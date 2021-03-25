@@ -1,5 +1,46 @@
 .Index {
   //background-color: #e1f7f7;
   height: 100vh;
-  border: 1px solid #ccc;
+  //border: 1px solid #ccc;
+}
+
+.content {
+  margin-top: calc(2.85714286em + 2px);
+  
+  .column {
+    //border: 1px solid green;
+    display: inline-block;
+    height: calc(100vh - 2.85714286em - 1.15rem);
+  }
+  
+  @ConfigurationPanelWidth: 20rem;
+  
+  .data-table {
+    width: 100vw;
+    max-width: 100vw;
+    overflow: auto;
+  }
+  
+  .configuration-panel {
+    width: @ConfigurationPanelWidth;
+    
+    display: none;
+    
+    @ConfigurationPanelBackgroundColor: #CCC;
+    background-color: @ConfigurationPanelBackgroundColor;
+    box-shadow: 0 0 1rem 1rem #DDD;
+  }
+  
+  &.show-configuration-panel {
+    .data-table {
+      @ColumnMargin: 0px;
+      width: calc(100vw - @ConfigurationPanelWidth - @ColumnMargin);
+      max-width: calc(100vw - @ConfigurationPanelWidth - @ColumnMargin);
+      float: left;
+    }
+    
+    .configuration-panel {
+      display: inline-block;
+    }
+  }
 }

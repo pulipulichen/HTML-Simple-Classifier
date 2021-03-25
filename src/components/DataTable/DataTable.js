@@ -10,7 +10,7 @@ let DataTable = {
       hotData: Handsontable.helper.createSpreadsheetData(10, 10),
       secondColumnSettings: {
         title: 'Second column header'
-      }
+      } 
     }
   },
   components: {

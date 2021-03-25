@@ -371,33 +371,24 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      { staticClass: "ui segment" },
-      [
-        _c(
-          "hot-table",
-          { attrs: { data: _vm.hotData } },
-          [
-            _c("hot-column", { attrs: { title: "First column header" } }),
-            _vm._v(" "),
-            _c("hot-column", {
-              attrs: { settings: _vm.secondColumnSettings, "read-only": "true" }
-            })
-          ],
-          1
-        )
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "button",
-      { staticClass: "ui button primary", attrs: { type: "button" } },
-      [_vm._v("\n    TEST\n  ")]
-    )
-  ])
+  return _c(
+    "div",
+    [
+      _c(
+        "hot-table",
+        { attrs: { data: _vm.hotData } },
+        [
+          _c("hot-column", { attrs: { title: "First column header" } }),
+          _vm._v(" "),
+          _c("hot-column", {
+            attrs: { settings: _vm.secondColumnSettings, "read-only": "true" }
+          })
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -470,7 +461,7 @@ let DataTable = {
       hotData: handsontable__WEBPACK_IMPORTED_MODULE_1__["default"].helper.createSpreadsheetData(10, 10),
       secondColumnSettings: {
         title: 'Second column header'
-      }
+      } 
     }
   },
   components: {
@@ -644,6 +635,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _handsontable_full_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_handsontable_full_min_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _handsontable_patch_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./handsontable.patch.less */ "./src/components/DataTable/vendors/handsontable/handsontable.patch.less");
 /* harmony import */ var _handsontable_patch_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_handsontable_patch_less__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 

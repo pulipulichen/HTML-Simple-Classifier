@@ -14,6 +14,8 @@ let Index = {
   },
   components: {
     DataTable: () => import(/* webpackChunkName: "DataTable" */ './DataTable/DataTable.vue'),
+    NavigationBar: () => import(/* webpackChunkName: "NavigationBar" */ './NavigationBar/NavigationBar.vue'),
+    ConfigurationPanel: () => import(/* webpackChunkName: "ConfigurationPanel" */ './ConfigurationPanel/ConfigurationPanel.vue'),
     LoadingLayer,
   },
   computed: {

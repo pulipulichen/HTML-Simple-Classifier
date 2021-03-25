@@ -1,15 +1,25 @@
 {
   "elements": {
+    "hot-table": {},
+    "hot-column": {},
     "style": {},
     "LoadingLayer": {}
   },
   "attributes": {
+    "v-bind:class": {},
+    "v-if": {},
+    "src": {},
+    "v-bind:localConfig": {},
+    "v-bind:src": {
+      "context": "img"
+    },
+    "title": {},
     "ref": {},
     "scoped": {},
-    "src": {},
     "v-bind:config": {},
-    "v-bind:localConfig": {},
     "lang": {},
-    "v-bind:utils": {}
+    "read-only": {},
+    "v-bind:utils": {},
+    "v-bind:placeholder": {}
   }
 }

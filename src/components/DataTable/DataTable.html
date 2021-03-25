@@ -1,15 +1,8 @@
 <div>
-  <div class="ui segment">
-    <hot-table :data="hotData">
-      <hot-column title="First column header">
-      </hot-column>
-      <hot-column :settings="secondColumnSettings" read-only="true">
-      </hot-column>
-    </hot-table>
-  </div>
-    
-  <button type="button"
-          class="ui button primary">
-    TEST
-  </button>
+  <hot-table :data="hotData">
+    <hot-column title="First column header">
+    </hot-column>
+    <hot-column :settings="secondColumnSettings" read-only="true">
+    </hot-column>
+  </hot-table>
 </div>

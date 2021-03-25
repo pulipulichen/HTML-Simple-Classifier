@@ -1,12 +1,33 @@
 <div class="Index">
   {{ config.urlGithub }}
   
-  <DataTable
-    ref="DataTable"
+  <NavigationBar
+    ref="NavigationBar"
     v-bind:config="config"
     v-bind:localConfig="localConfig"
     v-bind:utils="utils">
-  </DataTable>
+  </NavigationBar>
+  
+  <div class="content"
+       v-bind:class="{'show-configuration-panel': localConfig.displayConfigurationPanel}">
+    <div class="data-table column">
+      <DataTable
+        ref="DataTable"
+        v-bind:config="config"
+        v-bind:localConfig="localConfig"
+        v-bind:utils="utils">
+      </DataTable>
+    </div>
+    <div class="configuration-panel column"
+         v-if="localConfig.displayConfigurationPanel">
+      <ConfigurationPanel
+        ref="ConfigurationPanel"
+        v-bind:config="config"
+        v-bind:localConfig="localConfig"
+        v-bind:utils="utils">
+      </ConfigurationPanel>
+    </div>
+  </div>
   
   <!-- ============================ -->
   
