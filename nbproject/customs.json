@@ -1,0 +1,15 @@
+{
+  "elements": {
+    "style": {},
+    "LoadingLayer": {}
+  },
+  "attributes": {
+    "ref": {},
+    "scoped": {},
+    "src": {},
+    "v-bind:config": {},
+    "v-bind:localConfig": {},
+    "lang": {},
+    "v-bind:utils": {}
+  }
+}

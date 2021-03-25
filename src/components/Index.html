@@ -1,0 +1,10 @@
+<div class="Index">
+  {{ config.urlGithub }}
+  
+  <LoadingLayer
+    ref="LoadingLayer"
+    v-bind:config="config"
+    v-bind:localConfig="localConfig"
+    v-bind:utils="utils">
+  </LoadingLayer>
+</div>
