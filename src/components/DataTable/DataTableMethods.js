@@ -8,6 +8,17 @@ export default function (DataTable) {
     this.hotInstance.addHook('afterOnCellMouseUp', (event) => {
       this.onHotBeforeContextMenuSetItems(event)
     })
+    
+    
+    this.hotInstance.updateSettings({
+        cells: (row, col) => {
+        let cellProperties = {};
+        if (col === 1) {
+          cellProperties.readOnly = true;
+        }
+        return cellProperties;
+        }
+    })
   }
   
   DataTable.methods.onHotAfterChange = function () {
