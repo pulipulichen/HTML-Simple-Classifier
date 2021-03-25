@@ -374,18 +374,19 @@ var render = function() {
   return _c(
     "div",
     [
-      _c(
-        "hot-table",
-        { attrs: { data: _vm.hotData } },
-        [
-          _c("hot-column", { attrs: { title: "First column header" } }),
-          _vm._v(" "),
-          _c("hot-column", {
-            attrs: { settings: _vm.secondColumnSettings, "read-only": "true" }
-          })
-        ],
-        1
-      )
+      _c("hot-table", {
+        ref: "hotTableComponent",
+        attrs: {
+          data: _vm.localConfig.data,
+          rowHeaders: true,
+          colHeaders: _vm.localConfig.headers,
+          fixedColumnsLeft: 2,
+          manualColumnFreeze: false,
+          contextMenu: _vm.hotContextMenu,
+          minSpareRows: 1,
+          dropdownMenu: _vm.hotDropdownMenu
+        }
+      })
     ],
     1
   )
@@ -447,42 +448,40 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _handsontable_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @handsontable/vue */ "./node_modules/@handsontable/vue/es/vue-handsontable.js");
-/* harmony import */ var handsontable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! handsontable */ "./node_modules/handsontable/index.mjs");
-/* harmony import */ var _vendors_handsontable_handsontable_webpack_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./vendors/handsontable/handsontable.webpack.js */ "./src/components/DataTable/vendors/handsontable/handsontable.webpack.js");
+/* harmony import */ var _vendors_handsontable_handsontable_webpack_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vendors/handsontable/handsontable.webpack.js */ "./src/components/DataTable/vendors/handsontable/handsontable.webpack.js");
+/* harmony import */ var _DataTableData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DataTableData.js */ "./src/components/DataTable/DataTableData.js");
+/* harmony import */ var _DataTableMethods_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DataTableMethods.js */ "./src/components/DataTable/DataTableMethods.js");
+/* harmony import */ var _DataTableComputed_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DataTableComputed.js */ "./src/components/DataTable/DataTableComputed.js");
+/* harmony import */ var _DataTableWatch_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DataTableWatch.js */ "./src/components/DataTable/DataTableWatch.js");
 
-
+//import Handsontable from 'handsontable';
 
 
 let DataTable = {
   props: ['config', 'localConfig', 'utils'],
-  data () {    
-    this.$i18n.locale = this.localConfig.locale
-    return {
-      hotData: handsontable__WEBPACK_IMPORTED_MODULE_1__["default"].helper.createSpreadsheetData(10, 10),
-      secondColumnSettings: {
-        title: 'Second column header'
-      } 
-    }
-  },
+  //data () { },  // DataTableData.js
   components: {
-    HotTable: _handsontable_vue__WEBPACK_IMPORTED_MODULE_0__["HotTable"],
-    HotColumn: _handsontable_vue__WEBPACK_IMPORTED_MODULE_0__["HotColumn"]
+    HotTable: _handsontable_vue__WEBPACK_IMPORTED_MODULE_0__["HotTable"]
   },
-  watch: {
-    'localConfig.locale'() {
-      this.$i18n.locale = this.localConfig.locale;
-    },
-  },
-  computed: {
-    
-  },
+  watch: { }, // DataTableWatch.js
+  computed: {}, // DataTableComputed.js
   mounted() {
-    
+    this.initTable()
   },
-  methods: {
-    
-  }
+  methods: {} // DataTableMethods.js
 }
+
+
+Object(_DataTableData_js__WEBPACK_IMPORTED_MODULE_2__["default"])(DataTable)
+
+
+Object(_DataTableMethods_js__WEBPACK_IMPORTED_MODULE_3__["default"])(DataTable)
+
+
+Object(_DataTableComputed_js__WEBPACK_IMPORTED_MODULE_4__["default"])(DataTable)
+
+
+Object(_DataTableWatch_js__WEBPACK_IMPORTED_MODULE_5__["default"])(DataTable)
 
 /* harmony default export */ __webpack_exports__["default"] = (DataTable);
 
@@ -575,6 +574,211 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_DataTable_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CDataTable_5CDataTable_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_DataTable_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CDataTable_5CDataTable_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_DataTable_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CDataTable_5CDataTable_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_DataTable_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CDataTable_5CDataTable_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
  /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_DataTable_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CDataTable_5CDataTable_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/components/DataTable/DataTableComputed.js":
+/*!*******************************************************!*\
+  !*** ./src/components/DataTable/DataTableComputed.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (DataTable) {
+  //    hotSettings () {
+//      return {
+//        data: this.localConfig.data,
+//        colHeaders: true,
+//        rowHeaders: true
+//      }
+//    },
+  DataTable.computed.hotInstance = function () {
+    if (this.$refs.hotTableComponent) {
+      return this.$refs.hotTableComponent.hotInstance
+    }
+  }
+  DataTable.computed.hotColumns = function () {
+    let columns = this.localConfig.headers.map((header, i) => {
+      let readOnly = false
+      if (header === 'predict') {
+        readOnly = true
+      }
+      return {
+      }
+    })
+    return columns
+  }
+  DataTable.computed.hotAllowInsertColumn = function () {
+    let columns = this.localConfig.headers.map((header, i) => {
+      if (i < 2) {
+        return false
+      } else {
+        return true
+      }
+    })
+    return columns
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/DataTable/DataTableData.js":
+/*!***************************************************!*\
+  !*** ./src/components/DataTable/DataTableData.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (DataTable) {
+  DataTable.data = function () {
+    this.$i18n.locale = this.localConfig.locale
+    
+    let hotContextMenuDefault = [
+      'row_above', 'row_below', 'remove_row',
+      '---------',
+      'col_left', 'col_right', 'remove_col',
+      '---------',
+      'undo', 'redo'
+    ]
+    
+    let hotContextMenuColumnsReadOnly = [
+      'row_above', 'row_below', 'remove_row',
+      '---------',
+      'undo', 'redo'
+    ]
+    
+    let hotContextMenuSelectedColumnDefault = [
+      'col_left', 'col_right', 'remove_col',
+      '---------',
+      'undo', 'redo'
+    ]
+    
+    let hotContextMenuSelectedColumnReadOnly = [
+      'undo', 'redo'
+    ]
+    
+    return {
+      dataLock: false,
+      hotContextMenuEvent: null,
+      hotContextMenu: hotContextMenuDefault,
+      hotContextMenuDefault,
+      hotContextMenuColumnsReadOnly,
+      hotContextMenuSelectedColumnDefault,
+      hotContextMenuSelectedColumnReadOnly,
+      hotDropdownMenu: [
+        'col_left', 'col_right', 
+        '---------',
+        'remove_col'
+      ]
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/DataTable/DataTableMethods.js":
+/*!******************************************************!*\
+  !*** ./src/components/DataTable/DataTableMethods.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (DataTable) {
+  DataTable.methods.initTable = function () {
+    //console.log(this.hotInstance)
+    this.hotInstance.addHook('afterChange', () => {
+      this.onHotAfterChange()
+    })
+
+    this.hotInstance.addHook('afterOnCellMouseUp', (event) => {
+      this.onHotBeforeContextMenuSetItems(event)
+    })
+  }
+  
+  DataTable.methods.onHotAfterChange = function () {
+    if (this.dataLock === true) {
+      return false
+    }
+    let data = this.hotInstance.getData()
+    this.dataLock = true
+    this.localConfig.data = data
+    this.dataLock = false
+  }
+  
+  DataTable.methods.getSelectedRangeInfo = function () {
+    let range = this.hotInstance.getSelectedRange()
+    let from = range[0].from.col
+    let to = range[0].from.to
+    let colRange = [from, to]
+    colRange.sort()
+    return {
+      leftColumn: colRange[0],
+      isSelectedColumn: (range[0].from.row === -1),
+      isSelectedRow: (range[0].from.col === -1),
+    }
+  }
+  
+  DataTable.methods.onHotBeforeContextMenuSetItems = function (event) {
+    let selectedInfo = this.getSelectedRangeInfo()
+    
+    //this.hotContextMenuEvent = event
+    if (selectedInfo.isSelectedRow) {
+      this.hotContextMenu = this.hotContextMenuColumnsReadOnly
+    }
+    else if (selectedInfo.isSelectedColumn) {
+      if (selectedInfo.leftColumn < 2) {
+        this.hotContextMenu = this.hotContextMenuSelectedColumnReadOnly
+      } else {
+        this.hotContextMenu = this.hotContextMenuSelectedColumnDefault
+      }
+    }
+    else {
+      if (selectedInfo.leftColumn < 2) {
+        this.hotContextMenu = this.hotContextMenuColumnsReadOnly
+      } else {
+        this.hotContextMenu = this.hotContextMenuDefault
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/DataTable/DataTableWatch.js":
+/*!****************************************************!*\
+  !*** ./src/components/DataTable/DataTableWatch.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (DataTable) {
+  DataTable.watch['localConfig.locale'] = function () {
+    this.$i18n.locale = this.localConfig.locale;
+  }
+  DataTable.watch['localConfig.data'] = function () {
+    if (this.dataLock === true) {
+      return false
+    }
+    this.dataLock = true
+    this.hotInstance.loadData(this.localConfig.data);
+    this.dataLock = false
+  }
+//  
+//  DataTable.watch.hotContextMenu = async function () {
+//    this.utils.AsyncUtils.sleep(0)
+//    this.hotInstance.getPlugin('contextMenu').open(this.hotContextMenuEvent)
+//    this.utils.AsyncUtils.sleep(500)
+//    this.hotInstance.getPlugin('contextMenu').open(this.hotContextMenuEvent)
+//  }
+});
 
 /***/ }),
 

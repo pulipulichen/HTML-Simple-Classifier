@@ -1,8 +1,13 @@
 <div>
-  <hot-table :data="hotData">
-    <hot-column title="First column header">
-    </hot-column>
-    <hot-column :settings="secondColumnSettings" read-only="true">
-    </hot-column>
-  </hot-table>
+  <hot-table
+    ref="hotTableComponent"
+    v-bind:data="localConfig.data"
+    v-bind:rowHeaders="true"
+    v-bind:colHeaders="localConfig.headers"
+    v-bind:fixedColumnsLeft="2"
+    v-bind:manualColumnFreeze="false"
+    v-bind:contextMenu="hotContextMenu"
+    v-bind:minSpareRows="1"
+    v-bind:dropdownMenu="hotDropdownMenu"
+  ></hot-table>
 </div>

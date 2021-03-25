@@ -38,7 +38,7 @@ module.exports = function (Component) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "img[data-v-1d5bd9e2] {\n  width: 2.5em;\n  height: auto;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","NavigationBar.less"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,YAAA;ACCF","file":"NavigationBar.less","sourcesContent":["img {\n  width: 2.5em;\n  height: auto;\n}","img {\n  width: 2.5em;\n  height: auto;\n}\n"]}]);
+exports.push([module.i, "img[data-v-1d5bd9e2] {\n  width: 2.5em;\n  height: auto;\n}\n.menu[data-v-1d5bd9e2] {\n  z-index: 99999 !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","NavigationBar.less"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,YAAA;ACCF;ADEA;EACE,yBAAA;ACAF","file":"NavigationBar.less","sourcesContent":["img {\n  width: 2.5em;\n  height: auto;\n}\n\n.menu {\n  z-index: 99999 !important;\n}","img {\n  width: 2.5em;\n  height: auto;\n}\n.menu {\n  z-index: 99999 !important;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -64,6 +64,10 @@ var render = function() {
     _c("div", { staticClass: "ui top fixed inverted menu" }, [
       _c("div", { staticClass: "item" }, [
         _c("img", { attrs: { src: _vm.logoPath } })
+      ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "item", on: { click: _vm.loadDemo } }, [
+        _vm._v("\n      " + _vm._s(_vm.$t("LOAD DEMO")) + "\n    ")
       ]),
       _vm._v(" "),
       _c("a", { staticClass: "item" }, [
@@ -185,6 +189,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../assets/favicon/favicon.svg */ "./assets/favicon/favicon.svg");
 /* harmony import */ var _assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _NavigationBarMethodsData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavigationBarMethodsData.js */ "./src/components/NavigationBar/NavigationBarMethodsData.js");
+/* harmony import */ var _NavigationBarMethodsDataLoader_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavigationBarMethodsDataLoader.js */ "./src/components/NavigationBar/NavigationBarMethodsDataLoader.js");
+/* harmony import */ var _NavigationBarMethodsView_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NavigationBarMethodsView.js */ "./src/components/NavigationBar/NavigationBarMethodsView.js");
 
 
 let NavigationBar = {
@@ -203,13 +210,20 @@ let NavigationBar = {
   computed: {
     
   },
-  mounted() {
-    
+  mounted: async function () {
+    await this.initData()
   },
-  methods: {
-    
-  }
+  methods: {}
 }
+
+
+Object(_NavigationBarMethodsData_js__WEBPACK_IMPORTED_MODULE_1__["default"])(NavigationBar)
+
+
+Object(_NavigationBarMethodsDataLoader_js__WEBPACK_IMPORTED_MODULE_2__["default"])(NavigationBar)
+
+
+Object(_NavigationBarMethodsView_js__WEBPACK_IMPORTED_MODULE_3__["default"])(NavigationBar)
 
 /* harmony default export */ __webpack_exports__["default"] = (NavigationBar);
 
@@ -288,6 +302,239 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
  /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBarMethodsData.js":
+/*!******************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBarMethodsData.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
+  NavigationBar.methods.initData = async function () {
+    if (this.localConfig.data.length > 2
+            && Array.isArray(this.localConfig.data[0])
+            && this.localConfig.data[0].length > 3) {
+      return false
+    }
+    
+    this.loadDemo()
+  }
+  
+  NavigationBar.methods.loadDemo = async function () {
+    let rawData = await this.loadDemoData()
+    let orderedData = await this.orderColumns(rawData)
+    this.localConfig.headers = orderedData[0]
+    this.localConfig.data = orderedData.splice(1)
+  }
+  
+  NavigationBar.methods.loadDemoData = async function () {
+    let path = "./assets/data/" + this.config.demoData
+    //console.log(path)
+    if (path.endsWith('.csv')) {
+      return await this.loadURLCSV(path)
+    }
+    else {
+      return await this.loadURLODS(path)
+    }
+  }
+  
+  NavigationBar.methods.orderColumns = async function (data) {
+    let headers = data[0]
+    
+    if (headers[1] === 'predict') {
+      // 已經被調整好了，不用再整理
+      return data
+    }
+    
+    // ---------------------------
+    // 偵測
+    
+    let classFieldNameCandidates = ['class', 'label', 'target', 'score', 'dv']
+    let classFieldIndex = -1
+    let classFieldName
+    
+    for (let len = classFieldNameCandidates.length, i = len; i > 0; i--) {
+      let name = classFieldNameCandidates[(len - i)]
+      let index = headers.indexOf(name)
+      if (index > -1) {
+        classFieldIndex = index
+        classFieldName = name
+      }
+    }
+    
+    if (classFieldIndex === -1) {
+      classFieldIndex = headers.length - 1
+      classFieldName = headers[classFieldIndex]
+    }
+    
+    // ---------------------------
+    // 開始大遷移
+    for (let rowLen = data.length, r = rowLen; r > 0; r--) {
+      let row = data[(rowLen - r)]
+      
+      let classField = row.splice(classFieldIndex ,1)
+      // putting the 'role' string back in the array:
+      
+      if (r === rowLen) {
+        row.unshift('predict')
+        row.unshift(classField[0])
+      }
+      else {
+        row.unshift(null)
+        row.unshift(classField[0])
+      }
+      
+      if (r % 10 === 1) {
+        this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    
+    return data
+  }
+  
+});
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBarMethodsDataLoader.js":
+/*!************************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBarMethodsDataLoader.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var papaparse__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! papaparse */ "./node_modules/papaparse/papaparse.min.js");
+/* harmony import */ var papaparse__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(papaparse__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! xlsx */ "./node_modules/xlsx/xlsx.js");
+/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(xlsx__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
+  
+  NavigationBar.methods.loadURLCSV = function (url) {
+//    if (url.startsWith('./')) {
+//      let currentURL = location.href
+//      url = currentURL.slice(0, currentURL.lastIndexOf('/') + 1) + url.slice(2)
+//    }
+    
+    //console.log(url)
+    
+    return new Promise((resolve) => {
+      let data = []
+      papaparse__WEBPACK_IMPORTED_MODULE_0___default.a.parse(url, {
+        download: true,
+        step: function(row) {
+          data.push(row.data)
+        },
+        complete: function() {
+          //console.log(data)
+          resolve(data)
+        }
+      });
+    })
+  }
+  
+  
+  NavigationBar.methods.loadURLODS = function (url) {
+//    if (url.startsWith('./')) {
+//      let currentURL = location.href
+//      url = currentURL.slice(0, currentURL.lastIndexOf('/') + 1) + url.slice(2)
+//    }
+    
+    //console.log(url)
+    
+    return new Promise((resolve) => {
+      /* set up async GET request */
+      var req = new XMLHttpRequest();
+      req.open("GET", url, true);
+      req.responseType = "arraybuffer";
+
+      req.onload = function(e) {
+        var data = new Uint8Array(req.response);
+        var workbook = xlsx__WEBPACK_IMPORTED_MODULE_1___default.a.read(data, {type:"array"});
+
+        var sheet_name_list = workbook.SheetNames;
+
+        //console.log(url)
+        //console.log(sheet_name_list)
+        var xlData = xlsx__WEBPACK_IMPORTED_MODULE_1___default.a.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
+
+        let headers
+        xlData = xlData.map((row) => {
+          if (!headers) {
+            headers = Object.keys(row)
+          }
+          return headers.map(header => {
+            return row[header]
+          })
+        })
+        xlData.unshift(headers)
+
+
+        resolve(xlData)
+      }
+
+      req.send();
+      
+    })
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBarMethodsView.js":
+/*!******************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBarMethodsView.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
+});
+
+/***/ }),
+
+/***/ 0:
+/*!********************!*\
+  !*** fs (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 1:
+/*!************************!*\
+  !*** crypto (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 2:
+/*!************************!*\
+  !*** stream (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ })
 

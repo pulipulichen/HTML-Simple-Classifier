@@ -3,6 +3,10 @@
     <div class="item">
       <img v-bind:src="logoPath">
     </div>
+    <a class="item"
+       v-on:click="loadDemo">
+      {{ $t('LOAD DEMO') }}
+    </a>
     <a class="item">
       {{ $t('OPEN DATA') }}
     </a>

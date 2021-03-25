@@ -16,12 +16,19 @@ let NavigationBar = {
   computed: {
     
   },
-  mounted() {
-    
+  mounted: async function () {
+    await this.initData()
   },
-  methods: {
-    
-  }
+  methods: {}
 }
+
+import NavigationBarMethodsData from './NavigationBarMethodsData.js'
+NavigationBarMethodsData(NavigationBar)
+
+import NavigationBarMethodsDataLoader from './NavigationBarMethodsDataLoader.js'
+NavigationBarMethodsDataLoader(NavigationBar)
+
+import NavigationBarMethodsView from './NavigationBarMethodsView.js'
+NavigationBarMethodsView(NavigationBar)
 
 export default NavigationBar

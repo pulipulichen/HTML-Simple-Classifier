@@ -10,6 +10,9 @@ let config = {
   inited: false,
   urlGithub: 'https://github.com/pulipulichen/HTML-Simple-Classifier/',
   urlIssue: 'https://github.com/pulipulichen/HTML-Simple-Classifier/issues/new',
+  
+  //demoData: 'weather.class.csv'
+  demoData: 'weather.play.ods'
 }
 
 import styleConfig from './styles/style.config.js'

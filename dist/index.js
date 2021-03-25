@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"ConfigurationPanel":"ConfigurationPanel","NavigationBar":"NavigationBar","vendors/semantic-ui-niwsf":"vendors/semantic-ui-niwsf","vendors~DataTable":"vendors~DataTable","DataTable":"DataTable"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"ConfigurationPanel":"ConfigurationPanel","vendors/semantic-ui-niwsf":"vendors/semantic-ui-niwsf","vendors~DataTable":"vendors~DataTable","DataTable":"DataTable","vendors~NavigationBar":"vendors~NavigationBar","NavigationBar":"NavigationBar"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -2102,7 +2102,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".Index[data-v-82b7485c] {\n  height: 100vh;\n}\n.content[data-v-82b7485c] {\n  margin-top: calc(2.85714286em + 2px);\n}\n.content .column[data-v-82b7485c] {\n  display: inline-block;\n  height: calc(100vh - 2.85714286em - 1.15rem);\n}\n.content .data-table[data-v-82b7485c] {\n  width: 100vw;\n  max-width: 100vw;\n  overflow: auto;\n}\n.content .configuration-panel[data-v-82b7485c] {\n  width: 20rem;\n  display: none;\n  background-color: #CCC;\n  box-shadow: 0 0 1rem 1rem #DDD;\n}\n.content.show-configuration-panel .data-table[data-v-82b7485c] {\n  width: calc(100vw - 20rem - 0px);\n  max-width: calc(100vw - 20rem - 0px);\n  float: left;\n}\n.content.show-configuration-panel .configuration-panel[data-v-82b7485c] {\n  display: inline-block;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/Index.less?vue&type=style&index=0&id=82b7485c&lang=less&scoped=true&","Index.less"],"names":[],"mappings":"AAAA;EAEE,aAAA;ACAF;ADIA;EACE,oCAAA;ACFF;ADCA;EAKI,qBAAA;EACA,4CAAA;ACHJ;ADHA;EAYI,YAAA;EACA,gBAAA;EACA,cAAA;ACNJ;ADRA;EAkBI,YAAA;EAEA,aAAA;EAGA,sBAAA;EACA,8BAAA;ACVJ;ADaE;EAGI,gCAAA;EACA,oCAAA;EACA,WAAA;ACbN;ADQE;EASI,qBAAA;ACdN","file":"Index.less","sourcesContent":[".Index {\n  //background-color: #e1f7f7;\n  height: 100vh;\n  //border: 1px solid #ccc;\n}\n\n.content {\n  margin-top: calc(2.85714286em + 2px);\n  \n  .column {\n    //border: 1px solid green;\n    display: inline-block;\n    height: calc(100vh - 2.85714286em - 1.15rem);\n  }\n  \n  @ConfigurationPanelWidth: 20rem;\n  \n  .data-table {\n    width: 100vw;\n    max-width: 100vw;\n    overflow: auto;\n  }\n  \n  .configuration-panel {\n    width: @ConfigurationPanelWidth;\n    \n    display: none;\n    \n    @ConfigurationPanelBackgroundColor: #CCC;\n    background-color: @ConfigurationPanelBackgroundColor;\n    box-shadow: 0 0 1rem 1rem #DDD;\n  }\n  \n  &.show-configuration-panel {\n    .data-table {\n      @ColumnMargin: 0px;\n      width: calc(100vw - @ConfigurationPanelWidth - @ColumnMargin);\n      max-width: calc(100vw - @ConfigurationPanelWidth - @ColumnMargin);\n      float: left;\n    }\n    \n    .configuration-panel {\n      display: inline-block;\n    }\n  }\n}",".Index {\n  height: 100vh;\n}\n.content {\n  margin-top: calc(2.85714286em + 2px);\n}\n.content .column {\n  display: inline-block;\n  height: calc(100vh - 2.85714286em - 1.15rem);\n}\n.content .data-table {\n  width: 100vw;\n  max-width: 100vw;\n  overflow: auto;\n}\n.content .configuration-panel {\n  width: 20rem;\n  display: none;\n  background-color: #CCC;\n  box-shadow: 0 0 1rem 1rem #DDD;\n}\n.content.show-configuration-panel .data-table {\n  width: calc(100vw - 20rem - 0px);\n  max-width: calc(100vw - 20rem - 0px);\n  float: left;\n}\n.content.show-configuration-panel .configuration-panel {\n  display: inline-block;\n}\n"]}]);
+exports.push([module.i, ".Index[data-v-82b7485c] {\n  height: 100vh;\n}\n.content[data-v-82b7485c] {\n  margin-top: calc(2.85714286em + 2px);\n}\n.content .column[data-v-82b7485c] {\n  display: inline-block;\n  height: calc(100vh - 2.85714286em - 1.15rem);\n}\n.content .data-table[data-v-82b7485c] {\n  width: 100vw;\n  max-width: 100vw;\n  overflow: auto;\n}\n.content .configuration-panel[data-v-82b7485c] {\n  width: 20rem;\n  display: none;\n  background-color: #CCC;\n  box-shadow: 0 0 1rem 1rem #DDD;\n  position: relative;\n  z-index: 100;\n}\n.content.show-configuration-panel .data-table[data-v-82b7485c] {\n  width: calc(100vw - 20rem - 0px);\n  max-width: calc(100vw - 20rem - 0px);\n  float: left;\n}\n.content.show-configuration-panel .configuration-panel[data-v-82b7485c] {\n  display: inline-block;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/Index.less?vue&type=style&index=0&id=82b7485c&lang=less&scoped=true&","Index.less"],"names":[],"mappings":"AAAA;EAEE,aAAA;ACAF;ADIA;EACE,oCAAA;ACFF;ADCA;EAKI,qBAAA;EACA,4CAAA;ACHJ;ADHA;EAYI,YAAA;EACA,gBAAA;EACA,cAAA;ACNJ;ADRA;EAkBI,YAAA;EAEA,aAAA;EAGA,sBAAA;EACA,8BAAA;EAEA,kBAAA;EACA,YAAA;ACXJ;ADcE;EAGI,gCAAA;EACA,oCAAA;EACA,WAAA;ACdN;ADSE;EASI,qBAAA;ACfN","file":"Index.less","sourcesContent":[".Index {\n  //background-color: #e1f7f7;\n  height: 100vh;\n  //border: 1px solid #ccc;\n}\n\n.content {\n  margin-top: calc(2.85714286em + 2px);\n  \n  .column {\n    //border: 1px solid green;\n    display: inline-block;\n    height: calc(100vh - 2.85714286em - 1.15rem);\n  }\n  \n  @ConfigurationPanelWidth: 20rem;\n  \n  .data-table {\n    width: 100vw;\n    max-width: 100vw;\n    overflow: auto;\n  }\n  \n  .configuration-panel {\n    width: @ConfigurationPanelWidth;\n    \n    display: none;\n    \n    @ConfigurationPanelBackgroundColor: #CCC;\n    background-color: @ConfigurationPanelBackgroundColor;\n    box-shadow: 0 0 1rem 1rem #DDD;\n    \n    position: relative;\n    z-index: 100;\n  }\n  \n  &.show-configuration-panel {\n    .data-table {\n      @ColumnMargin: 0px;\n      width: calc(100vw - @ConfigurationPanelWidth - @ColumnMargin);\n      max-width: calc(100vw - @ConfigurationPanelWidth - @ColumnMargin);\n      float: left;\n    }\n    \n    .configuration-panel {\n      display: inline-block;\n    }\n  }\n}",".Index {\n  height: 100vh;\n}\n.content {\n  margin-top: calc(2.85714286em + 2px);\n}\n.content .column {\n  display: inline-block;\n  height: calc(100vh - 2.85714286em - 1.15rem);\n}\n.content .data-table {\n  width: 100vw;\n  max-width: 100vw;\n  overflow: auto;\n}\n.content .configuration-panel {\n  width: 20rem;\n  display: none;\n  background-color: #CCC;\n  box-shadow: 0 0 1rem 1rem #DDD;\n  position: relative;\n  z-index: 100;\n}\n.content.show-configuration-panel .data-table {\n  width: calc(100vw - 20rem - 0px);\n  max-width: calc(100vw - 20rem - 0px);\n  float: left;\n}\n.content.show-configuration-panel .configuration-panel {\n  display: inline-block;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -28489,7 +28489,7 @@ let Index = {
   },
   components: {
     DataTable: () => Promise.all(/*! import() | DataTable */[__webpack_require__.e("vendors~DataTable"), __webpack_require__.e("DataTable")]).then(__webpack_require__.bind(null, /*! ./DataTable/DataTable.vue */ "./src/components/DataTable/DataTable.vue")),
-    NavigationBar: () => __webpack_require__.e(/*! import() | NavigationBar */ "NavigationBar").then(__webpack_require__.bind(null, /*! ./NavigationBar/NavigationBar.vue */ "./src/components/NavigationBar/NavigationBar.vue")),
+    NavigationBar: () => Promise.all(/*! import() | NavigationBar */[__webpack_require__.e("vendors~NavigationBar"), __webpack_require__.e("NavigationBar")]).then(__webpack_require__.bind(null, /*! ./NavigationBar/NavigationBar.vue */ "./src/components/NavigationBar/NavigationBar.vue")),
     ConfigurationPanel: () => __webpack_require__.e(/*! import() | ConfigurationPanel */ "ConfigurationPanel").then(__webpack_require__.bind(null, /*! ./ConfigurationPanel/ConfigurationPanel.vue */ "./src/components/ConfigurationPanel/ConfigurationPanel.vue")),
     LoadingLayer: _LoadingLayer_LoadingLayer_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
   },
@@ -28787,6 +28787,9 @@ let config = {
   inited: false,
   urlGithub: 'https://github.com/pulipulichen/HTML-Simple-Classifier/',
   urlIssue: 'https://github.com/pulipulichen/HTML-Simple-Classifier/issues/new',
+  
+  //demoData: 'weather.class.csv'
+  demoData: 'weather.play.ods'
 }
 
 
@@ -29200,8 +29203,11 @@ module.exports = "<div class=\"non-invasive-web-style-framework\">\r\n  <index\r
 __webpack_require__.r(__webpack_exports__);
 let localConfig = {
   locale: 'zh-TW',
+  displayConfigurationPanel: true,
   
-  displayConfigurationPanel: true
+  data: [],
+  headers: [],
+  classFieldName: 'class',
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (localConfig);

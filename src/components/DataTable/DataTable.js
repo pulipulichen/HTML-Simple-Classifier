@@ -1,36 +1,31 @@
-import { HotTable, HotColumn } from '@handsontable/vue';
-import Handsontable from 'handsontable';
+import { HotTable } from '@handsontable/vue';
+//import Handsontable from 'handsontable';
 import './vendors/handsontable/handsontable.webpack.js'
 
 let DataTable = {
   props: ['config', 'localConfig', 'utils'],
-  data () {    
-    this.$i18n.locale = this.localConfig.locale
-    return {
-      hotData: Handsontable.helper.createSpreadsheetData(10, 10),
-      secondColumnSettings: {
-        title: 'Second column header'
-      } 
-    }
-  },
+  //data () { },  // DataTableData.js
   components: {
-    HotTable,
-    HotColumn
+    HotTable
   },
-  watch: {
-    'localConfig.locale'() {
-      this.$i18n.locale = this.localConfig.locale;
-    },
-  },
-  computed: {
-    
-  },
+  watch: { }, // DataTableWatch.js
+  computed: {}, // DataTableComputed.js
   mounted() {
-    
+    this.initTable()
   },
-  methods: {
-    
-  }
+  methods: {} // DataTableMethods.js
 }
+
+import DataTableData from './DataTableData.js'
+DataTableData(DataTable)
+
+import DataTableMethods from './DataTableMethods.js'
+DataTableMethods(DataTable)
+
+import DataTableComputed from './DataTableComputed.js'
+DataTableComputed(DataTable)
+
+import DataTableWatch from './DataTableWatch.js'
+DataTableWatch(DataTable)
 
 export default DataTable
