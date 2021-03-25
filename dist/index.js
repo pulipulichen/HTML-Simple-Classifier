@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"vendors/semantic-ui-niwsf":"vendors/semantic-ui-niwsf"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"vendors/semantic-ui-niwsf":"vendors/semantic-ui-niwsf","vendors~DataTable":"vendors~DataTable","DataTable":"DataTable"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -15856,6 +15856,15 @@ var render = function() {
     { staticClass: "Index" },
     [
       _vm._v("\r\n  " + _vm._s(_vm.config.urlGithub) + "\r\n  \r\n  "),
+      _c("DataTable", {
+        ref: "DataTable",
+        attrs: {
+          config: _vm.config,
+          localConfig: _vm.localConfig,
+          utils: _vm.utils
+        }
+      }),
+      _vm._v(" "),
       _c("LoadingLayer", {
         ref: "LoadingLayer",
         attrs: {
@@ -28433,6 +28442,7 @@ let Index = {
     }
   },
   components: {
+    DataTable: () => Promise.all(/*! import() | DataTable */[__webpack_require__.e("vendors~DataTable"), __webpack_require__.e("DataTable")]).then(__webpack_require__.bind(null, /*! ./DataTable/DataTable.vue */ "./src/components/DataTable/DataTable.vue")),
     LoadingLayer: _LoadingLayer_LoadingLayer_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
   },
   computed: {
@@ -29051,8 +29061,6 @@ let VueController = {
     
     await this.waitForSemanticUIReady()
     
-    this.addViewportListener()
-    
     //console.log('index.js mounted', 3)
     
     this.config.inited = true
@@ -29097,30 +29105,6 @@ let VueController = {
       data = JSON.stringify(data)
       //console.log(data)
       localStorage.setItem(this.config.appName, data)
-    },
-    addViewportListener () {
-      let $window = jquery__WEBPACK_IMPORTED_MODULE_7___default()(window)
-      
-      let resizeHandlerTimer
-      
-      let resizeHandler = () => {
-          //  Little JS Tip, No need to write `var` 50thousand times. Just use a comma and write your new variable
-          let x = $window.width(),    //  variable for window width assigned to `x`
-              y = $window.height(),   //  variable for window height assigned to `y`
-              z = x/y    //  your conversion you were using in the code you have in your question, there's plenty of different ways to test for size changes, do some Googling on "aspect ratio" as it's usually best way to go
-          
-          this.config.viewportSize.width = x
-          this.config.viewportSize.height = y
-          this.config.viewportSize.ratio = z
-      }
-      
-      $window.on('resize', () => {
-        clearTimeout(resizeHandlerTimer)
-        resizeHandlerTimer = setTimeout(() => {
-          resizeHandler()
-        }, 100)
-      })
-      resizeHandler()
     }
   }
 }

@@ -13,6 +13,7 @@ let Index = {
     }
   },
   components: {
+    DataTable: () => import(/* webpackChunkName: "DataTable" */ './DataTable/DataTable.vue'),
     LoadingLayer,
   },
   computed: {
