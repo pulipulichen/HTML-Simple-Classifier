@@ -29,12 +29,24 @@
   }
   
   .ht_clone_left .wtHolder .htCore tbody tr {
+    .test-dataset {
+      color: red !important;
+    }
+    
     td:nth-of-type(1) {
       background-color: #FFFBDE !important;
+      
+      &.test-dataset {
+        background-color: #DEF3FF !important;
+      }
     }
     
     td:nth-of-type(2) {
       background-color: #FFEFDE !important;
+      
+      &.test-dataset {
+        background-color: #EFE7FF !important;
+      }
     }
   }
 }

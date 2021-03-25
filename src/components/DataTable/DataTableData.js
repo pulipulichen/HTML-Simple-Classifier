@@ -1,3 +1,5 @@
+import HandsontablePluginRenameColHeader from './vendors/handsontable/handsontable.plugin.rename_col_header.js'
+
 export default function (DataTable) {
   DataTable.data = function () {
     this.$i18n.locale = this.localConfig.locale
@@ -34,11 +36,8 @@ export default function (DataTable) {
       hotContextMenuColumnsReadOnly,
       hotContextMenuSelectedColumnDefault,
       hotContextMenuSelectedColumnReadOnly,
-      hotDropdownMenu: [
-        'col_left', 'col_right', 
-        '---------',
-        'remove_col'
-      ]
+      hotDropdownMenu: ["col_left", "col_right", "remove_col", HandsontablePluginRenameColHeader, 'filter_by_condition', 'filter_operators', 'filter_by_condition2', 'filter_by_value', 'filter_action_bar'],
+      
     }
   }
 }

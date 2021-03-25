@@ -45,7 +45,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2),\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  color: white !important;\n  font-weight: bold;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) .changeType,\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) .changeType {\n  display: none !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) {\n  background-color: #fbbd08 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2).ht__highlight {\n  background-color: #CE9A00 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  background-color: #f2711c !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3).ht__highlight {\n  background-color: #CE5908 !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1) {\n  background-color: #FFFBDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2) {\n  background-color: #FFEFDE !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/DataTable/DataTable.less?vue&type=style&index=0&lang=less&","DataTable.less"],"names":[],"mappings":"AAAA;;EAIM,uBAAA;EACA,iBAAA;ACDN;ADJA;;EAQQ,wBAAA;ACAR;ADRA;EAaM,oCAAA;ACFN;ADKM;EACE,oCAAA;ACHR;ADdA;EAsBM,oCAAA;ACLN;ADOM;EACE,oCAAA;ACLR;ADpBA;EAgCM,oCAAA;ACTN;ADvBA;EAoCM,oCAAA;ACVN","file":"DataTable.less","sourcesContent":[".DataTable {\n  .ht_clone_top_left_corner .wtHolder .htCore {\n    th:nth-of-type(2),\n    th:nth-of-type(3) {\n      color: white !important;\n      font-weight: bold;\n      \n      .changeType {\n        display: none !important;\n      }\n    }\n    \n    th:nth-of-type(2) {\n      background-color: #fbbd08 !important;\n      \n      \n      &.ht__highlight {\n        background-color: #CE9A00 !important;\n      }\n    }\n    \n    th:nth-of-type(3) {\n      background-color: #f2711c !important;\n      \n      &.ht__highlight {\n        background-color: #CE5908 !important;\n      }\n    }\n  }\n  \n  .ht_clone_left .wtHolder .htCore tbody tr {\n    td:nth-of-type(1) {\n      background-color: #FFFBDE !important;\n    }\n    \n    td:nth-of-type(2) {\n      background-color: #FFEFDE !important;\n    }\n  }\n}\n  ",".DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2),\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  color: white !important;\n  font-weight: bold;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) .changeType,\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) .changeType {\n  display: none !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) {\n  background-color: #fbbd08 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2).ht__highlight {\n  background-color: #CE9A00 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  background-color: #f2711c !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3).ht__highlight {\n  background-color: #CE5908 !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1) {\n  background-color: #FFFBDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2) {\n  background-color: #FFEFDE !important;\n}\n"]}]);
+exports.push([module.i, ".DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2),\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  color: white !important;\n  font-weight: bold;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) .changeType,\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) .changeType {\n  display: none !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) {\n  background-color: #fbbd08 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2).ht__highlight {\n  background-color: #CE9A00 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  background-color: #f2711c !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3).ht__highlight {\n  background-color: #CE5908 !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr .test-dataset {\n  color: red !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1) {\n  background-color: #FFFBDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1).test-dataset {\n  background-color: #DEF3FF !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2) {\n  background-color: #FFEFDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2).test-dataset {\n  background-color: #EFE7FF !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/DataTable/DataTable.less?vue&type=style&index=0&lang=less&","DataTable.less"],"names":[],"mappings":"AAAA;;EAIM,uBAAA;EACA,iBAAA;ACDN;ADJA;;EAQQ,wBAAA;ACAR;ADRA;EAaM,oCAAA;ACFN;ADKM;EACE,oCAAA;ACHR;ADdA;EAsBM,oCAAA;ACLN;ADOM;EACE,oCAAA;ACLR;ADpBA;EAgCM,qBAAA;ACTN;ADvBA;EAoCM,oCAAA;ACVN;ADYM;EACE,oCAAA;ACVR;AD7BA;EA4CM,oCAAA;ACZN;ADcM;EACE,oCAAA;ACZR","file":"DataTable.less","sourcesContent":[".DataTable {\n  .ht_clone_top_left_corner .wtHolder .htCore {\n    th:nth-of-type(2),\n    th:nth-of-type(3) {\n      color: white !important;\n      font-weight: bold;\n      \n      .changeType {\n        display: none !important;\n      }\n    }\n    \n    th:nth-of-type(2) {\n      background-color: #fbbd08 !important;\n      \n      \n      &.ht__highlight {\n        background-color: #CE9A00 !important;\n      }\n    }\n    \n    th:nth-of-type(3) {\n      background-color: #f2711c !important;\n      \n      &.ht__highlight {\n        background-color: #CE5908 !important;\n      }\n    }\n  }\n  \n  .ht_clone_left .wtHolder .htCore tbody tr {\n    .test-dataset {\n      color: red !important;\n    }\n    \n    td:nth-of-type(1) {\n      background-color: #FFFBDE !important;\n      \n      &.test-dataset {\n        background-color: #DEF3FF !important;\n      }\n    }\n    \n    td:nth-of-type(2) {\n      background-color: #FFEFDE !important;\n      \n      &.test-dataset {\n        background-color: #EFE7FF !important;\n      }\n    }\n  }\n}\n  ",".DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2),\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  color: white !important;\n  font-weight: bold;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) .changeType,\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) .changeType {\n  display: none !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) {\n  background-color: #fbbd08 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2).ht__highlight {\n  background-color: #CE9A00 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  background-color: #f2711c !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3).ht__highlight {\n  background-color: #CE5908 !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr .test-dataset {\n  color: red !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1) {\n  background-color: #FFFBDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1).test-dataset {\n  background-color: #DEF3FF !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2) {\n  background-color: #FFEFDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2).test-dataset {\n  background-color: #EFE7FF !important;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -634,6 +634,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vendors_handsontable_handsontable_plugin_rename_col_header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendors/handsontable/handsontable.plugin.rename_col_header.js */ "./src/components/DataTable/vendors/handsontable/handsontable.plugin.rename_col_header.js");
+
+
 /* harmony default export */ __webpack_exports__["default"] = (function (DataTable) {
   DataTable.data = function () {
     this.$i18n.locale = this.localConfig.locale
@@ -670,11 +673,8 @@ __webpack_require__.r(__webpack_exports__);
       hotContextMenuColumnsReadOnly,
       hotContextMenuSelectedColumnDefault,
       hotContextMenuSelectedColumnReadOnly,
-      hotDropdownMenu: [
-        'col_left', 'col_right', 
-        '---------',
-        'remove_col'
-      ]
+      hotDropdownMenu: ["col_left", "col_right", "remove_col", _vendors_handsontable_handsontable_plugin_rename_col_header_js__WEBPACK_IMPORTED_MODULE_0__["default"], 'filter_by_condition', 'filter_operators', 'filter_by_condition2', 'filter_by_value', 'filter_action_bar'],
+      
     }
   }
 });
@@ -701,16 +701,22 @@ __webpack_require__.r(__webpack_exports__);
       this.onHotBeforeContextMenuSetItems(event)
     })
     
-    
     this.hotInstance.updateSettings({
-        cells: (row, col) => {
-        let cellProperties = {};
+      cells: (row, col) => {
+        let cellProperties = {}
+        
+        if ((col === 0 || col === 1) 
+                && (this.localConfig.data[row][0] === '?')) {
+          cellProperties.className = 'test-dataset';
+        }
+        
         if (col === 1) {
           cellProperties.readOnly = true;
         }
         return cellProperties;
-        }
+      }
     })
+    
   }
   
   DataTable.methods.onHotAfterChange = function () {
@@ -835,6 +841,73 @@ var add = __webpack_require__(/*! ../../../../../node_modules/vue-style-loader/l
 var update = add("db9becd2", content, false, {});
 // Hot Module Replacement
 if(false) {}
+
+/***/ }),
+
+/***/ "./src/components/DataTable/vendors/handsontable/handsontable.plugin.rename_col_header.js":
+/*!************************************************************************************************!*\
+  !*** ./src/components/DataTable/vendors/handsontable/handsontable.plugin.rename_col_header.js ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  key: 'rename_col_header',
+  name: function name() {
+    return "Rename column header"
+  },
+  callback: function callback(event, coords, th) {
+    //this.alter('remove_col', (0, _utils2.transformSelectionToColumnDistance)(this.getSelected()), null, 'ContextMenu.removeColumn');
+    //alert('ok')
+    //console.log([event, coords, th])
+
+    let index = coords[0].start.col
+
+    let instance = this
+    let headers = instance.getColHeader()
+
+    //console.log(headers)
+
+    //headers[index] = 
+    let header = headers[index]
+    
+    //let newHeader = window.prompt('Rename column header', header)
+    let newHeader = window.prompt('Rename column header', header)
+    if (typeof(newHeader) !== 'string' || newHeader.trim() === '') {
+      return this
+    }
+
+    headers[index] = newHeader
+
+    //console.log(headers)
+
+    //console.log(instance.getColHeader())
+    instance.updateSettings({
+      modifyColWidth: () => {},
+      colHeaders: headers
+    })
+
+  },
+  disabled: function disabled() {
+    /*
+     var selected = (0, _utils.getValidSelection)(this);
+     var totalColumns = this.countCols();
+     
+     if (!selected) {
+     return true;
+     }
+     
+     return this.selection.isSelectedByRowHeader() || this.selection.isSelectedByCorner() || !this.isColumnModificationAllowed() || !totalColumns;
+     */
+    return false
+  },
+  hidden: function hidden() {
+    //return !this.getSettings().allowRemoveColumn;
+    return false
+  }
+});
 
 /***/ }),
 

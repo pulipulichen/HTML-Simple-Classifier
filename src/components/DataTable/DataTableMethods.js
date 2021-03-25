@@ -9,16 +9,22 @@ export default function (DataTable) {
       this.onHotBeforeContextMenuSetItems(event)
     })
     
-    
     this.hotInstance.updateSettings({
-        cells: (row, col) => {
-        let cellProperties = {};
+      cells: (row, col) => {
+        let cellProperties = {}
+        
+        if ((col === 0 || col === 1) 
+                && (this.localConfig.data[row][0] === '?')) {
+          cellProperties.className = 'test-dataset';
+        }
+        
         if (col === 1) {
           cellProperties.readOnly = true;
         }
         return cellProperties;
-        }
+      }
     })
+    
   }
   
   DataTable.methods.onHotAfterChange = function () {
