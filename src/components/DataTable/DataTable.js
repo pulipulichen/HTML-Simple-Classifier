@@ -11,7 +11,7 @@ let DataTable = {
   watch: { }, // DataTableWatch.js
   computed: {}, // DataTableComputed.js
   mounted() {
-    this.initTable()
+    this.initTableEvents()
   },
   methods: {} // DataTableMethods.js
 }

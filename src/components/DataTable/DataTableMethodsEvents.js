@@ -1,5 +1,24 @@
 export default function (DataTable) {
-  
+  DataTable.methods.initTableEvents = function () {
+    //console.log(this.hotInstance)
+    this.hotInstance.addHook('afterChange', () => {
+      this.onHotAfterChange()
+    })
+
+    this.hotInstance.addHook('afterOnCellMouseUp', (event) => {
+      this.onHotBeforeContextMenuSetItems(event)
+    })
+    
+    this.hotInstance.updateSettings({
+      cells: (row, col) => {
+        return this.onHotCellUpdateSettings(row, col)
+      }
+    })
+    
+    this.hotInstance.addHook('beforeChange', (event) => {
+      this.onHotBeforeChange(event[0])
+    })
+  }
   DataTable.methods.onHotAfterChange = function () {
     if (this.dataLock === true) {
       return false
@@ -65,11 +84,13 @@ export default function (DataTable) {
     let classNameList = []
 
     if ((col === 0 || col === 1) 
-            && (this.localConfig.data[row][0] === '?')) {
+            && this.localConfig.data[row]
+            && this.isMissingData(this.localConfig.data[row][0])) {
       classNameList.push('test-dataset')
     }
     
     if (col === 1
+            && this.localConfig.data[row]
             && this.localConfig.data[row][0] !== this.localConfig.data[row][1]) {
       classNameList.push('incorrect-answer')
     }
@@ -84,4 +105,28 @@ export default function (DataTable) {
     return cellProperties;
   }
   
+  DataTable.methods.onHotBeforeChange = function (changes) {
+    let row = changes[0]
+    let col = changes[1]
+    let before = changes[2]
+    let after = changes[3]
+    
+    if (this.isMissingData(before) 
+            && this.isMissingData(after)) {
+      return false
+    }
+    
+    if (col === 1) {
+      return false
+    }
+    
+    let isTrainSet = !this.isMissingData(this.localConfig.data[row][0])
+    
+    if (isTrainSet) {
+      this.clearPredictColumn()
+    }
+    else {
+      this.localConfig.data[row][1] = null
+    }
+  }
 }
