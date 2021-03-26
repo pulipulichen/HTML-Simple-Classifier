@@ -11,17 +11,7 @@ export default function (DataTable) {
     
     this.hotInstance.updateSettings({
       cells: (row, col) => {
-        let cellProperties = {}
-        
-        if ((col === 0 || col === 1) 
-                && (this.localConfig.data[row][0] === '?')) {
-          cellProperties.className = 'test-dataset';
-        }
-        
-        if (col === 1) {
-          cellProperties.readOnly = true;
-        }
-        return cellProperties;
+        return this.onHotCellUpdateSettings(row, col)
       }
     })
     
@@ -32,6 +22,7 @@ export default function (DataTable) {
       return false
     }
     let data = this.hotInstance.getData()
+    data = data.splice(0, data.length - 1)
     this.dataLock = true
     this.localConfig.data = data
     this.dataLock = false
@@ -71,5 +62,30 @@ export default function (DataTable) {
         this.hotContextMenu = this.hotContextMenuDefault
       }
     }
+  }
+  
+  DataTable.methods.onHotCellUpdateSettings = function (row, col) {
+    let cellProperties = {}
+
+    let classNameList = []
+
+    if ((col === 0 || col === 1) 
+            && (this.localConfig.data[row][0] === '?')) {
+      classNameList.push('test-dataset')
+    }
+    
+    if (col === 1
+            && this.localConfig.data[row][0] !== this.localConfig.data[row][1]) {
+      classNameList.push('incorrect-answer')
+    }
+    
+    if (classNameList.length > 0) {
+      cellProperties.className = classNameList.join(' ')
+    }
+
+    if (col === 1) {
+      cellProperties.readOnly = true;
+    }
+    return cellProperties;
   }
 }

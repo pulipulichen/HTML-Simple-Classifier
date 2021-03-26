@@ -45,7 +45,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2),\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  color: white !important;\n  font-weight: bold;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) .changeType,\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) .changeType {\n  display: none !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) {\n  background-color: #fbbd08 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2).ht__highlight {\n  background-color: #CE9A00 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  background-color: #f2711c !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3).ht__highlight {\n  background-color: #CE5908 !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr .test-dataset {\n  color: red !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1) {\n  background-color: #FFFBDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1).test-dataset {\n  background-color: #DEF3FF !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2) {\n  background-color: #FFEFDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2).test-dataset {\n  background-color: #EFE7FF !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/DataTable/DataTable.less?vue&type=style&index=0&lang=less&","DataTable.less"],"names":[],"mappings":"AAAA;;EAIM,uBAAA;EACA,iBAAA;ACDN;ADJA;;EAQQ,wBAAA;ACAR;ADRA;EAaM,oCAAA;ACFN;ADKM;EACE,oCAAA;ACHR;ADdA;EAsBM,oCAAA;ACLN;ADOM;EACE,oCAAA;ACLR;ADpBA;EAgCM,qBAAA;ACTN;ADvBA;EAoCM,oCAAA;ACVN;ADYM;EACE,oCAAA;ACVR;AD7BA;EA4CM,oCAAA;ACZN;ADcM;EACE,oCAAA;ACZR","file":"DataTable.less","sourcesContent":[".DataTable {\n  .ht_clone_top_left_corner .wtHolder .htCore {\n    th:nth-of-type(2),\n    th:nth-of-type(3) {\n      color: white !important;\n      font-weight: bold;\n      \n      .changeType {\n        display: none !important;\n      }\n    }\n    \n    th:nth-of-type(2) {\n      background-color: #fbbd08 !important;\n      \n      \n      &.ht__highlight {\n        background-color: #CE9A00 !important;\n      }\n    }\n    \n    th:nth-of-type(3) {\n      background-color: #f2711c !important;\n      \n      &.ht__highlight {\n        background-color: #CE5908 !important;\n      }\n    }\n  }\n  \n  .ht_clone_left .wtHolder .htCore tbody tr {\n    .test-dataset {\n      color: red !important;\n    }\n    \n    td:nth-of-type(1) {\n      background-color: #FFFBDE !important;\n      \n      &.test-dataset {\n        background-color: #DEF3FF !important;\n      }\n    }\n    \n    td:nth-of-type(2) {\n      background-color: #FFEFDE !important;\n      \n      &.test-dataset {\n        background-color: #EFE7FF !important;\n      }\n    }\n  }\n}\n  ",".DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2),\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  color: white !important;\n  font-weight: bold;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) .changeType,\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) .changeType {\n  display: none !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) {\n  background-color: #fbbd08 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2).ht__highlight {\n  background-color: #CE9A00 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  background-color: #f2711c !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3).ht__highlight {\n  background-color: #CE5908 !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr .test-dataset {\n  color: red !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1) {\n  background-color: #FFFBDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1).test-dataset {\n  background-color: #DEF3FF !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2) {\n  background-color: #FFEFDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2).test-dataset {\n  background-color: #EFE7FF !important;\n}\n"]}]);
+exports.push([module.i, ".DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2),\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  color: white !important;\n  font-weight: bold;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) .changeType,\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) .changeType {\n  display: none !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) {\n  background-color: #fbbd08 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2).ht__highlight {\n  background-color: #CE9A00 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  background-color: #f2711c !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3).ht__highlight {\n  background-color: #CE5908 !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr .test-dataset {\n  color: red !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1) {\n  background-color: #FFFBDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1).test-dataset {\n  background-color: #DEF3FF !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2) {\n  background-color: #FFEFDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2).test-dataset {\n  background-color: #EFE7FF !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2).incorrect-answer {\n  color: red !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/DataTable/DataTable.less?vue&type=style&index=0&lang=less&","DataTable.less"],"names":[],"mappings":"AAAA;;EAIM,uBAAA;EACA,iBAAA;ACDN;ADJA;;EAQQ,wBAAA;ACAR;ADRA;EAaM,oCAAA;ACFN;ADKM;EACE,oCAAA;ACHR;ADdA;EAsBM,oCAAA;ACLN;ADOM;EACE,oCAAA;ACLR;ADpBA;EAgCM,qBAAA;ACTN;ADvBA;EAoCM,oCAAA;ACVN;ADYM;EACE,oCAAA;ACVR;AD7BA;EA4CM,oCAAA;ACZN;ADcM;EACE,oCAAA;ACZR;ADeM;EACE,qBAAA;ACbR","file":"DataTable.less","sourcesContent":[".DataTable {\n  .ht_clone_top_left_corner .wtHolder .htCore {\n    th:nth-of-type(2),\n    th:nth-of-type(3) {\n      color: white !important;\n      font-weight: bold;\n      \n      .changeType {\n        display: none !important;\n      }\n    }\n    \n    th:nth-of-type(2) {\n      background-color: #fbbd08 !important;\n      \n      \n      &.ht__highlight {\n        background-color: #CE9A00 !important;\n      }\n    }\n    \n    th:nth-of-type(3) {\n      background-color: #f2711c !important;\n      \n      &.ht__highlight {\n        background-color: #CE5908 !important;\n      }\n    }\n  }\n  \n  .ht_clone_left .wtHolder .htCore tbody tr {\n    .test-dataset {\n      color: red !important;\n    }\n    \n    td:nth-of-type(1) {\n      background-color: #FFFBDE !important;\n      \n      &.test-dataset {\n        background-color: #DEF3FF !important;\n      }\n    }\n    \n    td:nth-of-type(2) {\n      background-color: #FFEFDE !important;\n      \n      &.test-dataset {\n        background-color: #EFE7FF !important;\n      }\n      \n      &.incorrect-answer {\n        color: red !important;\n      }\n    }\n  }\n}\n  ",".DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2),\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  color: white !important;\n  font-weight: bold;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) .changeType,\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) .changeType {\n  display: none !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2) {\n  background-color: #fbbd08 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(2).ht__highlight {\n  background-color: #CE9A00 !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3) {\n  background-color: #f2711c !important;\n}\n.DataTable .ht_clone_top_left_corner .wtHolder .htCore th:nth-of-type(3).ht__highlight {\n  background-color: #CE5908 !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr .test-dataset {\n  color: red !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1) {\n  background-color: #FFFBDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(1).test-dataset {\n  background-color: #DEF3FF !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2) {\n  background-color: #FFEFDE !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2).test-dataset {\n  background-color: #EFE7FF !important;\n}\n.DataTable .ht_clone_left .wtHolder .htCore tbody tr td:nth-of-type(2).incorrect-answer {\n  color: red !important;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -383,6 +383,7 @@ var render = function() {
           colHeaders: _vm.localConfig.headers,
           fixedColumnsLeft: 2,
           manualColumnFreeze: false,
+          filters: true,
           contextMenu: _vm.hotContextMenu,
           minSpareRows: 1,
           dropdownMenu: _vm.hotDropdownMenu
@@ -703,17 +704,7 @@ __webpack_require__.r(__webpack_exports__);
     
     this.hotInstance.updateSettings({
       cells: (row, col) => {
-        let cellProperties = {}
-        
-        if ((col === 0 || col === 1) 
-                && (this.localConfig.data[row][0] === '?')) {
-          cellProperties.className = 'test-dataset';
-        }
-        
-        if (col === 1) {
-          cellProperties.readOnly = true;
-        }
-        return cellProperties;
+        return this.onHotCellUpdateSettings(row, col)
       }
     })
     
@@ -724,6 +715,7 @@ __webpack_require__.r(__webpack_exports__);
       return false
     }
     let data = this.hotInstance.getData()
+    data = data.splice(0, data.length - 1)
     this.dataLock = true
     this.localConfig.data = data
     this.dataLock = false
@@ -764,6 +756,31 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   }
+  
+  DataTable.methods.onHotCellUpdateSettings = function (row, col) {
+    let cellProperties = {}
+
+    let classNameList = []
+
+    if ((col === 0 || col === 1) 
+            && (this.localConfig.data[row][0] === '?')) {
+      classNameList.push('test-dataset')
+    }
+    
+    if (col === 1
+            && this.localConfig.data[row][0] !== this.localConfig.data[row][1]) {
+      classNameList.push('incorrect-answer')
+    }
+    
+    if (classNameList.length > 0) {
+      cellProperties.className = classNameList.join(' ')
+    }
+
+    if (col === 1) {
+      cellProperties.readOnly = true;
+    }
+    return cellProperties;
+  }
 });
 
 /***/ }),
@@ -786,7 +803,7 @@ __webpack_require__.r(__webpack_exports__);
       return false
     }
     this.dataLock = true
-    this.hotInstance.loadData(this.localConfig.data);
+    this.hotInstance.loadData(this.localConfig.data)
     this.dataLock = false
   }
 //  

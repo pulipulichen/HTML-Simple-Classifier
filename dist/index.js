@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"ConfigurationPanel":"ConfigurationPanel","vendors/semantic-ui-niwsf":"vendors/semantic-ui-niwsf","vendors~DataTable":"vendors~DataTable","DataTable":"DataTable","vendors~NavigationBar":"vendors~NavigationBar","NavigationBar":"NavigationBar"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"ConfigurationPanel":"ConfigurationPanel","vendors/semantic-ui-niwsf":"vendors/semantic-ui-niwsf","vendors~DataTable":"vendors~DataTable","DataTable":"DataTable","vendors~NavigationBar":"vendors~NavigationBar","NavigationBar":"NavigationBar","classifiers/DecisionTree":"classifiers/DecisionTree"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -2102,7 +2102,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".Index[data-v-82b7485c] {\n  height: 100vh;\n}\n.content[data-v-82b7485c] {\n  margin-top: calc(2.85714286em + 2px);\n}\n.content .column[data-v-82b7485c] {\n  display: inline-block;\n  height: calc(100vh - 2.85714286em - 1.15rem);\n}\n.content .data-table[data-v-82b7485c] {\n  width: 100vw;\n  max-width: 100vw;\n  overflow: auto;\n}\n.content .configuration-panel[data-v-82b7485c] {\n  width: 20rem;\n  display: none;\n  background-color: #CCC;\n  box-shadow: 0 0 1rem 1rem #DDD;\n  position: relative;\n  z-index: 100;\n}\n.content.show-configuration-panel .data-table[data-v-82b7485c] {\n  width: calc(100vw - 20rem - 0px);\n  max-width: calc(100vw - 20rem - 0px);\n  float: left;\n}\n.content.show-configuration-panel .configuration-panel[data-v-82b7485c] {\n  display: inline-block;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/Index.less?vue&type=style&index=0&id=82b7485c&lang=less&scoped=true&","Index.less"],"names":[],"mappings":"AAAA;EAEE,aAAA;ACAF;ADIA;EACE,oCAAA;ACFF;ADCA;EAKI,qBAAA;EACA,4CAAA;ACHJ;ADHA;EAYI,YAAA;EACA,gBAAA;EACA,cAAA;ACNJ;ADRA;EAkBI,YAAA;EAEA,aAAA;EAGA,sBAAA;EACA,8BAAA;EAEA,kBAAA;EACA,YAAA;ACXJ;ADcE;EAGI,gCAAA;EACA,oCAAA;EACA,WAAA;ACdN;ADSE;EASI,qBAAA;ACfN","file":"Index.less","sourcesContent":[".Index {\n  //background-color: #e1f7f7;\n  height: 100vh;\n  //border: 1px solid #ccc;\n}\n\n.content {\n  margin-top: calc(2.85714286em + 2px);\n  \n  .column {\n    //border: 1px solid green;\n    display: inline-block;\n    height: calc(100vh - 2.85714286em - 1.15rem);\n  }\n  \n  @ConfigurationPanelWidth: 20rem;\n  \n  .data-table {\n    width: 100vw;\n    max-width: 100vw;\n    overflow: auto;\n  }\n  \n  .configuration-panel {\n    width: @ConfigurationPanelWidth;\n    \n    display: none;\n    \n    @ConfigurationPanelBackgroundColor: #CCC;\n    background-color: @ConfigurationPanelBackgroundColor;\n    box-shadow: 0 0 1rem 1rem #DDD;\n    \n    position: relative;\n    z-index: 100;\n  }\n  \n  &.show-configuration-panel {\n    .data-table {\n      @ColumnMargin: 0px;\n      width: calc(100vw - @ConfigurationPanelWidth - @ColumnMargin);\n      max-width: calc(100vw - @ConfigurationPanelWidth - @ColumnMargin);\n      float: left;\n    }\n    \n    .configuration-panel {\n      display: inline-block;\n    }\n  }\n}",".Index {\n  height: 100vh;\n}\n.content {\n  margin-top: calc(2.85714286em + 2px);\n}\n.content .column {\n  display: inline-block;\n  height: calc(100vh - 2.85714286em - 1.15rem);\n}\n.content .data-table {\n  width: 100vw;\n  max-width: 100vw;\n  overflow: auto;\n}\n.content .configuration-panel {\n  width: 20rem;\n  display: none;\n  background-color: #CCC;\n  box-shadow: 0 0 1rem 1rem #DDD;\n  position: relative;\n  z-index: 100;\n}\n.content.show-configuration-panel .data-table {\n  width: calc(100vw - 20rem - 0px);\n  max-width: calc(100vw - 20rem - 0px);\n  float: left;\n}\n.content.show-configuration-panel .configuration-panel {\n  display: inline-block;\n}\n"]}]);
+exports.push([module.i, ".Index[data-v-82b7485c] {\n  height: 100vh;\n}\n.content[data-v-82b7485c] {\n  margin-top: 2.9rem;\n}\n.content .column[data-v-82b7485c] {\n  display: inline-block;\n  height: calc(100vh - 2.85714286em - 1.15rem);\n}\n.content .data-table[data-v-82b7485c] {\n  width: 100vw;\n  max-width: 100vw;\n  overflow: auto;\n}\n.content .configuration-panel[data-v-82b7485c] {\n  width: 20rem;\n  display: none;\n  background-color: #CCC;\n  box-shadow: 0 0 1rem 1rem #DDD;\n  position: relative;\n  z-index: 100;\n}\n.content.show-configuration-panel .data-table[data-v-82b7485c] {\n  width: calc(100vw - 20rem - 0px);\n  max-width: calc(100vw - 20rem - 0px);\n  float: left;\n}\n.content.show-configuration-panel .configuration-panel[data-v-82b7485c] {\n  display: inline-block;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/Index.less?vue&type=style&index=0&id=82b7485c&lang=less&scoped=true&","Index.less"],"names":[],"mappings":"AAAA;EAEE,aAAA;ACAF;ADIA;EACE,kBAAA;ACFF;ADCA;EAKI,qBAAA;EACA,4CAAA;ACHJ;ADHA;EAYI,YAAA;EACA,gBAAA;EACA,cAAA;ACNJ;ADRA;EAkBI,YAAA;EAEA,aAAA;EAGA,sBAAA;EACA,8BAAA;EAEA,kBAAA;EACA,YAAA;ACXJ;ADcE;EAGI,gCAAA;EACA,oCAAA;EACA,WAAA;ACdN;ADSE;EASI,qBAAA;ACfN","file":"Index.less","sourcesContent":[".Index {\n  //background-color: #e1f7f7;\n  height: 100vh;\n  //border: 1px solid #ccc;\n}\n\n.content {\n  margin-top: 2.9rem;\n  \n  .column {\n    //border: 1px solid green;\n    display: inline-block;\n    height: calc(100vh - 2.85714286em - 1.15rem);\n  }\n  \n  @ConfigurationPanelWidth: 20rem;\n  \n  .data-table {\n    width: 100vw;\n    max-width: 100vw;\n    overflow: auto;\n  }\n  \n  .configuration-panel {\n    width: @ConfigurationPanelWidth;\n    \n    display: none;\n    \n    @ConfigurationPanelBackgroundColor: #CCC;\n    background-color: @ConfigurationPanelBackgroundColor;\n    box-shadow: 0 0 1rem 1rem #DDD;\n    \n    position: relative;\n    z-index: 100;\n  }\n  \n  &.show-configuration-panel {\n    .data-table {\n      @ColumnMargin: 0px;\n      width: calc(100vw - @ConfigurationPanelWidth - @ColumnMargin);\n      max-width: calc(100vw - @ConfigurationPanelWidth - @ColumnMargin);\n      float: left;\n    }\n    \n    .configuration-panel {\n      display: inline-block;\n    }\n  }\n}",".Index {\n  height: 100vh;\n}\n.content {\n  margin-top: 2.9rem;\n}\n.content .column {\n  display: inline-block;\n  height: calc(100vh - 2.85714286em - 1.15rem);\n}\n.content .data-table {\n  width: 100vw;\n  max-width: 100vw;\n  overflow: auto;\n}\n.content .configuration-panel {\n  width: 20rem;\n  display: none;\n  background-color: #CCC;\n  box-shadow: 0 0 1rem 1rem #DDD;\n  position: relative;\n  z-index: 100;\n}\n.content.show-configuration-panel .data-table {\n  width: calc(100vw - 20rem - 0px);\n  max-width: calc(100vw - 20rem - 0px);\n  float: left;\n}\n.content.show-configuration-panel .configuration-panel {\n  display: inline-block;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -2138,7 +2138,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".LoadingLayer[data-v-6ee23722] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 9999;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: white;\n  font-weight: bold;\n  font-size: 3rem;\n  padding-top: calc(50vh - 4rem);\n  line-height: 4rem;\n  text-align: center;\n  width: 100vw;\n  height: 100vh;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/LoadingLayer/LoadingLayer.less?vue&type=style&index=0&id=6ee23722&lang=less&scoped=true&","LoadingLayer.less"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,MAAA;EACA,OAAA;EACA,aAAA;EACA,oCAAA;EACA,YAAA;EACA,iBAAA;EAEA,eAAA;EACA,8BAAA;EACA,iBAAA;EACA,kBAAA;EACA,YAAA;EACA,aAAA;ACAF","file":"LoadingLayer.less","sourcesContent":[".LoadingLayer {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 9999;\n  background-color: rgba(0,0,0,0.5);\n  color: white;\n  font-weight: bold;\n  \n  font-size: 3rem;\n  padding-top: calc(50vh - 4rem);\n  line-height: 4rem;\n  text-align: center;\n  width: 100vw;\n  height: 100vh;\n  \n}",".LoadingLayer {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 9999;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: white;\n  font-weight: bold;\n  font-size: 3rem;\n  padding-top: calc(50vh - 4rem);\n  line-height: 4rem;\n  text-align: center;\n  width: 100vw;\n  height: 100vh;\n}\n"]}]);
+exports.push([module.i, ".LoadingLayer[data-v-6ee23722] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 9999;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: white;\n  font-weight: bold;\n  cursor: wait;\n  user-select: none;\n  font-size: 3rem;\n  padding-top: calc(50vh - 4rem);\n  line-height: 4rem;\n  text-align: center;\n  width: 100vw;\n  height: 100vh;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/LoadingLayer/LoadingLayer.less?vue&type=style&index=0&id=6ee23722&lang=less&scoped=true&","LoadingLayer.less"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,MAAA;EACA,OAAA;EACA,aAAA;EACA,oCAAA;EACA,YAAA;EACA,iBAAA;EACA,YAAA;EACA,iBAAA;EAEA,eAAA;EACA,8BAAA;EACA,iBAAA;EACA,kBAAA;EACA,YAAA;EACA,aAAA;ACAF","file":"LoadingLayer.less","sourcesContent":[".LoadingLayer {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 9999;\n  background-color: rgba(0,0,0,0.5);\n  color: white;\n  font-weight: bold;\n  cursor: wait;\n  user-select: none;\n  \n  font-size: 3rem;\n  padding-top: calc(50vh - 4rem);\n  line-height: 4rem;\n  text-align: center;\n  width: 100vw;\n  height: 100vh;\n  \n}",".LoadingLayer {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 9999;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: white;\n  font-weight: bold;\n  cursor: wait;\n  user-select: none;\n  font-size: 3rem;\n  padding-top: calc(50vh - 4rem);\n  line-height: 4rem;\n  text-align: center;\n  width: 100vw;\n  height: 100vh;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -15855,7 +15855,6 @@ var render = function() {
     "div",
     { staticClass: "Index" },
     [
-      _vm._v("\r\n  " + _vm._s(_vm.config.urlGithub) + "\r\n  \r\n  "),
       _c("NavigationBar", {
         ref: "NavigationBar",
         attrs: {
@@ -15948,12 +15947,15 @@ var render = function() {
   return _vm.config.loadingProgress < 1
     ? _c("div", { staticClass: "LoadingLayer" }, [
         _vm._v("\n  " + _vm._s(_vm.$t("Now loading...")) + "\n  "),
-        _c("br"),
-        _vm._v(
-          "\n  (" +
-            _vm._s(Math.floor(_vm.config.loadingProgress * 100)) +
-            "%)\n"
-        )
+        _vm.config.loadingProgress > 0
+          ? _c("div", [
+              _vm._v(
+                "\n    (" +
+                  _vm._s(Math.floor(_vm.config.loadingProgress * 100)) +
+                  "%)\n  "
+              )
+            ])
+          : _vm._e()
       ])
     : _vm._e()
 }
@@ -28785,11 +28787,14 @@ let config = {
   },
   
   inited: false,
+  loadingProgress: 1,
   urlGithub: 'https://github.com/pulipulichen/HTML-Simple-Classifier/',
   urlIssue: 'https://github.com/pulipulichen/HTML-Simple-Classifier/issues/new',
   
-  //demoData: 'weather.class.csv'
-  demoData: 'weather.play.ods'
+  demoData: 'weather.class.csv'
+  //demoData: 'weather.play.ods'
+  //demoData: 'labor.csv'
+  //demoData: 'unbalanced.csv'
 }
 
 
@@ -29208,6 +29213,7 @@ let localConfig = {
   data: [],
   headers: [],
   classFieldName: 'class',
+  classDataType: 'nominal',
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (localConfig);

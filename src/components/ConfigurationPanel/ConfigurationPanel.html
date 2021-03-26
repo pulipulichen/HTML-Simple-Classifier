@@ -1,3 +1,22 @@
-<div>
+<div class="ui form">
+  <div class="ui field">
+    <label for="ClassFieldName">
+      {{ $t('Class') }}
+    </label>
+    <select v-model="localConfig.classFieldName"
+            if="ClassFieldName">
+      <option v-for="header in headers"
+              v-bind:value="header">
+        {{ header }}
+      </option>
+    </select>
+  </div>
+    
   
+  <DecisionTree 
+    ref="DecisionTree"
+    v-bind:config="config"
+    v-bind:localConfig="localConfig"
+    v-bind:utils="utils">
+  </DecisionTree>
 </div>

@@ -5,6 +5,7 @@ let localConfig = {
   data: [],
   headers: [],
   classFieldName: 'class',
+  classDataType: 'nominal',
 }
 
 export default localConfig

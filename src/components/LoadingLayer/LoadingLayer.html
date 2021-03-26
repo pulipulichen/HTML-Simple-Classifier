@@ -1,6 +1,7 @@
 <div class="LoadingLayer"
      v-if="config.loadingProgress < 1">
   {{ $t('Now loading...') }}
-  <br />
-  ({{ Math.floor(config.loadingProgress*100) }}%)
+  <div v-if="config.loadingProgress > 0">
+    ({{ Math.floor(config.loadingProgress*100) }}%)
+  </div>
 </div>

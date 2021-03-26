@@ -11,10 +11,18 @@ export default function (NavigationBar) {
   }
   
   NavigationBar.methods.loadDemo = async function () {
+    this.config.loadingProgress = 0
     let rawData = await this.loadDemoData()
-    let orderedData = await this.orderColumns(rawData)
+    this.config.loadingProgress = 0.5
+    let detectResult = this.detectClassField(rawData)
+    //console.log(detectResult)
+    let orderedData = await this.orderColumns(rawData, detectResult.classFieldIndex)
+    this.config.loadingProgress = 0.75
+    
+    this.localConfig.classFieldName = detectResult.classFieldName    
     this.localConfig.headers = orderedData[0]
     this.localConfig.data = orderedData.splice(1)
+    this.config.loadingProgress = 1
   }
   
   NavigationBar.methods.loadDemoData = async function () {
@@ -28,12 +36,15 @@ export default function (NavigationBar) {
     }
   }
   
-  NavigationBar.methods.orderColumns = async function (data) {
+  NavigationBar.methods.detectClassField = function (data) {
     let headers = data[0]
     
     if (headers[1] === 'predict') {
       // 已經被調整好了，不用再整理
-      return data
+      return {
+        classFieldName: headers[0],
+        classFieldIndex: 0
+      }
     }
     
     // ---------------------------
@@ -49,14 +60,23 @@ export default function (NavigationBar) {
       if (index > -1) {
         classFieldIndex = index
         classFieldName = name
+        break
       }
     }
+    //console.log(classFieldName, classFieldIndex)
     
     if (classFieldIndex === -1) {
       classFieldIndex = headers.length - 1
       classFieldName = headers[classFieldIndex]
     }
     
+    return {
+      classFieldName,
+      classFieldIndex
+    }
+  }
+  
+  NavigationBar.methods.orderColumns = async function (data, classFieldIndex) {
     // ---------------------------
     // 開始大遷移
     for (let rowLen = data.length, r = rowLen; r > 0; r--) {

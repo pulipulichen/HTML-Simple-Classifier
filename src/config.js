@@ -8,11 +8,14 @@ let config = {
   },
   
   inited: false,
+  loadingProgress: 1,
   urlGithub: 'https://github.com/pulipulichen/HTML-Simple-Classifier/',
   urlIssue: 'https://github.com/pulipulichen/HTML-Simple-Classifier/issues/new',
   
-  //demoData: 'weather.class.csv'
-  demoData: 'weather.play.ods'
+  demoData: 'weather.class.csv'
+  //demoData: 'weather.play.ods'
+  //demoData: 'labor.csv'
+  //demoData: 'unbalanced.csv'
 }
 
 import styleConfig from './styles/style.config.js'

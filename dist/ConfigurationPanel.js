@@ -49,7 +49,65 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "div",
+    { staticClass: "ui form" },
+    [
+      _c("div", { staticClass: "ui field" }, [
+        _c("label", { attrs: { for: "ClassFieldName" } }, [
+          _vm._v("\n      " + _vm._s(_vm.$t("Class")) + "\n    ")
+        ]),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.localConfig.classFieldName,
+                expression: "localConfig.classFieldName"
+              }
+            ],
+            attrs: { if: "ClassFieldName" },
+            on: {
+              change: function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.$set(
+                  _vm.localConfig,
+                  "classFieldName",
+                  $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                )
+              }
+            }
+          },
+          _vm._l(_vm.headers, function(header) {
+            return _c("option", { domProps: { value: header } }, [
+              _vm._v("\n        " + _vm._s(header) + "\n      ")
+            ])
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _c("DecisionTree", {
+        ref: "DecisionTree",
+        attrs: {
+          config: _vm.config,
+          localConfig: _vm.localConfig,
+          utils: _vm.utils
+        }
+      })
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -107,12 +165,16 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-let TemplateExample = {
+/* harmony import */ var _ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ConfigurationPanelMethodsData.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsData.js");
+let ConfigurationPanel = {
   props: ['config', 'localConfig', 'utils'],
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
     }
+  },
+  components: {
+    DecisionTree: () => __webpack_require__.e(/*! import() | classifiers/DecisionTree */ "classifiers/DecisionTree").then(__webpack_require__.bind(null, /*! ./DecisionTree/DecisionTree.vue */ "./src/components/ConfigurationPanel/DecisionTree/DecisionTree.vue")),
   },
   watch: {
     'localConfig.locale'() {
@@ -120,17 +182,20 @@ let TemplateExample = {
     },
   },
   computed: {
-    
+    headers () {
+      return this.localConfig.headers.filter(header => header !== 'predict')
+    }
   },
   mounted() {
     
   },
-  methods: {
-    
-  }
+  methods: {}
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (TemplateExample);
+
+Object(_ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_0__["default"])(ConfigurationPanel)
+
+/* harmony default export */ __webpack_exports__["default"] = (ConfigurationPanel);
 
 /***/ }),
 
@@ -221,6 +286,82 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_ConfigurationPanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CConfigurationPanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_ConfigurationPanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CConfigurationPanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_ConfigurationPanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CConfigurationPanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_ConfigurationPanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CConfigurationPanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
  /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_ConfigurationPanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CConfigurationPanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsData.js":
+/*!****************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/ConfigurationPanelMethodsData.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (ConfigurationPanel) {
+  ConfigurationPanel.methods.getJSONData = async function () {
+    let headers = this.localConfig.headers
+    let trainSet = []
+    let testSet = []
+    
+    for (let len = this.localConfig.data.length, i = len; i > 0; i--) {
+      let row = this.localConfig.data[(len - i)]
+      let trainJSON = {}
+      let testJSON = {}
+      
+      let isTrainingSet = true
+      
+      headers.forEach((header, i) => {
+        if (header === 'predict') {
+          return false
+        }
+        
+        if (i === 0 && row[i] === '?') {
+          isTrainingSet = false
+          trainJSON[header] = row[i]
+          return false
+        }
+        
+        trainJSON[header] = row[i]
+        if (header !== this.localConfig.classFieldName) {
+          testJSON[header] = row[i]
+        }
+        
+      })
+      
+      if (isTrainingSet) {
+        trainSet.push(trainJSON)
+        testSet.push(testJSON)
+      }
+      else {
+        testSet.push(testJSON)
+      }
+      
+      if (i % 10 === 5) {
+        await this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    
+    return {
+      trainSet,
+      testSet
+    }
+  }
+  
+  ConfigurationPanel.methods.setPredictResults = async function (predictResults) {
+    let data = this.localConfig.data
+    for (let len = data.length, i = len; i > 0; i--) {
+      let index = (len - i)
+      //let row = data[index]
+      data[index][1] = predictResults[index]
+      if (i % 10 === 5) {
+        await this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    this.localConfig.data = this.localConfig.data.splice(0,0).concat(data)
+    //console.log(data)
+  }
+});
 
 /***/ })
 

@@ -7,7 +7,7 @@ export default function (DataTable) {
       return false
     }
     this.dataLock = true
-    this.hotInstance.loadData(this.localConfig.data);
+    this.hotInstance.loadData(this.localConfig.data)
     this.dataLock = false
   }
 //  

@@ -38,7 +38,7 @@ module.exports = function (Component) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "img[data-v-1d5bd9e2] {\n  width: 2.5em;\n  height: auto;\n}\n.menu[data-v-1d5bd9e2] {\n  z-index: 99999 !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","NavigationBar.less"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,YAAA;ACCF;ADEA;EACE,yBAAA;ACAF","file":"NavigationBar.less","sourcesContent":["img {\n  width: 2.5em;\n  height: auto;\n}\n\n.menu {\n  z-index: 99999 !important;\n}","img {\n  width: 2.5em;\n  height: auto;\n}\n.menu {\n  z-index: 99999 !important;\n}\n"]}]);
+exports.push([module.i, "img[data-v-1d5bd9e2] {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu[data-v-1d5bd9e2] {\n  z-index: 99999 !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","NavigationBar.less"],"names":[],"mappings":"AAAA;EACE,wBAAA;EACA,YAAA;ACCF;ADEA;EACE,yBAAA;ACAF","file":"NavigationBar.less","sourcesContent":["img {\n  width: 1.5rem !important;\n  height: auto;\n}\n\n.menu {\n  z-index: 99999 !important;\n}","img {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu {\n  z-index: 99999 !important;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -79,18 +79,22 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "right menu" }, [
-        _c("div", { staticClass: "ui right aligned category search item" }, [
-          _c("div", { staticClass: "ui icon input" }, [
-            _c("input", {
-              staticClass: "prompt",
-              attrs: { type: "text", placeholder: _vm.$t("Search...") }
-            }),
+        _c(
+          "div",
+          { staticClass: "ui right mini aligned category search item" },
+          [
+            _c("div", { staticClass: "ui icon input" }, [
+              _c("input", {
+                staticClass: "prompt",
+                attrs: { type: "text", placeholder: _vm.$t("Search...") }
+              }),
+              _vm._v(" "),
+              _c("i", { staticClass: "search link icon" })
+            ]),
             _vm._v(" "),
-            _c("i", { staticClass: "search link icon" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "results" })
-        ]),
+            _c("div", { staticClass: "results" })
+          ]
+        ),
         _vm._v(" "),
         _c(
           "a",
@@ -327,10 +331,18 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   NavigationBar.methods.loadDemo = async function () {
+    this.config.loadingProgress = 0
     let rawData = await this.loadDemoData()
-    let orderedData = await this.orderColumns(rawData)
+    this.config.loadingProgress = 0.5
+    let detectResult = this.detectClassField(rawData)
+    //console.log(detectResult)
+    let orderedData = await this.orderColumns(rawData, detectResult.classFieldIndex)
+    this.config.loadingProgress = 0.75
+    
+    this.localConfig.classFieldName = detectResult.classFieldName    
     this.localConfig.headers = orderedData[0]
     this.localConfig.data = orderedData.splice(1)
+    this.config.loadingProgress = 1
   }
   
   NavigationBar.methods.loadDemoData = async function () {
@@ -344,12 +356,15 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
   
-  NavigationBar.methods.orderColumns = async function (data) {
+  NavigationBar.methods.detectClassField = function (data) {
     let headers = data[0]
     
     if (headers[1] === 'predict') {
       // 已經被調整好了，不用再整理
-      return data
+      return {
+        classFieldName: headers[0],
+        classFieldIndex: 0
+      }
     }
     
     // ---------------------------
@@ -365,14 +380,23 @@ __webpack_require__.r(__webpack_exports__);
       if (index > -1) {
         classFieldIndex = index
         classFieldName = name
+        break
       }
     }
+    //console.log(classFieldName, classFieldIndex)
     
     if (classFieldIndex === -1) {
       classFieldIndex = headers.length - 1
       classFieldName = headers[classFieldIndex]
     }
     
+    return {
+      classFieldName,
+      classFieldIndex
+    }
+  }
+  
+  NavigationBar.methods.orderColumns = async function (data, classFieldIndex) {
     // ---------------------------
     // 開始大遷移
     for (let rowLen = data.length, r = rowLen; r > 0; r--) {

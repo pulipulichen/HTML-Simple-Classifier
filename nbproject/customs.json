@@ -6,23 +6,31 @@
     "LoadingLayer": {}
   },
   "attributes": {
-    "v-bind:class": {},
-    "v-if": {},
-    "v-bind:data": {},
-    "src": {},
+    "v-bind:filters": {},
     "v-bind:rowHeaders": {},
     "v-bind:localConfig": {},
     "v-bind:src": {
       "context": "img"
     },
     "title": {},
+    "v-model": {},
     "ref": {},
-    "scoped": {},
-    "v-on:click": {},
-    "v-bind:colHeaders": {},
     "v-bind:config": {},
     "lang": {},
     "read-only": {},
+    "v-bind:class": {},
+    "v-if": {},
+    "v-bind:dropdownMenu": {},
+    "v-bind:data": {},
+    "v-bind:fixedColumnsLeft": {},
+    "src": {},
+    "v-for": {},
+    "v-bind:contextMenu": {},
+    "v-bind:manualColumnFreeze": {},
+    "scoped": {},
+    "v-on:click": {},
+    "v-bind:minSpareRows": {},
+    "v-bind:colHeaders": {},
     "v-bind:utils": {},
     "v-bind:placeholder": {}
   }
