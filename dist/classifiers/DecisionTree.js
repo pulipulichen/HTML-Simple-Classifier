@@ -141,8 +141,6 @@ let DecisionTree = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
-      model: null,
-      accuracy: null
     }
   },
   watch: {
@@ -273,9 +271,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (DecisionTree) {
   DecisionTree.methods.start = async function () {
     let data = await this.$parent.getJSONData()
-    this.model = this.buildModel(data.trainSet)
     
-    let predictResults = await this.getPredictResults(this.model, data.testSet)
+    let model
+    if (!this.localConfig.modelJSON) {
+      model = this.buildModel(data.trainSet)
+      this.localConfig.modelJSON = JSON.stringify(model.root)
+    }
+    else {
+      model = this.buildModel([])
+      model.root = JSON.parse(this.localConfig.modelJSON)
+    }
+    let predictResults = await this.getPredictResults(model, data.testSet)
     //console.log(predictResults)
     this.$parent.setPredictResults(predictResults)
   }
@@ -284,9 +290,9 @@ __webpack_require__.r(__webpack_exports__);
     
     // Configuration
     var config = {
-        trainingSet: trainSet, 
-        categoryAttr: this.localConfig.classFieldName, 
-        //ignoredAttributes: ['person']
+      trainingSet: trainSet, 
+      categoryAttr: this.localConfig.classFieldName, 
+      //ignoredAttributes: ['person']
     };
 
     // Building Decision Tree

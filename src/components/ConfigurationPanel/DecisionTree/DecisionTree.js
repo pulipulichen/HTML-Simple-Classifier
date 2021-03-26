@@ -3,8 +3,6 @@ let DecisionTree = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
-      model: null,
-      accuracy: null
     }
   },
   watch: {

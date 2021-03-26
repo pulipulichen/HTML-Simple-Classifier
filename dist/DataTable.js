@@ -958,6 +958,7 @@ __webpack_require__.r(__webpack_exports__);
     let isTrainSet = !this.isMissingData(this.localConfig.data[row][0])
     
     if (isTrainSet) {
+      this.localConfig.modelJSON = null
       this.clearPredictColumn()
     }
     else {
