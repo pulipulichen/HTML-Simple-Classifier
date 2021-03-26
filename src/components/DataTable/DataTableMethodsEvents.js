@@ -99,13 +99,13 @@ export default function (DataTable) {
       cellProperties.className = classNameList.join(' ')
     }
 
-    if (col === 1 && this.lockPredictColumn) {
+    if (col === 1 && this.predictColumnLocker) {
       cellProperties.readOnly = true;
     }
     return cellProperties;
   }
   
-  DataTable.methods.onHotBeforeChange = function (changes) {
+  DataTable.methods.onHotBeforeChange = async function (changes) {
     let row = changes[0]
     let col = changes[1]
     let before = changes[2]
@@ -122,8 +122,10 @@ export default function (DataTable) {
     
     let isTrainSet = !this.isMissingData(this.localConfig.data[row][0])
     
+    console.log(this.localConfig.data[row][0])
     if (isTrainSet) {
       this.localConfig.modelJSON = null
+      await this.utils.AsyncUtils.sleep()
       this.clearPredictColumn()
     }
     else {

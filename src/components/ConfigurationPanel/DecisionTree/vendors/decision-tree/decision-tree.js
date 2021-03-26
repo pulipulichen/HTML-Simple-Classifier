@@ -23,12 +23,18 @@ var dt = (function () {
         this.inited = true
       })()
     }
-          
-    DecisionTree.prototype.predict = async function (item) {
+    
+    DecisionTree.prototype.waitReady = async function () {
       //console.log(item)
       while (this.inited === false) {
         await sleep(50)
       }
+      return true
+    }
+          
+    DecisionTree.prototype.predict = async function (item) {
+      //console.log(item)
+      await this.waitReady()
       //console.log(item)
       return predict(this.root, item);
     }
@@ -357,7 +363,8 @@ var dt = (function () {
 
             predicate = tree.predicate;
             if (!predicate) {
-              return undefined
+              //return undefined
+              predicate = predicates[tree.predicateName]
             }
             pivot = tree.pivot;
 

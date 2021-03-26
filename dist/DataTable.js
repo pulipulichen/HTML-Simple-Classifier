@@ -740,7 +740,8 @@ __webpack_require__.r(__webpack_exports__);
       hotDropdownMenu: hotDropdownMenuDefault,
       hotDropdownMenuDefault,
       hotPredictColumnDropdownMenu,
-      lockPredictColumn: true
+      
+      predictColumnLocker: true
     }
   }
 });
@@ -774,6 +775,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (DataTable) {
   
   DataTable.methods.clearPredictColumn = async function () {
+    //this.utils.AsyncUtils.sleep(0)
+    //return console.error('[TODO] clearPredictColumn')
+    /*
     let data = []
     
     for (let len = this.localConfig.data.length - 1, i = len; i > 0; i--) {
@@ -789,14 +793,42 @@ __webpack_require__.r(__webpack_exports__);
     
     this.localConfig.data = this.localConfig.data.splice(0,0).concat(data)
     
+    
+     */
+    this.hotInstance.selectColumns(1,1)
+    this.unlockPredictColumn()
+    this.hotInstance.emptySelectedCells()
+    this.lockPredictColumn()
+    
     this.hotInstance.deselectCell()
   }
   
+  DataTable.methods.lockPredictColumn = function () {
+    this.predictColumnLocker = true
+    this.hotInstance.updateSettings({
+      cells: (row, col) => {
+        return this.onHotCellUpdateSettings(row, col)
+      }
+    })
+  }
+  
+  DataTable.methods.unlockPredictColumn = function () {
+    this.predictColumnLocker = false
+    this.hotInstance.updateSettings({
+      cells: (row, col) => {
+        return this.onHotCellUpdateSettings(row, col)
+      }
+    })
+  }
+  
   DataTable.methods.isMissingData = function (cell) {
-    return (cell === '?' || cell === null || cell === undefined)
+    //return (cell === '?' || cell === null || cell === undefined)
+    return this.utils.DataUtils.isMissingData(cell)
   }
   
   DataTable.methods.clearTestPredictColumn = async function () {
+    return console.error('[TODO]')
+    /*
     let data = []
     let changed = false
     
@@ -817,8 +849,28 @@ __webpack_require__.r(__webpack_exports__);
     if (changed) {
       this.localConfig.data = this.localConfig.data.splice(0,0).concat(data)
     }
+    */
     
-    this.hotInstance.deselectCell()
+    let coords = []
+    for (let len = this.localConfig.data.length - 1, i = len; i > 0; i--) {
+      let index = (len - i)
+      let row = this.localConfig.data[index]
+      
+      if (this.isMissingData(row[0])) {
+        coords.push([index, 1, index, 1])
+      }
+      
+      if (i % 10 === 5) {
+        this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    this.hotInstance.selectCells(coords)
+    
+    this.unlockPredictColumn()
+    this.hotInstance.emptySelectedCells()
+    this.lockPredictColumn()
+    
+    this.hotInstance.selectCells([])
   }
 });
 
@@ -934,13 +986,13 @@ __webpack_require__.r(__webpack_exports__);
       cellProperties.className = classNameList.join(' ')
     }
 
-    if (col === 1 && this.lockPredictColumn) {
+    if (col === 1 && this.predictColumnLocker) {
       cellProperties.readOnly = true;
     }
     return cellProperties;
   }
   
-  DataTable.methods.onHotBeforeChange = function (changes) {
+  DataTable.methods.onHotBeforeChange = async function (changes) {
     let row = changes[0]
     let col = changes[1]
     let before = changes[2]
@@ -957,8 +1009,10 @@ __webpack_require__.r(__webpack_exports__);
     
     let isTrainSet = !this.isMissingData(this.localConfig.data[row][0])
     
+    console.log(this.localConfig.data[row][0])
     if (isTrainSet) {
       this.localConfig.modelJSON = null
+      await this.utils.AsyncUtils.sleep()
       this.clearPredictColumn()
     }
     else {
@@ -982,6 +1036,11 @@ __webpack_require__.r(__webpack_exports__);
   DataTable.watch['localConfig.locale'] = function () {
     this.$i18n.locale = this.localConfig.locale;
   }
+  
+  DataTable.watch['localConfig.classFieldName'] = function () {
+    this.clearPredictColumn()
+  }
+  
   DataTable.watch['localConfig.data'] = function () {
     if (this.dataLock === true) {
       return false

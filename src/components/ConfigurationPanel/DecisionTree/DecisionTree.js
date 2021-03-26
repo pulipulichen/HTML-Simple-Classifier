@@ -11,7 +11,9 @@ let DecisionTree = {
     },
   },
   computed: {
-    
+    isModelBuilded () {
+      return (this.localConfig.modelJSON !== null && this.localConfig.modelJSON !== '{}')
+    }
   },
   mounted() {
     setTimeout(() => {

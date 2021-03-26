@@ -27,7 +27,7 @@ module.exports = function (Component) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "", "",{"version":3,"sources":[],"names":[],"mappings":"","file":"ConfigurationPanel.less"}]);
+exports.push([module.i, ".ConfigurationPanel[data-v-00331f62] {\n  padding: 1rem;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/ConfigurationPanel/ConfigurationPanel.less?vue&type=style&index=0&id=00331f62&lang=less&scoped=true&","ConfigurationPanel.less"],"names":[],"mappings":"AAAA;EACE,aAAA;ACCF","file":"ConfigurationPanel.less","sourcesContent":[".ConfigurationPanel {\n  padding: 1rem;\n}",".ConfigurationPanel {\n  padding: 1rem;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -51,7 +51,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "ui form" },
+    { staticClass: "ui form ConfigurationPanel" },
     [
       _c("div", { staticClass: "ui field" }, [
         _c("label", { attrs: { for: "ClassFieldName" } }, [
@@ -69,7 +69,7 @@ var render = function() {
                 expression: "localConfig.classFieldName"
               }
             ],
-            attrs: { if: "ClassFieldName" },
+            attrs: { id: "ClassFieldName" },
             on: {
               change: function($event) {
                 var $$selectedVal = Array.prototype.filter
@@ -97,14 +97,58 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("DecisionTree", {
-        ref: "DecisionTree",
-        attrs: {
-          config: _vm.config,
-          localConfig: _vm.localConfig,
-          utils: _vm.utils
-        }
-      })
+      _c("div", { staticClass: "ui field" }, [
+        _c("label", { attrs: { for: "Classifier" } }, [
+          _vm._v("\n      " + _vm._s(_vm.$t("Classifier")) + "\n    ")
+        ]),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.classifier,
+                expression: "classifier"
+              }
+            ],
+            attrs: { id: "Classifier" },
+            on: {
+              change: function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.classifier = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              }
+            }
+          },
+          _vm._l(_vm.classifierList, function(c) {
+            return _c("option", { domProps: { value: c } }, [
+              _vm._v("\n        " + _vm._s(c) + "\n      ")
+            ])
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _vm.classifier === "DecisionTree"
+        ? _c("DecisionTree", {
+            ref: "DecisionTree",
+            attrs: {
+              config: _vm.config,
+              localConfig: _vm.localConfig,
+              utils: _vm.utils
+            }
+          })
+        : _vm._e()
     ],
     1
   )
@@ -171,6 +215,8 @@ let ConfigurationPanel = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
+      classifier: 'DecisionTree',
+      classifierList: ['DecisionTree']
     }
   },
   components: {
@@ -180,10 +226,16 @@ let ConfigurationPanel = {
     'localConfig.locale'() {
       this.$i18n.locale = this.localConfig.locale;
     },
+    'localConfig.classFieldName' () {
+      this.localConfig.modelJSON = null
+    }
   },
   computed: {
     headers () {
       return this.localConfig.headers.filter(header => header !== 'predict')
+    },
+    isModelBuilded () {
+      return (this.localConfig.modelJSON !== null && this.localConfig.modelJSON !== '{}')
     }
   },
   mounted() {
@@ -303,41 +355,53 @@ __webpack_require__.r(__webpack_exports__);
     let headers = this.localConfig.headers
     let trainSet = []
     let testSet = []
+    let testSetRowIndexes = []
     
     for (let len = this.localConfig.data.length - 1, i = len; i > 0; i--) {
-      let row = this.localConfig.data[(len - i)]
-      if (row.filter(cell => cell !== null).length === 0
-              || row.filter(cell => cell !== undefined).length === 0) {
-        continue
-      }
+      let rowIndex = (len - i)
+      let row = this.localConfig.data[rowIndex]
+//      if (row.filter(cell => cell !== null).length === 0
+//              || row.filter(cell => cell !== undefined).length === 0) {
+//        continue
+//      }
       
       let trainJSON = {}
       let testJSON = {}
       
       let isTrainingSet = true
       
-      headers.forEach((header, i) => {
-        if (header === 'predict') {
-          return false
-        }
-        
-        if (i === 0 && row[i] === '?') {
-          isTrainingSet = false
+      // 先確認是否有已經預測的資料，如果已經有了，那就略過預測
+      if (this.isModelBuilded === false || this.utils.DataUtils.isMissingData(row[1])) {
+
+        headers.forEach((header, i) => {
+          if (header === 'predict') {
+            return false
+          }
+
+          if (i === 0 && this.utils.DataUtils.isMissingData(row[i])) {
+            isTrainingSet = false
+            trainJSON[header] = row[i]
+            return false
+          }
+          else if (i > 1 && 
+                  (this.utils.DataUtils.isMissingData(row[i]))) {
+            // 缺失值
+            return false
+          }
+
           trainJSON[header] = row[i]
-          return false
-        }
-        else if (i > 1 && 
-                (row[i] === '?' || row[i] === null || row[i] === '')) {
-          // 缺失值
-          return false
-        }
-        
-        trainJSON[header] = row[i]
-        if (header !== this.localConfig.classFieldName) {
-          testJSON[header] = row[i]
-        }
-        
-      })
+          if (header !== this.localConfig.classFieldName) {
+            testJSON[header] = row[i]
+          }
+
+        })
+      }
+      else {
+        // 如果已經有預測資料
+        isTrainingSet = this.utils.DataUtils.isMissingData(row[0])
+        trainJSON['predict'] = row[1]
+        testJSON['predict'] = row[1]
+      }
       
       if (isTrainingSet) {
         trainSet.push(trainJSON)
@@ -345,6 +409,7 @@ __webpack_require__.r(__webpack_exports__);
       }
       else {
         testSet.push(testJSON)
+        testSetRowIndexes.push(rowIndex)
       }
       
       if (i % 10 === 5) {
@@ -354,7 +419,8 @@ __webpack_require__.r(__webpack_exports__);
     
     return {
       trainSet,
-      testSet
+      testSet,
+      testSetRowIndexes
     }
   }
   

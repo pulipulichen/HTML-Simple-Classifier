@@ -3,41 +3,53 @@ export default function (ConfigurationPanel) {
     let headers = this.localConfig.headers
     let trainSet = []
     let testSet = []
+    let testSetRowIndexes = []
     
     for (let len = this.localConfig.data.length - 1, i = len; i > 0; i--) {
-      let row = this.localConfig.data[(len - i)]
-      if (row.filter(cell => cell !== null).length === 0
-              || row.filter(cell => cell !== undefined).length === 0) {
-        continue
-      }
+      let rowIndex = (len - i)
+      let row = this.localConfig.data[rowIndex]
+//      if (row.filter(cell => cell !== null).length === 0
+//              || row.filter(cell => cell !== undefined).length === 0) {
+//        continue
+//      }
       
       let trainJSON = {}
       let testJSON = {}
       
       let isTrainingSet = true
       
-      headers.forEach((header, i) => {
-        if (header === 'predict') {
-          return false
-        }
-        
-        if (i === 0 && row[i] === '?') {
-          isTrainingSet = false
+      // 先確認是否有已經預測的資料，如果已經有了，那就略過預測
+      if (this.isModelBuilded === false || this.utils.DataUtils.isMissingData(row[1])) {
+
+        headers.forEach((header, i) => {
+          if (header === 'predict') {
+            return false
+          }
+
+          if (i === 0 && this.utils.DataUtils.isMissingData(row[i])) {
+            isTrainingSet = false
+            trainJSON[header] = row[i]
+            return false
+          }
+          else if (i > 1 && 
+                  (this.utils.DataUtils.isMissingData(row[i]))) {
+            // 缺失值
+            return false
+          }
+
           trainJSON[header] = row[i]
-          return false
-        }
-        else if (i > 1 && 
-                (row[i] === '?' || row[i] === null || row[i] === '')) {
-          // 缺失值
-          return false
-        }
-        
-        trainJSON[header] = row[i]
-        if (header !== this.localConfig.classFieldName) {
-          testJSON[header] = row[i]
-        }
-        
-      })
+          if (header !== this.localConfig.classFieldName) {
+            testJSON[header] = row[i]
+          }
+
+        })
+      }
+      else {
+        // 如果已經有預測資料
+        isTrainingSet = this.utils.DataUtils.isMissingData(row[0])
+        trainJSON['predict'] = row[1]
+        testJSON['predict'] = row[1]
+      }
       
       if (isTrainingSet) {
         trainSet.push(trainJSON)
@@ -45,6 +57,7 @@ export default function (ConfigurationPanel) {
       }
       else {
         testSet.push(testJSON)
+        testSetRowIndexes.push(rowIndex)
       }
       
       if (i % 10 === 5) {
@@ -54,7 +67,8 @@ export default function (ConfigurationPanel) {
     
     return {
       trainSet,
-      testSet
+      testSet,
+      testSetRowIndexes
     }
   }
   

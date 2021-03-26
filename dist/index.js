@@ -28778,7 +28778,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_config_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_style_config_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _config_production_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./config.production.js */ "./src/config.production.js");
 let config = {
-  appName: 'vue-app',
+  appName: 'HTML-Simple-Classifier',
   debug: {
     ErrorHandler: {
       verbose: true
@@ -29446,6 +29446,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/utils/DataUtils.js":
+/*!********************************!*\
+  !*** ./src/utils/DataUtils.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  isMissingData: function (data) {
+    return (data === '?' || data === null || data === undefined)
+  }
+});
+
+/***/ }),
+
 /***/ "./src/utils/FileUtils.js":
 /*!********************************!*\
   !*** ./src/utils/FileUtils.js ***!
@@ -29555,8 +29572,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AxiosUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AxiosUtils.js */ "./src/utils/AxiosUtils.js");
 /* harmony import */ var _FileUtils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FileUtils.js */ "./src/utils/FileUtils.js");
 /* harmony import */ var _URLUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./URLUtils.js */ "./src/utils/URLUtils.js");
-/* harmony import */ var _date_helper_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./date-helper.js */ "./src/utils/date-helper.js");
-/* harmony import */ var _date_helper_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_date_helper_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _DataUtils_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DataUtils.js */ "./src/utils/DataUtils.js");
+/* harmony import */ var _date_helper_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./date-helper.js */ "./src/utils/date-helper.js");
+/* harmony import */ var _date_helper_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_date_helper_js__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -29570,6 +29589,7 @@ __webpack_require__.r(__webpack_exports__);
   AxiosUtils: _AxiosUtils_js__WEBPACK_IMPORTED_MODULE_2__["default"],
   FileUtils: _FileUtils_js__WEBPACK_IMPORTED_MODULE_3__["default"],
   URLUtils: _URLUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"],
+  DataUtils: _DataUtils_js__WEBPACK_IMPORTED_MODULE_5__["default"],
 });
 
 /***/ })

@@ -94,7 +94,8 @@ export default function (DataTable) {
       hotDropdownMenu: hotDropdownMenuDefault,
       hotDropdownMenuDefault,
       hotPredictColumnDropdownMenu,
-      lockPredictColumn: true
+      
+      predictColumnLocker: true
     }
   }
 }

@@ -331,6 +331,8 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   NavigationBar.methods.loadDemo = async function () {
+    this.localConfig.classFieldName = null
+    
     this.config.loadingProgress = 0
     let rawData = await this.loadDemoData()
     this.config.loadingProgress = 0.5

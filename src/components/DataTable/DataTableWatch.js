@@ -2,6 +2,11 @@ export default function (DataTable) {
   DataTable.watch['localConfig.locale'] = function () {
     this.$i18n.locale = this.localConfig.locale;
   }
+  
+  DataTable.watch['localConfig.classFieldName'] = function () {
+    this.clearPredictColumn()
+  }
+  
   DataTable.watch['localConfig.data'] = function () {
     if (this.dataLock === true) {
       return false

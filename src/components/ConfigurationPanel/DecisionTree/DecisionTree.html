@@ -2,6 +2,11 @@
   <button type="button"
           class="ui primary fluid button"
           v-on:click="start">
-    START
+    <template v-if="!isModelBuilded">
+      {{ $t('Build Model and Predict') }}
+    </template>
+    <template v-if="isModelBuilded">
+      {{ $t('Predict') }}
+    </template>  
   </button>
 </div>

@@ -1,5 +1,5 @@
 let config = {
-  appName: 'vue-app',
+  appName: 'HTML-Simple-Classifier',
   debug: {
     ErrorHandler: {
       verbose: true

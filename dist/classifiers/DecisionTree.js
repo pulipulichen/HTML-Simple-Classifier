@@ -75,7 +75,22 @@ var render = function() {
         attrs: { type: "button" },
         on: { click: _vm.start }
       },
-      [_vm._v("\n    START\n  ")]
+      [
+        !_vm.isModelBuilded
+          ? [
+              _vm._v(
+                "\n      " +
+                  _vm._s(_vm.$t("Build Model and Predict")) +
+                  "\n    "
+              )
+            ]
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.isModelBuilded
+          ? [_vm._v("\n      " + _vm._s(_vm.$t("Predict")) + "\n    ")]
+          : _vm._e()
+      ],
+      2
     )
   ])
 }
@@ -149,7 +164,9 @@ let DecisionTree = {
     },
   },
   computed: {
-    
+    isModelBuilded () {
+      return (this.localConfig.modelJSON !== null && this.localConfig.modelJSON !== '{}')
+    }
   },
   mounted() {
     setTimeout(() => {
@@ -270,17 +287,30 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function (DecisionTree) {
   DecisionTree.methods.start = async function () {
-    let data = await this.$parent.getJSONData()
+    //this.localConfig.modelJSON = null
     
+    let data = await this.$parent.getJSONData()
+    //console.log(data.trainSet)
     let model
-    if (!this.localConfig.modelJSON) {
+    
+    
+    if (this.isModelBuilded === false) {
       model = this.buildModel(data.trainSet)
+      await model.waitReady()
+      //console.log(model.root)
       this.localConfig.modelJSON = JSON.stringify(model.root)
+      //console.log(JSON.parse(this.localConfig.modelJSON))
     }
     else {
       model = this.buildModel([])
+      await model.waitReady()
+      model.category = this.localConfig.classFieldName
       model.root = JSON.parse(this.localConfig.modelJSON)
+      //console.log(model.root, this.localConfig.modelJSON)
     }
+    //console.error('需要只Predict test case')
+    
+    //console.log(data.testSet)
     let predictResults = await this.getPredictResults(model, data.testSet)
     //console.log(predictResults)
     this.$parent.setPredictResults(predictResults)
@@ -294,17 +324,28 @@ __webpack_require__.r(__webpack_exports__);
       categoryAttr: this.localConfig.classFieldName, 
       //ignoredAttributes: ['person']
     };
-
+    
     // Building Decision Tree
     return new _vendors_decision_tree_decision_tree_webpack_js__WEBPACK_IMPORTED_MODULE_0__["default"].DecisionTree(config);
   }
   
   DecisionTree.methods.getPredictResults = async function (model, testSet) {
     let results = []
+    //console.log(model.root)
     for (let len = testSet.length, i = len; i > 0; i--) {
       let testCase = testSet[(len - i)]
-      //console.log(testCase)
-      let result = await model.predict(testCase)
+      
+      let result
+      if (this.utils.DataUtils.isMissingData(testCase['predict']) === false) {
+        result = testCase['predict']
+      }
+      else {
+        //console.log(testCase)
+        //console.log(model.root)
+        result = await model.predict(testCase)
+        //console.log(result)
+      }
+        
       results.push(result)
       
       if (i % 10 === 5) {
@@ -352,12 +393,18 @@ var dt = (function () {
         this.inited = true
       })()
     }
-          
-    DecisionTree.prototype.predict = async function (item) {
+    
+    DecisionTree.prototype.waitReady = async function () {
       //console.log(item)
       while (this.inited === false) {
         await sleep(50)
       }
+      return true
+    }
+          
+    DecisionTree.prototype.predict = async function (item) {
+      //console.log(item)
+      await this.waitReady()
       //console.log(item)
       return predict(this.root, item);
     }
@@ -686,7 +733,8 @@ var dt = (function () {
 
             predicate = tree.predicate;
             if (!predicate) {
-              return undefined
+              //return undefined
+              predicate = predicates[tree.predicateName]
             }
             pivot = tree.pivot;
 
