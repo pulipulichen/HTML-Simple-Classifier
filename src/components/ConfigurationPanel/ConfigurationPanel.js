@@ -1,3 +1,5 @@
+import EvaluationPanel from './EvaluationPanel/EvaluationPanel.vue'
+
 let ConfigurationPanel = {
   props: ['config', 'localConfig', 'utils'],
   data () {    
@@ -9,6 +11,7 @@ let ConfigurationPanel = {
   },
   components: {
     DecisionTree: () => import(/* webpackChunkName: "classifiers/DecisionTree" */ './DecisionTree/DecisionTree.vue'),
+    EvaluationPanel
   },
   watch: {
     'localConfig.locale'() {
@@ -16,6 +19,9 @@ let ConfigurationPanel = {
     },
     'localConfig.classFieldName' () {
       this.localConfig.modelJSON = null
+    },
+    'localConfig.modelJSON' () {
+      this.resetModelEvaluation()
     }
   },
   computed: {
@@ -24,6 +30,9 @@ let ConfigurationPanel = {
     },
     isModelBuilded () {
       return (this.localConfig.modelJSON !== null && this.localConfig.modelJSON !== '{}')
+    },
+    hasModelEvaluated () {
+      return (this.localConfig.modelEvaluations.length > 0)
     }
   },
   mounted() {
@@ -34,5 +43,8 @@ let ConfigurationPanel = {
 
 import ConfigurationPanelMethodsData from './ConfigurationPanelMethodsData.js'
 ConfigurationPanelMethodsData(ConfigurationPanel)
+
+import ConfigurationPanelMethodsEvaluation from './ConfigurationPanelMethodsEvaluation.js'
+ConfigurationPanelMethodsEvaluation(ConfigurationPanel)
 
 export default ConfigurationPanel

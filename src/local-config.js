@@ -9,7 +9,7 @@ let localConfig = {
   classifierModelJSON: null,
   
   modelJSON: null,
-  modelEvaluation: []
+  modelEvaluations: []
 }
 
 export default localConfig

@@ -4,6 +4,7 @@ export default function (ConfigurationPanel) {
     let trainSet = []
     let testSet = []
     let testSetRowIndexes = []
+    let trainSetClasses = []
     
     for (let len = this.localConfig.data.length - 1, i = len; i > 0; i--) {
       let rowIndex = (len - i)
@@ -51,6 +52,10 @@ export default function (ConfigurationPanel) {
         testJSON['predict'] = row[1]
       }
       
+      if (this.hasModelEvaluated === false && isTrainingSet) {
+        trainSetClasses.push(row[0])
+      }
+      
       if (isTrainingSet) {
         trainSet.push(trainJSON)
         testSet.push(testJSON)
@@ -68,7 +73,8 @@ export default function (ConfigurationPanel) {
     return {
       trainSet,
       testSet,
-      testSetRowIndexes
+      testSetRowIndexes,
+      trainSetClasses
     }
   }
   
@@ -85,4 +91,23 @@ export default function (ConfigurationPanel) {
     this.localConfig.data = this.localConfig.data.splice(0,0).concat(data)
     //console.log(data)
   }
+  
+  ConfigurationPanel.methods.getTrainSetPredicts = async function (predictResults, testSetRowIndexes) {
+    let predicts = []
+    for (let len = predictResults.length - 1, i = len; i > 0; i--) {
+      let index = (len - i)
+      if (testSetRowIndexes.indexOf(index) > -1) {
+        continue
+      }
+      
+      //let row = data[index]
+      predicts.push(predictResults[index])
+      
+      if (i % 10 === 5) {
+        await this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    return predicts
+  }
+  
 }

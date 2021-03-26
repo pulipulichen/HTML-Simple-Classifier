@@ -1,0 +1,20 @@
+<div class="EvaluationPanel"
+     v-if="$parent.hasModelEvaluated">
+  <h2>
+    {{ $t('Evaluation') }}
+  </h2>
+
+  <table class="ui celled unstackable table">
+    <tbody>
+      <tr v-for="evluation in localConfig.modelEvaluations">
+        <td class="active">
+          {{ $t(evluation.name) }}
+        </td>
+        <td v-if="evluation.type === 'percent'">
+          {{ evluation.value * 100 }}%
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

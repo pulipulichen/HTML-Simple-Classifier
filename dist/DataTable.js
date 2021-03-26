@@ -1009,7 +1009,7 @@ __webpack_require__.r(__webpack_exports__);
     
     let isTrainSet = !this.isMissingData(this.localConfig.data[row][0])
     
-    console.log(this.localConfig.data[row][0])
+    //console.log(this.localConfig.data[row][0])
     if (isTrainSet) {
       this.localConfig.modelJSON = null
       await this.utils.AsyncUtils.sleep()

@@ -293,7 +293,6 @@ __webpack_require__.r(__webpack_exports__);
     //console.log(data.trainSet)
     let model
     
-    
     if (this.isModelBuilded === false) {
       model = this.buildModel(data.trainSet)
       await model.waitReady()
@@ -312,6 +311,23 @@ __webpack_require__.r(__webpack_exports__);
     
     //console.log(data.testSet)
     let predictResults = await this.getPredictResults(model, data.testSet)
+    
+    if (this.$parent.hasModelEvaluated === false) {
+      let getTrainSetPredicts = await this.$parent.getTrainSetPredicts(predictResults, data.testSetRowIndexes)
+      //console.log(data.trainSetClasses)
+      //console.log(getTrainSetPredicts)
+      
+      this.$parent.resetModelEvaluation()
+      
+      let accuracy = await this.$parent.calcAccuracy(data.trainSetClasses, getTrainSetPredicts)
+      //console.log(accuracy)
+      this.localConfig.modelEvaluations.push({
+        name: 'accuracy',
+        type: 'percent',
+        value: accuracy
+      })
+    }
+    
     //console.log(predictResults)
     this.$parent.setPredictResults(predictResults)
   }
@@ -354,6 +370,10 @@ __webpack_require__.r(__webpack_exports__);
     }
     
     return results
+  }
+  
+  DecisionTree.methods.getEvaluationResults = async function (model, testSet, testSetRowIndexes) {
+    
   }
 });
 

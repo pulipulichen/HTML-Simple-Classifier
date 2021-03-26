@@ -29217,7 +29217,7 @@ let localConfig = {
   classifierModelJSON: null,
   
   modelJSON: null,
-  modelEvaluation: []
+  modelEvaluations: []
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (localConfig);
