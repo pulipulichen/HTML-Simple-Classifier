@@ -24,6 +24,7 @@ export default function (DataTable) {
     let data = this.hotInstance.getData()
     data = data.splice(0, data.length - 1)
     this.dataLock = true
+    //console.log(data)
     this.localConfig.data = data
     this.dataLock = false
   }
@@ -49,9 +50,13 @@ export default function (DataTable) {
       this.hotContextMenu = this.hotContextMenuColumnsReadOnly
     }
     else if (selectedInfo.isSelectedColumn) {
-      if (selectedInfo.leftColumn < 2) {
+      if (selectedInfo.leftColumn === 0) {
         this.hotContextMenu = this.hotContextMenuSelectedColumnReadOnly
-      } else {
+      }
+      else if (selectedInfo.leftColumn === 1) {
+        this.hotContextMenu = this.hotContextMenuSelectedColumnClearReadOnly
+      } 
+      else {
         this.hotContextMenu = this.hotContextMenuSelectedColumnDefault
       }
     }

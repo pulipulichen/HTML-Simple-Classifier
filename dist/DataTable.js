@@ -657,12 +657,18 @@ __webpack_require__.r(__webpack_exports__);
     ]
     
     let hotContextMenuSelectedColumnDefault = [
-      'col_left', 'col_right', 'remove_col',
+      'col_left', 'col_right', 'clear_column', 'remove_col',
       '---------',
       'undo', 'redo'
     ]
     
     let hotContextMenuSelectedColumnReadOnly = [
+      'undo', 'redo'
+    ]
+    
+    let hotContextMenuSelectedColumnClearReadOnly = [
+      'clear_column',
+      '---------',
       'undo', 'redo'
     ]
     
@@ -674,6 +680,7 @@ __webpack_require__.r(__webpack_exports__);
       hotContextMenuColumnsReadOnly,
       hotContextMenuSelectedColumnDefault,
       hotContextMenuSelectedColumnReadOnly,
+      hotContextMenuSelectedColumnClearReadOnly,
       hotDropdownMenu: ["col_left", "col_right", "remove_col", _vendors_handsontable_handsontable_plugin_rename_col_header_js__WEBPACK_IMPORTED_MODULE_0__["default"], 'filter_by_condition', 'filter_operators', 'filter_by_condition2', 'filter_by_value', 'filter_action_bar'],
       
     }
@@ -717,6 +724,7 @@ __webpack_require__.r(__webpack_exports__);
     let data = this.hotInstance.getData()
     data = data.splice(0, data.length - 1)
     this.dataLock = true
+    //console.log(data)
     this.localConfig.data = data
     this.dataLock = false
   }
@@ -742,9 +750,13 @@ __webpack_require__.r(__webpack_exports__);
       this.hotContextMenu = this.hotContextMenuColumnsReadOnly
     }
     else if (selectedInfo.isSelectedColumn) {
-      if (selectedInfo.leftColumn < 2) {
+      if (selectedInfo.leftColumn === 0) {
         this.hotContextMenu = this.hotContextMenuSelectedColumnReadOnly
-      } else {
+      }
+      else if (selectedInfo.leftColumn === 1) {
+        this.hotContextMenu = this.hotContextMenuSelectedColumnClearReadOnly
+      } 
+      else {
         this.hotContextMenu = this.hotContextMenuSelectedColumnDefault
       }
     }

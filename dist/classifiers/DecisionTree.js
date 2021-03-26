@@ -274,14 +274,15 @@ __webpack_require__.r(__webpack_exports__);
   DecisionTree.methods.start = async function () {
     let data = await this.$parent.getJSONData()
     //console.log(data)
-    this.model = await this.buildModel(data.trainSet)
+    //return false
+    this.model = this.buildModel(data.trainSet)
     
     let predictResults = await this.getPredictResults(this.model, data.testSet)
-    //console.log(predictResults)
+    console.log(predictResults)
     this.$parent.setPredictResults(predictResults)
   }
   
-  DecisionTree.methods.buildModel = async function (trainSet) {
+  DecisionTree.methods.buildModel = function (trainSet) {
     
     // Configuration
     var config = {
@@ -291,14 +292,15 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     // Building Decision Tree
-    return await new _vendors_decision_tree_decision_tree_webpack_js__WEBPACK_IMPORTED_MODULE_0__["default"].DecisionTree(config);
+    return new _vendors_decision_tree_decision_tree_webpack_js__WEBPACK_IMPORTED_MODULE_0__["default"].DecisionTree(config);
   }
   
   DecisionTree.methods.getPredictResults = async function (model, testSet) {
     let results = []
     for (let len = testSet.length, i = len; i > 0; i--) {
       let testCase = testSet[(len - i)]
-      let result = model.predict(testCase)
+      //console.log(testCase)
+      let result = await model.predict(testCase)
       results.push(result)
       
       if (i % 10 === 5) {
@@ -330,19 +332,30 @@ var dt = (function () {
      * @param builder - contains training set and
      *                  some configuration parameters
      */
-    function DecisionTree(builder) {        
-        this.root = buildDecisionTree({
+    function DecisionTree(builder) {
+      (async () => {
+        this.inited = false
+        //console.log('準備')
+        this.root = await buildDecisionTree({
             trainingSet: builder.trainingSet,
             ignoredAttributes: arrayToHashSet(builder.ignoredAttributes),
             categoryAttr: builder.categoryAttr || 'category',
             minItemsCount: builder.minItemsCount || 1,
             entropyThrehold: builder.entropyThrehold || 0.01,
             maxTreeDepth: builder.maxTreeDepth || 70
-        });
+        })
+        //console.log('完成')
+        this.inited = true
+      })()
     }
           
-    DecisionTree.prototype.predict = function (item) {
-        return predict(this.root, item);
+    DecisionTree.prototype.predict = async function (item) {
+      //console.log(item)
+      while (this.inited === false) {
+        await sleep(50)
+      }
+      //console.log(item)
+      return predict(this.root, item);
     }
 
     /**
@@ -503,11 +516,15 @@ var dt = (function () {
         '==': function (a, b) { return a == b },
         '>=': function (a, b) { return a >= b }
     };
+    
+    function sleep (ms = 500) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
 
     /**
      * Function for building decision tree
      */
-    function buildDecisionTree(builder) {
+    async function buildDecisionTree(builder) {
 
         var trainingSet = builder.trainingSet;
         var minItemsCount = builder.minItemsCount;
@@ -516,7 +533,7 @@ var dt = (function () {
         var maxTreeDepth = builder.maxTreeDepth;
         var ignoredAttributes = builder.ignoredAttributes;
 
-        if ((maxTreeDepth == 0) || (trainingSet.length <= minItemsCount)) {
+        if ((maxTreeDepth === 0) || (trainingSet.length <= minItemsCount)) {
             // restriction by maximal depth of tree
             // or size of training set is to small
             // so we have to terminate process of building tree
@@ -549,7 +566,7 @@ var dt = (function () {
 
             // iterating over all attributes of item
             for (var attr in item) {
-                if ((attr == categoryAttr) || ignoredAttributes[attr]) {
+                if ((attr === categoryAttr) || ignoredAttributes[attr]) {
                     continue;
                 }
 
@@ -559,7 +576,7 @@ var dt = (function () {
                 // pick the predicate
                 // depending on the type of the attribute value
                 var predicateName;
-                if (typeof pivot == 'number') {
+                if (typeof pivot === 'number') {
                     predicateName = '>=';
                 } else {
                     // there is no sense to compare non-numeric attributes
@@ -602,7 +619,14 @@ var dt = (function () {
                     bestSplit.gain = currGain;
                 }
             }
-        }
+          
+          if (i % 10 === 5) {
+            await sleep(0)
+          }
+            
+        } // for (var i = trainingSet.length - 1; i >= 0; i--) {
+        
+        
 
         if (!bestSplit.gain) {
             // can't find optimal split
@@ -614,10 +638,10 @@ var dt = (function () {
         builder.maxTreeDepth = maxTreeDepth - 1;
 
         builder.trainingSet = bestSplit.match;
-        var matchSubTree = buildDecisionTree(builder);
+        var matchSubTree = await buildDecisionTree(builder);
 
         builder.trainingSet = bestSplit.notMatch;
-        var notMatchSubTree = buildDecisionTree(builder);
+        var notMatchSubTree = await buildDecisionTree(builder);
 
         return {
             attribute: bestSplit.attribute,
@@ -640,6 +664,11 @@ var dt = (function () {
             predicate,
             pivot;
         
+        
+        if (!tree) {
+          return undefined
+        }
+        
         // Traversing tree from the root to leaf
         while(true) {
           
@@ -652,6 +681,9 @@ var dt = (function () {
             value = item[attr];
 
             predicate = tree.predicate;
+            if (!predicate) {
+              return undefined
+            }
             pivot = tree.pivot;
 
             // move to one of subtrees
@@ -708,12 +740,6 @@ var dt = (function () {
             result[prediction] = result[prediction] ? result[prediction] + 1 : 1;
         }
         return result;
-    }
-
-    // ------------------------------
-
-    DecisionTree.prototype.predict = function (item) {
-        return predict(this.root, item);
     }
 
     var exports = {};

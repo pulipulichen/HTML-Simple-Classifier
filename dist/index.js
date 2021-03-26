@@ -29214,6 +29214,7 @@ let localConfig = {
   headers: [],
   classFieldName: 'class',
   classDataType: 'nominal',
+  classifierModelJSON: null
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (localConfig);

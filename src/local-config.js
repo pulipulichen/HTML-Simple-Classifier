@@ -6,6 +6,7 @@ let localConfig = {
   headers: [],
   classFieldName: 'class',
   classDataType: 'nominal',
+  classifierModelJSON: null
 }
 
 export default localConfig

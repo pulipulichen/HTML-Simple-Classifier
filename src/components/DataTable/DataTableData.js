@@ -19,12 +19,18 @@ export default function (DataTable) {
     ]
     
     let hotContextMenuSelectedColumnDefault = [
-      'col_left', 'col_right', 'remove_col',
+      'col_left', 'col_right', 'clear_column', 'remove_col',
       '---------',
       'undo', 'redo'
     ]
     
     let hotContextMenuSelectedColumnReadOnly = [
+      'undo', 'redo'
+    ]
+    
+    let hotContextMenuSelectedColumnClearReadOnly = [
+      'clear_column',
+      '---------',
       'undo', 'redo'
     ]
     
@@ -36,6 +42,7 @@ export default function (DataTable) {
       hotContextMenuColumnsReadOnly,
       hotContextMenuSelectedColumnDefault,
       hotContextMenuSelectedColumnReadOnly,
+      hotContextMenuSelectedColumnClearReadOnly,
       hotDropdownMenu: ["col_left", "col_right", "remove_col", HandsontablePluginRenameColHeader, 'filter_by_condition', 'filter_operators', 'filter_by_condition2', 'filter_by_value', 'filter_action_bar'],
       
     }

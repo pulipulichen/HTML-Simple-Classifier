@@ -304,8 +304,13 @@ __webpack_require__.r(__webpack_exports__);
     let trainSet = []
     let testSet = []
     
-    for (let len = this.localConfig.data.length, i = len; i > 0; i--) {
+    for (let len = this.localConfig.data.length - 1, i = len; i > 0; i--) {
       let row = this.localConfig.data[(len - i)]
+      if (row.filter(cell => cell !== null).length === 0
+              || row.filter(cell => cell !== undefined).length === 0) {
+        continue
+      }
+      
       let trainJSON = {}
       let testJSON = {}
       
@@ -319,6 +324,11 @@ __webpack_require__.r(__webpack_exports__);
         if (i === 0 && row[i] === '?') {
           isTrainingSet = false
           trainJSON[header] = row[i]
+          return false
+        }
+        else if (i > 1 && 
+                (row[i] === '?' || row[i] === null || row[i] === '')) {
+          // 缺失值
           return false
         }
         
@@ -350,7 +360,7 @@ __webpack_require__.r(__webpack_exports__);
   
   ConfigurationPanel.methods.setPredictResults = async function (predictResults) {
     let data = this.localConfig.data
-    for (let len = data.length, i = len; i > 0; i--) {
+    for (let len = data.length - 1, i = len; i > 0; i--) {
       let index = (len - i)
       //let row = data[index]
       data[index][1] = predictResults[index]
