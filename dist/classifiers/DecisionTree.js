@@ -273,12 +273,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (DecisionTree) {
   DecisionTree.methods.start = async function () {
     let data = await this.$parent.getJSONData()
-    //console.log(data)
-    //return false
     this.model = this.buildModel(data.trainSet)
     
     let predictResults = await this.getPredictResults(this.model, data.testSet)
-    console.log(predictResults)
+    //console.log(predictResults)
     this.$parent.setPredictResults(predictResults)
   }
   

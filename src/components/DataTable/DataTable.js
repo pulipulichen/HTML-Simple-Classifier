@@ -22,6 +22,12 @@ DataTableData(DataTable)
 import DataTableMethods from './DataTableMethods.js'
 DataTableMethods(DataTable)
 
+import DataTableMethodsClear from './DataTableMethodsClear.js'
+DataTableMethodsClear(DataTable)
+
+import DataTableMethodsEvents from './DataTableMethodsEvents.js'
+DataTableMethodsEvents(DataTable)
+
 import DataTableComputed from './DataTableComputed.js'
 DataTableComputed(DataTable)
 

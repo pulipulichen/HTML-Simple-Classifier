@@ -1,4 +1,5 @@
 import HandsontablePluginRenameColHeader from './vendors/handsontable/handsontable.plugin.rename_col_header.js'
+//import HandsontablePluginClearPredictColumn from './vendors/handsontable/handsontable.plugin.rename_clear_predict_column.js'
 
 export default function (DataTable) {
   DataTable.data = function () {
@@ -28,10 +29,57 @@ export default function (DataTable) {
       'undo', 'redo'
     ]
     
+    let HandsontablePluginClearPredictColumn = {
+      key: 'clear_predict_column',
+      name: function name() {
+        return "Clear Predictions"
+      },
+      callback: (event, coords, th) => {
+        this.clearPredictColumn()
+      },
+      disabled: function disabled() {
+        return false
+      },
+      hidden: function hidden() {
+        return false
+      }
+    }
+    
+    
+    let HandsontablePluginClearPredictColumnTestCases = {
+      key: 'clear_predict_column_test_cases',
+      name: function name() {
+        return "Clear Test Predictions"
+      },
+      callback: (event, coords, th) => {
+        this.clearTestPredictColumn()
+      },
+      disabled: function disabled() {
+        return false
+      },
+      hidden: function hidden() {
+        return false
+      }
+    }
+    
     let hotContextMenuSelectedColumnClearReadOnly = [
-      'clear_column',
+      HandsontablePluginClearPredictColumn,
       '---------',
       'undo', 'redo'
+    ]
+    
+    let hotDropdownMenuDefault = [
+      "col_left", "col_right", "remove_col", 
+      HandsontablePluginRenameColHeader,
+      '---------',
+      'filter_by_condition', 'filter_operators', 'filter_by_condition2', 'filter_by_value', 'filter_action_bar'
+    ]
+    
+    let hotPredictColumnDropdownMenu = [
+      HandsontablePluginClearPredictColumn,
+      HandsontablePluginClearPredictColumnTestCases,
+      '---------',
+      'filter_by_condition', 'filter_operators', 'filter_by_condition2', 'filter_by_value', 'filter_action_bar'
     ]
     
     return {
@@ -43,8 +91,10 @@ export default function (DataTable) {
       hotContextMenuSelectedColumnDefault,
       hotContextMenuSelectedColumnReadOnly,
       hotContextMenuSelectedColumnClearReadOnly,
-      hotDropdownMenu: ["col_left", "col_right", "remove_col", HandsontablePluginRenameColHeader, 'filter_by_condition', 'filter_operators', 'filter_by_condition2', 'filter_by_value', 'filter_action_bar'],
-      
+      hotDropdownMenu: hotDropdownMenuDefault,
+      hotDropdownMenuDefault,
+      hotPredictColumnDropdownMenu,
+      lockPredictColumn: true
     }
   }
 }

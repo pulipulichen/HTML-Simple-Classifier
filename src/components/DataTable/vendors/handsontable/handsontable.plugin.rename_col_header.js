@@ -4,18 +4,11 @@ export default {
     return "Rename column header"
   },
   callback: function callback(event, coords, th) {
-    //this.alter('remove_col', (0, _utils2.transformSelectionToColumnDistance)(this.getSelected()), null, 'ContextMenu.removeColumn');
-    //alert('ok')
-    //console.log([event, coords, th])
-
     let index = coords[0].start.col
 
     let instance = this
     let headers = instance.getColHeader()
 
-    //console.log(headers)
-
-    //headers[index] = 
     let header = headers[index]
     
     //let newHeader = window.prompt('Rename column header', header)
