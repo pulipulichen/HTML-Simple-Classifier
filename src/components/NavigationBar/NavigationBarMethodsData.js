@@ -10,11 +10,15 @@ export default function (NavigationBar) {
     this.loadDemo()
   }
   
-  NavigationBar.methods.loadDemo = async function () {
+  NavigationBar.methods.loadDemo = async function (file) {
+    if (!file) {
+      file = this.config.demoDataList[0]
+    }
+    
     this.localConfig.classFieldName = null
     
     this.config.loadingProgress = 0
-    let rawData = await this.loadDemoData()
+    let rawData = await this.loadDemoData(file)
     
     this.config.loadingProgress = 0.5
     let detectResult = this.detectClassField(rawData)
@@ -33,11 +37,11 @@ export default function (NavigationBar) {
     
     this.config.loadingProgress = 1
     
-    console.log(this.localConfig.data.length)
+    //console.log(this.localConfig.data.length)
   }
   
-  NavigationBar.methods.loadDemoData = async function () {
-    let path = "./assets/data/" + this.config.demoData
+  NavigationBar.methods.loadDemoData = async function (file) {
+    let path = "./assets/data/" + file
     //console.log(path)
     if (path.endsWith('.csv')) {
       return await this.loadURLCSV(path)

@@ -26,7 +26,7 @@ $.site = $.fn.site = function(parameters) {
     performance    = [],
 
     query          = arguments[0],
-    methodInvoked  = (typeof query == 'string'),
+    methodInvoked  = (typeof query === 'string'),
     queryArguments = [].slice.call(arguments, 1),
 
     settings        = ( $.isPlainObject(parameters) )

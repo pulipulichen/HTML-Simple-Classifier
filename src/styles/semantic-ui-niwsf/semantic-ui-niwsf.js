@@ -9,6 +9,8 @@
  *
  */
 
+import jQuery from 'jquery'
+
 import './scripts/semantic.niwsf.site.js'
 import './scripts/semantic.niwsf.form.js'
 import './scripts/semantic.niwsf.accordion.js'
@@ -29,3 +31,5 @@ import './scripts/semantic.niwsf.tab.js'
 import './scripts/semantic.niwsf.transition.js'
 import './scripts/semantic.niwsf.api.js'
 import './scripts/semantic.niwsf.visibility.js'
+
+jQuery.isSemanticNIWSFReady = true

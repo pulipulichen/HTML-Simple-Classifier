@@ -1,4 +1,4 @@
-import $ from 'jquery'
+//import $ from 'jquery'
 ////let $ = require('jquery')
 //window.jQuery = window.$ = $
 

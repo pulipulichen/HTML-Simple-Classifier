@@ -3,9 +3,17 @@
     <div class="item">
       <img v-bind:src="logoPath">
     </div>
-    <a class="item"
-       v-on:click="loadDemo">
+    <a class="ui dropdown item"
+       ref="LoadDemoDropdown">
       {{ $t('LOAD DEMO') }}
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item"
+             v-for="file in config.demoDataList"
+             v-on:click="loadDemo(file)">
+          {{ $t(file) }}
+        </div>
+      </div>
     </a>
     <a class="item"
        v-on:click="openFile">

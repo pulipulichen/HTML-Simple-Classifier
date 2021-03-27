@@ -12,7 +12,11 @@ let config = {
   urlGithub: 'https://github.com/pulipulichen/HTML-Simple-Classifier/',
   urlIssue: 'https://github.com/pulipulichen/HTML-Simple-Classifier/issues/new',
   
-  demoData: 'weather.class.csv'
+  demoDataList: [
+    'weather.class.csv',
+    'weather.play.ods',
+    'labor.csv'
+  ]
   //demoData: 'weather.play.ods'
   //demoData: 'labor.csv'
   //demoData: 'unbalanced.csv'

@@ -18,6 +18,7 @@ let NavigationBar = {
   },
   mounted: async function () {
     await this.initData()
+    this.initDropdown()
   },
   methods: {}
 }

@@ -28791,7 +28791,11 @@ let config = {
   urlGithub: 'https://github.com/pulipulichen/HTML-Simple-Classifier/',
   urlIssue: 'https://github.com/pulipulichen/HTML-Simple-Classifier/issues/new',
   
-  demoData: 'weather.class.csv'
+  demoDataList: [
+    'weather.class.csv',
+    'weather.play.ods',
+    'labor.csv'
+  ]
   //demoData: 'weather.play.ods'
   //demoData: 'labor.csv'
   //demoData: 'unbalanced.csv'
@@ -29305,14 +29309,10 @@ setDocHeight();
 /*!***********************************!*\
   !*** ./src/styles/semantic-ui.js ***!
   \***********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-
+//import $ from 'jquery'
 ////let $ = require('jquery')
 //window.jQuery = window.$ = $
 
@@ -29321,7 +29321,7 @@ __webpack_require__.r(__webpack_exports__);
 //require('./../vendors/semantic-ui/semantic.min.js')
 
 // Use Semantic UI NIWSF version
-let SemanticUINIWSF = () => __webpack_require__.e(/*! import() | vendors/semantic-ui-niwsf */ "vendors/semantic-ui-niwsf").then(__webpack_require__.t.bind(null, /*! ./semantic-ui-niwsf/semantic-ui-niwsf-webpack.js */ "./src/styles/semantic-ui-niwsf/semantic-ui-niwsf-webpack.js", 7))
+let SemanticUINIWSF = () => __webpack_require__.e(/*! import() | vendors/semantic-ui-niwsf */ "vendors/semantic-ui-niwsf").then(__webpack_require__.bind(null, /*! ./semantic-ui-niwsf/semantic-ui-niwsf-webpack.js */ "./src/styles/semantic-ui-niwsf/semantic-ui-niwsf-webpack.js"))
 SemanticUINIWSF()
 
 /***/ }),
@@ -29350,7 +29350,8 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _semantic_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./semantic-ui */ "./src/styles/semantic-ui.js");
+/* harmony import */ var _semantic_ui_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./semantic-ui.js */ "./src/styles/semantic-ui.js");
+/* harmony import */ var _semantic_ui_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_semantic_ui_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _global_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./global.less */ "./src/styles/global.less");
 /* harmony import */ var _global_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_global_less__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _intMobileHeight_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./intMobileHeight.js */ "./src/styles/intMobileHeight.js");

@@ -66,8 +66,29 @@ var render = function() {
         _c("img", { attrs: { src: _vm.logoPath } })
       ]),
       _vm._v(" "),
-      _c("a", { staticClass: "item", on: { click: _vm.loadDemo } }, [
-        _vm._v("\n      " + _vm._s(_vm.$t("LOAD DEMO")) + "\n    ")
+      _c("a", { ref: "LoadDemoDropdown", staticClass: "ui dropdown item" }, [
+        _vm._v("\n      " + _vm._s(_vm.$t("LOAD DEMO")) + "\n      "),
+        _c("i", { staticClass: "dropdown icon" }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "menu" },
+          _vm._l(_vm.config.demoDataList, function(file) {
+            return _c(
+              "div",
+              {
+                staticClass: "item",
+                on: {
+                  click: function($event) {
+                    return _vm.loadDemo(file)
+                  }
+                }
+              },
+              [_vm._v("\n          " + _vm._s(_vm.$t(file)) + "\n        ")]
+            )
+          }),
+          0
+        )
       ]),
       _vm._v(" "),
       _c("a", { staticClass: "item", on: { click: _vm.openFile } }, [
@@ -250,6 +271,7 @@ let NavigationBar = {
   },
   mounted: async function () {
     await this.initData()
+    this.initDropdown()
   },
   methods: {}
 }
@@ -364,11 +386,15 @@ __webpack_require__.r(__webpack_exports__);
     this.loadDemo()
   }
   
-  NavigationBar.methods.loadDemo = async function () {
+  NavigationBar.methods.loadDemo = async function (file) {
+    if (!file) {
+      file = this.config.demoDataList[0]
+    }
+    
     this.localConfig.classFieldName = null
     
     this.config.loadingProgress = 0
-    let rawData = await this.loadDemoData()
+    let rawData = await this.loadDemoData(file)
     
     this.config.loadingProgress = 0.5
     let detectResult = this.detectClassField(rawData)
@@ -387,11 +413,11 @@ __webpack_require__.r(__webpack_exports__);
     
     this.config.loadingProgress = 1
     
-    console.log(this.localConfig.data.length)
+    //console.log(this.localConfig.data.length)
   }
   
-  NavigationBar.methods.loadDemoData = async function () {
-    let path = "./assets/data/" + this.config.demoData
+  NavigationBar.methods.loadDemoData = async function (file) {
+    let path = "./assets/data/" + file
     //console.log(path)
     if (path.endsWith('.csv')) {
       return await this.loadURLCSV(path)
@@ -572,7 +598,18 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
 /* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
+  NavigationBar.methods.initDropdown = async function () {
+    while (!this.$refs.LoadDemoDropdown || !jquery__WEBPACK_IMPORTED_MODULE_0___default.a.isSemanticNIWSFReady) {
+      await this.utils.AsyncUtils.sleep()
+    }
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.LoadDemoDropdown).dropdown()
+  }
+    
   NavigationBar.methods.onSearch = function (event) {
     window.alert('TODO: Search ' + this.localConfig.searchKeyword)
     //console.log(event)
