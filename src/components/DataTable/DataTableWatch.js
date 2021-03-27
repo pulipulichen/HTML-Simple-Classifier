@@ -5,6 +5,8 @@ export default function (DataTable) {
   
   DataTable.watch['localConfig.classFieldName'] = function () {
     this.clearPredictColumn()
+    
+    this.changeClassField()
   }
   
   DataTable.watch['localConfig.data'] = async function () {
@@ -17,7 +19,7 @@ export default function (DataTable) {
     //console.log('載入資料')
     //console.log(this.localConfig.data)
     
-    this.hotInstance.loadData(this.localConfig.data)
+    this.hotInstance.loadData(this.localConfig.data.concat([]))
     
     await this.utils.AsyncUtils.sleep(0)
     this.dataLock = false

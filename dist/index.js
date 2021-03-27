@@ -28798,7 +28798,6 @@ let config = {
   urlIssue: 'https://github.com/pulipulichen/HTML-Simple-Classifier/issues/new',
   
   demoDataList: [
-    'pasture.arff',
     'weather.play.ods',
     'weather.class.csv',
     'iris.ods',

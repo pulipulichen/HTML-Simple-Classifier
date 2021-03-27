@@ -8,13 +8,8 @@ let NavigationBar = {
       logoPath
     }
   },
-  watch: {
-    'localConfig.locale'() {
-      this.$i18n.locale = this.localConfig.locale;
-    },
-  },
+  watch: {},  // NavigationBarWatch.js
   computed: {
-    
   },
   mounted: async function () {
     await this.initData()
@@ -31,5 +26,8 @@ NavigationBarMethodsDataLoader(NavigationBar)
 
 import NavigationBarMethodsView from './NavigationBarMethodsView.js'
 NavigationBarMethodsView(NavigationBar)
+
+import NavigationBarWatch from './NavigationBarWatch.js'
+NavigationBarWatch(NavigationBar)
 
 export default NavigationBar

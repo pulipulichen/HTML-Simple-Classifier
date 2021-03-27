@@ -251,6 +251,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavigationBarMethodsData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavigationBarMethodsData.js */ "./src/components/NavigationBar/NavigationBarMethodsData.js");
 /* harmony import */ var _NavigationBarMethodsDataLoader_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavigationBarMethodsDataLoader.js */ "./src/components/NavigationBar/NavigationBarMethodsDataLoader.js");
 /* harmony import */ var _NavigationBarMethodsView_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NavigationBarMethodsView.js */ "./src/components/NavigationBar/NavigationBarMethodsView.js");
+/* harmony import */ var _NavigationBarWatch_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavigationBarWatch.js */ "./src/components/NavigationBar/NavigationBarWatch.js");
 
 
 let NavigationBar = {
@@ -261,13 +262,8 @@ let NavigationBar = {
       logoPath: (_assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0___default())
     }
   },
-  watch: {
-    'localConfig.locale'() {
-      this.$i18n.locale = this.localConfig.locale;
-    },
-  },
+  watch: {},  // NavigationBarWatch.js
   computed: {
-    
   },
   mounted: async function () {
     await this.initData()
@@ -284,6 +280,9 @@ Object(_NavigationBarMethodsDataLoader_js__WEBPACK_IMPORTED_MODULE_2__["default"
 
 
 Object(_NavigationBarMethodsView_js__WEBPACK_IMPORTED_MODULE_3__["default"])(NavigationBar)
+
+
+Object(_NavigationBarWatch_js__WEBPACK_IMPORTED_MODULE_4__["default"])(NavigationBar)
 
 /* harmony default export */ __webpack_exports__["default"] = (NavigationBar);
 
@@ -641,6 +640,26 @@ __webpack_require__.r(__webpack_exports__);
   NavigationBar.methods.openFile = function () {
     window.alert('TODO')
   }
+});
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBarWatch.js":
+/*!************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBarWatch.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
+    
+  NavigationBar.watch['localConfig.locale'] = async function () {
+    this.$i18n.locale = this.localConfig.locale
+  }
+  
+  
 });
 
 /***/ }),

@@ -771,6 +771,52 @@ __webpack_require__.r(__webpack_exports__);
     this.config.isDataProcessing = false
     this.dataLock = false
   }
+  
+  DataTable.methods.changeClassField = async function () {
+    let headers = this.localConfig.headers
+    let headerIndex = headers.indexOf(this.localConfig.classFieldName)
+    
+    let data = []
+    
+    this.config.isDataProcessing = true
+    this.dataLock = true
+    await this.utils.AsyncUtils.sleep(0)
+
+    let beforeHeader = headers[0]
+    headers[0] = this.localConfig.classFieldName
+    headers[headerIndex] = beforeHeader
+    
+    this.localConfig.headers = this.localConfig.headers.splice(0,0).concat(headers)
+    
+    // ----------------------------
+    
+    //console.log(this.localConfig.data.length)
+    for (let len = this.localConfig.data.length, i = len; i > 0; i--) {
+      let rowIndex = (len - i)
+      let row = this.localConfig.data[rowIndex]
+      
+      let beforeClassValue = row[0]
+      let afterClassValue = row[headerIndex]
+      
+      row[0] = afterClassValue
+      row[headerIndex] = beforeClassValue
+      
+      data.push(row)
+      
+      if (i % 10 === 5) {
+        await this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    
+    //data.push([null])
+    //console.log(data)
+    
+    this.localConfig.data = this.localConfig.data.splice(0,0).concat(data)
+    
+    await this.utils.AsyncUtils.sleep(0)
+    this.config.isDataProcessing = false
+    this.dataLock = false
+  }
 });
 
 /***/ }),
@@ -922,6 +968,7 @@ __webpack_require__.r(__webpack_exports__);
   // ----------------------
   
   DataTable.methods.onHotAfterChange = function () {
+    /*
     if (this.config.isDataProcessing) {
       return false
     }
@@ -935,6 +982,7 @@ __webpack_require__.r(__webpack_exports__);
     //console.log(data)
     this.localConfig.data = data
     this.dataLock = false
+    */
   }
   
   DataTable.methods.getSelectedRangeInfo = function () {
@@ -1130,6 +1178,8 @@ __webpack_require__.r(__webpack_exports__);
   
   DataTable.watch['localConfig.classFieldName'] = function () {
     this.clearPredictColumn()
+    
+    this.changeClassField()
   }
   
   DataTable.watch['localConfig.data'] = async function () {
@@ -1142,7 +1192,7 @@ __webpack_require__.r(__webpack_exports__);
     //console.log('載入資料')
     //console.log(this.localConfig.data)
     
-    this.hotInstance.loadData(this.localConfig.data)
+    this.hotInstance.loadData(this.localConfig.data.concat([]))
     
     await this.utils.AsyncUtils.sleep(0)
     this.dataLock = false

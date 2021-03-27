@@ -23,6 +23,7 @@ export default function (DataTable) {
   // ----------------------
   
   DataTable.methods.onHotAfterChange = function () {
+    /*
     if (this.config.isDataProcessing) {
       return false
     }
@@ -36,6 +37,7 @@ export default function (DataTable) {
     //console.log(data)
     this.localConfig.data = data
     this.dataLock = false
+    */
   }
   
   DataTable.methods.getSelectedRangeInfo = function () {
