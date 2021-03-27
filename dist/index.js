@@ -29486,7 +29486,7 @@ __webpack_require__.r(__webpack_exports__);
       return value
     }
     
-    if (typeof value === 'string' && !isNaN(value)) {
+    if (typeof value === 'string' && value !== '' && !isNaN(value)) {
       return Number(value)
     }
     else {

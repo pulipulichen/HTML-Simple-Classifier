@@ -5,6 +5,10 @@ export default function (ConfigurationPanel) {
   }
     
   ConfigurationPanel.methods.calcAccuracy = async function (classes, predicts) {
+    if (classes.length !== predicts.length) {
+      console.error(`Non-match: ${classes.length} vs ${predicts.length}`)
+    }
+    
     let len = classes.length
     let matchCounter = 0
     for (let i = len; i > 0; i--) {

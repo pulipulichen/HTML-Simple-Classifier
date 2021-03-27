@@ -89,7 +89,7 @@ export default function (ConfigurationPanel) {
   
   ConfigurationPanel.methods.setPredictResults = async function (predictResults) {
     let data = this.localConfig.data
-    for (let len = data.length - 1, i = len; i > 0; i--) {
+    for (let len = data.length, i = len; i > 0; i--) {
       let index = (len - i)
       //let row = data[index]
       data[index][1] = predictResults[index]
@@ -103,7 +103,7 @@ export default function (ConfigurationPanel) {
   
   ConfigurationPanel.methods.getTrainSetPredicts = async function (predictResults, testSetRowIndexes) {
     let predicts = []
-    for (let len = predictResults.length - 1, i = len; i > 0; i--) {
+    for (let len = predictResults.length, i = len; i > 0; i--) {
       let index = (len - i)
       if (testSetRowIndexes.indexOf(index) > -1) {
         continue

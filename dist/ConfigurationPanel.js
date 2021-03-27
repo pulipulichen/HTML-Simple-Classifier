@@ -602,7 +602,7 @@ __webpack_require__.r(__webpack_exports__);
   
   ConfigurationPanel.methods.setPredictResults = async function (predictResults) {
     let data = this.localConfig.data
-    for (let len = data.length - 1, i = len; i > 0; i--) {
+    for (let len = data.length, i = len; i > 0; i--) {
       let index = (len - i)
       //let row = data[index]
       data[index][1] = predictResults[index]
@@ -616,7 +616,7 @@ __webpack_require__.r(__webpack_exports__);
   
   ConfigurationPanel.methods.getTrainSetPredicts = async function (predictResults, testSetRowIndexes) {
     let predicts = []
-    for (let len = predictResults.length - 1, i = len; i > 0; i--) {
+    for (let len = predictResults.length, i = len; i > 0; i--) {
       let index = (len - i)
       if (testSetRowIndexes.indexOf(index) > -1) {
         continue
@@ -652,6 +652,10 @@ __webpack_require__.r(__webpack_exports__);
   }
     
   ConfigurationPanel.methods.calcAccuracy = async function (classes, predicts) {
+    if (classes.length !== predicts.length) {
+      console.error(`Non-match: ${classes.length} vs ${predicts.length}`)
+    }
+    
     let len = classes.length
     let matchCounter = 0
     for (let i = len; i > 0; i--) {

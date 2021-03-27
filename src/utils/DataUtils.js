@@ -24,7 +24,7 @@ export default {
       return value
     }
     
-    if (typeof value === 'string' && !isNaN(value)) {
+    if (typeof value === 'string' && value !== '' && !isNaN(value)) {
       return Number(value)
     }
     else {
