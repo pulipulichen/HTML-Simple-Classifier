@@ -827,7 +827,7 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   DataTable.methods.clearTestPredictColumn = async function () {
-    return console.error('[TODO]')
+    //return console.error('[TODO]')
     /*
     let data = []
     let changed = false

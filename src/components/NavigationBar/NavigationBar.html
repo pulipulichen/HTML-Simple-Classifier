@@ -7,20 +7,24 @@
        v-on:click="loadDemo">
       {{ $t('LOAD DEMO') }}
     </a>
-    <a class="item">
-      {{ $t('OPEN DATA') }}
+    <a class="item"
+       v-on:click="openFile">
+      {{ $t('OPEN FILE') }}
     </a>
-    <a class="item">
-      {{ $t('SAVE DATA') }}
+    <a class="item"
+       v-on:click="saveFile">
+      {{ $t('SAVE FILE') }}
     </a>
 
     <div class="right menu">
       <div class="ui right mini aligned category search item">
-        <div class="ui icon input">
+        <form class="ui icon input"
+              v-on:submit.stop.prevent="onSearch">
           <input class="prompt" type="text" 
+                 v-model="localConfig.searchKeyword"
                  v-bind:placeholder="$t('Search...')">
           <i class="search link icon"></i>
-        </div>
+        </form>
         <div class="results"></div>
       </div>
       <a class="icon item"

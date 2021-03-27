@@ -29217,7 +29217,9 @@ let localConfig = {
   classifierModelJSON: null,
   
   modelJSON: null,
-  modelEvaluations: []
+  modelEvaluations: [],
+  
+  searchKeyword: ''
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (localConfig);

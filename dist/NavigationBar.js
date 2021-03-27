@@ -70,12 +70,12 @@ var render = function() {
         _vm._v("\n      " + _vm._s(_vm.$t("LOAD DEMO")) + "\n    ")
       ]),
       _vm._v(" "),
-      _c("a", { staticClass: "item" }, [
-        _vm._v("\n      " + _vm._s(_vm.$t("OPEN DATA")) + "\n    ")
+      _c("a", { staticClass: "item", on: { click: _vm.openFile } }, [
+        _vm._v("\n      " + _vm._s(_vm.$t("OPEN FILE")) + "\n    ")
       ]),
       _vm._v(" "),
-      _c("a", { staticClass: "item" }, [
-        _vm._v("\n      " + _vm._s(_vm.$t("SAVE DATA")) + "\n    ")
+      _c("a", { staticClass: "item", on: { click: _vm.saveFile } }, [
+        _vm._v("\n      " + _vm._s(_vm.$t("SAVE FILE")) + "\n    ")
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "right menu" }, [
@@ -83,14 +83,48 @@ var render = function() {
           "div",
           { staticClass: "ui right mini aligned category search item" },
           [
-            _c("div", { staticClass: "ui icon input" }, [
-              _c("input", {
-                staticClass: "prompt",
-                attrs: { type: "text", placeholder: _vm.$t("Search...") }
-              }),
-              _vm._v(" "),
-              _c("i", { staticClass: "search link icon" })
-            ]),
+            _c(
+              "form",
+              {
+                staticClass: "ui icon input",
+                on: {
+                  submit: function($event) {
+                    $event.stopPropagation()
+                    $event.preventDefault()
+                    return _vm.onSearch($event)
+                  }
+                }
+              },
+              [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.localConfig.searchKeyword,
+                      expression: "localConfig.searchKeyword"
+                    }
+                  ],
+                  staticClass: "prompt",
+                  attrs: { type: "text", placeholder: _vm.$t("Search...") },
+                  domProps: { value: _vm.localConfig.searchKeyword },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.localConfig,
+                        "searchKeyword",
+                        $event.target.value
+                      )
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("i", { staticClass: "search link icon" })
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "results" })
           ]
@@ -527,6 +561,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
+  NavigationBar.methods.onSearch = function (event) {
+    window.alert('TODO: Search ' + this.localConfig.searchKeyword)
+    //console.log(event)
+    return false
+  }
+  
+  NavigationBar.methods.saveFile = function () {
+    window.alert('TODO')
+  }
+  
+  NavigationBar.methods.openFile = function () {
+    window.alert('TODO')
+  }
 });
 
 /***/ }),

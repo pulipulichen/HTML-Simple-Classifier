@@ -53,7 +53,7 @@ export default function (DataTable) {
   }
   
   DataTable.methods.clearTestPredictColumn = async function () {
-    return console.error('[TODO]')
+    //return console.error('[TODO]')
     /*
     let data = []
     let changed = false

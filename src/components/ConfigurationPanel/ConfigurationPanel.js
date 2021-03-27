@@ -24,22 +24,15 @@ let ConfigurationPanel = {
       this.resetModelEvaluation()
     }
   },
-  computed: {
-    headers () {
-      return this.localConfig.headers.filter(header => header !== 'predict')
-    },
-    isModelBuilded () {
-      return (this.localConfig.modelJSON !== null && this.localConfig.modelJSON !== '{}')
-    },
-    hasModelEvaluated () {
-      return (this.localConfig.modelEvaluations.length > 0)
-    }
-  },
+  computed: {}, // ConfigurationPanelComputed.js
   mounted() {
     
   },
   methods: {}
 }
+
+import ConfigurationPanelComputed from './ConfigurationPanelComputed.js'
+ConfigurationPanelComputed(ConfigurationPanel)
 
 import ConfigurationPanelMethodsData from './ConfigurationPanelMethodsData.js'
 ConfigurationPanelMethodsData(ConfigurationPanel)

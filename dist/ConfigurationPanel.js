@@ -89,7 +89,7 @@ var render = function() {
     [
       _c("div", { staticClass: "ui field" }, [
         _c("label", { attrs: { for: "ClassFieldName" } }, [
-          _vm._v("\n      " + _vm._s(_vm.$t("Class")) + "\n    ")
+          _vm._v("\n      " + _vm._s(_vm.$t("Class Field")) + "\n    ")
         ]),
         _vm._v(" "),
         _c(
@@ -331,8 +331,9 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _EvaluationPanel_EvaluationPanel_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EvaluationPanel/EvaluationPanel.vue */ "./src/components/ConfigurationPanel/EvaluationPanel/EvaluationPanel.vue");
-/* harmony import */ var _ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ConfigurationPanelMethodsData.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsData.js");
-/* harmony import */ var _ConfigurationPanelMethodsEvaluation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ConfigurationPanelMethodsEvaluation.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsEvaluation.js");
+/* harmony import */ var _ConfigurationPanelComputed_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ConfigurationPanelComputed.js */ "./src/components/ConfigurationPanel/ConfigurationPanelComputed.js");
+/* harmony import */ var _ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ConfigurationPanelMethodsData.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsData.js");
+/* harmony import */ var _ConfigurationPanelMethodsEvaluation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ConfigurationPanelMethodsEvaluation.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsEvaluation.js");
 
 
 let ConfigurationPanel = {
@@ -359,17 +360,7 @@ let ConfigurationPanel = {
       this.resetModelEvaluation()
     }
   },
-  computed: {
-    headers () {
-      return this.localConfig.headers.filter(header => header !== 'predict')
-    },
-    isModelBuilded () {
-      return (this.localConfig.modelJSON !== null && this.localConfig.modelJSON !== '{}')
-    },
-    hasModelEvaluated () {
-      return (this.localConfig.modelEvaluations.length > 0)
-    }
-  },
+  computed: {}, // ConfigurationPanelComputed.js
   mounted() {
     
   },
@@ -377,10 +368,13 @@ let ConfigurationPanel = {
 }
 
 
-Object(_ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ConfigurationPanel)
+Object(_ConfigurationPanelComputed_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ConfigurationPanel)
 
 
-Object(_ConfigurationPanelMethodsEvaluation_js__WEBPACK_IMPORTED_MODULE_2__["default"])(ConfigurationPanel)
+Object(_ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_2__["default"])(ConfigurationPanel)
+
+
+Object(_ConfigurationPanelMethodsEvaluation_js__WEBPACK_IMPORTED_MODULE_3__["default"])(ConfigurationPanel)
 
 /* harmony default export */ __webpack_exports__["default"] = (ConfigurationPanel);
 
@@ -473,6 +467,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_ConfigurationPanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CConfigurationPanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_ConfigurationPanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CConfigurationPanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_ConfigurationPanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CConfigurationPanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_ConfigurationPanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CConfigurationPanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
  /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_ConfigurationPanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CConfigurationPanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/ConfigurationPanelComputed.js":
+/*!*************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/ConfigurationPanelComputed.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (ConfigurationPanel) {
+  ConfigurationPanel.computed.headers = function () {
+      return this.localConfig.headers.filter(header => header !== 'predict')
+  }
+  ConfigurationPanel.computed.isModelBuilded = function () {
+    return (this.localConfig.modelJSON !== null && this.localConfig.modelJSON !== '{}')
+  }
+  ConfigurationPanel.computed.hasModelEvaluated = function () {
+    return (this.localConfig.modelEvaluations.length > 0)
+  }
+  
+  ConfigurationPanel.computed.isNeedPredict = function () {
+    for (let len = this.localConfig.data.length - 1, i = len; i > 0; i--) {
+      let predict = this.localConfig.data[(len - i)][1]
+      if (this.utils.DataUtils.isMissingData(predict)) {
+        return true
+      }
+    }
+    return false
+  }
+});
 
 /***/ }),
 
