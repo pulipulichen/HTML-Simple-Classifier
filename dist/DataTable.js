@@ -759,7 +759,21 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (DataTable) {
-  
+  DataTable.methods.loadData = async function (data) {
+    //console.log(data)
+    
+    this.config.isDataProcessing = true
+    this.dataLock = true
+    await this.utils.AsyncUtils.sleep(0)
+    
+    
+    this.hotInstance.loadData(data)
+    this.localConfig.data = data
+    
+    await this.utils.AsyncUtils.sleep(0)
+    this.config.isDataProcessing = false
+    this.dataLock = false
+  }
 });
 
 /***/ }),
@@ -907,7 +921,14 @@ __webpack_require__.r(__webpack_exports__);
       this.onHotBeforeChange(event[0])
     })
   }
+  
+  // ----------------------
+  
   DataTable.methods.onHotAfterChange = function () {
+    if (this.config.isDataProcessing) {
+      return false
+    }
+    
     if (this.dataLock === true) {
       return false
     }
@@ -920,6 +941,10 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   DataTable.methods.getSelectedRangeInfo = function () {
+    if (this.config.isDataProcessing) {
+      return false
+    }
+    
     let range = this.hotInstance.getSelectedRange()
     if (!range) {
       return {
@@ -941,6 +966,10 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   DataTable.methods.onHotBeforeContextMenuSetItems = function (event) {
+    if (this.config.isDataProcessing) {
+      return false
+    }
+    
     let selectedInfo = this.getSelectedRangeInfo()
     
     //this.hotContextMenuEvent = event
@@ -975,6 +1004,10 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   DataTable.methods.onHotCellUpdateSettings = function (row, col) {
+    if (this.config.isDataProcessing) {
+      return false
+    }
+    
     let cellProperties = {}
 
     let classNameList = []
@@ -1002,6 +1035,10 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   DataTable.methods.onHotBeforeChange = async function (changes) {
+    if (this.config.isDataProcessing) {
+      return false
+    }
+    
     let row = changes[0]
     let col = changes[1]
     let before = changes[2]
@@ -1050,18 +1087,20 @@ __webpack_require__.r(__webpack_exports__);
     this.clearPredictColumn()
   }
   
-  DataTable.watch['localConfig.data'] = function () {
+  DataTable.watch['localConfig.data'] = async function () {
     
     if (this.dataLock === true) {
       return false
     }
     this.dataLock = true
-    //await this.utils.AsyncUtils.sleep(0)
-    console.log(this.dataLock, this.localConfig.data.length)
+    await this.utils.AsyncUtils.sleep(0)
+    //console.log(this.dataLock, this.localConfig.data.length)
     //console.log('載入資料')
     //console.log(this.localConfig.data)
     
     this.hotInstance.loadData(this.localConfig.data)
+    
+    await this.utils.AsyncUtils.sleep(0)
     this.dataLock = false
   }
 //  

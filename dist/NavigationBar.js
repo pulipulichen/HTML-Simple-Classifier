@@ -387,6 +387,8 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   NavigationBar.methods.loadDemo = async function (file) {
+    this.config.isDataProcessing = true
+    
     if (!file) {
       file = this.config.demoDataList[0]
     }
@@ -405,15 +407,20 @@ __webpack_require__.r(__webpack_exports__);
     this.localConfig.classFieldName = detectResult.classFieldName    
     
     this.localConfig.headers = orderedData[0]
-    this.localConfig.data = orderedData.splice(1)
+    
+    let data = orderedData.splice(1)
+    //console.log(data)
+    //this.localConfig.data = this.localConfig.data.splice(0, 0).concat(data)
+    await this.$parent.$refs.DataTable.loadData(data)
     
     //let data = orderedData.splice(1)
     //this.localConfig.data = this.localConfig.data.splice(0, 0).concat(data)
     
     
     this.config.loadingProgress = 1
-    
     //console.log(this.localConfig.data.length)
+    
+    this.config.isDataProcessing = false
   }
   
   NavigationBar.methods.loadDemoData = async function (file) {

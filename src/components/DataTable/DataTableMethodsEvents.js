@@ -19,7 +19,14 @@ export default function (DataTable) {
       this.onHotBeforeChange(event[0])
     })
   }
+  
+  // ----------------------
+  
   DataTable.methods.onHotAfterChange = function () {
+    if (this.config.isDataProcessing) {
+      return false
+    }
+    
     if (this.dataLock === true) {
       return false
     }
@@ -32,6 +39,10 @@ export default function (DataTable) {
   }
   
   DataTable.methods.getSelectedRangeInfo = function () {
+    if (this.config.isDataProcessing) {
+      return false
+    }
+    
     let range = this.hotInstance.getSelectedRange()
     if (!range) {
       return {
@@ -53,6 +64,10 @@ export default function (DataTable) {
   }
   
   DataTable.methods.onHotBeforeContextMenuSetItems = function (event) {
+    if (this.config.isDataProcessing) {
+      return false
+    }
+    
     let selectedInfo = this.getSelectedRangeInfo()
     
     //this.hotContextMenuEvent = event
@@ -87,6 +102,10 @@ export default function (DataTable) {
   }
   
   DataTable.methods.onHotCellUpdateSettings = function (row, col) {
+    if (this.config.isDataProcessing) {
+      return false
+    }
+    
     let cellProperties = {}
 
     let classNameList = []
@@ -114,6 +133,10 @@ export default function (DataTable) {
   }
   
   DataTable.methods.onHotBeforeChange = async function (changes) {
+    if (this.config.isDataProcessing) {
+      return false
+    }
+    
     let row = changes[0]
     let col = changes[1]
     let before = changes[2]

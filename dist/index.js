@@ -28792,10 +28792,12 @@ let config = {
   urlIssue: 'https://github.com/pulipulichen/HTML-Simple-Classifier/issues/new',
   
   demoDataList: [
-    'weather.class.csv',
     'weather.play.ods',
+    'weather.class.csv',
+    'iris.ods',
     'labor.csv'
-  ]
+  ],
+  isDataProcessing: false
   //demoData: 'weather.play.ods'
   //demoData: 'labor.csv'
   //demoData: 'unbalanced.csv'

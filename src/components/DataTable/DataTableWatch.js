@@ -7,18 +7,20 @@ export default function (DataTable) {
     this.clearPredictColumn()
   }
   
-  DataTable.watch['localConfig.data'] = function () {
+  DataTable.watch['localConfig.data'] = async function () {
     
     if (this.dataLock === true) {
       return false
     }
     this.dataLock = true
-    //await this.utils.AsyncUtils.sleep(0)
-    console.log(this.dataLock, this.localConfig.data.length)
+    await this.utils.AsyncUtils.sleep(0)
+    //console.log(this.dataLock, this.localConfig.data.length)
     //console.log('載入資料')
     //console.log(this.localConfig.data)
     
     this.hotInstance.loadData(this.localConfig.data)
+    
+    await this.utils.AsyncUtils.sleep(0)
     this.dataLock = false
   }
 //  
