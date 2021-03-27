@@ -63,41 +63,37 @@ var render = function() {
   return _c("div", [
     _c("div", { staticClass: "ui top fixed inverted menu" }, [
       _c("div", { staticClass: "item" }, [
-        _c("img", { attrs: { src: _vm.logoPath } })
+        _c("img", { attrs: { src: _vm.logoPath } }),
+        _vm._v("\n      " + _vm._s(_vm.config.t) + "\n    ")
       ]),
       _vm._v(" "),
-      _c(
-        "a",
-        {
-          ref: "LoadDemoDropdown",
-          staticClass: "ui dropdown item",
-          on: { click: _vm.loadDemo }
-        },
-        [
-          _vm._v("\n      " + _vm._s(_vm.$t("LOAD DEMO")) + "\n      "),
-          _c("i", { staticClass: "dropdown icon" }),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "menu" },
-            _vm._l(_vm.config.demoDataList, function(file) {
-              return _c(
-                "div",
-                {
-                  staticClass: "item",
-                  on: {
-                    click: function($event) {
-                      return _vm.loadDemo(file)
-                    }
+      _c("a", { ref: "LoadDemoDropdown", staticClass: "ui dropdown item" }, [
+        _c("span", { on: { click: _vm.loadDemo } }, [
+          _vm._v("\n        " + _vm._s(_vm.$t("LOAD DEMO")) + "\n      ")
+        ]),
+        _vm._v(" "),
+        _c("i", { staticClass: "dropdown icon" }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "menu" },
+          _vm._l(_vm.config.demoDataList, function(file) {
+            return _c(
+              "div",
+              {
+                staticClass: "item",
+                on: {
+                  click: function($event) {
+                    return _vm.loadDemo(file)
                   }
-                },
-                [_vm._v("\n          " + _vm._s(_vm.$t(file)) + "\n        ")]
-              )
-            }),
-            0
-          )
-        ]
-      ),
+                }
+              },
+              [_vm._v("\n          " + _vm._s(_vm.$t(file)) + "\n        ")]
+            )
+          }),
+          0
+        )
+      ]),
       _vm._v(" "),
       _c(
         "a",
@@ -119,38 +115,33 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _c(
-        "a",
-        {
-          ref: "SaveFileDropdown",
-          staticClass: "ui dropdown item",
-          on: { click: _vm.saveFile }
-        },
-        [
-          _vm._v("\n      " + _vm._s(_vm.$t("SAVE FILE")) + "\n      "),
-          _c("i", { staticClass: "dropdown icon" }),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "menu" },
-            _vm._l(_vm.saveFormats, function(format) {
-              return _c(
-                "div",
-                {
-                  staticClass: "item",
-                  on: {
-                    click: function($event) {
-                      return _vm.saveFile(format)
-                    }
+      _c("a", { ref: "SaveFileDropdown", staticClass: "ui dropdown item" }, [
+        _c("span", { on: { click: _vm.saveFile } }, [
+          _vm._v("\n        " + _vm._s(_vm.$t("SAVE FILE")) + "\n      ")
+        ]),
+        _vm._v(" "),
+        _c("i", { staticClass: "dropdown icon" }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "menu" },
+          _vm._l(_vm.saveFormats, function(format) {
+            return _c(
+              "div",
+              {
+                staticClass: "item",
+                on: {
+                  click: function($event) {
+                    return _vm.saveFile(format)
                   }
-                },
-                [_vm._v("\n          " + _vm._s(_vm.$t(format)) + "\n        ")]
-              )
-            }),
-            0
-          )
-        ]
-      ),
+                }
+              },
+              [_vm._v("\n          " + _vm._s(_vm.$t(format)) + "\n        ")]
+            )
+          }),
+          0
+        )
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "right menu" }, [
         _c(
@@ -447,6 +438,9 @@ __webpack_require__.r(__webpack_exports__);
             && this.localConfig.data[0].length > 3) {
       return false
     }
+    else if (this.config.openFromAPI) {
+      return false
+    }
     
     //console.log('沒有資料，讀取demo')
     this.loadDemo()
@@ -466,6 +460,7 @@ __webpack_require__.r(__webpack_exports__);
     this.config.loadingProgress = 0
     let rawData = await this.loadDemoData(file)
     await this.processRawData(rawData)
+    await this.$parent.startPredict()
   }
   
   NavigationBar.methods.processRawData = async function (rawData) {
@@ -483,6 +478,10 @@ __webpack_require__.r(__webpack_exports__);
     let data = orderedData.splice(1)
     //console.log(data)
     //this.localConfig.data = this.localConfig.data.splice(0, 0).concat(data)
+    while (!this.$parent.$refs.DataTable) {
+      await this.utils.AsyncUtils.sleep(100)
+    }
+    
     await this.$parent.$refs.DataTable.loadData(data)
     
     //let data = orderedData.splice(1)

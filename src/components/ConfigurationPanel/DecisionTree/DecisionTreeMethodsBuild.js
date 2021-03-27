@@ -1,6 +1,10 @@
 import dt from './vendors/decision-tree/decision-tree.webpack.js'
 
 export default function (DecisionTree) {
+  DecisionTree.methods.startPredict = async function () {
+    return await this.start()
+  }
+    
   DecisionTree.methods.start = async function () {
     //this.localConfig.modelJSON = null
     this.config.loadingProgress = 0

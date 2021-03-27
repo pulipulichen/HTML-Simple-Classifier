@@ -11,6 +11,7 @@ let config = {
   loadingProgress: 1,
   urlGithub: 'https://github.com/pulipulichen/HTML-Simple-Classifier/',
   urlIssue: 'https://github.com/pulipulichen/HTML-Simple-Classifier/issues/new',
+  openFromAPI: false,
   
   demoDataList: [
     'weather.play.ods',

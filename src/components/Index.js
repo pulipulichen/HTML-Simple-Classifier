@@ -10,6 +10,7 @@ let Index = {
   data () {    
     this.$i18n.locale = this.config.localConfig
     return {
+      postMessageAPI: null
     }
   },
   components: {
@@ -25,11 +26,14 @@ let Index = {
       if (this.config.inited === false) {
         return false
       }
-      
+      this.initPostMessageAPI()
     },
   },
   methods: {
   }
 }
+
+import IndexPostMessage from './IndexPostMessage.js'
+IndexPostMessage(Index)
 
 export default Index

@@ -88,6 +88,7 @@ let VueController = {
   watch: {},
   mounted: async function () {
     //console.log('index.js mounted', 1)
+    this.config.openFromAPI = (location.href.endsWith('api=1'))
     
     this.restoreFromLocalStorage()
     
@@ -108,7 +109,8 @@ let VueController = {
       return true
     },
     restoreFromLocalStorage () {
-      if (this.config.debug.enableRestore === false) {
+      if (this.config.debug.enableRestore === false
+        || this.config.openFromAPI) {
         return false
       } 
 

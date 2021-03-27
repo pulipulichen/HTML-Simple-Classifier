@@ -28,6 +28,9 @@ ConfigurationPanelComputed(ConfigurationPanel)
 import ConfigurationPanelWatch from './ConfigurationPanelWatch.js'
 ConfigurationPanelWatch(ConfigurationPanel)
 
+import ConfigurationPanelMethods from './ConfigurationPanelMethods.js'
+ConfigurationPanelMethods(ConfigurationPanel)
+
 import ConfigurationPanelMethodsData from './ConfigurationPanelMethodsData.js'
 ConfigurationPanelMethodsData(ConfigurationPanel)
 

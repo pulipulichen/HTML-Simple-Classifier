@@ -175,7 +175,7 @@ var render = function() {
       _vm._v(" "),
       _vm.classifier === "DecisionTree"
         ? _c("DecisionTree", {
-            ref: "DecisionTree",
+            ref: "Classifier",
             attrs: {
               config: _vm.config,
               localConfig: _vm.localConfig,
@@ -333,8 +333,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _EvaluationPanel_EvaluationPanel_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EvaluationPanel/EvaluationPanel.vue */ "./src/components/ConfigurationPanel/EvaluationPanel/EvaluationPanel.vue");
 /* harmony import */ var _ConfigurationPanelComputed_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ConfigurationPanelComputed.js */ "./src/components/ConfigurationPanel/ConfigurationPanelComputed.js");
 /* harmony import */ var _ConfigurationPanelWatch_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ConfigurationPanelWatch.js */ "./src/components/ConfigurationPanel/ConfigurationPanelWatch.js");
-/* harmony import */ var _ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ConfigurationPanelMethodsData.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsData.js");
-/* harmony import */ var _ConfigurationPanelMethodsEvaluation_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ConfigurationPanelMethodsEvaluation.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsEvaluation.js");
+/* harmony import */ var _ConfigurationPanelMethods_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ConfigurationPanelMethods.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethods.js");
+/* harmony import */ var _ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ConfigurationPanelMethodsData.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsData.js");
+/* harmony import */ var _ConfigurationPanelMethodsEvaluation_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ConfigurationPanelMethodsEvaluation.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsEvaluation.js");
 
 
 let ConfigurationPanel = {
@@ -366,10 +367,13 @@ Object(_ConfigurationPanelComputed_js__WEBPACK_IMPORTED_MODULE_1__["default"])(C
 Object(_ConfigurationPanelWatch_js__WEBPACK_IMPORTED_MODULE_2__["default"])(ConfigurationPanel)
 
 
-Object(_ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_3__["default"])(ConfigurationPanel)
+Object(_ConfigurationPanelMethods_js__WEBPACK_IMPORTED_MODULE_3__["default"])(ConfigurationPanel)
 
 
-Object(_ConfigurationPanelMethodsEvaluation_js__WEBPACK_IMPORTED_MODULE_4__["default"])(ConfigurationPanel)
+Object(_ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_4__["default"])(ConfigurationPanel)
+
+
+Object(_ConfigurationPanelMethodsEvaluation_js__WEBPACK_IMPORTED_MODULE_5__["default"])(ConfigurationPanel)
 
 /* harmony default export */ __webpack_exports__["default"] = (ConfigurationPanel);
 
@@ -497,6 +501,28 @@ __webpack_require__.r(__webpack_exports__);
   
   ConfigurationPanel.computed.isModelWindowOpened = function () {
     return ((this.modelWindow !== null) && (this.modelWindow.closed === false))
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/ConfigurationPanelMethods.js":
+/*!************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/ConfigurationPanelMethods.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (ConfigurationPanel) {
+  ConfigurationPanel.methods.startPredict = async function () {
+    while (this.config.inited === false
+            || !this.$refs.Classifier) {
+      await this.utils.AsyncUtils.sleep(100)
+    }
+    
+    this.$refs.Classifier.startPredict()
   }
 });
 

@@ -313,6 +313,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (DecisionTree) {
+  DecisionTree.methods.startPredict = async function () {
+    return await this.start()
+  }
+    
   DecisionTree.methods.start = async function () {
     //this.localConfig.modelJSON = null
     this.config.loadingProgress = 0

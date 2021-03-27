@@ -2,11 +2,13 @@
   <div class="ui top fixed inverted menu">
     <div class="item">
       <img v-bind:src="logoPath">
+      {{ config.t }}
     </div>
     <a class="ui dropdown item"
-       ref="LoadDemoDropdown"
-       v-on:click="loadDemo">
-      {{ $t('LOAD DEMO') }}
+       ref="LoadDemoDropdown">
+      <span v-on:click="loadDemo">
+        {{ $t('LOAD DEMO') }}
+      </span>
       <i class="dropdown icon"></i>
       <div class="menu">
         <div class="item"
@@ -25,9 +27,11 @@
              v-on:change="openFile" />
     </a>
     <a class="ui dropdown item"
-       ref="SaveFileDropdown"
-       v-on:click="saveFile">
-      {{ $t('SAVE FILE') }}
+       ref="SaveFileDropdown">
+      <span v-on:click="saveFile">
+        {{ $t('SAVE FILE') }}
+      </span>
+      
       <i class="dropdown icon"></i>
       <div class="menu">
         <div class="item"
