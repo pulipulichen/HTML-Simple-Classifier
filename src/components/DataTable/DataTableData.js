@@ -1,4 +1,6 @@
-import HandsontablePluginRenameColHeader from './vendors/handsontable/handsontable.plugin.rename_col_header.js'
+import HandsontablePluginFactory from './vendors/handsontable/handsontable.plugin.factory.js'
+
+//import HandsontablePluginRenameColHeader from './vendors/handsontable/handsontable.plugin.rename_col_header.js'
 //import HandsontablePluginClearPredictColumn from './vendors/handsontable/handsontable.plugin.rename_clear_predict_column.js'
 
 export default function (DataTable) {
@@ -29,44 +31,35 @@ export default function (DataTable) {
       'undo', 'redo'
     ]
     
-    let HandsontablePluginClearPredictColumn = {
+    let HandsontablePluginClearPredictColumn = HandsontablePluginFactory({
       key: 'clear_predict_column',
-      name: function name() {
-        return "Clear Predictions"
-      },
+      name: () => {return this.$t('Clear Predictions')},
       callback: (event, coords, th) => {
         this.clearPredictColumn()
-      },
-      disabled: function disabled() {
-        return false
-      },
-      hidden: function hidden() {
-        return false
       }
-    }
+    })
     
-    
-    let HandsontablePluginClearPredictColumnTestCases = {
+    let HandsontablePluginClearPredictColumnTestCases = HandsontablePluginFactory({
       key: 'clear_predict_column_test_cases',
-      name: function name() {
-        return "Clear Test Predictions"
-      },
+      name: () => {return this.$t("Clear Test Predictions")},
       callback: (event, coords, th) => {
         this.clearTestPredictColumn()
-      },
-      disabled: function disabled() {
-        return false
-      },
-      hidden: function hidden() {
-        return false
       }
-    }
+    })
     
     let hotContextMenuSelectedColumnClearReadOnly = [
       HandsontablePluginClearPredictColumn,
       '---------',
       'undo', 'redo'
     ]
+    
+    let HandsontablePluginRenameColHeader = HandsontablePluginFactory({
+      key: 'rename_col_header',
+      name: () => {return this.$t("Rename column header")},
+      callback: (event, coords, th) => {
+        this.renameColHeader(event, coords, th)
+      }
+    })
     
     let hotDropdownMenuDefault = [
       HandsontablePluginRenameColHeader,

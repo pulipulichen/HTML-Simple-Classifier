@@ -34,4 +34,7 @@ DataTableComputed(DataTable)
 import DataTableWatch from './DataTableWatch.js'
 DataTableWatch(DataTable)
 
+import DataTableMethodsMenu from './DataTableMethodsMenu.js'
+DataTableMethodsMenu(DataTable)
+
 export default DataTable

@@ -457,6 +457,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _DataTableMethodsEvents_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DataTableMethodsEvents.js */ "./src/components/DataTable/DataTableMethodsEvents.js");
 /* harmony import */ var _DataTableComputed_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DataTableComputed.js */ "./src/components/DataTable/DataTableComputed.js");
 /* harmony import */ var _DataTableWatch_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./DataTableWatch.js */ "./src/components/DataTable/DataTableWatch.js");
+/* harmony import */ var _DataTableMethodsMenu_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./DataTableMethodsMenu.js */ "./src/components/DataTable/DataTableMethodsMenu.js");
 
 //import Handsontable from 'handsontable';
 
@@ -492,6 +493,9 @@ Object(_DataTableComputed_js__WEBPACK_IMPORTED_MODULE_6__["default"])(DataTable)
 
 
 Object(_DataTableWatch_js__WEBPACK_IMPORTED_MODULE_7__["default"])(DataTable)
+
+
+Object(_DataTableMethodsMenu_js__WEBPACK_IMPORTED_MODULE_8__["default"])(DataTable)
 
 /* harmony default export */ __webpack_exports__["default"] = (DataTable);
 
@@ -643,8 +647,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _vendors_handsontable_handsontable_plugin_rename_col_header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendors/handsontable/handsontable.plugin.rename_col_header.js */ "./src/components/DataTable/vendors/handsontable/handsontable.plugin.rename_col_header.js");
+/* harmony import */ var _vendors_handsontable_handsontable_plugin_factory_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendors/handsontable/handsontable.plugin.factory.js */ "./src/components/DataTable/vendors/handsontable/handsontable.plugin.factory.js");
 
+
+//import HandsontablePluginRenameColHeader from './vendors/handsontable/handsontable.plugin.rename_col_header.js'
 //import HandsontablePluginClearPredictColumn from './vendors/handsontable/handsontable.plugin.rename_clear_predict_column.js'
 
 /* harmony default export */ __webpack_exports__["default"] = (function (DataTable) {
@@ -675,38 +681,21 @@ __webpack_require__.r(__webpack_exports__);
       'undo', 'redo'
     ]
     
-    let HandsontablePluginClearPredictColumn = {
+    let HandsontablePluginClearPredictColumn = Object(_vendors_handsontable_handsontable_plugin_factory_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
       key: 'clear_predict_column',
-      name: function name() {
-        return "Clear Predictions"
-      },
+      name: () => {return this.$t('Clear Predictions')},
       callback: (event, coords, th) => {
         this.clearPredictColumn()
-      },
-      disabled: function disabled() {
-        return false
-      },
-      hidden: function hidden() {
-        return false
       }
-    }
+    })
     
-    
-    let HandsontablePluginClearPredictColumnTestCases = {
+    let HandsontablePluginClearPredictColumnTestCases = Object(_vendors_handsontable_handsontable_plugin_factory_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
       key: 'clear_predict_column_test_cases',
-      name: function name() {
-        return "Clear Test Predictions"
-      },
+      name: () => {return this.$t("Clear Test Predictions")},
       callback: (event, coords, th) => {
         this.clearTestPredictColumn()
-      },
-      disabled: function disabled() {
-        return false
-      },
-      hidden: function hidden() {
-        return false
       }
-    }
+    })
     
     let hotContextMenuSelectedColumnClearReadOnly = [
       HandsontablePluginClearPredictColumn,
@@ -714,8 +703,16 @@ __webpack_require__.r(__webpack_exports__);
       'undo', 'redo'
     ]
     
+    let HandsontablePluginRenameColHeader = Object(_vendors_handsontable_handsontable_plugin_factory_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      key: 'rename_col_header',
+      name: () => {return this.$t("Rename column header")},
+      callback: (event, coords, th) => {
+        this.renameColHeader(event, coords, th)
+      }
+    })
+    
     let hotDropdownMenuDefault = [
-      _vendors_handsontable_handsontable_plugin_rename_col_header_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+      HandsontablePluginRenameColHeader,
       '---------',
       "col_left", "col_right", "remove_col", 
       '---------',
@@ -1073,6 +1070,50 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/DataTable/DataTableMethodsMenu.js":
+/*!**********************************************************!*\
+  !*** ./src/components/DataTable/DataTableMethodsMenu.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (DataTable) {
+  DataTable.methods.renameColHeader = function (event, coords, th) {
+    let index = coords[0].start.col
+
+    let instance = this.hotInstance
+    let headers = instance.getColHeader()
+
+    let header = headers[index]
+    
+    //let newHeader = window.prompt('Rename column header', header)
+    let newHeader = window.prompt(this.$t('Rename column header'), header)
+    if (typeof(newHeader) !== 'string' || newHeader.trim() === '') {
+      return this
+    }
+
+    headers[index] = newHeader
+    //this.localConfig.headers[index]
+    //this.localConfig.headers[index] = newHeader
+    
+    let savedHeader = this.localConfig.headers
+    savedHeader[index] = newHeader
+    this.localConfig.headers = this.localConfig.headers.splice(0,0).concat(savedHeader)
+
+    //console.log(headers)
+
+    //console.log(instance.getColHeader())
+    instance.updateSettings({
+      modifyColWidth: () => {},
+      colHeaders: headers
+    })
+  }
+});
+
+/***/ }),
+
 /***/ "./src/components/DataTable/DataTableWatch.js":
 /*!****************************************************!*\
   !*** ./src/components/DataTable/DataTableWatch.js ***!
@@ -1161,61 +1202,47 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./src/components/DataTable/vendors/handsontable/handsontable.plugin.rename_col_header.js":
-/*!************************************************************************************************!*\
-  !*** ./src/components/DataTable/vendors/handsontable/handsontable.plugin.rename_col_header.js ***!
-  \************************************************************************************************/
+/***/ "./src/components/DataTable/vendors/handsontable/handsontable.plugin.factory.js":
+/*!**************************************************************************************!*\
+  !*** ./src/components/DataTable/vendors/handsontable/handsontable.plugin.factory.js ***!
+  \**************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  key: 'rename_col_header',
-  name: function name() {
-    return "Rename column header"
-  },
-  callback: function callback(event, coords, th) {
-    let index = coords[0].start.col
+/* harmony default export */ __webpack_exports__["default"] = (function (options = {}) {
+  let {
+    key,
+    name,
+    callback
+  } = options
 
-    let instance = this
-    let headers = instance.getColHeader()
-
-    let header = headers[index]
-    
-    //let newHeader = window.prompt('Rename column header', header)
-    let newHeader = window.prompt('Rename column header', header)
-    if (typeof(newHeader) !== 'string' || newHeader.trim() === '') {
-      return this
+  return {
+    key,
+    name: function () {
+      return name()
+    },
+    callback: function (event, coords, th) {
+      callback(event, coords, th)
+    },
+    disabled: function () {
+      /*
+       var selected = (0, _utils.getValidSelection)(this);
+       var totalColumns = this.countCols();
+       
+       if (!selected) {
+       return true;
+       }
+       
+       return this.selection.isSelectedByRowHeader() || this.selection.isSelectedByCorner() || !this.isColumnModificationAllowed() || !totalColumns;
+       */
+      return false
+    },
+    hidden: function hidden() {
+      //return !this.getSettings().allowRemoveColumn;
+      return false
     }
-
-    headers[index] = newHeader
-
-    //console.log(headers)
-
-    //console.log(instance.getColHeader())
-    instance.updateSettings({
-      modifyColWidth: () => {},
-      colHeaders: headers
-    })
-
-  },
-  disabled: function disabled() {
-    /*
-     var selected = (0, _utils.getValidSelection)(this);
-     var totalColumns = this.countCols();
-     
-     if (!selected) {
-     return true;
-     }
-     
-     return this.selection.isSelectedByRowHeader() || this.selection.isSelectedByCorner() || !this.isColumnModificationAllowed() || !totalColumns;
-     */
-    return false
-  },
-  hidden: function hidden() {
-    //return !this.getSettings().allowRemoveColumn;
-    return false
   }
 });
 

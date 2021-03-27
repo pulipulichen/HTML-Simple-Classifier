@@ -7,13 +7,13 @@ export default function (options = {}) {
 
   return {
     key,
-    name: function name() {
-      return name
+    name: function () {
+      return name()
     },
-    callback: function callback(event, coords, th) {
+    callback: function (event, coords, th) {
       callback(event, coords, th)
     },
-    disabled: function disabled() {
+    disabled: function () {
       /*
        var selected = (0, _utils.getValidSelection)(this);
        var totalColumns = this.countCols();
