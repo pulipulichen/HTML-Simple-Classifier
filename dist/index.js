@@ -29501,6 +29501,79 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/utils/PopupUtils.js":
+/*!*********************************!*\
+  !*** ./src/utils/PopupUtils.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  open: function (options = {}) {
+    let {
+      windowName = 'popup' + (new Date()).getTime(),
+      cssURL,
+      bodyHTML,
+      title = window.document.title,
+      size = 'fullscreen' // 'fullscreen', 'left', 'right'
+    } = options
+    
+    let top = 0
+    let left = 0
+    let width = window.screen.availWidth
+    let height = window.screen.availHeight
+    
+    if (size === 'left') {
+      width = parseInt(width / 2, 10)
+    }
+    else if (size === 'right') {
+      width = parseInt(width / 2, 10)
+      left = width
+    }
+    
+    let parameters = [
+      'toolbar=no',
+      'location=no',
+      'status=no',
+      'menubar=no',
+      'scrollbars=yes',
+      'resizable=yes',
+      'width=' + width,
+      'height=' + height,
+      'top=' + top,
+      'left=' + left
+    ]
+    //console.log(windowName)
+    let win = window.open('', windowName, parameters.join(','))
+    let doc = win.document
+    
+    if (cssURL) {
+      
+      var head  = doc.getElementsByTagName('head')[0];
+      var link  = doc.createElement('link');
+      link.rel  = 'stylesheet';
+      link.type = 'text/css';
+      link.href = cssURL
+      //link.media = 'all';
+      head.appendChild(link);
+    }
+    
+    if (bodyHTML) {
+      doc.body.innerHTML = bodyHTML
+    }
+    
+    if (title) {
+      doc.title = title
+    }
+    
+    return win
+  }
+});
+
+/***/ }),
+
 /***/ "./src/utils/URLUtils.js":
 /*!*******************************!*\
   !*** ./src/utils/URLUtils.js ***!
@@ -29575,8 +29648,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FileUtils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FileUtils.js */ "./src/utils/FileUtils.js");
 /* harmony import */ var _URLUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./URLUtils.js */ "./src/utils/URLUtils.js");
 /* harmony import */ var _DataUtils_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DataUtils.js */ "./src/utils/DataUtils.js");
-/* harmony import */ var _date_helper_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./date-helper.js */ "./src/utils/date-helper.js");
-/* harmony import */ var _date_helper_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_date_helper_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _PopupUtils_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PopupUtils.js */ "./src/utils/PopupUtils.js");
+/* harmony import */ var _date_helper_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./date-helper.js */ "./src/utils/date-helper.js");
+/* harmony import */ var _date_helper_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_date_helper_js__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -29592,6 +29667,7 @@ __webpack_require__.r(__webpack_exports__);
   FileUtils: _FileUtils_js__WEBPACK_IMPORTED_MODULE_3__["default"],
   URLUtils: _URLUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"],
   DataUtils: _DataUtils_js__WEBPACK_IMPORTED_MODULE_5__["default"],
+  PopupUtils: _PopupUtils_js__WEBPACK_IMPORTED_MODULE_6__["default"]
 });
 
 /***/ })

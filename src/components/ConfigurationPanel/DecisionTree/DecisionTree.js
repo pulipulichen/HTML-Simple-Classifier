@@ -3,6 +3,7 @@ let DecisionTree = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
+      model: null
     }
   },
   watch: {
@@ -13,6 +14,11 @@ let DecisionTree = {
   computed: {
     isModelBuilded () {
       return (this.localConfig.modelJSON !== null && this.localConfig.modelJSON !== '{}')
+    },
+    modelCSSURL () {
+      let currentURL = location.href
+      return currentURL.slice(0, currentURL.lastIndexOf('/') + 1)
+        + 'assets/classifiers/DecisionTree/style.css'
     }
   },
   mounted() {
@@ -23,7 +29,10 @@ let DecisionTree = {
   methods: {}
 }
 
-import DecisionTreeMethods from './DecisionTreeMethods.js'
-DecisionTreeMethods(DecisionTree)
+import DecisionTreeMethodsBuild from './DecisionTreeMethodsBuild.js'
+DecisionTreeMethodsBuild(DecisionTree)
+
+import DecisionTreeMethodsShow from './DecisionTreeMethodsShow.js'
+DecisionTreeMethodsShow(DecisionTree)
 
 export default DecisionTree

@@ -6,41 +6,28 @@ export default function (DecisionTree) {
     
     let data = await this.$parent.getJSONData()
     //console.log(data.trainSet)
-    let model
     
     if (this.isModelBuilded === false) {
-      model = this.buildModel(data.trainSet)
-      await model.waitReady()
+      this.model = this.buildModel(data.trainSet)
+      await this.model.waitReady()
       //console.log(model.root)
-      this.localConfig.modelJSON = JSON.stringify(model.root)
+      this.localConfig.modelJSON = JSON.stringify(this.model.root)
       //console.log(JSON.parse(this.localConfig.modelJSON))
     }
     else {
-      model = this.buildModel([])
-      await model.waitReady()
-      model.category = this.localConfig.classFieldName
-      model.root = JSON.parse(this.localConfig.modelJSON)
+      this.model = this.buildModel([])
+      await this.model.waitReady()
+      this.model.category = this.localConfig.classFieldName
+      this.model.root = JSON.parse(this.localConfig.modelJSON)
       //console.log(model.root, this.localConfig.modelJSON)
     }
     //console.error('需要只Predict test case')
     
     //console.log(data.testSet)
-    let predictResults = await this.getPredictResults(model, data.testSet)
+    let predictResults = await this.getPredictResults(this.model, data.testSet)
     
     if (this.$parent.hasModelEvaluated === false) {
-      let getTrainSetPredicts = await this.$parent.getTrainSetPredicts(predictResults, data.testSetRowIndexes)
-      //console.log(data.trainSetClasses)
-      //console.log(getTrainSetPredicts)
-      
-      this.$parent.resetModelEvaluation()
-      
-      let accuracy = await this.$parent.calcAccuracy(data.trainSetClasses, getTrainSetPredicts)
-      //console.log(accuracy)
-      this.localConfig.modelEvaluations.push({
-        name: 'accuracy',
-        type: 'percent',
-        value: accuracy
-      })
+      this.evaluationResults(data, predictResults)
     }
     
     //console.log(predictResults)
@@ -48,7 +35,6 @@ export default function (DecisionTree) {
   }
   
   DecisionTree.methods.buildModel = function (trainSet) {
-    
     // Configuration
     var config = {
       trainingSet: trainSet, 
@@ -87,7 +73,19 @@ export default function (DecisionTree) {
     return results
   }
   
-  DecisionTree.methods.getEvaluationResults = async function (model, testSet, testSetRowIndexes) {
-    
+  DecisionTree.methods.evaluationResults = async function (data, predictResults) {
+    let getTrainSetPredicts = await this.$parent.getTrainSetPredicts(predictResults, data.testSetRowIndexes)
+    //console.log(data.trainSetClasses)
+    //console.log(getTrainSetPredicts)
+
+    this.$parent.resetModelEvaluation()
+
+    let accuracy = await this.$parent.calcAccuracy(data.trainSetClasses, getTrainSetPredicts)
+    //console.log(accuracy)
+    this.localConfig.modelEvaluations.push({
+      name: 'accuracy',
+      type: 'percent',
+      value: accuracy
+    })
   }
 }
