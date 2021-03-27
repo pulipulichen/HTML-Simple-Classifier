@@ -130,4 +130,28 @@ export default function (NavigationBar) {
     return data
   }
   
+  
+  NavigationBar.methods.dataToArrayJSON = async function () {
+    let headers = this.localConfig.headers
+    let rows = this.localConfig.data
+    
+    let data = []
+    
+    for (let len = rows.length, i = len; i > 0; i--) {
+      let row = rows[(len - i)]
+      
+      let json = {}
+      headers.forEach((header, i) => {
+        json[header] = row[i]
+      })
+      
+      data.push(json)
+      
+      if (i % 10 === 5) {
+        await this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    
+    return data
+  }
 }

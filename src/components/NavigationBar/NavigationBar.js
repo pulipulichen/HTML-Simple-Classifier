@@ -11,6 +11,14 @@ let NavigationBar = {
   },
   watch: {},  // NavigationBarWatch.js
   computed: {
+    filenameWithoutExt () {
+      let filename = this.localConfig.filename
+      let pos = filename.lastIndexOf('.')
+      if (pos === -1) {
+        return filename
+      }
+      return filename.slice(0, pos)
+    }
   },
   mounted: async function () {
     await this.initData()
@@ -22,8 +30,11 @@ let NavigationBar = {
 import NavigationBarMethodsData from './NavigationBarMethodsData.js'
 NavigationBarMethodsData(NavigationBar)
 
-import NavigationBarMethodsDataLoader from './NavigationBarMethodsDataLoader.js'
-NavigationBarMethodsDataLoader(NavigationBar)
+import NavigationBarMethodsHandlerODS from './NavigationBarMethodsHandlerODS.js'
+NavigationBarMethodsHandlerODS(NavigationBar)
+
+import NavigationBarMethodsHandlerCSV from './NavigationBarMethodsHandlerCSV.js'
+NavigationBarMethodsHandlerCSV(NavigationBar)
 
 import NavigationBarMethodsView from './NavigationBarMethodsView.js'
 NavigationBarMethodsView(NavigationBar)

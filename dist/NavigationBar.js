@@ -286,9 +286,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../assets/favicon/favicon.svg */ "./assets/favicon/favicon.svg");
 /* harmony import */ var _assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _NavigationBarMethodsData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavigationBarMethodsData.js */ "./src/components/NavigationBar/NavigationBarMethodsData.js");
-/* harmony import */ var _NavigationBarMethodsDataLoader_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavigationBarMethodsDataLoader.js */ "./src/components/NavigationBar/NavigationBarMethodsDataLoader.js");
-/* harmony import */ var _NavigationBarMethodsView_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NavigationBarMethodsView.js */ "./src/components/NavigationBar/NavigationBarMethodsView.js");
-/* harmony import */ var _NavigationBarWatch_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavigationBarWatch.js */ "./src/components/NavigationBar/NavigationBarWatch.js");
+/* harmony import */ var _NavigationBarMethodsHandlerODS_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavigationBarMethodsHandlerODS.js */ "./src/components/NavigationBar/NavigationBarMethodsHandlerODS.js");
+/* harmony import */ var _NavigationBarMethodsHandlerCSV_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NavigationBarMethodsHandlerCSV.js */ "./src/components/NavigationBar/NavigationBarMethodsHandlerCSV.js");
+/* harmony import */ var _NavigationBarMethodsView_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavigationBarMethodsView.js */ "./src/components/NavigationBar/NavigationBarMethodsView.js");
+/* harmony import */ var _NavigationBarWatch_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavigationBarWatch.js */ "./src/components/NavigationBar/NavigationBarWatch.js");
 
 
 let NavigationBar = {
@@ -302,6 +303,14 @@ let NavigationBar = {
   },
   watch: {},  // NavigationBarWatch.js
   computed: {
+    filenameWithoutExt () {
+      let filename = this.localConfig.filename
+      let pos = filename.lastIndexOf('.')
+      if (pos === -1) {
+        return filename
+      }
+      return filename.slice(0, pos)
+    }
   },
   mounted: async function () {
     await this.initData()
@@ -314,13 +323,16 @@ let NavigationBar = {
 Object(_NavigationBarMethodsData_js__WEBPACK_IMPORTED_MODULE_1__["default"])(NavigationBar)
 
 
-Object(_NavigationBarMethodsDataLoader_js__WEBPACK_IMPORTED_MODULE_2__["default"])(NavigationBar)
+Object(_NavigationBarMethodsHandlerODS_js__WEBPACK_IMPORTED_MODULE_2__["default"])(NavigationBar)
 
 
-Object(_NavigationBarMethodsView_js__WEBPACK_IMPORTED_MODULE_3__["default"])(NavigationBar)
+Object(_NavigationBarMethodsHandlerCSV_js__WEBPACK_IMPORTED_MODULE_3__["default"])(NavigationBar)
 
 
-Object(_NavigationBarWatch_js__WEBPACK_IMPORTED_MODULE_4__["default"])(NavigationBar)
+Object(_NavigationBarMethodsView_js__WEBPACK_IMPORTED_MODULE_4__["default"])(NavigationBar)
+
+
+Object(_NavigationBarWatch_js__WEBPACK_IMPORTED_MODULE_5__["default"])(NavigationBar)
 
 /* harmony default export */ __webpack_exports__["default"] = (NavigationBar);
 
@@ -543,13 +555,37 @@ __webpack_require__.r(__webpack_exports__);
     return data
   }
   
+  
+  NavigationBar.methods.dataToArrayJSON = async function () {
+    let headers = this.localConfig.headers
+    let rows = this.localConfig.data
+    
+    let data = []
+    
+    for (let len = rows.length, i = len; i > 0; i--) {
+      let row = rows[(len - i)]
+      
+      let json = {}
+      headers.forEach((header, i) => {
+        json[header] = row[i]
+      })
+      
+      data.push(json)
+      
+      if (i % 10 === 5) {
+        await this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    
+    return data
+  }
 });
 
 /***/ }),
 
-/***/ "./src/components/NavigationBar/NavigationBarMethodsDataLoader.js":
+/***/ "./src/components/NavigationBar/NavigationBarMethodsHandlerCSV.js":
 /*!************************************************************************!*\
-  !*** ./src/components/NavigationBar/NavigationBarMethodsDataLoader.js ***!
+  !*** ./src/components/NavigationBar/NavigationBarMethodsHandlerCSV.js ***!
   \************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -558,9 +594,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var papaparse__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! papaparse */ "./node_modules/papaparse/papaparse.min.js");
 /* harmony import */ var papaparse__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(papaparse__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! xlsx */ "./node_modules/xlsx/xlsx.js");
-/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(xlsx__WEBPACK_IMPORTED_MODULE_1__);
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
@@ -625,6 +658,48 @@ __webpack_require__.r(__webpack_exports__);
     })
   }
   
+  NavigationBar.methods.saveFileCSV = async function () {
+    this.config.loadingProgress = 0
+    let arrayJSON = await this.dataToArrayJSON()
+    this.config.loadingProgress = 0.5
+    //console.log(arrayJSON)
+    var csv = papaparse__WEBPACK_IMPORTED_MODULE_0___default.a.unparse(arrayJSON)
+    
+    this.config.loadingProgress = 0.7
+    let filename = this.filenameWithoutExt + '.csv'
+
+//    var csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
+//    var csvURL
+////    if (navigator.msSaveBlob) {
+////      csvURL = navigator.msSaveBlob(csvData, filename);
+////    } else {
+////      csvURL = window.URL.createObjectURL(csvData);
+////    }
+//    
+//    csvURL = window.URL.createObjectURL(csvData);
+
+    this.config.loadingProgress = 1
+    this.utils.FileUtils.download(filename, csv)
+    
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBarMethodsHandlerODS.js":
+/*!************************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBarMethodsHandlerODS.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! xlsx */ "./node_modules/xlsx/xlsx.js");
+/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(xlsx__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
   
   NavigationBar.methods.loadURLODS = function (url) {
 
@@ -636,7 +711,7 @@ __webpack_require__.r(__webpack_exports__);
 
       req.onload = async (e) => {
         var data = new Uint8Array(req.response);
-        var workbook = xlsx__WEBPACK_IMPORTED_MODULE_1___default.a.read(data, {type:"array"});
+        var workbook = xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.read(data, {type:"array"});
 
         resolve(await this.processXLSXData(workbook))
       }
@@ -651,7 +726,7 @@ __webpack_require__.r(__webpack_exports__);
       reader.readAsArrayBuffer(file);
       reader.onload = async (e) => {
         var data = new Uint8Array(reader.result);
-        var workbook = xlsx__WEBPACK_IMPORTED_MODULE_1___default.a.read(data, {type: "array"})
+        var workbook = xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.read(data, {type: "array"})
         resolve(await this.processXLSXData(workbook))
       }
     })
@@ -663,7 +738,7 @@ __webpack_require__.r(__webpack_exports__);
 
     //console.log(url)
     //console.log(sheet_name_list)
-    var xlData = xlsx__WEBPACK_IMPORTED_MODULE_1___default.a.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
+    var xlData = xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
 
     let headers
     
@@ -686,6 +761,10 @@ __webpack_require__.r(__webpack_exports__);
 
     xlData = await this.utils.DataUtils.parseNumber(xlData)
     return xlData
+  }
+  
+  NavigationBar.methods.saveFileODS = async function () {
+    window.alert('[TODO]')
   }
 });
 
@@ -722,8 +801,17 @@ __webpack_require__.r(__webpack_exports__);
     return false
   }
   
-  NavigationBar.methods.saveFile = function (format) {
-    window.alert('TODO: ' + format)
+  NavigationBar.methods.saveFile = async function (format) {
+    
+    if (format === 'csv') {
+      this.saveFileCSV()
+    }
+    else if (format === 'ods') {
+      this.saveFileODS()
+    }
+    else {
+      window.alert(this.$t('Incorrect format: ') + format)
+    }
   }
   
   NavigationBar.methods.openFile = async function (event) {

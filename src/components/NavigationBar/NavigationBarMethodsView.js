@@ -16,8 +16,17 @@ export default function (NavigationBar) {
     return false
   }
   
-  NavigationBar.methods.saveFile = function (format) {
-    window.alert('TODO: ' + format)
+  NavigationBar.methods.saveFile = async function (format) {
+    
+    if (format === 'csv') {
+      this.saveFileCSV()
+    }
+    else if (format === 'ods') {
+      this.saveFileODS()
+    }
+    else {
+      window.alert(this.$t('Incorrect format: ') + format)
+    }
   }
   
   NavigationBar.methods.openFile = async function (event) {
