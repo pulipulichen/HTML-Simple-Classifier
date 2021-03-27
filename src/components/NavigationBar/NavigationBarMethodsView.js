@@ -6,8 +6,12 @@ export default function (NavigationBar) {
     while (!this.$refs.LoadDemoDropdown || !$.isSemanticNIWSFReady) {
       await this.utils.AsyncUtils.sleep()
     }
-    $(this.$refs.LoadDemoDropdown).dropdown()
-    $(this.$refs.SaveFileDropdown).dropdown()
+    let config = {
+      on: 'hover'
+    }
+    
+    $(this.$refs.LoadDemoDropdown).dropdown(config)
+    $(this.$refs.SaveFileDropdown).dropdown(config)
   }
     
   NavigationBar.methods.onSearch = function (event) {
@@ -17,6 +21,9 @@ export default function (NavigationBar) {
   }
   
   NavigationBar.methods.saveFile = async function (format) {
+    if (!format || typeof format !== 'string') {
+      format = this.saveFormats[0]
+    }
     
     if (format === 'csv') {
       this.saveFileCSV()

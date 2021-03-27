@@ -66,30 +66,38 @@ var render = function() {
         _c("img", { attrs: { src: _vm.logoPath } })
       ]),
       _vm._v(" "),
-      _c("a", { ref: "LoadDemoDropdown", staticClass: "ui dropdown item" }, [
-        _vm._v("\n      " + _vm._s(_vm.$t("LOAD DEMO")) + "\n      "),
-        _c("i", { staticClass: "dropdown icon" }),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "menu" },
-          _vm._l(_vm.config.demoDataList, function(file) {
-            return _c(
-              "div",
-              {
-                staticClass: "item",
-                on: {
-                  click: function($event) {
-                    return _vm.loadDemo(file)
+      _c(
+        "a",
+        {
+          ref: "LoadDemoDropdown",
+          staticClass: "ui dropdown item",
+          on: { click: _vm.loadDemo }
+        },
+        [
+          _vm._v("\n      " + _vm._s(_vm.$t("LOAD DEMO")) + "\n      "),
+          _c("i", { staticClass: "dropdown icon" }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "menu" },
+            _vm._l(_vm.config.demoDataList, function(file) {
+              return _c(
+                "div",
+                {
+                  staticClass: "item",
+                  on: {
+                    click: function($event) {
+                      return _vm.loadDemo(file)
+                    }
                   }
-                }
-              },
-              [_vm._v("\n          " + _vm._s(_vm.$t(file)) + "\n        ")]
-            )
-          }),
-          0
-        )
-      ]),
+                },
+                [_vm._v("\n          " + _vm._s(_vm.$t(file)) + "\n        ")]
+              )
+            }),
+            0
+          )
+        ]
+      ),
       _vm._v(" "),
       _c(
         "a",
@@ -111,30 +119,38 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _c("a", { ref: "SaveFileDropdown", staticClass: "ui dropdown item" }, [
-        _vm._v("\n      " + _vm._s(_vm.$t("SAVE FILE")) + "\n      "),
-        _c("i", { staticClass: "dropdown icon" }),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "menu" },
-          _vm._l(_vm.saveFormats, function(format) {
-            return _c(
-              "div",
-              {
-                staticClass: "item",
-                on: {
-                  click: function($event) {
-                    return _vm.saveFile(format)
+      _c(
+        "a",
+        {
+          ref: "SaveFileDropdown",
+          staticClass: "ui dropdown item",
+          on: { click: _vm.saveFile }
+        },
+        [
+          _vm._v("\n      " + _vm._s(_vm.$t("SAVE FILE")) + "\n      "),
+          _c("i", { staticClass: "dropdown icon" }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "menu" },
+            _vm._l(_vm.saveFormats, function(format) {
+              return _c(
+                "div",
+                {
+                  staticClass: "item",
+                  on: {
+                    click: function($event) {
+                      return _vm.saveFile(format)
+                    }
                   }
-                }
-              },
-              [_vm._v("\n          " + _vm._s(_vm.$t(format)) + "\n        ")]
-            )
-          }),
-          0
-        )
-      ]),
+                },
+                [_vm._v("\n          " + _vm._s(_vm.$t(format)) + "\n        ")]
+              )
+            }),
+            0
+          )
+        ]
+      ),
       _vm._v(" "),
       _c("div", { staticClass: "right menu" }, [
         _c(
@@ -439,7 +455,7 @@ __webpack_require__.r(__webpack_exports__);
   NavigationBar.methods.loadDemo = async function (file) {
     this.config.isDataProcessing = true
     
-    if (!file) {
+    if (!file || typeof file !== 'string') {
       file = this.config.demoDataList[0]
     }
     
@@ -579,6 +595,10 @@ __webpack_require__.r(__webpack_exports__);
     
     return data
   }
+  
+  NavigationBar.methods.getFilenameWithTime = function (ext) {
+    return this.filenameWithoutExt + '_' + (new Date()).mmddhhmm() + '.' + ext
+  }
 });
 
 /***/ }),
@@ -666,7 +686,7 @@ __webpack_require__.r(__webpack_exports__);
     var csv = papaparse__WEBPACK_IMPORTED_MODULE_0___default.a.unparse(arrayJSON)
     
     this.config.loadingProgress = 0.7
-    let filename = this.filenameWithoutExt + '.csv'
+    let filename = this.getFilenameWithTime('csv')
 
 //    var csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
 //    var csvURL
@@ -764,7 +784,23 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   NavigationBar.methods.saveFileODS = async function () {
-    window.alert('[TODO]')
+    let arrayJSON = await this.dataToArrayJSON()
+    // export json to Worksheet of Excel
+    // only array possible
+    var data = xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.utils.json_to_sheet(arrayJSON) 
+
+    // A workbook is the name given to an Excel file
+    var wb = xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.utils.book_new() // make Workbook of Excel
+
+    // add Worksheet to Workbook
+    // Workbook contains one or more worksheets
+    xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.utils.book_append_sheet(wb, data, 'data') // sheetAName is name of Worksheet
+    
+    // export Excel file
+    
+    let filename = this.getFilenameWithTime('ods')
+    
+    xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.writeFile(wb, filename) // name of the file is 'book.xlsx'
   }
 });
 
@@ -791,8 +827,12 @@ __webpack_require__.r(__webpack_exports__);
     while (!this.$refs.LoadDemoDropdown || !jquery__WEBPACK_IMPORTED_MODULE_0___default.a.isSemanticNIWSFReady) {
       await this.utils.AsyncUtils.sleep()
     }
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.LoadDemoDropdown).dropdown()
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.SaveFileDropdown).dropdown()
+    let config = {
+      on: 'hover'
+    }
+    
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.LoadDemoDropdown).dropdown(config)
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.SaveFileDropdown).dropdown(config)
   }
     
   NavigationBar.methods.onSearch = function (event) {
@@ -802,6 +842,9 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   NavigationBar.methods.saveFile = async function (format) {
+    if (!format || typeof format !== 'string') {
+      format = this.saveFormats[0]
+    }
     
     if (format === 'csv') {
       this.saveFileCSV()

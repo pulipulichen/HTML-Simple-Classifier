@@ -14,7 +14,7 @@ export default function (NavigationBar) {
   NavigationBar.methods.loadDemo = async function (file) {
     this.config.isDataProcessing = true
     
-    if (!file) {
+    if (!file || typeof file !== 'string') {
       file = this.config.demoDataList[0]
     }
     
@@ -153,5 +153,9 @@ export default function (NavigationBar) {
     }
     
     return data
+  }
+  
+  NavigationBar.methods.getFilenameWithTime = function (ext) {
+    return this.filenameWithoutExt + '_' + (new Date()).mmddhhmm() + '.' + ext
   }
 }

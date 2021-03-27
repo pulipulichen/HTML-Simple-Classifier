@@ -70,7 +70,7 @@ export default function (NavigationBar) {
     var csv = Papa.unparse(arrayJSON)
     
     this.config.loadingProgress = 0.7
-    let filename = this.filenameWithoutExt + '.csv'
+    let filename = this.getFilenameWithTime('csv')
 
 //    var csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
 //    var csvURL

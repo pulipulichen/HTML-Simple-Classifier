@@ -4,7 +4,8 @@
       <img v-bind:src="logoPath">
     </div>
     <a class="ui dropdown item"
-       ref="LoadDemoDropdown">
+       ref="LoadDemoDropdown"
+       v-on:click="loadDemo">
       {{ $t('LOAD DEMO') }}
       <i class="dropdown icon"></i>
       <div class="menu">
@@ -24,7 +25,8 @@
              v-on:change="openFile" />
     </a>
     <a class="ui dropdown item"
-       ref="SaveFileDropdown">
+       ref="SaveFileDropdown"
+       v-on:click="saveFile">
       {{ $t('SAVE FILE') }}
       <i class="dropdown icon"></i>
       <div class="menu">

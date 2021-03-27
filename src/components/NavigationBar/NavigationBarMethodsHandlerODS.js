@@ -65,6 +65,22 @@ export default function (NavigationBar) {
   }
   
   NavigationBar.methods.saveFileODS = async function () {
-    window.alert('[TODO]')
+    let arrayJSON = await this.dataToArrayJSON()
+    // export json to Worksheet of Excel
+    // only array possible
+    var data = XLSX.utils.json_to_sheet(arrayJSON) 
+
+    // A workbook is the name given to an Excel file
+    var wb = XLSX.utils.book_new() // make Workbook of Excel
+
+    // add Worksheet to Workbook
+    // Workbook contains one or more worksheets
+    XLSX.utils.book_append_sheet(wb, data, 'data') // sheetAName is name of Worksheet
+    
+    // export Excel file
+    
+    let filename = this.getFilenameWithTime('ods')
+    
+    XLSX.writeFile(wb, filename) // name of the file is 'book.xlsx'
   }
 }
