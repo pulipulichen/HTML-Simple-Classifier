@@ -32,6 +32,10 @@ export default function (DecisionTree) {
     
     //console.log(predictResults)
     this.$parent.setPredictResults(predictResults)
+    
+    if (this.$parent.isModelWindowOpened) {
+      this.showModel()
+    }
   }
   
   DecisionTree.methods.buildModel = function (trainSet) {

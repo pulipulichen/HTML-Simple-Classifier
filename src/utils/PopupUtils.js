@@ -56,6 +56,26 @@ export default {
       doc.title = title
     }
     
+    win.setHTML = (html) => {
+      doc.body.innerHTML = html
+    }
+    
+    win.clearHTML = () => {
+      doc.body.innerHTML = ''
+    }
+    
+    win.setTitle = (title) => {
+      doc.title = title
+    }
+    
+    win.scrollToCenter = () => {
+     let scrollLeft =  parseInt((win.document.body.scrollWidth - win.innerWidth) / 2, 10)
+      win.scrollTo(null, scrollLeft)
+    }
+    
+    win.scrollToTop = () => {
+      win.scrollTo(0, null)
+    }
     return win
   }
 }

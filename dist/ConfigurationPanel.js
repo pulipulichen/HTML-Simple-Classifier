@@ -332,8 +332,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _EvaluationPanel_EvaluationPanel_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EvaluationPanel/EvaluationPanel.vue */ "./src/components/ConfigurationPanel/EvaluationPanel/EvaluationPanel.vue");
 /* harmony import */ var _ConfigurationPanelComputed_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ConfigurationPanelComputed.js */ "./src/components/ConfigurationPanel/ConfigurationPanelComputed.js");
-/* harmony import */ var _ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ConfigurationPanelMethodsData.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsData.js");
-/* harmony import */ var _ConfigurationPanelMethodsEvaluation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ConfigurationPanelMethodsEvaluation.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsEvaluation.js");
+/* harmony import */ var _ConfigurationPanelWatch_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ConfigurationPanelWatch.js */ "./src/components/ConfigurationPanel/ConfigurationPanelWatch.js");
+/* harmony import */ var _ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ConfigurationPanelMethodsData.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsData.js");
+/* harmony import */ var _ConfigurationPanelMethodsEvaluation_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ConfigurationPanelMethodsEvaluation.js */ "./src/components/ConfigurationPanel/ConfigurationPanelMethodsEvaluation.js");
 
 
 let ConfigurationPanel = {
@@ -342,24 +343,15 @@ let ConfigurationPanel = {
     this.$i18n.locale = this.localConfig.locale
     return {
       classifier: 'DecisionTree',
-      classifierList: ['DecisionTree']
+      classifierList: ['DecisionTree'],
+      modelWindow: null
     }
   },
   components: {
     DecisionTree: () => __webpack_require__.e(/*! import() | classifiers/DecisionTree */ "classifiers/DecisionTree").then(__webpack_require__.bind(null, /*! ./DecisionTree/DecisionTree.vue */ "./src/components/ConfigurationPanel/DecisionTree/DecisionTree.vue")),
     EvaluationPanel: _EvaluationPanel_EvaluationPanel_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  watch: {
-    'localConfig.locale'() {
-      this.$i18n.locale = this.localConfig.locale;
-    },
-    'localConfig.classFieldName' () {
-      this.localConfig.modelJSON = null
-    },
-    'localConfig.modelJSON' () {
-      this.resetModelEvaluation()
-    }
-  },
+  watch: {},  // ConfigurationPanelWatch
   computed: {}, // ConfigurationPanelComputed.js
   mounted() {
     
@@ -371,10 +363,13 @@ let ConfigurationPanel = {
 Object(_ConfigurationPanelComputed_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ConfigurationPanel)
 
 
-Object(_ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_2__["default"])(ConfigurationPanel)
+Object(_ConfigurationPanelWatch_js__WEBPACK_IMPORTED_MODULE_2__["default"])(ConfigurationPanel)
 
 
-Object(_ConfigurationPanelMethodsEvaluation_js__WEBPACK_IMPORTED_MODULE_3__["default"])(ConfigurationPanel)
+Object(_ConfigurationPanelMethodsData_js__WEBPACK_IMPORTED_MODULE_3__["default"])(ConfigurationPanel)
+
+
+Object(_ConfigurationPanelMethodsEvaluation_js__WEBPACK_IMPORTED_MODULE_4__["default"])(ConfigurationPanel)
 
 /* harmony default export */ __webpack_exports__["default"] = (ConfigurationPanel);
 
@@ -498,6 +493,10 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
     return false
+  }
+  
+  ConfigurationPanel.computed.isModelWindowOpened = function () {
+    return ((this.modelWindow !== null) && (this.modelWindow.closed === false))
   }
 });
 
@@ -660,6 +659,39 @@ __webpack_require__.r(__webpack_exports__);
     return matchCounter / len
   }
   
+});
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/ConfigurationPanelWatch.js":
+/*!**********************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/ConfigurationPanelWatch.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (ConfigurationPanel) {
+  ConfigurationPanel.watch['localConfig.locale'] = function () {
+    this.$i18n.locale = this.localConfig.locale;
+  }
+  
+  ConfigurationPanel.watch['localConfig.classFieldName'] = function () {
+    this.localConfig.modelJSON = null
+  }
+  
+  ConfigurationPanel.watch['localConfig.modelJSON'] = function () {
+    this.resetModelEvaluation()
+
+    //console.log(this.isModelWindowOpened, this.modelWindow)
+    if (this.isModelWindowOpened) {
+      //this.modelWindow.close()
+      //this.modelWindow = null
+      this.modelWindow.clearHTML()
+      this.modelWindow.setTitle(this.$t('No Model'))
+    }
+  }
 });
 
 /***/ }),

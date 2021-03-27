@@ -28791,10 +28791,10 @@ let config = {
   urlGithub: 'https://github.com/pulipulichen/HTML-Simple-Classifier/',
   urlIssue: 'https://github.com/pulipulichen/HTML-Simple-Classifier/issues/new',
   
-  demoData: 'weather.class.csv'
+  //demoData: 'weather.class.csv'
   //demoData: 'weather.play.ods'
   //demoData: 'labor.csv'
-  //demoData: 'unbalanced.csv'
+  demoData: 'unbalanced.csv'
 }
 
 
@@ -29568,6 +29568,26 @@ __webpack_require__.r(__webpack_exports__);
       doc.title = title
     }
     
+    win.setHTML = (html) => {
+      doc.body.innerHTML = html
+    }
+    
+    win.clearHTML = () => {
+      doc.body.innerHTML = ''
+    }
+    
+    win.setTitle = (title) => {
+      doc.title = title
+    }
+    
+    win.scrollToCenter = () => {
+     let scrollLeft =  parseInt((win.document.body.scrollWidth - win.innerWidth) / 2, 10)
+      win.scrollTo(null, scrollLeft)
+    }
+    
+    win.scrollToTop = () => {
+      win.scrollTo(0, null)
+    }
     return win
   }
 });

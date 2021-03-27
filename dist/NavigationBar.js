@@ -369,6 +369,7 @@ __webpack_require__.r(__webpack_exports__);
     
     this.config.loadingProgress = 0
     let rawData = await this.loadDemoData()
+    
     this.config.loadingProgress = 0.5
     let detectResult = this.detectClassField(rawData)
     //console.log(detectResult)
@@ -377,8 +378,14 @@ __webpack_require__.r(__webpack_exports__);
     
     this.localConfig.classFieldName = detectResult.classFieldName    
     this.localConfig.headers = orderedData[0]
+    
+    //let data = orderedData.splice(1)
+    //this.localConfig.data = this.localConfig.data.splice(0, 0).concat(data)
     this.localConfig.data = orderedData.splice(1)
+    
     this.config.loadingProgress = 1
+    
+    console.log(this.localConfig.data)
   }
   
   NavigationBar.methods.loadDemoData = async function () {

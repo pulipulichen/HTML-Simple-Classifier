@@ -33,6 +33,14 @@ export default function (DataTable) {
   
   DataTable.methods.getSelectedRangeInfo = function () {
     let range = this.hotInstance.getSelectedRange()
+    if (!range) {
+      return {
+        leftColumn: -1,
+        isSelectedColumn: false,
+        isSelectedRow: false,
+      }
+    }
+    
     let from = range[0].from.col
     let to = range[0].from.to
     let colRange = [from, to]

@@ -18,4 +18,8 @@ export default function (ConfigurationPanel) {
     }
     return false
   }
+  
+  ConfigurationPanel.computed.isModelWindowOpened = function () {
+    return ((this.modelWindow !== null) && (this.modelWindow.closed === false))
+  }
 }
