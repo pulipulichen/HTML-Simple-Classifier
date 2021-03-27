@@ -20,8 +20,14 @@ export default function (NavigationBar) {
     
     this.localConfig.classFieldName = null
     
+    this.localConfig.filename = file
+    
     this.config.loadingProgress = 0
     let rawData = await this.loadDemoData(file)
+    await this.processRawData(rawData)
+  }
+  
+  NavigationBar.methods.processRawData = async function (rawData) {
     
     this.config.loadingProgress = 0.5
     let detectResult = this.detectClassField(rawData)
@@ -40,7 +46,6 @@ export default function (NavigationBar) {
     
     //let data = orderedData.splice(1)
     //this.localConfig.data = this.localConfig.data.splice(0, 0).concat(data)
-    
     
     this.config.loadingProgress = 1
     //console.log(this.localConfig.data.length)

@@ -13,15 +13,15 @@ export default function (NavigationBar) {
     
     return new Promise((resolve) => {
       let data = []
-      let filedCount
+      let fieldCount
       Papa.parse(url, {
         download: true,
         step: function(row) {
           if (Array.isArray(row.data)) {
-            if (!filedCount) {
-              filedCount = row.data.length
+            if (!fieldCount) {
+              fieldCount = row.data.length
             }
-            if (filedCount !== row.data.length) {
+            if (fieldCount !== row.data.length) {
               return false
             }
             //console.log(row.data.length)
@@ -29,25 +29,43 @@ export default function (NavigationBar) {
           }
         },
         complete: async () => {
-          //console.log(data)
           data = await this.utils.DataUtils.parseNumber(data)
-          //console.log(data.length, data[(data.length - 1)])
-          
           resolve(data)
         }
       });
     })
   }
   
+  NavigationBar.methods.loadFileCSV = function (file) {
+
+    return new Promise((resolve) => {
+      let data = []
+      let fieldCount
+      Papa.parse(event.target.files[0], {
+        worker: true, // Don't bog down the main thread if its a big file
+        step: function(row) {
+          if (Array.isArray(row.data)) {
+            if (!fieldCount) {
+              fieldCount = row.data.length
+            }
+            if (fieldCount !== row.data.length) {
+              return false
+            }
+            //console.log(row.data.length)
+            data.push(row.data)
+          }
+        },
+        complete: async () => {
+          data = await this.utils.DataUtils.parseNumber(data)
+          resolve(data)
+        }
+      })
+    })
+  }
+  
   
   NavigationBar.methods.loadURLODS = function (url) {
-//    if (url.startsWith('./')) {
-//      let currentURL = location.href
-//      url = currentURL.slice(0, currentURL.lastIndexOf('/') + 1) + url.slice(2)
-//    }
-    
-    //console.log(url)
-    
+
     return new Promise((resolve) => {
       /* set up async GET request */
       var req = new XMLHttpRequest();
@@ -58,29 +76,47 @@ export default function (NavigationBar) {
         var data = new Uint8Array(req.response);
         var workbook = XLSX.read(data, {type:"array"});
 
-        var sheet_name_list = workbook.SheetNames;
-
-        //console.log(url)
-        //console.log(sheet_name_list)
-        var xlData = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
-
-        let headers
-        xlData = xlData.map((row) => {
-          if (!headers) {
-            headers = Object.keys(row)
-          }
-          return headers.map(header => {
-            return row[header]
-          })
-        })
-        xlData.unshift(headers)
-
-        xlData = await this.utils.DataUtils.parseNumber(xlData)
-
-        resolve(xlData)
+        resolve(await this.processXLSXData(workbook))
       }
 
       req.send();
     })
+  }
+  
+  NavigationBar.methods.loadFileODS = async function (file) {
+    var data = new Uint8Array(file);
+    var workbook = XLSX.read(data, {type:"array"})
+    return await this.processXLSXData(workbook)
+  }
+  
+  NavigationBar.methods.processXLSXData = async function (workbook) {
+    
+    var sheet_name_list = workbook.SheetNames;
+
+    //console.log(url)
+    //console.log(sheet_name_list)
+    var xlData = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
+
+    let headers
+    
+    for (let len = xlData.length, i = len; i > 0; i--) {
+      let rowIndex = (len - i)
+      let row = xlData[rowIndex]
+      if (!headers) {
+        headers = Object.keys(row)
+      }
+      xlData[rowIndex] = headers.map(header => {
+        return row[header]
+      })
+      
+      if (i % 10 === 5) {
+        await this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    
+    xlData.unshift(headers)
+
+    xlData = await this.utils.DataUtils.parseNumber(xlData)
+    return xlData
   }
 }

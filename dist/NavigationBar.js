@@ -38,7 +38,7 @@ module.exports = function (Component) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "img[data-v-1d5bd9e2] {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu[data-v-1d5bd9e2] {\n  z-index: 99999 !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","NavigationBar.less"],"names":[],"mappings":"AAAA;EACE,wBAAA;EACA,YAAA;ACCF;ADEA;EACE,yBAAA;ACAF","file":"NavigationBar.less","sourcesContent":["img {\n  width: 1.5rem !important;\n  height: auto;\n}\n\n.menu {\n  z-index: 99999 !important;\n}","img {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu {\n  z-index: 99999 !important;\n}\n"]}]);
+exports.push([module.i, "img[data-v-1d5bd9e2] {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu[data-v-1d5bd9e2] {\n  z-index: 99999 !important;\n}\ninput[type=\"file\"][data-v-1d5bd9e2] {\n  display: none !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","NavigationBar.less"],"names":[],"mappings":"AAAA;EACE,wBAAA;EACA,YAAA;ACCF;ADEA;EACE,yBAAA;ACAF;ADGA;EACE,wBAAA;ACDF","file":"NavigationBar.less","sourcesContent":["img {\n  width: 1.5rem !important;\n  height: auto;\n}\n\n.menu {\n  z-index: 99999 !important;\n}\n\ninput[type=\"file\"] {\n  display: none !important;\n}","img {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu {\n  z-index: 99999 !important;\n}\ninput[type=\"file\"] {\n  display: none !important;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -91,9 +91,25 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("a", { staticClass: "item", on: { click: _vm.openFile } }, [
-        _vm._v("\n      " + _vm._s(_vm.$t("OPEN FILE")) + "\n    ")
-      ]),
+      _c(
+        "a",
+        {
+          staticClass: "item",
+          on: {
+            click: function($event) {
+              return _vm.$refs.FileInput.click()
+            }
+          }
+        },
+        [
+          _vm._v("\n      " + _vm._s(_vm.$t("OPEN FILE")) + "\n      "),
+          _c("input", {
+            ref: "FileInput",
+            attrs: { type: "file", accept: ".ods,.csv" },
+            on: { change: _vm.openFile }
+          })
+        ]
+      ),
       _vm._v(" "),
       _c("a", { staticClass: "item", on: { click: _vm.saveFile } }, [
         _vm._v("\n      " + _vm._s(_vm.$t("SAVE FILE")) + "\n    ")
@@ -395,8 +411,14 @@ __webpack_require__.r(__webpack_exports__);
     
     this.localConfig.classFieldName = null
     
+    this.localConfig.filename = file
+    
     this.config.loadingProgress = 0
     let rawData = await this.loadDemoData(file)
+    await this.processRawData(rawData)
+  }
+  
+  NavigationBar.methods.processRawData = async function (rawData) {
     
     this.config.loadingProgress = 0.5
     let detectResult = this.detectClassField(rawData)
@@ -415,7 +437,6 @@ __webpack_require__.r(__webpack_exports__);
     
     //let data = orderedData.splice(1)
     //this.localConfig.data = this.localConfig.data.splice(0, 0).concat(data)
-    
     
     this.config.loadingProgress = 1
     //console.log(this.localConfig.data.length)
@@ -532,15 +553,15 @@ __webpack_require__.r(__webpack_exports__);
     
     return new Promise((resolve) => {
       let data = []
-      let filedCount
+      let fieldCount
       papaparse__WEBPACK_IMPORTED_MODULE_0___default.a.parse(url, {
         download: true,
         step: function(row) {
           if (Array.isArray(row.data)) {
-            if (!filedCount) {
-              filedCount = row.data.length
+            if (!fieldCount) {
+              fieldCount = row.data.length
             }
-            if (filedCount !== row.data.length) {
+            if (fieldCount !== row.data.length) {
               return false
             }
             //console.log(row.data.length)
@@ -548,25 +569,43 @@ __webpack_require__.r(__webpack_exports__);
           }
         },
         complete: async () => {
-          //console.log(data)
           data = await this.utils.DataUtils.parseNumber(data)
-          //console.log(data.length, data[(data.length - 1)])
-          
           resolve(data)
         }
       });
     })
   }
   
+  NavigationBar.methods.loadFileCSV = function (file) {
+
+    return new Promise((resolve) => {
+      let data = []
+      let fieldCount
+      papaparse__WEBPACK_IMPORTED_MODULE_0___default.a.parse(event.target.files[0], {
+        worker: true, // Don't bog down the main thread if its a big file
+        step: function(row) {
+          if (Array.isArray(row.data)) {
+            if (!fieldCount) {
+              fieldCount = row.data.length
+            }
+            if (fieldCount !== row.data.length) {
+              return false
+            }
+            //console.log(row.data.length)
+            data.push(row.data)
+          }
+        },
+        complete: async () => {
+          data = await this.utils.DataUtils.parseNumber(data)
+          resolve(data)
+        }
+      })
+    })
+  }
+  
   
   NavigationBar.methods.loadURLODS = function (url) {
-//    if (url.startsWith('./')) {
-//      let currentURL = location.href
-//      url = currentURL.slice(0, currentURL.lastIndexOf('/') + 1) + url.slice(2)
-//    }
-    
-    //console.log(url)
-    
+
     return new Promise((resolve) => {
       /* set up async GET request */
       var req = new XMLHttpRequest();
@@ -577,30 +616,48 @@ __webpack_require__.r(__webpack_exports__);
         var data = new Uint8Array(req.response);
         var workbook = xlsx__WEBPACK_IMPORTED_MODULE_1___default.a.read(data, {type:"array"});
 
-        var sheet_name_list = workbook.SheetNames;
-
-        //console.log(url)
-        //console.log(sheet_name_list)
-        var xlData = xlsx__WEBPACK_IMPORTED_MODULE_1___default.a.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
-
-        let headers
-        xlData = xlData.map((row) => {
-          if (!headers) {
-            headers = Object.keys(row)
-          }
-          return headers.map(header => {
-            return row[header]
-          })
-        })
-        xlData.unshift(headers)
-
-        xlData = await this.utils.DataUtils.parseNumber(xlData)
-
-        resolve(xlData)
+        resolve(await this.processXLSXData(workbook))
       }
 
       req.send();
     })
+  }
+  
+  NavigationBar.methods.loadFileODS = async function (file) {
+    var data = new Uint8Array(file);
+    var workbook = xlsx__WEBPACK_IMPORTED_MODULE_1___default.a.read(data, {type:"array"})
+    return await this.processXLSXData(workbook)
+  }
+  
+  NavigationBar.methods.processXLSXData = async function (workbook) {
+    
+    var sheet_name_list = workbook.SheetNames;
+
+    //console.log(url)
+    //console.log(sheet_name_list)
+    var xlData = xlsx__WEBPACK_IMPORTED_MODULE_1___default.a.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
+
+    let headers
+    
+    for (let len = xlData.length, i = len; i > 0; i--) {
+      let rowIndex = (len - i)
+      let row = xlData[rowIndex]
+      if (!headers) {
+        headers = Object.keys(row)
+      }
+      xlData[rowIndex] = headers.map(header => {
+        return row[header]
+      })
+      
+      if (i % 10 === 5) {
+        await this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    
+    xlData.unshift(headers)
+
+    xlData = await this.utils.DataUtils.parseNumber(xlData)
+    return xlData
   }
 });
 
@@ -617,6 +674,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var papaparse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! papaparse */ "./node_modules/papaparse/papaparse.min.js");
+/* harmony import */ var papaparse__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(papaparse__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
@@ -637,8 +697,29 @@ __webpack_require__.r(__webpack_exports__);
     window.alert('TODO')
   }
   
-  NavigationBar.methods.openFile = function () {
-    window.alert('TODO')
+  NavigationBar.methods.openFile = async function (event) {
+    //console.log(1);
+    if (!window.FileReader) {
+      console.error(this.$t('Browser is not compatible'))
+      return false // Browser is not compatible
+    }
+
+    //var reader = new FileReader();
+
+    let file = event.target.files[0]
+    this.localConfig.filename = file.name
+    
+    this.config.loadingProgress = 0
+    
+    let rawData
+    if (this.localConfig.filename.endsWith('.csv')) {
+      rawData = await this.loadFileCSV(file)
+    }
+    else if (this.localConfig.filename.endsWith('.ods')) {
+      rawData = await this.loadFileODS(file)
+    }
+    
+    await this.processRawData(rawData)
   }
 });
 

@@ -31,4 +31,8 @@ export default function (DataTable) {
 //    this.utils.AsyncUtils.sleep(500)
 //    this.hotInstance.getPlugin('contextMenu').open(this.hotContextMenuEvent)
 //  }
+
+  DataTable.watch['localConfig.displayConfigurationPanel'] = function () {
+    this.hotInstance.render()
+  }
 }

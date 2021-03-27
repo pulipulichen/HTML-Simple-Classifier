@@ -8,6 +8,7 @@ let localConfig = {
   classDataType: 'nominal',
   classifierModelJSON: null,
   
+  filename: null,
   modelJSON: null,
   modelEvaluations: [],
   

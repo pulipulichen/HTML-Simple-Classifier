@@ -16,8 +16,12 @@
       </div>
     </a>
     <a class="item"
-       v-on:click="openFile">
+       v-on:click="$refs.FileInput.click()">
       {{ $t('OPEN FILE') }}
+      <input type="file"
+             ref="FileInput"
+             accept=".ods,.csv"
+             v-on:change="openFile" />
     </a>
     <a class="item"
        v-on:click="saveFile">

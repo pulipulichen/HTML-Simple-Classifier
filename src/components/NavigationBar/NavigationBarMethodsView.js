@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import Papa from 'papaparse'
 
 export default function (NavigationBar) {
   NavigationBar.methods.initDropdown = async function () {
@@ -18,7 +19,28 @@ export default function (NavigationBar) {
     window.alert('TODO')
   }
   
-  NavigationBar.methods.openFile = function () {
-    window.alert('TODO')
+  NavigationBar.methods.openFile = async function (event) {
+    //console.log(1);
+    if (!window.FileReader) {
+      console.error(this.$t('Browser is not compatible'))
+      return false // Browser is not compatible
+    }
+
+    //var reader = new FileReader();
+
+    let file = event.target.files[0]
+    this.localConfig.filename = file.name
+    
+    this.config.loadingProgress = 0
+    
+    let rawData
+    if (this.localConfig.filename.endsWith('.csv')) {
+      rawData = await this.loadFileCSV(file)
+    }
+    else if (this.localConfig.filename.endsWith('.ods')) {
+      rawData = await this.loadFileODS(file)
+    }
+    
+    await this.processRawData(rawData)
   }
 }
