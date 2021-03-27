@@ -84,9 +84,15 @@ export default function (NavigationBar) {
   }
   
   NavigationBar.methods.loadFileODS = async function (file) {
-    var data = new Uint8Array(file);
-    var workbook = XLSX.read(data, {type:"array"})
-    return await this.processXLSXData(workbook)
+    let reader = new FileReader();
+    return new Promise((resolve) => {
+      reader.readAsArrayBuffer(file);
+      reader.onload = async (e) => {
+        var data = new Uint8Array(reader.result);
+        var workbook = XLSX.read(data, {type: "array"})
+        resolve(await this.processXLSXData(workbook))
+      }
+    })
   }
   
   NavigationBar.methods.processXLSXData = async function (workbook) {
