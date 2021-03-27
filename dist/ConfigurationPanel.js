@@ -519,13 +519,16 @@ __webpack_require__.r(__webpack_exports__);
     let testSetRowIndexes = []
     let trainSetClasses = []
     
-    for (let len = this.localConfig.data.length - 1, i = len; i > 0; i--) {
+    for (let len = this.localConfig.data.length, i = len; i > 0; i--) {
       let rowIndex = (len - i)
       let row = this.localConfig.data[rowIndex]
-//      if (row.filter(cell => cell !== null).length === 0
-//              || row.filter(cell => cell !== undefined).length === 0) {
-//        continue
-//      }
+      
+      let notMissingRow = row.filter(cell => {
+        return !this.utils.DataUtils.isMissingData(cell)
+      })
+      if (notMissingRow.length === 0) {
+        continue
+      }
       
       let trainJSON = {}
       let testJSON = {}

@@ -29472,7 +29472,7 @@ __webpack_require__.r(__webpack_exports__);
       let ary = []
       for (let len = value.length, i  = len; i > 0; i--) {
         let index = (len - i)
-        ary[index] = await this.parseNumber(value[index])
+        ary.push(await this.parseNumber(value[index]))
         
         if (i % 10 === 5) {
           await this.sleep()

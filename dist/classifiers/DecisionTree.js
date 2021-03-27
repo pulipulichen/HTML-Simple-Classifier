@@ -72,11 +72,8 @@ var render = function() {
       _c(
         "button",
         {
-          staticClass: "ui fluid button",
-          class: {
-            disabled: !_vm.$parent.isNeedPredict,
-            primary: _vm.$parent.isNeedPredict
-          },
+          staticClass: "ui primary fluid button",
+          class: { disabled: !_vm.$parent.isNeedPredict },
           attrs: { type: "button" },
           on: { click: _vm.start }
         },

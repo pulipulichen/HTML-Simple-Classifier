@@ -13,15 +13,26 @@ export default function (NavigationBar) {
     
     return new Promise((resolve) => {
       let data = []
+      let filedCount
       Papa.parse(url, {
         download: true,
         step: function(row) {
-          data.push(row.data)
+          if (Array.isArray(row.data)) {
+            if (!filedCount) {
+              filedCount = row.data.length
+            }
+            if (filedCount !== row.data.length) {
+              return false
+            }
+            //console.log(row.data.length)
+            data.push(row.data)
+          }
         },
         complete: async () => {
           //console.log(data)
           data = await this.utils.DataUtils.parseNumber(data)
-  
+          //console.log(data.length, data[(data.length - 1)])
+          
           resolve(data)
         }
       });

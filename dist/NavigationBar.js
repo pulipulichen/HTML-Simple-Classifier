@@ -272,6 +272,8 @@ let NavigationBar = {
   mounted: async function () {
     await this.initData()
     this.initDropdown()
+    
+    this.loadDemo('weather.class.csv')
   },
   methods: {}
 }
@@ -532,15 +534,26 @@ __webpack_require__.r(__webpack_exports__);
     
     return new Promise((resolve) => {
       let data = []
+      let filedCount
       papaparse__WEBPACK_IMPORTED_MODULE_0___default.a.parse(url, {
         download: true,
         step: function(row) {
-          data.push(row.data)
+          if (Array.isArray(row.data)) {
+            if (!filedCount) {
+              filedCount = row.data.length
+            }
+            if (filedCount !== row.data.length) {
+              return false
+            }
+            //console.log(row.data.length)
+            data.push(row.data)
+          }
         },
         complete: async () => {
           //console.log(data)
           data = await this.utils.DataUtils.parseNumber(data)
-  
+          //console.log(data.length, data[(data.length - 1)])
+          
           resolve(data)
         }
       });
