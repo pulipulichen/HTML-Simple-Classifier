@@ -23,11 +23,18 @@
              accept=".ods,.csv"
              v-on:change="openFile" />
     </a>
-    <a class="item"
-       v-on:click="saveFile">
+    <a class="ui dropdown item"
+       ref="SaveFileDropdown">
       {{ $t('SAVE FILE') }}
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item"
+             v-for="format in saveFormats"
+             v-on:click="saveFile(format)">
+          {{ $t(format) }}
+        </div>
+      </div>
     </a>
-
     <div class="right menu">
       <div class="ui right mini aligned category search item">
         <form class="ui icon input"

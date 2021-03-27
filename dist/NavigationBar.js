@@ -38,7 +38,7 @@ module.exports = function (Component) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "img[data-v-1d5bd9e2] {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu[data-v-1d5bd9e2] {\n  z-index: 99999 !important;\n}\ninput[type=\"file\"][data-v-1d5bd9e2] {\n  display: none !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","NavigationBar.less"],"names":[],"mappings":"AAAA;EACE,wBAAA;EACA,YAAA;ACCF;ADEA;EACE,yBAAA;ACAF;ADGA;EACE,wBAAA;ACDF","file":"NavigationBar.less","sourcesContent":["img {\n  width: 1.5rem !important;\n  height: auto;\n}\n\n.menu {\n  z-index: 99999 !important;\n}\n\ninput[type=\"file\"] {\n  display: none !important;\n}","img {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu {\n  z-index: 99999 !important;\n}\ninput[type=\"file\"] {\n  display: none !important;\n}\n"]}]);
+exports.push([module.i, "img[data-v-1d5bd9e2] {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu[data-v-1d5bd9e2] {\n  z-index: 99999 !important;\n}\ninput[type=\"file\"][data-v-1d5bd9e2] {\n  display: none !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","NavigationBar.less"],"names":[],"mappings":"AAAA;EACE,wBAAA;EACA,YAAA;ACCF;ADEA;EACE,yBAAA;ACAF;ADGA;EACE,wBAAA;ACDF","file":"NavigationBar.less","sourcesContent":["img {\n  width: 1.5rem !important;\n  height: auto;\n}\n\n.menu {\n  z-index: 99999 !important;\n}\n\ninput[type=\"file\"] {\n  display: none !important;\n}\n","img {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu {\n  z-index: 99999 !important;\n}\ninput[type=\"file\"] {\n  display: none !important;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -111,8 +111,29 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _c("a", { staticClass: "item", on: { click: _vm.saveFile } }, [
-        _vm._v("\n      " + _vm._s(_vm.$t("SAVE FILE")) + "\n    ")
+      _c("a", { ref: "SaveFileDropdown", staticClass: "ui dropdown item" }, [
+        _vm._v("\n      " + _vm._s(_vm.$t("SAVE FILE")) + "\n      "),
+        _c("i", { staticClass: "dropdown icon" }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "menu" },
+          _vm._l(_vm.saveFormats, function(format) {
+            return _c(
+              "div",
+              {
+                staticClass: "item",
+                on: {
+                  click: function($event) {
+                    return _vm.saveFile(format)
+                  }
+                }
+              },
+              [_vm._v("\n          " + _vm._s(_vm.$t(format)) + "\n        ")]
+            )
+          }),
+          0
+        )
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "right menu" }, [
@@ -275,7 +296,8 @@ let NavigationBar = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
-      logoPath: (_assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0___default())
+      logoPath: (_assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0___default()),
+      saveFormats: ['ods', 'csv']
     }
   },
   watch: {},  // NavigationBarWatch.js
@@ -691,6 +713,7 @@ __webpack_require__.r(__webpack_exports__);
       await this.utils.AsyncUtils.sleep()
     }
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.LoadDemoDropdown).dropdown()
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.SaveFileDropdown).dropdown()
   }
     
   NavigationBar.methods.onSearch = function (event) {
@@ -699,8 +722,8 @@ __webpack_require__.r(__webpack_exports__);
     return false
   }
   
-  NavigationBar.methods.saveFile = function () {
-    window.alert('TODO')
+  NavigationBar.methods.saveFile = function (format) {
+    window.alert('TODO: ' + format)
   }
   
   NavigationBar.methods.openFile = async function (event) {

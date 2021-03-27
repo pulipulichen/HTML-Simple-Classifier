@@ -5,7 +5,8 @@ let NavigationBar = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
-      logoPath
+      logoPath,
+      saveFormats: ['ods', 'csv']
     }
   },
   watch: {},  // NavigationBarWatch.js

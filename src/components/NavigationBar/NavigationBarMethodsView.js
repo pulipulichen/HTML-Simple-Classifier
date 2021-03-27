@@ -7,6 +7,7 @@ export default function (NavigationBar) {
       await this.utils.AsyncUtils.sleep()
     }
     $(this.$refs.LoadDemoDropdown).dropdown()
+    $(this.$refs.SaveFileDropdown).dropdown()
   }
     
   NavigationBar.methods.onSearch = function (event) {
@@ -15,8 +16,8 @@ export default function (NavigationBar) {
     return false
   }
   
-  NavigationBar.methods.saveFile = function () {
-    window.alert('TODO')
+  NavigationBar.methods.saveFile = function (format) {
+    window.alert('TODO: ' + format)
   }
   
   NavigationBar.methods.openFile = async function (event) {
