@@ -26,21 +26,27 @@ export default function (ConfigurationPanel) {
           if (header === 'predict') {
             return false
           }
+          
+          let value = row[i]
+          
+          if (typeof value === 'string' && !isNaN(value)) {
+            value = Number(value)
+          }
 
-          if (i === 0 && this.utils.DataUtils.isMissingData(row[i])) {
+          if (i === 0 && this.utils.DataUtils.isMissingData(value)) {
             isTrainingSet = false
-            trainJSON[header] = row[i]
+            trainJSON[header] = value
             return false
           }
           else if (i > 1 && 
-                  (this.utils.DataUtils.isMissingData(row[i]))) {
+                  (this.utils.DataUtils.isMissingData(value))) {
             // 缺失值
             return false
           }
 
-          trainJSON[header] = row[i]
+          trainJSON[header] = value
           if (header !== this.localConfig.classFieldName) {
-            testJSON[header] = row[i]
+            testJSON[header] = value
           }
 
         })

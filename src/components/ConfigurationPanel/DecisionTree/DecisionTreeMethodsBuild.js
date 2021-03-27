@@ -3,9 +3,13 @@ import dt from './vendors/decision-tree/decision-tree.webpack.js'
 export default function (DecisionTree) {
   DecisionTree.methods.start = async function () {
     //this.localConfig.modelJSON = null
+    this.config.loadingProgress = 0
     
     let data = await this.$parent.getJSONData()
     //console.log(data.trainSet)
+    this.config.loadingProgress = 0.25
+    
+    //console.log(data.trainSet[0])
     
     if (this.isModelBuilded === false) {
       this.model = this.buildModel(data.trainSet)
@@ -23,8 +27,12 @@ export default function (DecisionTree) {
     }
     //console.error('需要只Predict test case')
     
+    this.config.loadingProgress = 0.5
+    
     //console.log(data.testSet)
     let predictResults = await this.getPredictResults(this.model, data.testSet)
+    
+    this.config.loadingProgress = 0.75
     
     if (this.$parent.hasModelEvaluated === false) {
       this.evaluationResults(data, predictResults)
@@ -33,9 +41,13 @@ export default function (DecisionTree) {
     //console.log(predictResults)
     this.$parent.setPredictResults(predictResults)
     
+    this.config.loadingProgress = 0.9
+    
     if (this.$parent.isModelWindowOpened) {
       this.showModel()
     }
+    
+    this.config.loadingProgress = 1
   }
   
   DecisionTree.methods.buildModel = function (trainSet) {
@@ -84,12 +96,17 @@ export default function (DecisionTree) {
 
     this.$parent.resetModelEvaluation()
 
+    //console.log(data.trainSetClasses.length, getTrainSetPredicts.length, data.testSetRowIndexes.length)
+
     let accuracy = await this.$parent.calcAccuracy(data.trainSetClasses, getTrainSetPredicts)
     //console.log(accuracy)
-    this.localConfig.modelEvaluations.push({
+    let accuracyInfo = {
       name: 'accuracy',
       type: 'percent',
       value: accuracy
-    })
+    }
+    
+    //console.log(accuracyInfo)
+    this.localConfig.modelEvaluations.push(accuracyInfo)
   }
 }

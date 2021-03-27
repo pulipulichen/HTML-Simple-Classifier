@@ -715,8 +715,9 @@ __webpack_require__.r(__webpack_exports__);
     ]
     
     let hotDropdownMenuDefault = [
-      "col_left", "col_right", "remove_col", 
       _vendors_handsontable_handsontable_plugin_rename_col_header_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+      '---------',
+      "col_left", "col_right", "remove_col", 
       '---------',
       'filter_by_condition', 'filter_operators', 'filter_by_condition2', 'filter_by_value', 'filter_action_bar'
     ]
@@ -1050,10 +1051,16 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   DataTable.watch['localConfig.data'] = function () {
+    
     if (this.dataLock === true) {
       return false
     }
     this.dataLock = true
+    //await this.utils.AsyncUtils.sleep(0)
+    console.log(this.dataLock, this.localConfig.data.length)
+    //console.log('載入資料')
+    //console.log(this.localConfig.data)
+    
     this.hotInstance.loadData(this.localConfig.data)
     this.dataLock = false
   }

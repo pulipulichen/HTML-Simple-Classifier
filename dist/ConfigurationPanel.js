@@ -236,11 +236,11 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 evluation.type === "percent"
-                  ? _c("td", [
+                  ? _c("td", { staticClass: "right aligned" }, [
                       _vm._v(
                         "\n          " +
-                          _vm._s(evluation.value * 100) +
-                          "%\n        "
+                          _vm._s(_vm.displayPercent(evluation.value)) +
+                          "\n        "
                       )
                     ])
                   : _vm._e()
@@ -539,21 +539,27 @@ __webpack_require__.r(__webpack_exports__);
           if (header === 'predict') {
             return false
           }
+          
+          let value = row[i]
+          
+          if (typeof value === 'string' && !isNaN(value)) {
+            value = Number(value)
+          }
 
-          if (i === 0 && this.utils.DataUtils.isMissingData(row[i])) {
+          if (i === 0 && this.utils.DataUtils.isMissingData(value)) {
             isTrainingSet = false
-            trainJSON[header] = row[i]
+            trainJSON[header] = value
             return false
           }
           else if (i > 1 && 
-                  (this.utils.DataUtils.isMissingData(row[i]))) {
+                  (this.utils.DataUtils.isMissingData(value))) {
             // 缺失值
             return false
           }
 
-          trainJSON[header] = row[i]
+          trainJSON[header] = value
           if (header !== this.localConfig.classFieldName) {
-            testJSON[header] = row[i]
+            testJSON[header] = value
           }
 
         })
@@ -756,7 +762,17 @@ let EvaluationPanel = {
     
   },
   methods: {
-    
+    displayPercent (value) {
+      if (value === 0 || value === 1) {
+        return (value * 100) + '%'
+      }
+      
+      let displayValue = value * 100
+      if ((displayValue + '').length > 7) {
+        displayValue = Math.round(value * 100000) / 1000
+      }
+      return (displayValue) + '%'
+    }
   }
 }
 

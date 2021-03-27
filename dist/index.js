@@ -28791,10 +28791,10 @@ let config = {
   urlGithub: 'https://github.com/pulipulichen/HTML-Simple-Classifier/',
   urlIssue: 'https://github.com/pulipulichen/HTML-Simple-Classifier/issues/new',
   
-  //demoData: 'weather.class.csv'
+  demoData: 'weather.class.csv'
   //demoData: 'weather.play.ods'
   //demoData: 'labor.csv'
-  demoData: 'unbalanced.csv'
+  //demoData: 'unbalanced.csv'
 }
 
 
@@ -29458,8 +29458,37 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
+  sleep: function (ms = 0) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  },
   isMissingData: function (data) {
     return (data === '?' || data === null || data === undefined)
+  },
+  parseNumber: async function (value) {
+    if (Array.isArray(value)) {
+      let ary = []
+      for (let len = value.length, i  = len; i > 0; i--) {
+        let index = (len - i)
+        ary[index] = await this.parseNumber(value[index])
+        
+        if (i % 10 === 5) {
+          await this.sleep()
+        }
+      }
+      
+      return ary
+    }
+    
+    if (this.isMissingData(value)) {
+      return value
+    }
+    
+    if (typeof value === 'string' && !isNaN(value)) {
+      return Number(value)
+    }
+    else {
+      return value
+    }
   }
 });
 

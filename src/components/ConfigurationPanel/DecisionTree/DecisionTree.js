@@ -22,9 +22,9 @@ let DecisionTree = {
     }
   },
   mounted() {
-    setTimeout(() => {
-      this.start()
-    }, 1000)
+//    setTimeout(() => {
+//      this.start()
+//    }, 1000)
   },
   methods: {}
 }

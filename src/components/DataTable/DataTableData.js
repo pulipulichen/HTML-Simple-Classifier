@@ -69,8 +69,9 @@ export default function (DataTable) {
     ]
     
     let hotDropdownMenuDefault = [
-      "col_left", "col_right", "remove_col", 
       HandsontablePluginRenameColHeader,
+      '---------',
+      "col_left", "col_right", "remove_col", 
       '---------',
       'filter_by_condition', 'filter_operators', 'filter_by_condition2', 'filter_by_value', 'filter_action_bar'
     ]

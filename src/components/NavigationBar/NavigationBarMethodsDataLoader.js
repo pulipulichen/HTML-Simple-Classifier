@@ -18,8 +18,10 @@ export default function (NavigationBar) {
         step: function(row) {
           data.push(row.data)
         },
-        complete: function() {
+        complete: async () => {
           //console.log(data)
+          data = await this.utils.DataUtils.parseNumber(data)
+  
           resolve(data)
         }
       });
@@ -41,7 +43,7 @@ export default function (NavigationBar) {
       req.open("GET", url, true);
       req.responseType = "arraybuffer";
 
-      req.onload = function(e) {
+      req.onload = async (e) => {
         var data = new Uint8Array(req.response);
         var workbook = XLSX.read(data, {type:"array"});
 
@@ -62,6 +64,7 @@ export default function (NavigationBar) {
         })
         xlData.unshift(headers)
 
+        xlData = await this.utils.DataUtils.parseNumber(xlData)
 
         resolve(xlData)
       }

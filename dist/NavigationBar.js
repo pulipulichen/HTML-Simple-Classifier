@@ -377,15 +377,17 @@ __webpack_require__.r(__webpack_exports__);
     this.config.loadingProgress = 0.75
     
     this.localConfig.classFieldName = detectResult.classFieldName    
+    
     this.localConfig.headers = orderedData[0]
+    this.localConfig.data = orderedData.splice(1)
     
     //let data = orderedData.splice(1)
     //this.localConfig.data = this.localConfig.data.splice(0, 0).concat(data)
-    this.localConfig.data = orderedData.splice(1)
+    
     
     this.config.loadingProgress = 1
     
-    console.log(this.localConfig.data)
+    console.log(this.localConfig.data.length)
   }
   
   NavigationBar.methods.loadDemoData = async function () {
@@ -502,8 +504,10 @@ __webpack_require__.r(__webpack_exports__);
         step: function(row) {
           data.push(row.data)
         },
-        complete: function() {
+        complete: async () => {
           //console.log(data)
+          data = await this.utils.DataUtils.parseNumber(data)
+  
           resolve(data)
         }
       });
@@ -525,7 +529,7 @@ __webpack_require__.r(__webpack_exports__);
       req.open("GET", url, true);
       req.responseType = "arraybuffer";
 
-      req.onload = function(e) {
+      req.onload = async (e) => {
         var data = new Uint8Array(req.response);
         var workbook = xlsx__WEBPACK_IMPORTED_MODULE_1___default.a.read(data, {type:"array"});
 
@@ -546,6 +550,7 @@ __webpack_require__.r(__webpack_exports__);
         })
         xlData.unshift(headers)
 
+        xlData = await this.utils.DataUtils.parseNumber(xlData)
 
         resolve(xlData)
       }

@@ -10,8 +10,9 @@
         <td class="active">
           {{ $t(evluation.name) }}
         </td>
-        <td v-if="evluation.type === 'percent'">
-          {{ evluation.value * 100 }}%
+        <td v-if="evluation.type === 'percent'"
+            class="right aligned">
+          {{ displayPercent(evluation.value) }}
         </td>
 
       </tr>
