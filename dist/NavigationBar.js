@@ -272,8 +272,6 @@ let NavigationBar = {
   mounted: async function () {
     await this.initData()
     this.initDropdown()
-    
-    this.loadDemo('weather.class.csv')
   },
   methods: {}
 }
@@ -385,6 +383,7 @@ __webpack_require__.r(__webpack_exports__);
       return false
     }
     
+    //console.log('沒有資料，讀取demo')
     this.loadDemo()
   }
   

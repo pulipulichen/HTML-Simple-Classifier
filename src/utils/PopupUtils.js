@@ -13,6 +13,7 @@ export default {
     let width = window.screen.availWidth
     let height = window.screen.availHeight
     
+    
     if (size === 'left') {
       width = parseInt(width / 2, 10)
     }
@@ -35,6 +36,11 @@ export default {
     ]
     //console.log(windowName)
     let win = window.open('', windowName, parameters.join(','))
+    
+    // ------------------------------
+    
+    let isReady = false
+    
     let doc = win.document
     
     if (cssURL) {
@@ -50,6 +56,7 @@ export default {
     
     if (bodyHTML) {
       doc.body.innerHTML = bodyHTML
+      isReady = true
     }
     
     if (title) {
@@ -58,6 +65,7 @@ export default {
     
     win.setHTML = (html) => {
       doc.body.innerHTML = html
+      isReady = true
     }
     
     win.clearHTML = () => {
@@ -68,14 +76,28 @@ export default {
       doc.title = title
     }
     
-    win.scrollToCenter = () => {
-     let scrollLeft =  parseInt((win.document.body.scrollWidth - win.innerWidth) / 2, 10)
-      win.scrollTo(null, scrollLeft)
+    let waitReady = async () => {
+      while (isReady === false) {
+        await this.sleep()
+      }
     }
     
-    win.scrollToTop = () => {
-      win.scrollTo(0, null)
+    win.scrollToCenter = async () => {
+      //console.log('1')
+      await waitReady()
+      //console.log('2', win.document.body.scrollWidth, win.innerWidth)
+      let scrollLeft =  parseInt((win.document.body.scrollWidth - win.innerWidth) / 2, 10)
+      //console.log(scrollLeft)
+      win.scrollTo(scrollLeft, null)
+    }
+    
+    win.scrollToTop = async () => {
+      await waitReady()
+      win.scrollTo(null, 0)
     }
     return win
-  }
+  },
+  sleep: function (ms = 50) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  },
 }

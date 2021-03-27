@@ -8,7 +8,6 @@ export default function (DataTable) {
   }
   
   DataTable.watch['localConfig.data'] = async function () {
-    
     if (this.dataLock === true) {
       return false
     }

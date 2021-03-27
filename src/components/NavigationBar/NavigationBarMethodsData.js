@@ -7,6 +7,7 @@ export default function (NavigationBar) {
       return false
     }
     
+    //console.log('沒有資料，讀取demo')
     this.loadDemo()
   }
   

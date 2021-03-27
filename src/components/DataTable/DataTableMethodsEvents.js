@@ -103,12 +103,16 @@ export default function (DataTable) {
   
   DataTable.methods.onHotCellUpdateSettings = function (row, col) {
     if (this.config.isDataProcessing) {
-      return false
+      return {}
     }
     
     let cellProperties = {}
 
     let classNameList = []
+    
+    if ((this.localConfig.data.length - 1) === row) {
+      return {}
+    }
 
     if ((col === 0 || col === 1) 
             && this.localConfig.data[row]

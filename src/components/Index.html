@@ -1,6 +1,7 @@
 <div class="Index">
   
   <NavigationBar
+    v-if="config.inited"
     ref="NavigationBar"
     v-bind:config="config"
     v-bind:localConfig="localConfig"
@@ -12,6 +13,7 @@
     <div class="data-table column">
       <DataTable
         ref="DataTable"
+        v-if="config.inited"
         v-bind:config="config"
         v-bind:localConfig="localConfig"
         v-bind:utils="utils">
@@ -21,6 +23,7 @@
          v-if="localConfig.displayConfigurationPanel">
       <ConfigurationPanel
         ref="ConfigurationPanel"
+        v-if="config.inited"
         v-bind:config="config"
         v-bind:localConfig="localConfig"
         v-bind:utils="utils">

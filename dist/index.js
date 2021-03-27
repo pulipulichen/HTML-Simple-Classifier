@@ -15855,14 +15855,16 @@ var render = function() {
     "div",
     { staticClass: "Index" },
     [
-      _c("NavigationBar", {
-        ref: "NavigationBar",
-        attrs: {
-          config: _vm.config,
-          localConfig: _vm.localConfig,
-          utils: _vm.utils
-        }
-      }),
+      _vm.config.inited
+        ? _c("NavigationBar", {
+            ref: "NavigationBar",
+            attrs: {
+              config: _vm.config,
+              localConfig: _vm.localConfig,
+              utils: _vm.utils
+            }
+          })
+        : _vm._e(),
       _vm._v(" "),
       _c(
         "div",
@@ -15878,14 +15880,16 @@ var render = function() {
             "div",
             { staticClass: "data-table column" },
             [
-              _c("DataTable", {
-                ref: "DataTable",
-                attrs: {
-                  config: _vm.config,
-                  localConfig: _vm.localConfig,
-                  utils: _vm.utils
-                }
-              })
+              _vm.config.inited
+                ? _c("DataTable", {
+                    ref: "DataTable",
+                    attrs: {
+                      config: _vm.config,
+                      localConfig: _vm.localConfig,
+                      utils: _vm.utils
+                    }
+                  })
+                : _vm._e()
             ],
             1
           ),
@@ -15895,14 +15899,16 @@ var render = function() {
                 "div",
                 { staticClass: "configuration-panel column" },
                 [
-                  _c("ConfigurationPanel", {
-                    ref: "ConfigurationPanel",
-                    attrs: {
-                      config: _vm.config,
-                      localConfig: _vm.localConfig,
-                      utils: _vm.utils
-                    }
-                  })
+                  _vm.config.inited
+                    ? _c("ConfigurationPanel", {
+                        ref: "ConfigurationPanel",
+                        attrs: {
+                          config: _vm.config,
+                          localConfig: _vm.localConfig,
+                          utils: _vm.utils
+                        }
+                      })
+                    : _vm._e()
                 ],
                 1
               )
@@ -29557,6 +29563,7 @@ __webpack_require__.r(__webpack_exports__);
     let width = window.screen.availWidth
     let height = window.screen.availHeight
     
+    
     if (size === 'left') {
       width = parseInt(width / 2, 10)
     }
@@ -29579,6 +29586,11 @@ __webpack_require__.r(__webpack_exports__);
     ]
     //console.log(windowName)
     let win = window.open('', windowName, parameters.join(','))
+    
+    // ------------------------------
+    
+    let isReady = false
+    
     let doc = win.document
     
     if (cssURL) {
@@ -29594,6 +29606,7 @@ __webpack_require__.r(__webpack_exports__);
     
     if (bodyHTML) {
       doc.body.innerHTML = bodyHTML
+      isReady = true
     }
     
     if (title) {
@@ -29602,6 +29615,7 @@ __webpack_require__.r(__webpack_exports__);
     
     win.setHTML = (html) => {
       doc.body.innerHTML = html
+      isReady = true
     }
     
     win.clearHTML = () => {
@@ -29612,16 +29626,30 @@ __webpack_require__.r(__webpack_exports__);
       doc.title = title
     }
     
-    win.scrollToCenter = () => {
-     let scrollLeft =  parseInt((win.document.body.scrollWidth - win.innerWidth) / 2, 10)
-      win.scrollTo(null, scrollLeft)
+    let waitReady = async () => {
+      while (isReady === false) {
+        await this.sleep()
+      }
     }
     
-    win.scrollToTop = () => {
-      win.scrollTo(0, null)
+    win.scrollToCenter = async () => {
+      //console.log('1')
+      await waitReady()
+      //console.log('2', win.document.body.scrollWidth, win.innerWidth)
+      let scrollLeft =  parseInt((win.document.body.scrollWidth - win.innerWidth) / 2, 10)
+      //console.log(scrollLeft)
+      win.scrollTo(scrollLeft, null)
+    }
+    
+    win.scrollToTop = async () => {
+      await waitReady()
+      win.scrollTo(null, 0)
     }
     return win
-  }
+  },
+  sleep: function (ms = 50) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  },
 });
 
 /***/ }),
