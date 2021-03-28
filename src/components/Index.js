@@ -27,13 +27,18 @@ let Index = {
         return false
       }
       this.initPostMessageAPI()
+      
+      //this.testRegression()
     },
   },
   methods: {
   }
 }
 
-import IndexPostMessage from './IndexPostMessage.js'
-IndexPostMessage(Index)
+import IndexMethodsPostMessage from './IndexMethodsPostMessage.js'
+IndexMethodsPostMessage(Index)
+
+//import IndexMethodsTest from './IndexMethodsTest.js'
+//IndexMethodsTest(Index)
 
 export default Index

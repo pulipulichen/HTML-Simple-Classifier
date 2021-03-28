@@ -73,6 +73,11 @@ export default function (NavigationBar) {
   }
   
   NavigationBar.methods.detectClassField = function (data) {
+    if (Array.isArray(data) === false 
+            || data.length === 0) {
+      return false
+    }
+    
     let headers = data[0]
     
     if (headers[1] === 'predict') {

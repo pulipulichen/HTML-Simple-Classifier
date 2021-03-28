@@ -35,6 +35,11 @@ export default function (Index) {
       data = data.data
     }
     let {rawData} = data
+    
+    if (Array.isArray(rawData) === false || rawData.length < 3) {
+      return false
+    }
+    
     await this.processRawData(rawData)
     await this.startPredict()
   }
