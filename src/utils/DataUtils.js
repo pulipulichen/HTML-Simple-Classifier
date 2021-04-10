@@ -12,7 +12,8 @@ export default {
         let index = (len - i)
         ary.push(await this.parseNumber(value[index]))
         
-        if (i % 10 === 5) {
+        if (i % 5000 === 2500) {
+          //console.log('parseNumber', i)
           await this.sleep()
         }
       }

@@ -5,7 +5,7 @@ export default function (ConfigurationPanel) {
     let testSet = []
     let testSetRowIndexes = []
     let trainSetClasses = []
-    
+    console.log(this.localConfig.data)
     for (let len = this.localConfig.data.length, i = len; i > 0; i--) {
       let rowIndex = (len - i)
       let row = this.localConfig.data[rowIndex]
@@ -25,34 +25,41 @@ export default function (ConfigurationPanel) {
       // 先確認是否有已經預測的資料，如果已經有了，那就略過預測
       if (this.isModelBuilded === false || this.utils.DataUtils.isMissingData(row[1])) {
 
-        headers.forEach((header, i) => {
+        for (let j = 0, headersLen = headers.length; j < headersLen; j++) {
+          let header = headers[j]
+          //console.log(header)
           if (header === 'predict') {
-            return false
+            continue
           }
           
-          let value = row[i]
+          let value = row[j]
+          console.log(i, header, value)
           
           if (typeof value === 'string' && !isNaN(value)) {
             value = Number(value)
           }
 
-          if (i === 0 && this.utils.DataUtils.isMissingData(value)) {
+          if (j === 0 && this.utils.DataUtils.isMissingData(value)) {
             isTrainingSet = false
             trainJSON[header] = value
-            return false
+            continue
           }
-          else if (i > 1 && 
+          else if (j > 1 && 
                   (this.utils.DataUtils.isMissingData(value))) {
             // 缺失值
-            return false
+            continue
           }
 
           trainJSON[header] = value
           if (header !== this.localConfig.classFieldName) {
             testJSON[header] = value
           }
-
-        })
+          
+          if (j % 1000 === 5) {
+            console.log('getJSONData sleep j', j)
+            await this.utils.AsyncUtils.sleep(0)
+          }
+        }
       }
       else {
         // 如果已經有預測資料
@@ -74,10 +81,13 @@ export default function (ConfigurationPanel) {
         testSetRowIndexes.push(rowIndex)
       }
       
-      if (i % 10 === 5) {
+      if (i % 1000 === 5) {
+        console.log('getJSONData sleep i', i)
         await this.utils.AsyncUtils.sleep(0)
       }
     }
+    
+    console.log(trainSet)
     
     return {
       trainSet,

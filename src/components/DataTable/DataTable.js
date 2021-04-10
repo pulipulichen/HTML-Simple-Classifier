@@ -12,6 +12,7 @@ let DataTable = {
   computed: {}, // DataTableComputed.js
   mounted() {
     this.initTableEvents()
+    this.recalculateAllColumnsWidth()
   },
   methods: {} // DataTableMethods.js
 }

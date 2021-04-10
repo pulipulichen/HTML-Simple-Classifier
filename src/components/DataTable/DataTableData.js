@@ -88,6 +88,8 @@ export default function (DataTable) {
       hotDropdownMenu: hotDropdownMenuDefault,
       hotDropdownMenuDefault,
       hotPredictColumnDropdownMenu,
+      hotAutoColumnSize: {syncLimit: 1000},
+      hotAutoRowSize: {syncLimit: 1000},
       
       predictColumnLocker: true
     }

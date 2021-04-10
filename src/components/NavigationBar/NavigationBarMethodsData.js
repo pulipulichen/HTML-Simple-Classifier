@@ -32,23 +32,32 @@ export default function (NavigationBar) {
   }
   
   NavigationBar.methods.processRawData = async function (rawData) {
-    
+    console.log('processRawData', 1)
     this.config.loadingProgress = 0.5
     let detectResult = this.detectClassField(rawData)
+    
+    console.log('processRawData', 2)
     //console.log(detectResult)
     let orderedData = await this.orderColumns(rawData, detectResult.classFieldIndex)
+    
+    console.log('processRawData', 3)
     this.config.loadingProgress = 0.75
     
     this.localConfig.classFieldName = detectResult.classFieldName    
     
+    console.log('processRawData', 4)
     this.localConfig.headers = orderedData[0]
     
     let data = orderedData.splice(1)
     //console.log(data)
     //this.localConfig.data = this.localConfig.data.splice(0, 0).concat(data)
+    console.log('processRawData', 5)
+    
     while (!this.$parent.$refs.DataTable) {
       await this.utils.AsyncUtils.sleep(100)
     }
+    
+    console.log('processRawData', 6)
     
     await this.$parent.$refs.DataTable.loadData(data)
     

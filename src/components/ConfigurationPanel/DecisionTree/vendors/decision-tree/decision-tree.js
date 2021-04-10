@@ -344,7 +344,8 @@ var dt = (function () {
         }
       }
 
-      if (i % 10 === 5) {
+      if (i % 1000 === 5) {
+        console.log('buildDecisionTree sleep i', i)
         await sleep(0)
       }
 

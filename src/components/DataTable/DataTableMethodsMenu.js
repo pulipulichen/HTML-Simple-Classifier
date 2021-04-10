@@ -29,4 +29,16 @@ export default function (DataTable) {
       colHeaders: headers
     })
   }
+  
+  DataTable.methods.recalculateAllColumnsWidth = function () {
+    return false
+    
+    this.hotAutoColumnSize = true
+    var plugin = this.hotInstance.getPlugin('autoColumnSize');
+    plugin.enablePlugin()
+    plugin.recalculateAllColumnsWidth()
+    plugin.disablePlugin()
+    this.hotAutoColumnSize = false
+    console.log('recalculateAllColumnsWidth', plugin.isNeedRecalculate(), plugin.calculateAllColumnsWidth())
+  }
 }

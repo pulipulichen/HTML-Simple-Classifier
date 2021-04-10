@@ -42,6 +42,7 @@ export default function (NavigationBar) {
       let fieldCount
       Papa.parse(event.target.files[0], {
         worker: true, // Don't bog down the main thread if its a big file
+        dynamicTyping: true,
         step: function(row) {
           if (Array.isArray(row.data)) {
             if (!fieldCount) {
@@ -50,12 +51,14 @@ export default function (NavigationBar) {
             if (fieldCount !== row.data.length) {
               return false
             }
-            //console.log(row.data.length)
+            console.log('Papa parse', row.data.length)
             data.push(row.data)
           }
         },
         complete: async () => {
-          data = await this.utils.DataUtils.parseNumber(data)
+          console.log('Papa完成')
+          //data = await this.utils.DataUtils.parseNumber(data)
+          //console.log('parseNumber完成')
           resolve(data)
         }
       })

@@ -1,1 +1,958 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{200:function(module,exports){eval('module.exports = function (Component) {\n  Component.options.__i18n = Component.options.__i18n || []\n  Component.options.__i18n.push(\'{"en":{"TEST_MESSAGE":"Test Message"},"zh-TW":{"TEST_MESSAGE":"測試訊息"}}\')\n  delete Component.options._Ctor\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjAwLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvTmF2aWdhdGlvbkJhci9OYXZpZ2F0aW9uQmFyLnlhbWw/ZDg2YiJdLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uIChDb21wb25lbnQpIHtcbiAgQ29tcG9uZW50Lm9wdGlvbnMuX19pMThuID0gQ29tcG9uZW50Lm9wdGlvbnMuX19pMThuIHx8IFtdXG4gIENvbXBvbmVudC5vcHRpb25zLl9faTE4bi5wdXNoKCd7XCJlblwiOntcIlRFU1RfTUVTU0FHRVwiOlwiVGVzdCBNZXNzYWdlXCJ9LFwiemgtVFdcIjp7XCJURVNUX01FU1NBR0VcIjpcIua4rOippuioiuaBr1wifX0nKVxuICBkZWxldGUgQ29tcG9uZW50Lm9wdGlvbnMuX0N0b3Jcbn1cbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTsiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///200\n')},370:function(module,exports){eval("/* (ignored) *///# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzcwLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL2ZzIChpZ25vcmVkKT81NzNjIl0sInNvdXJjZXNDb250ZW50IjpbIi8qIChpZ25vcmVkKSAqLyJdLCJtYXBwaW5ncyI6IkFBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///370\n")},372:function(module,exports,__webpack_require__){eval("var api = __webpack_require__(5);\n            var content = __webpack_require__(468);\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzcyLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvTmF2aWdhdGlvbkJhci9OYXZpZ2F0aW9uQmFyLmxlc3M/M2YzMyJdLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgYXBpID0gcmVxdWlyZShcIiEuLi8uLi8uLi9ub2RlX21vZHVsZXMvc3R5bGUtbG9hZGVyL2Rpc3QvcnVudGltZS9pbmplY3RTdHlsZXNJbnRvU3R5bGVUYWcuanNcIik7XG4gICAgICAgICAgICB2YXIgY29udGVudCA9IHJlcXVpcmUoXCIhIS4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMSEuLi8uLi8uLi9ub2RlX21vZHVsZXMvdnVlLWxvYWRlci9saWIvbG9hZGVycy9zdHlsZVBvc3RMb2FkZXIuanMhLi4vLi4vLi4vbm9kZV9tb2R1bGVzL3Bvc3Rjc3MtbG9hZGVyL3NyYy9pbmRleC5qcz8/cmVmLS0xLTIhLi4vLi4vLi4vbm9kZV9tb2R1bGVzL2xlc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMyEuL05hdmlnYXRpb25CYXIubGVzcz92dWUmdHlwZT1zdHlsZSZpbmRleD0wJmlkPTFkNWJkOWUyJmxhbmc9bGVzcyZzY29wZWQ9dHJ1ZSZcIik7XG5cbiAgICAgICAgICAgIGNvbnRlbnQgPSBjb250ZW50Ll9fZXNNb2R1bGUgPyBjb250ZW50LmRlZmF1bHQgOiBjb250ZW50O1xuXG4gICAgICAgICAgICBpZiAodHlwZW9mIGNvbnRlbnQgPT09ICdzdHJpbmcnKSB7XG4gICAgICAgICAgICAgIGNvbnRlbnQgPSBbW21vZHVsZS5pZCwgY29udGVudCwgJyddXTtcbiAgICAgICAgICAgIH1cblxudmFyIG9wdGlvbnMgPSB7fTtcblxub3B0aW9ucy5pbnNlcnQgPSBcImhlYWRcIjtcbm9wdGlvbnMuc2luZ2xldG9uID0gZmFsc2U7XG5cbnZhciB1cGRhdGUgPSBhcGkoY29udGVudCwgb3B0aW9ucyk7XG5cblxuXG5tb2R1bGUuZXhwb3J0cyA9IGNvbnRlbnQubG9jYWxzIHx8IHt9OyJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///372\n")},459:function(module,exports){eval('module.exports = "./dist/asset/favicon.svg";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDU5LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vYXNzZXRzL2Zhdmljb24vZmF2aWNvbi5zdmc/ODczZSJdLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IFwiLi9kaXN0L2Fzc2V0L2Zhdmljb24uc3ZnXCI7Il0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///459\n')},465:function(module,exports){eval("/* (ignored) *///# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDY1LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL2NyeXB0byAoaWdub3JlZCk/NzkyZSJdLCJzb3VyY2VzQ29udGVudCI6WyIvKiAoaWdub3JlZCkgKi8iXSwibWFwcGluZ3MiOiJBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///465\n")},466:function(module,exports){eval("/* (ignored) *///# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDY2LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3N0cmVhbSAoaWdub3JlZCk/NzM4OSJdLCJzb3VyY2VzQ29udGVudCI6WyIvKiAoaWdub3JlZCkgKi8iXSwibWFwcGluZ3MiOiJBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///466\n")},467:function(module,__webpack_exports__,__webpack_require__){"use strict";eval("/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_ref_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_1_2_node_modules_less_loader_dist_cjs_js_ref_1_3_NavigationBar_less_vue_type_style_index_0_id_1d5bd9e2_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(372);\n/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_ref_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_1_2_node_modules_less_loader_dist_cjs_js_ref_1_3_NavigationBar_less_vue_type_style_index_0_id_1d5bd9e2_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_ref_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_1_2_node_modules_less_loader_dist_cjs_js_ref_1_3_NavigationBar_less_vue_type_style_index_0_id_1d5bd9e2_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__);\n/* unused harmony reexport * */\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDY3LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvTmF2aWdhdGlvbkJhci9OYXZpZ2F0aW9uQmFyLmxlc3M/YTM4MCJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tIFwiLSEuLi8uLi8uLi9ub2RlX21vZHVsZXMvc3R5bGUtbG9hZGVyL2Rpc3QvY2pzLmpzIS4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMSEuLi8uLi8uLi9ub2RlX21vZHVsZXMvdnVlLWxvYWRlci9saWIvbG9hZGVycy9zdHlsZVBvc3RMb2FkZXIuanMhLi4vLi4vLi4vbm9kZV9tb2R1bGVzL3Bvc3Rjc3MtbG9hZGVyL3NyYy9pbmRleC5qcz8/cmVmLS0xLTIhLi4vLi4vLi4vbm9kZV9tb2R1bGVzL2xlc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMyEuL05hdmlnYXRpb25CYXIubGVzcz92dWUmdHlwZT1zdHlsZSZpbmRleD0wJmlkPTFkNWJkOWUyJmxhbmc9bGVzcyZzY29wZWQ9dHJ1ZSZcIiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBOyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///467\n")},468:function(module,exports,__webpack_require__){eval('// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);\nexports = ___CSS_LOADER_API_IMPORT___(true);\n// Module\nexports.push([module.i, "img[data-v-1d5bd9e2]{width:1.5rem!important;height:auto}.menu[data-v-1d5bd9e2]{z-index:99999!important}input[type=file][data-v-1d5bd9e2]{display:none!important}", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/NavigationBar/D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less"],"names":[],"mappings":"AAAA,qBACE,sBAAA,CACA,WCCF,CDEA,uBACE,uBCAF,CDGA,kCACE,sBCDF","file":"NavigationBar.less","sourcesContent":["img {\\n  width: 1.5rem !important;\\n  height: auto;\\n}\\n\\n.menu {\\n  z-index: 99999 !important;\\n}\\n\\ninput[type=\\"file\\"] {\\n  display: none !important;\\n}\\n","img {\\n  width: 1.5rem !important;\\n  height: auto;\\n}\\n.menu {\\n  z-index: 99999 !important;\\n}\\ninput[type=\\"file\\"] {\\n  display: none !important;\\n}\\n"]}]);\n// Exports\nmodule.exports = exports;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDY4LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvTmF2aWdhdGlvbkJhci9OYXZpZ2F0aW9uQmFyLmxlc3M/NGI2NSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBJbXBvcnRzXG52YXIgX19fQ1NTX0xPQURFUl9BUElfSU1QT1JUX19fID0gcmVxdWlyZShcIi4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvcnVudGltZS9hcGkuanNcIik7XG5leHBvcnRzID0gX19fQ1NTX0xPQURFUl9BUElfSU1QT1JUX19fKHRydWUpO1xuLy8gTW9kdWxlXG5leHBvcnRzLnB1c2goW21vZHVsZS5pZCwgXCJpbWdbZGF0YS12LTFkNWJkOWUyXXt3aWR0aDoxLjVyZW0haW1wb3J0YW50O2hlaWdodDphdXRvfS5tZW51W2RhdGEtdi0xZDViZDllMl17ei1pbmRleDo5OTk5OSFpbXBvcnRhbnR9aW5wdXRbdHlwZT1maWxlXVtkYXRhLXYtMWQ1YmQ5ZTJde2Rpc3BsYXk6bm9uZSFpbXBvcnRhbnR9XCIsIFwiXCIse1widmVyc2lvblwiOjMsXCJzb3VyY2VzXCI6W1wiRDoveGFtcHAvaHRkb2NzL3Byb2plY3RzLWh0bWw1L0hUTUwtU2ltcGxlLUNsYXNzaWZpZXIvc3JjL2NvbXBvbmVudHMvTmF2aWdhdGlvbkJhci9EOi94YW1wcC9odGRvY3MvcHJvamVjdHMtaHRtbDUvSFRNTC1TaW1wbGUtQ2xhc3NpZmllci9zcmMvY29tcG9uZW50cy9OYXZpZ2F0aW9uQmFyL05hdmlnYXRpb25CYXIubGVzcz92dWUmdHlwZT1zdHlsZSZpbmRleD0wJmlkPTFkNWJkOWUyJmxhbmc9bGVzcyZzY29wZWQ9dHJ1ZSZcIixcIkQ6L3hhbXBwL2h0ZG9jcy9wcm9qZWN0cy1odG1sNS9IVE1MLVNpbXBsZS1DbGFzc2lmaWVyL3NyYy9jb21wb25lbnRzL05hdmlnYXRpb25CYXIvTmF2aWdhdGlvbkJhci5sZXNzXCJdLFwibmFtZXNcIjpbXSxcIm1hcHBpbmdzXCI6XCJBQUFBLHFCQUNFLHNCQUFBLENBQ0EsV0NDRixDREVBLHVCQUNFLHVCQ0FGLENER0Esa0NBQ0Usc0JDREZcIixcImZpbGVcIjpcIk5hdmlnYXRpb25CYXIubGVzc1wiLFwic291cmNlc0NvbnRlbnRcIjpbXCJpbWcge1xcbiAgd2lkdGg6IDEuNXJlbSAhaW1wb3J0YW50O1xcbiAgaGVpZ2h0OiBhdXRvO1xcbn1cXG5cXG4ubWVudSB7XFxuICB6LWluZGV4OiA5OTk5OSAhaW1wb3J0YW50O1xcbn1cXG5cXG5pbnB1dFt0eXBlPVxcXCJmaWxlXFxcIl0ge1xcbiAgZGlzcGxheTogbm9uZSAhaW1wb3J0YW50O1xcbn1cXG5cIixcImltZyB7XFxuICB3aWR0aDogMS41cmVtICFpbXBvcnRhbnQ7XFxuICBoZWlnaHQ6IGF1dG87XFxufVxcbi5tZW51IHtcXG4gIHotaW5kZXg6IDk5OTk5ICFpbXBvcnRhbnQ7XFxufVxcbmlucHV0W3R5cGU9XFxcImZpbGVcXFwiXSB7XFxuICBkaXNwbGF5OiBub25lICFpbXBvcnRhbnQ7XFxufVxcblwiXX1dKTtcbi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0gZXhwb3J0cztcbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///468\n')},469:function(module,__webpack_exports__,__webpack_require__){"use strict";eval('/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(200);\n/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);\n /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); //# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDY5LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvTmF2aWdhdGlvbkJhci9OYXZpZ2F0aW9uQmFyLnlhbWw/ZWFkNCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgbW9kIGZyb20gXCItIS4uLy4uLy4uL25vZGVfbW9kdWxlcy9Aa2F6dXBvbi92dWUtaTE4bi1sb2FkZXIvbGliL2luZGV4LmpzIS4vTmF2aWdhdGlvbkJhci55YW1sP3Z1ZSZ0eXBlPWN1c3RvbSZpbmRleD0wJmJsb2NrVHlwZT1pMThuJmlzc3VlclBhdGg9RCUzQSU1Q3hhbXBwJTVDaHRkb2NzJTVDcHJvamVjdHMtaHRtbDUlNUNIVE1MLVNpbXBsZS1DbGFzc2lmaWVyJTVDc3JjJTVDY29tcG9uZW50cyU1Q05hdmlnYXRpb25CYXIlNUNOYXZpZ2F0aW9uQmFyLnZ1ZSZsYW5nPXlhbWxcIjsgZXhwb3J0IGRlZmF1bHQgbW9kOyBleHBvcnQgKiBmcm9tIFwiLSEuLi8uLi8uLi9ub2RlX21vZHVsZXMvQGthenVwb24vdnVlLWkxOG4tbG9hZGVyL2xpYi9pbmRleC5qcyEuL05hdmlnYXRpb25CYXIueWFtbD92dWUmdHlwZT1jdXN0b20maW5kZXg9MCZibG9ja1R5cGU9aTE4biZpc3N1ZXJQYXRoPUQlM0ElNUN4YW1wcCU1Q2h0ZG9jcyU1Q3Byb2plY3RzLWh0bWw1JTVDSFRNTC1TaW1wbGUtQ2xhc3NpZmllciU1Q3NyYyU1Q2NvbXBvbmVudHMlNUNOYXZpZ2F0aW9uQmFyJTVDTmF2aWdhdGlvbkJhci52dWUmbGFuZz15YW1sXCIiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///469\n')},506:function(module,__webpack_exports__,__webpack_require__){"use strict";eval('// ESM COMPAT FLAG\n__webpack_require__.r(__webpack_exports__);\n\n// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./src/components/NavigationBar/NavigationBar.html?vue&type=template&id=1d5bd9e2&scoped=true&\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c("div", [\n    _c("div", { staticClass: "ui top fixed inverted menu" }, [\n      _c("div", { staticClass: "item" }, [\n        _c("img", { attrs: { src: _vm.logoPath } }),\n        _vm._v("\\n      " + _vm._s(_vm.config.t) + "\\n    ")\n      ]),\n      _vm._v(" "),\n      _c("a", { ref: "LoadDemoDropdown", staticClass: "ui dropdown item" }, [\n        _c("span", { on: { click: _vm.loadDemo } }, [\n          _vm._v("\\n        " + _vm._s(_vm.$t("LOAD DEMO")) + "\\n      ")\n        ]),\n        _vm._v(" "),\n        _c("i", { staticClass: "dropdown icon" }),\n        _vm._v(" "),\n        _c(\n          "div",\n          { staticClass: "menu" },\n          _vm._l(_vm.config.demoDataList, function(file) {\n            return _c(\n              "div",\n              {\n                staticClass: "item",\n                on: {\n                  click: function($event) {\n                    return _vm.loadDemo(file)\n                  }\n                }\n              },\n              [_vm._v("\\n          " + _vm._s(_vm.$t(file)) + "\\n        ")]\n            )\n          }),\n          0\n        )\n      ]),\n      _vm._v(" "),\n      _c(\n        "a",\n        {\n          staticClass: "item",\n          on: {\n            click: function($event) {\n              return _vm.$refs.FileInput.click()\n            }\n          }\n        },\n        [\n          _vm._v("\\n      " + _vm._s(_vm.$t("OPEN FILE")) + "\\n      "),\n          _c("input", {\n            ref: "FileInput",\n            attrs: { type: "file", accept: ".ods,.csv" },\n            on: { change: _vm.openFile }\n          })\n        ]\n      ),\n      _vm._v(" "),\n      _c("a", { ref: "SaveFileDropdown", staticClass: "ui dropdown item" }, [\n        _c("span", { on: { click: _vm.saveFile } }, [\n          _vm._v("\\n        " + _vm._s(_vm.$t("SAVE FILE")) + "\\n      ")\n        ]),\n        _vm._v(" "),\n        _c("i", { staticClass: "dropdown icon" }),\n        _vm._v(" "),\n        _c(\n          "div",\n          { staticClass: "menu" },\n          _vm._l(_vm.saveFormats, function(format) {\n            return _c(\n              "div",\n              {\n                staticClass: "item",\n                on: {\n                  click: function($event) {\n                    return _vm.saveFile(format)\n                  }\n                }\n              },\n              [_vm._v("\\n          " + _vm._s(_vm.$t(format)) + "\\n        ")]\n            )\n          }),\n          0\n        )\n      ]),\n      _vm._v(" "),\n      _c("div", { staticClass: "right menu" }, [\n        _c(\n          "div",\n          { staticClass: "ui right mini aligned category search item" },\n          [\n            _c(\n              "form",\n              {\n                staticClass: "ui icon input",\n                on: {\n                  submit: function($event) {\n                    $event.stopPropagation()\n                    $event.preventDefault()\n                    return _vm.onSearch($event)\n                  }\n                }\n              },\n              [\n                _c("input", {\n                  directives: [\n                    {\n                      name: "model",\n                      rawName: "v-model",\n                      value: _vm.localConfig.searchKeyword,\n                      expression: "localConfig.searchKeyword"\n                    }\n                  ],\n                  staticClass: "prompt",\n                  attrs: { type: "text", placeholder: _vm.$t("Search...") },\n                  domProps: { value: _vm.localConfig.searchKeyword },\n                  on: {\n                    input: function($event) {\n                      if ($event.target.composing) {\n                        return\n                      }\n                      _vm.$set(\n                        _vm.localConfig,\n                        "searchKeyword",\n                        $event.target.value\n                      )\n                    }\n                  }\n                }),\n                _vm._v(" "),\n                _c("i", { staticClass: "search link icon" })\n              ]\n            ),\n            _vm._v(" "),\n            _c("div", { staticClass: "results" })\n          ]\n        ),\n        _vm._v(" "),\n        _c(\n          "a",\n          {\n            staticClass: "icon item",\n            on: {\n              click: function($event) {\n                _vm.localConfig.displayConfigurationPanel = !_vm.localConfig\n                  .displayConfigurationPanel\n              }\n            }\n          },\n          [\n            !_vm.localConfig.displayConfigurationPanel\n              ? _c("i", { staticClass: "bars icon" })\n              : _vm._e(),\n            _vm._v(" "),\n            _vm.localConfig.displayConfigurationPanel\n              ? _c("i", { staticClass: "chevron circle up icon" })\n              : _vm._e()\n          ]\n        )\n      ])\n    ])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n// CONCATENATED MODULE: ./src/components/NavigationBar/NavigationBar.html?vue&type=template&id=1d5bd9e2&scoped=true&\n\n// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js\nvar asyncToGenerator = __webpack_require__(1);\nvar asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);\n\n// EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js\nvar regenerator = __webpack_require__(0);\nvar regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);\n\n// EXTERNAL MODULE: ./assets/favicon/favicon.svg\nvar favicon = __webpack_require__(459);\nvar favicon_default = /*#__PURE__*/__webpack_require__.n(favicon);\n\n// CONCATENATED MODULE: ./src/components/NavigationBar/NavigationBarMethodsData.js\n\n\n/* harmony default export */ var NavigationBarMethodsData = (function (NavigationBar) {\n  NavigationBar.methods.initData = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n    return regenerator_default.a.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            if (!(this.localConfig.data.length > 2 && Array.isArray(this.localConfig.data[0]) && this.localConfig.data[0].length > 3)) {\n              _context.next = 4;\n              break;\n            }\n\n            return _context.abrupt("return", false);\n\n          case 4:\n            if (!this.config.openFromAPI) {\n              _context.next = 6;\n              break;\n            }\n\n            return _context.abrupt("return", false);\n\n          case 6:\n            //console.log(\'沒有資料，讀取demo\')\n            this.loadDemo();\n\n          case 7:\n          case "end":\n            return _context.stop();\n        }\n      }\n    }, _callee, this);\n  }));\n\n  NavigationBar.methods.loadDemo = /*#__PURE__*/function () {\n    var _ref2 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2(file) {\n      var rawData;\n      return regenerator_default.a.wrap(function _callee2$(_context2) {\n        while (1) {\n          switch (_context2.prev = _context2.next) {\n            case 0:\n              this.config.isDataProcessing = true;\n\n              if (!file || typeof file !== \'string\') {\n                file = this.config.demoDataList[0];\n              }\n\n              this.localConfig.classFieldName = null;\n              this.localConfig.filename = file;\n              this.config.loadingProgress = 0;\n              _context2.next = 7;\n              return this.loadDemoData(file);\n\n            case 7:\n              rawData = _context2.sent;\n              _context2.next = 10;\n              return this.processRawData(rawData);\n\n            case 10:\n              _context2.next = 12;\n              return this.$parent.startPredict();\n\n            case 12:\n            case "end":\n              return _context2.stop();\n          }\n        }\n      }, _callee2, this);\n    }));\n\n    return function (_x) {\n      return _ref2.apply(this, arguments);\n    };\n  }();\n\n  NavigationBar.methods.processRawData = /*#__PURE__*/function () {\n    var _ref3 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee3(rawData) {\n      var detectResult, orderedData, data;\n      return regenerator_default.a.wrap(function _callee3$(_context3) {\n        while (1) {\n          switch (_context3.prev = _context3.next) {\n            case 0:\n              this.config.loadingProgress = 0.5;\n              detectResult = this.detectClassField(rawData); //console.log(detectResult)\n\n              _context3.next = 4;\n              return this.orderColumns(rawData, detectResult.classFieldIndex);\n\n            case 4:\n              orderedData = _context3.sent;\n              this.config.loadingProgress = 0.75;\n              this.localConfig.classFieldName = detectResult.classFieldName;\n              this.localConfig.headers = orderedData[0];\n              data = orderedData.splice(1); //console.log(data)\n              //this.localConfig.data = this.localConfig.data.splice(0, 0).concat(data)\n\n            case 9:\n              if (this.$parent.$refs.DataTable) {\n                _context3.next = 14;\n                break;\n              }\n\n              _context3.next = 12;\n              return this.utils.AsyncUtils.sleep(100);\n\n            case 12:\n              _context3.next = 9;\n              break;\n\n            case 14:\n              _context3.next = 16;\n              return this.$parent.$refs.DataTable.loadData(data);\n\n            case 16:\n              //let data = orderedData.splice(1)\n              //this.localConfig.data = this.localConfig.data.splice(0, 0).concat(data)\n              this.config.loadingProgress = 1; //console.log(this.localConfig.data.length)\n\n              this.config.isDataProcessing = false;\n\n            case 18:\n            case "end":\n              return _context3.stop();\n          }\n        }\n      }, _callee3, this);\n    }));\n\n    return function (_x2) {\n      return _ref3.apply(this, arguments);\n    };\n  }();\n\n  NavigationBar.methods.loadDemoData = /*#__PURE__*/function () {\n    var _ref4 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee4(file) {\n      var path;\n      return regenerator_default.a.wrap(function _callee4$(_context4) {\n        while (1) {\n          switch (_context4.prev = _context4.next) {\n            case 0:\n              path = "./assets/data/" + file; //console.log(path)\n\n              if (!path.endsWith(\'.csv\')) {\n                _context4.next = 7;\n                break;\n              }\n\n              _context4.next = 4;\n              return this.loadURLCSV(path);\n\n            case 4:\n              return _context4.abrupt("return", _context4.sent);\n\n            case 7:\n              _context4.next = 9;\n              return this.loadURLODS(path);\n\n            case 9:\n              return _context4.abrupt("return", _context4.sent);\n\n            case 10:\n            case "end":\n              return _context4.stop();\n          }\n        }\n      }, _callee4, this);\n    }));\n\n    return function (_x3) {\n      return _ref4.apply(this, arguments);\n    };\n  }();\n\n  NavigationBar.methods.detectClassField = function (data) {\n    if (Array.isArray(data) === false || data.length === 0) {\n      return false;\n    }\n\n    var headers = data[0];\n\n    if (headers[1] === \'predict\') {\n      // 已經被調整好了，不用再整理\n      return {\n        classFieldName: headers[0],\n        classFieldIndex: 0\n      };\n    } // ---------------------------\n    // 偵測\n\n\n    var classFieldNameCandidates = [\'class\', \'label\', \'target\', \'score\', \'dv\'];\n    var classFieldIndex = -1;\n    var classFieldName;\n\n    for (var len = classFieldNameCandidates.length, i = len; i > 0; i--) {\n      var name = classFieldNameCandidates[len - i];\n      var index = headers.indexOf(name);\n\n      if (index > -1) {\n        classFieldIndex = index;\n        classFieldName = name;\n        break;\n      }\n    } //console.log(classFieldName, classFieldIndex)\n\n\n    if (classFieldIndex === -1) {\n      classFieldIndex = headers.length - 1;\n      classFieldName = headers[classFieldIndex];\n    }\n\n    return {\n      classFieldName: classFieldName,\n      classFieldIndex: classFieldIndex\n    };\n  };\n\n  NavigationBar.methods.orderColumns = /*#__PURE__*/function () {\n    var _ref5 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee5(data, classFieldIndex) {\n      var rowLen, r, row, classField;\n      return regenerator_default.a.wrap(function _callee5$(_context5) {\n        while (1) {\n          switch (_context5.prev = _context5.next) {\n            case 0:\n              // ---------------------------\n              // 開始大遷移\n              for (rowLen = data.length, r = rowLen; r > 0; r--) {\n                row = data[rowLen - r];\n                classField = row.splice(classFieldIndex, 1); // putting the \'role\' string back in the array:\n\n                if (r === rowLen) {\n                  row.unshift(\'predict\');\n                  row.unshift(classField[0]);\n                } else {\n                  row.unshift(null);\n                  row.unshift(classField[0]);\n                }\n\n                if (r % 10 === 1) {\n                  this.utils.AsyncUtils.sleep(0);\n                }\n              }\n\n              return _context5.abrupt("return", data);\n\n            case 2:\n            case "end":\n              return _context5.stop();\n          }\n        }\n      }, _callee5, this);\n    }));\n\n    return function (_x4, _x5) {\n      return _ref5.apply(this, arguments);\n    };\n  }();\n\n  NavigationBar.methods.dataToArrayJSON = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee6() {\n    var _this = this;\n\n    var headers, rows, data, _loop, len, i;\n\n    return regenerator_default.a.wrap(function _callee6$(_context7) {\n      while (1) {\n        switch (_context7.prev = _context7.next) {\n          case 0:\n            headers = this.localConfig.headers;\n            rows = this.localConfig.data;\n            data = [];\n            _loop = /*#__PURE__*/regenerator_default.a.mark(function _loop(len, i) {\n              var row, json;\n              return regenerator_default.a.wrap(function _loop$(_context6) {\n                while (1) {\n                  switch (_context6.prev = _context6.next) {\n                    case 0:\n                      row = rows[len - i];\n                      json = {};\n                      headers.forEach(function (header, i) {\n                        json[header] = row[i];\n                      });\n                      data.push(json);\n\n                      if (!(i % 10 === 5)) {\n                        _context6.next = 7;\n                        break;\n                      }\n\n                      _context6.next = 7;\n                      return _this.utils.AsyncUtils.sleep(0);\n\n                    case 7:\n                    case "end":\n                      return _context6.stop();\n                  }\n                }\n              }, _loop);\n            });\n            len = rows.length, i = len;\n\n          case 5:\n            if (!(i > 0)) {\n              _context7.next = 10;\n              break;\n            }\n\n            return _context7.delegateYield(_loop(len, i), "t0", 7);\n\n          case 7:\n            i--;\n            _context7.next = 5;\n            break;\n\n          case 10:\n            return _context7.abrupt("return", data);\n\n          case 11:\n          case "end":\n            return _context7.stop();\n        }\n      }\n    }, _callee6, this);\n  }));\n\n  NavigationBar.methods.getFilenameWithTime = function (ext) {\n    return this.filenameWithoutExt + \'_\' + new Date().mmddhhmm() + \'.\' + ext;\n  };\n});\n// EXTERNAL MODULE: ./node_modules/xlsx/xlsx.js\nvar xlsx = __webpack_require__(460);\nvar xlsx_default = /*#__PURE__*/__webpack_require__.n(xlsx);\n\n// CONCATENATED MODULE: ./src/components/NavigationBar/NavigationBarMethodsHandlerODS.js\n\n\n\n/* harmony default export */ var NavigationBarMethodsHandlerODS = (function (NavigationBar) {\n  NavigationBar.methods.loadURLODS = function (url) {\n    var _this = this;\n\n    return new Promise(function (resolve) {\n      /* set up async GET request */\n      var req = new XMLHttpRequest();\n      req.open("GET", url, true);\n      req.responseType = "arraybuffer";\n\n      req.onload = /*#__PURE__*/function () {\n        var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee(e) {\n          var data, workbook;\n          return regenerator_default.a.wrap(function _callee$(_context) {\n            while (1) {\n              switch (_context.prev = _context.next) {\n                case 0:\n                  data = new Uint8Array(req.response);\n                  workbook = xlsx_default.a.read(data, {\n                    type: "array"\n                  });\n                  _context.t0 = resolve;\n                  _context.next = 5;\n                  return _this.processXLSXData(workbook);\n\n                case 5:\n                  _context.t1 = _context.sent;\n                  (0, _context.t0)(_context.t1);\n\n                case 7:\n                case "end":\n                  return _context.stop();\n              }\n            }\n          }, _callee);\n        }));\n\n        return function (_x) {\n          return _ref.apply(this, arguments);\n        };\n      }();\n\n      req.send();\n    });\n  };\n\n  NavigationBar.methods.loadFileODS = /*#__PURE__*/function () {\n    var _ref2 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee3(file) {\n      var _this2 = this;\n\n      var reader;\n      return regenerator_default.a.wrap(function _callee3$(_context3) {\n        while (1) {\n          switch (_context3.prev = _context3.next) {\n            case 0:\n              reader = new FileReader();\n              return _context3.abrupt("return", new Promise(function (resolve) {\n                reader.readAsArrayBuffer(file);\n\n                reader.onload = /*#__PURE__*/function () {\n                  var _ref3 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2(e) {\n                    var data, workbook;\n                    return regenerator_default.a.wrap(function _callee2$(_context2) {\n                      while (1) {\n                        switch (_context2.prev = _context2.next) {\n                          case 0:\n                            data = new Uint8Array(reader.result);\n                            workbook = xlsx_default.a.read(data, {\n                              type: "array"\n                            });\n                            _context2.t0 = resolve;\n                            _context2.next = 5;\n                            return _this2.processXLSXData(workbook);\n\n                          case 5:\n                            _context2.t1 = _context2.sent;\n                            (0, _context2.t0)(_context2.t1);\n\n                          case 7:\n                          case "end":\n                            return _context2.stop();\n                        }\n                      }\n                    }, _callee2);\n                  }));\n\n                  return function (_x3) {\n                    return _ref3.apply(this, arguments);\n                  };\n                }();\n              }));\n\n            case 2:\n            case "end":\n              return _context3.stop();\n          }\n        }\n      }, _callee3);\n    }));\n\n    return function (_x2) {\n      return _ref2.apply(this, arguments);\n    };\n  }();\n\n  NavigationBar.methods.processXLSXData = /*#__PURE__*/function () {\n    var _ref4 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee4(workbook) {\n      var _this3 = this;\n\n      var sheet_name_list, xlData, headers, _loop, len, i;\n\n      return regenerator_default.a.wrap(function _callee4$(_context5) {\n        while (1) {\n          switch (_context5.prev = _context5.next) {\n            case 0:\n              sheet_name_list = workbook.SheetNames; //console.log(url)\n              //console.log(sheet_name_list)\n\n              xlData = xlsx_default.a.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);\n              _loop = /*#__PURE__*/regenerator_default.a.mark(function _loop(len, i) {\n                var rowIndex, row;\n                return regenerator_default.a.wrap(function _loop$(_context4) {\n                  while (1) {\n                    switch (_context4.prev = _context4.next) {\n                      case 0:\n                        rowIndex = len - i;\n                        row = xlData[rowIndex];\n\n                        if (!headers) {\n                          headers = Object.keys(row);\n                        }\n\n                        xlData[rowIndex] = headers.map(function (header) {\n                          return row[header];\n                        });\n\n                        if (!(i % 10 === 5)) {\n                          _context4.next = 7;\n                          break;\n                        }\n\n                        _context4.next = 7;\n                        return _this3.utils.AsyncUtils.sleep(0);\n\n                      case 7:\n                      case "end":\n                        return _context4.stop();\n                    }\n                  }\n                }, _loop);\n              });\n              len = xlData.length, i = len;\n\n            case 4:\n              if (!(i > 0)) {\n                _context5.next = 9;\n                break;\n              }\n\n              return _context5.delegateYield(_loop(len, i), "t0", 6);\n\n            case 6:\n              i--;\n              _context5.next = 4;\n              break;\n\n            case 9:\n              xlData.unshift(headers);\n              _context5.next = 12;\n              return this.utils.DataUtils.parseNumber(xlData);\n\n            case 12:\n              xlData = _context5.sent;\n              return _context5.abrupt("return", xlData);\n\n            case 14:\n            case "end":\n              return _context5.stop();\n          }\n        }\n      }, _callee4, this);\n    }));\n\n    return function (_x4) {\n      return _ref4.apply(this, arguments);\n    };\n  }();\n\n  NavigationBar.methods.saveFileODS = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee5() {\n    var arrayJSON, data, wb, filename;\n    return regenerator_default.a.wrap(function _callee5$(_context6) {\n      while (1) {\n        switch (_context6.prev = _context6.next) {\n          case 0:\n            _context6.next = 2;\n            return this.dataToArrayJSON();\n\n          case 2:\n            arrayJSON = _context6.sent;\n            // export json to Worksheet of Excel\n            // only array possible\n            data = xlsx_default.a.utils.json_to_sheet(arrayJSON); // A workbook is the name given to an Excel file\n\n            wb = xlsx_default.a.utils.book_new(); // make Workbook of Excel\n            // add Worksheet to Workbook\n            // Workbook contains one or more worksheets\n\n            xlsx_default.a.utils.book_append_sheet(wb, data, \'data\'); // sheetAName is name of Worksheet\n            // export Excel file\n\n            filename = this.getFilenameWithTime(\'ods\');\n            xlsx_default.a.writeFile(wb, filename); // name of the file is \'book.xlsx\'\n\n          case 8:\n          case "end":\n            return _context6.stop();\n        }\n      }\n    }, _callee5, this);\n  }));\n});\n// EXTERNAL MODULE: ./node_modules/papaparse/papaparse.min.js\nvar papaparse_min = __webpack_require__(371);\nvar papaparse_min_default = /*#__PURE__*/__webpack_require__.n(papaparse_min);\n\n// CONCATENATED MODULE: ./src/components/NavigationBar/NavigationBarMethodsHandlerCSV.js\n\n\n\n/* harmony default export */ var NavigationBarMethodsHandlerCSV = (function (NavigationBar) {\n  NavigationBar.methods.loadURLCSV = function (url) {\n    var _this = this;\n\n    //    if (url.startsWith(\'./\')) {\n    //      let currentURL = location.href\n    //      url = currentURL.slice(0, currentURL.lastIndexOf(\'/\') + 1) + url.slice(2)\n    //    }\n    //console.log(url)\n    return new Promise(function (resolve) {\n      var data = [];\n      var fieldCount;\n      papaparse_min_default.a.parse(url, {\n        download: true,\n        step: function step(row) {\n          if (Array.isArray(row.data)) {\n            if (!fieldCount) {\n              fieldCount = row.data.length;\n            }\n\n            if (fieldCount !== row.data.length) {\n              return false;\n            } //console.log(row.data.length)\n\n\n            data.push(row.data);\n          }\n        },\n        complete: function () {\n          var _complete = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n            return regenerator_default.a.wrap(function _callee$(_context) {\n              while (1) {\n                switch (_context.prev = _context.next) {\n                  case 0:\n                    _context.next = 2;\n                    return _this.utils.DataUtils.parseNumber(data);\n\n                  case 2:\n                    data = _context.sent;\n                    resolve(data);\n\n                  case 4:\n                  case "end":\n                    return _context.stop();\n                }\n              }\n            }, _callee);\n          }));\n\n          function complete() {\n            return _complete.apply(this, arguments);\n          }\n\n          return complete;\n        }()\n      });\n    });\n  };\n\n  NavigationBar.methods.loadFileCSV = function (file) {\n    var _this2 = this;\n\n    return new Promise(function (resolve) {\n      var data = [];\n      var fieldCount;\n      papaparse_min_default.a.parse(event.target.files[0], {\n        worker: true,\n        // Don\'t bog down the main thread if its a big file\n        step: function step(row) {\n          if (Array.isArray(row.data)) {\n            if (!fieldCount) {\n              fieldCount = row.data.length;\n            }\n\n            if (fieldCount !== row.data.length) {\n              return false;\n            } //console.log(row.data.length)\n\n\n            data.push(row.data);\n          }\n        },\n        complete: function () {\n          var _complete2 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2() {\n            return regenerator_default.a.wrap(function _callee2$(_context2) {\n              while (1) {\n                switch (_context2.prev = _context2.next) {\n                  case 0:\n                    _context2.next = 2;\n                    return _this2.utils.DataUtils.parseNumber(data);\n\n                  case 2:\n                    data = _context2.sent;\n                    resolve(data);\n\n                  case 4:\n                  case "end":\n                    return _context2.stop();\n                }\n              }\n            }, _callee2);\n          }));\n\n          function complete() {\n            return _complete2.apply(this, arguments);\n          }\n\n          return complete;\n        }()\n      });\n    });\n  };\n\n  NavigationBar.methods.saveFileCSV = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee3() {\n    var arrayJSON, csv, filename;\n    return regenerator_default.a.wrap(function _callee3$(_context3) {\n      while (1) {\n        switch (_context3.prev = _context3.next) {\n          case 0:\n            this.config.loadingProgress = 0;\n            _context3.next = 3;\n            return this.dataToArrayJSON();\n\n          case 3:\n            arrayJSON = _context3.sent;\n            this.config.loadingProgress = 0.5; //console.log(arrayJSON)\n\n            csv = papaparse_min_default.a.unparse(arrayJSON);\n            this.config.loadingProgress = 0.7;\n            filename = this.getFilenameWithTime(\'csv\'); //    var csvData = new Blob([csv], {type: \'text/csv;charset=utf-8;\'});\n            //    var csvURL\n            ////    if (navigator.msSaveBlob) {\n            ////      csvURL = navigator.msSaveBlob(csvData, filename);\n            ////    } else {\n            ////      csvURL = window.URL.createObjectURL(csvData);\n            ////    }\n            //    \n            //    csvURL = window.URL.createObjectURL(csvData);\n\n            this.config.loadingProgress = 1;\n            this.utils.FileUtils.download(filename, csv);\n\n          case 10:\n          case "end":\n            return _context3.stop();\n        }\n      }\n    }, _callee3, this);\n  }));\n});\n// EXTERNAL MODULE: ./node_modules/jquery/dist/jquery.js\nvar jquery = __webpack_require__(13);\nvar jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);\n\n// CONCATENATED MODULE: ./src/components/NavigationBar/NavigationBarMethodsView.js\n\n\n\n\n/* harmony default export */ var NavigationBarMethodsView = (function (NavigationBar) {\n  NavigationBar.methods.initDropdown = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n    var config;\n    return regenerator_default.a.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            if (!(!this.$refs.LoadDemoDropdown || !jquery_default.a.isSemanticNIWSFReady)) {\n              _context.next = 5;\n              break;\n            }\n\n            _context.next = 3;\n            return this.utils.AsyncUtils.sleep();\n\n          case 3:\n            _context.next = 0;\n            break;\n\n          case 5:\n            config = {\n              on: \'hover\'\n            };\n            jquery_default()(this.$refs.LoadDemoDropdown).dropdown(config);\n            jquery_default()(this.$refs.SaveFileDropdown).dropdown(config);\n\n          case 8:\n          case "end":\n            return _context.stop();\n        }\n      }\n    }, _callee, this);\n  }));\n\n  NavigationBar.methods.onSearch = function (event) {\n    window.alert(\'TODO: Search \' + this.localConfig.searchKeyword); //console.log(event)\n\n    return false;\n  };\n\n  NavigationBar.methods.saveFile = /*#__PURE__*/function () {\n    var _ref2 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2(format) {\n      return regenerator_default.a.wrap(function _callee2$(_context2) {\n        while (1) {\n          switch (_context2.prev = _context2.next) {\n            case 0:\n              if (!format || typeof format !== \'string\') {\n                format = this.saveFormats[0];\n              }\n\n              if (format === \'csv\') {\n                this.saveFileCSV();\n              } else if (format === \'ods\') {\n                this.saveFileODS();\n              } else {\n                window.alert(this.$t(\'Incorrect format: \') + format);\n              }\n\n            case 2:\n            case "end":\n              return _context2.stop();\n          }\n        }\n      }, _callee2, this);\n    }));\n\n    return function (_x) {\n      return _ref2.apply(this, arguments);\n    };\n  }();\n\n  NavigationBar.methods.openFile = /*#__PURE__*/function () {\n    var _ref3 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee3(event) {\n      var file, rawData;\n      return regenerator_default.a.wrap(function _callee3$(_context3) {\n        while (1) {\n          switch (_context3.prev = _context3.next) {\n            case 0:\n              if (window.FileReader) {\n                _context3.next = 3;\n                break;\n              }\n\n              console.error(this.$t(\'Browser is not compatible\'));\n              return _context3.abrupt("return", false);\n\n            case 3:\n              //var reader = new FileReader();\n              file = event.target.files[0];\n              this.localConfig.filename = file.name;\n              this.config.loadingProgress = 0;\n\n              if (!this.localConfig.filename.endsWith(\'.csv\')) {\n                _context3.next = 12;\n                break;\n              }\n\n              _context3.next = 9;\n              return this.loadFileCSV(file);\n\n            case 9:\n              rawData = _context3.sent;\n              _context3.next = 16;\n              break;\n\n            case 12:\n              if (!this.localConfig.filename.endsWith(\'.ods\')) {\n                _context3.next = 16;\n                break;\n              }\n\n              _context3.next = 15;\n              return this.loadFileODS(file);\n\n            case 15:\n              rawData = _context3.sent;\n\n            case 16:\n              _context3.next = 18;\n              return this.processRawData(rawData);\n\n            case 18:\n            case "end":\n              return _context3.stop();\n          }\n        }\n      }, _callee3, this);\n    }));\n\n    return function (_x2) {\n      return _ref3.apply(this, arguments);\n    };\n  }();\n});\n// CONCATENATED MODULE: ./src/components/NavigationBar/NavigationBarWatch.js\n\n\n/* harmony default export */ var NavigationBarWatch = (function (NavigationBar) {\n  NavigationBar.watch[\'localConfig.locale\'] = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n    return regenerator_default.a.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            this.$i18n.locale = this.localConfig.locale;\n\n          case 1:\n          case "end":\n            return _context.stop();\n        }\n      }\n    }, _callee, this);\n  }));\n});\n// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--6!./src/components/NavigationBar/NavigationBar.js?vue&type=script&lang=js&\n\n\n\nvar NavigationBarvue_type_script_lang_js_NavigationBar = {\n  props: [\'config\', \'localConfig\', \'utils\'],\n  data: function data() {\n    this.$i18n.locale = this.localConfig.locale;\n    return {\n      logoPath: favicon_default.a,\n      saveFormats: [\'ods\', \'csv\']\n    };\n  },\n  watch: {},\n  // NavigationBarWatch.js\n  computed: {\n    filenameWithoutExt: function filenameWithoutExt() {\n      var filename = this.localConfig.filename;\n      var pos = filename.lastIndexOf(\'.\');\n\n      if (pos === -1) {\n        return filename;\n      }\n\n      return filename.slice(0, pos);\n    }\n  },\n  mounted: function () {\n    var _mounted = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n      return regenerator_default.a.wrap(function _callee$(_context) {\n        while (1) {\n          switch (_context.prev = _context.next) {\n            case 0:\n              _context.next = 2;\n              return this.initData();\n\n            case 2:\n              this.initDropdown();\n\n            case 3:\n            case "end":\n              return _context.stop();\n          }\n        }\n      }, _callee, this);\n    }));\n\n    function mounted() {\n      return _mounted.apply(this, arguments);\n    }\n\n    return mounted;\n  }(),\n  methods: {}\n};\n\nNavigationBarMethodsData(NavigationBarvue_type_script_lang_js_NavigationBar);\n\nNavigationBarMethodsHandlerODS(NavigationBarvue_type_script_lang_js_NavigationBar);\n\nNavigationBarMethodsHandlerCSV(NavigationBarvue_type_script_lang_js_NavigationBar);\n\nNavigationBarMethodsView(NavigationBarvue_type_script_lang_js_NavigationBar);\n\nNavigationBarWatch(NavigationBarvue_type_script_lang_js_NavigationBar);\n/* harmony default export */ var NavigationBarvue_type_script_lang_js_ = (NavigationBarvue_type_script_lang_js_NavigationBar);\n// CONCATENATED MODULE: ./src/components/NavigationBar/NavigationBar.js?vue&type=script&lang=js&\n /* harmony default export */ var NavigationBar_NavigationBarvue_type_script_lang_js_ = (NavigationBarvue_type_script_lang_js_); \n// EXTERNAL MODULE: ./src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&\nvar NavigationBarvue_type_style_index_0_id_1d5bd9e2_lang_less_scoped_true_ = __webpack_require__(467);\n\n// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js\nvar componentNormalizer = __webpack_require__(6);\n\n// EXTERNAL MODULE: ./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml\nvar NavigationBarvue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml = __webpack_require__(469);\n\n// CONCATENATED MODULE: ./src/components/NavigationBar/NavigationBar.vue\n\n\n\n\n\n\n/* normalize component */\n\nvar component = Object(componentNormalizer["a" /* default */])(\n  NavigationBar_NavigationBarvue_type_script_lang_js_,\n  render,\n  staticRenderFns,\n  false,\n  null,\n  "1d5bd9e2",\n  null\n  \n)\n\n/* custom blocks */\n\nif (typeof NavigationBarvue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml["default"] === \'function\') Object(NavigationBarvue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml["default"])(component)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = "src/components/NavigationBar/NavigationBar.vue"\n/* harmony default export */ var NavigationBar_NavigationBar = __webpack_exports__["default"] = (component.exports);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNTA2LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvTmF2aWdhdGlvbkJhci9OYXZpZ2F0aW9uQmFyLmh0bWw/MzIzMCIsIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9OYXZpZ2F0aW9uQmFyL05hdmlnYXRpb25CYXJNZXRob2RzRGF0YS5qcz82MjIwIiwid2VicGFjazovLy8uL3NyYy9jb21wb25lbnRzL05hdmlnYXRpb25CYXIvTmF2aWdhdGlvbkJhck1ldGhvZHNIYW5kbGVyT0RTLmpzP2RkNzgiLCJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvTmF2aWdhdGlvbkJhci9OYXZpZ2F0aW9uQmFyTWV0aG9kc0hhbmRsZXJDU1YuanM/YjI1ZiIsIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9OYXZpZ2F0aW9uQmFyL05hdmlnYXRpb25CYXJNZXRob2RzVmlldy5qcz83ZmQ3Iiwid2VicGFjazovLy8uL3NyYy9jb21wb25lbnRzL05hdmlnYXRpb25CYXIvTmF2aWdhdGlvbkJhcldhdGNoLmpzP2M3ODEiLCJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvTmF2aWdhdGlvbkJhci9OYXZpZ2F0aW9uQmFyLmpzPzkyNzUiLCJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvTmF2aWdhdGlvbkJhci9OYXZpZ2F0aW9uQmFyLmpzP2I5MzciLCJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvTmF2aWdhdGlvbkJhci9OYXZpZ2F0aW9uQmFyLnZ1ZT8xOWJlIl0sInNvdXJjZXNDb250ZW50IjpbInZhciByZW5kZXIgPSBmdW5jdGlvbigpIHtcbiAgdmFyIF92bSA9IHRoaXNcbiAgdmFyIF9oID0gX3ZtLiRjcmVhdGVFbGVtZW50XG4gIHZhciBfYyA9IF92bS5fc2VsZi5fYyB8fCBfaFxuICByZXR1cm4gX2MoXCJkaXZcIiwgW1xuICAgIF9jKFwiZGl2XCIsIHsgc3RhdGljQ2xhc3M6IFwidWkgdG9wIGZpeGVkIGludmVydGVkIG1lbnVcIiB9LCBbXG4gICAgICBfYyhcImRpdlwiLCB7IHN0YXRpY0NsYXNzOiBcIml0ZW1cIiB9LCBbXG4gICAgICAgIF9jKFwiaW1nXCIsIHsgYXR0cnM6IHsgc3JjOiBfdm0ubG9nb1BhdGggfSB9KSxcbiAgICAgICAgX3ZtLl92KFwiXFxuICAgICAgXCIgKyBfdm0uX3MoX3ZtLmNvbmZpZy50KSArIFwiXFxuICAgIFwiKVxuICAgICAgXSksXG4gICAgICBfdm0uX3YoXCIgXCIpLFxuICAgICAgX2MoXCJhXCIsIHsgcmVmOiBcIkxvYWREZW1vRHJvcGRvd25cIiwgc3RhdGljQ2xhc3M6IFwidWkgZHJvcGRvd24gaXRlbVwiIH0sIFtcbiAgICAgICAgX2MoXCJzcGFuXCIsIHsgb246IHsgY2xpY2s6IF92bS5sb2FkRGVtbyB9IH0sIFtcbiAgICAgICAgICBfdm0uX3YoXCJcXG4gICAgICAgIFwiICsgX3ZtLl9zKF92bS4kdChcIkxPQUQgREVNT1wiKSkgKyBcIlxcbiAgICAgIFwiKVxuICAgICAgICBdKSxcbiAgICAgICAgX3ZtLl92KFwiIFwiKSxcbiAgICAgICAgX2MoXCJpXCIsIHsgc3RhdGljQ2xhc3M6IFwiZHJvcGRvd24gaWNvblwiIH0pLFxuICAgICAgICBfdm0uX3YoXCIgXCIpLFxuICAgICAgICBfYyhcbiAgICAgICAgICBcImRpdlwiLFxuICAgICAgICAgIHsgc3RhdGljQ2xhc3M6IFwibWVudVwiIH0sXG4gICAgICAgICAgX3ZtLl9sKF92bS5jb25maWcuZGVtb0RhdGFMaXN0LCBmdW5jdGlvbihmaWxlKSB7XG4gICAgICAgICAgICByZXR1cm4gX2MoXG4gICAgICAgICAgICAgIFwiZGl2XCIsXG4gICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICBzdGF0aWNDbGFzczogXCJpdGVtXCIsXG4gICAgICAgICAgICAgICAgb246IHtcbiAgICAgICAgICAgICAgICAgIGNsaWNrOiBmdW5jdGlvbigkZXZlbnQpIHtcbiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIF92bS5sb2FkRGVtbyhmaWxlKVxuICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgW192bS5fdihcIlxcbiAgICAgICAgICBcIiArIF92bS5fcyhfdm0uJHQoZmlsZSkpICsgXCJcXG4gICAgICAgIFwiKV1cbiAgICAgICAgICAgIClcbiAgICAgICAgICB9KSxcbiAgICAgICAgICAwXG4gICAgICAgIClcbiAgICAgIF0pLFxuICAgICAgX3ZtLl92KFwiIFwiKSxcbiAgICAgIF9jKFxuICAgICAgICBcImFcIixcbiAgICAgICAge1xuICAgICAgICAgIHN0YXRpY0NsYXNzOiBcIml0ZW1cIixcbiAgICAgICAgICBvbjoge1xuICAgICAgICAgICAgY2xpY2s6IGZ1bmN0aW9uKCRldmVudCkge1xuICAgICAgICAgICAgICByZXR1cm4gX3ZtLiRyZWZzLkZpbGVJbnB1dC5jbGljaygpXG4gICAgICAgICAgICB9XG4gICAgICAgICAgfVxuICAgICAgICB9LFxuICAgICAgICBbXG4gICAgICAgICAgX3ZtLl92KFwiXFxuICAgICAgXCIgKyBfdm0uX3MoX3ZtLiR0KFwiT1BFTiBGSUxFXCIpKSArIFwiXFxuICAgICAgXCIpLFxuICAgICAgICAgIF9jKFwiaW5wdXRcIiwge1xuICAgICAgICAgICAgcmVmOiBcIkZpbGVJbnB1dFwiLFxuICAgICAgICAgICAgYXR0cnM6IHsgdHlwZTogXCJmaWxlXCIsIGFjY2VwdDogXCIub2RzLC5jc3ZcIiB9LFxuICAgICAgICAgICAgb246IHsgY2hhbmdlOiBfdm0ub3BlbkZpbGUgfVxuICAgICAgICAgIH0pXG4gICAgICAgIF1cbiAgICAgICksXG4gICAgICBfdm0uX3YoXCIgXCIpLFxuICAgICAgX2MoXCJhXCIsIHsgcmVmOiBcIlNhdmVGaWxlRHJvcGRvd25cIiwgc3RhdGljQ2xhc3M6IFwidWkgZHJvcGRvd24gaXRlbVwiIH0sIFtcbiAgICAgICAgX2MoXCJzcGFuXCIsIHsgb246IHsgY2xpY2s6IF92bS5zYXZlRmlsZSB9IH0sIFtcbiAgICAgICAgICBfdm0uX3YoXCJcXG4gICAgICAgIFwiICsgX3ZtLl9zKF92bS4kdChcIlNBVkUgRklMRVwiKSkgKyBcIlxcbiAgICAgIFwiKVxuICAgICAgICBdKSxcbiAgICAgICAgX3ZtLl92KFwiIFwiKSxcbiAgICAgICAgX2MoXCJpXCIsIHsgc3RhdGljQ2xhc3M6IFwiZHJvcGRvd24gaWNvblwiIH0pLFxuICAgICAgICBfdm0uX3YoXCIgXCIpLFxuICAgICAgICBfYyhcbiAgICAgICAgICBcImRpdlwiLFxuICAgICAgICAgIHsgc3RhdGljQ2xhc3M6IFwibWVudVwiIH0sXG4gICAgICAgICAgX3ZtLl9sKF92bS5zYXZlRm9ybWF0cywgZnVuY3Rpb24oZm9ybWF0KSB7XG4gICAgICAgICAgICByZXR1cm4gX2MoXG4gICAgICAgICAgICAgIFwiZGl2XCIsXG4gICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICBzdGF0aWNDbGFzczogXCJpdGVtXCIsXG4gICAgICAgICAgICAgICAgb246IHtcbiAgICAgICAgICAgICAgICAgIGNsaWNrOiBmdW5jdGlvbigkZXZlbnQpIHtcbiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIF92bS5zYXZlRmlsZShmb3JtYXQpXG4gICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICBbX3ZtLl92KFwiXFxuICAgICAgICAgIFwiICsgX3ZtLl9zKF92bS4kdChmb3JtYXQpKSArIFwiXFxuICAgICAgICBcIildXG4gICAgICAgICAgICApXG4gICAgICAgICAgfSksXG4gICAgICAgICAgMFxuICAgICAgICApXG4gICAgICBdKSxcbiAgICAgIF92bS5fdihcIiBcIiksXG4gICAgICBfYyhcImRpdlwiLCB7IHN0YXRpY0NsYXNzOiBcInJpZ2h0IG1lbnVcIiB9LCBbXG4gICAgICAgIF9jKFxuICAgICAgICAgIFwiZGl2XCIsXG4gICAgICAgICAgeyBzdGF0aWNDbGFzczogXCJ1aSByaWdodCBtaW5pIGFsaWduZWQgY2F0ZWdvcnkgc2VhcmNoIGl0ZW1cIiB9LFxuICAgICAgICAgIFtcbiAgICAgICAgICAgIF9jKFxuICAgICAgICAgICAgICBcImZvcm1cIixcbiAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgIHN0YXRpY0NsYXNzOiBcInVpIGljb24gaW5wdXRcIixcbiAgICAgICAgICAgICAgICBvbjoge1xuICAgICAgICAgICAgICAgICAgc3VibWl0OiBmdW5jdGlvbigkZXZlbnQpIHtcbiAgICAgICAgICAgICAgICAgICAgJGV2ZW50LnN0b3BQcm9wYWdhdGlvbigpXG4gICAgICAgICAgICAgICAgICAgICRldmVudC5wcmV2ZW50RGVmYXVsdCgpXG4gICAgICAgICAgICAgICAgICAgIHJldHVybiBfdm0ub25TZWFyY2goJGV2ZW50KVxuICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgW1xuICAgICAgICAgICAgICAgIF9jKFwiaW5wdXRcIiwge1xuICAgICAgICAgICAgICAgICAgZGlyZWN0aXZlczogW1xuICAgICAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgICAgbmFtZTogXCJtb2RlbFwiLFxuICAgICAgICAgICAgICAgICAgICAgIHJhd05hbWU6IFwidi1tb2RlbFwiLFxuICAgICAgICAgICAgICAgICAgICAgIHZhbHVlOiBfdm0ubG9jYWxDb25maWcuc2VhcmNoS2V5d29yZCxcbiAgICAgICAgICAgICAgICAgICAgICBleHByZXNzaW9uOiBcImxvY2FsQ29uZmlnLnNlYXJjaEtleXdvcmRcIlxuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICBdLFxuICAgICAgICAgICAgICAgICAgc3RhdGljQ2xhc3M6IFwicHJvbXB0XCIsXG4gICAgICAgICAgICAgICAgICBhdHRyczogeyB0eXBlOiBcInRleHRcIiwgcGxhY2Vob2xkZXI6IF92bS4kdChcIlNlYXJjaC4uLlwiKSB9LFxuICAgICAgICAgICAgICAgICAgZG9tUHJvcHM6IHsgdmFsdWU6IF92bS5sb2NhbENvbmZpZy5zZWFyY2hLZXl3b3JkIH0sXG4gICAgICAgICAgICAgICAgICBvbjoge1xuICAgICAgICAgICAgICAgICAgICBpbnB1dDogZnVuY3Rpb24oJGV2ZW50KSB7XG4gICAgICAgICAgICAgICAgICAgICAgaWYgKCRldmVudC50YXJnZXQuY29tcG9zaW5nKSB7XG4gICAgICAgICAgICAgICAgICAgICAgICByZXR1cm5cbiAgICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgICAgX3ZtLiRzZXQoXG4gICAgICAgICAgICAgICAgICAgICAgICBfdm0ubG9jYWxDb25maWcsXG4gICAgICAgICAgICAgICAgICAgICAgICBcInNlYXJjaEtleXdvcmRcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICRldmVudC50YXJnZXQudmFsdWVcbiAgICAgICAgICAgICAgICAgICAgICApXG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICB9KSxcbiAgICAgICAgICAgICAgICBfdm0uX3YoXCIgXCIpLFxuICAgICAgICAgICAgICAgIF9jKFwiaVwiLCB7IHN0YXRpY0NsYXNzOiBcInNlYXJjaCBsaW5rIGljb25cIiB9KVxuICAgICAgICAgICAgICBdXG4gICAgICAgICAgICApLFxuICAgICAgICAgICAgX3ZtLl92KFwiIFwiKSxcbiAgICAgICAgICAgIF9jKFwiZGl2XCIsIHsgc3RhdGljQ2xhc3M6IFwicmVzdWx0c1wiIH0pXG4gICAgICAgICAgXVxuICAgICAgICApLFxuICAgICAgICBfdm0uX3YoXCIgXCIpLFxuICAgICAgICBfYyhcbiAgICAgICAgICBcImFcIixcbiAgICAgICAgICB7XG4gICAgICAgICAgICBzdGF0aWNDbGFzczogXCJpY29uIGl0ZW1cIixcbiAgICAgICAgICAgIG9uOiB7XG4gICAgICAgICAgICAgIGNsaWNrOiBmdW5jdGlvbigkZXZlbnQpIHtcbiAgICAgICAgICAgICAgICBfdm0ubG9jYWxDb25maWcuZGlzcGxheUNvbmZpZ3VyYXRpb25QYW5lbCA9ICFfdm0ubG9jYWxDb25maWdcbiAgICAgICAgICAgICAgICAgIC5kaXNwbGF5Q29uZmlndXJhdGlvblBhbmVsXG4gICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgICB9LFxuICAgICAgICAgIFtcbiAgICAgICAgICAgICFfdm0ubG9jYWxDb25maWcuZGlzcGxheUNvbmZpZ3VyYXRpb25QYW5lbFxuICAgICAgICAgICAgICA/IF9jKFwiaVwiLCB7IHN0YXRpY0NsYXNzOiBcImJhcnMgaWNvblwiIH0pXG4gICAgICAgICAgICAgIDogX3ZtLl9lKCksXG4gICAgICAgICAgICBfdm0uX3YoXCIgXCIpLFxuICAgICAgICAgICAgX3ZtLmxvY2FsQ29uZmlnLmRpc3BsYXlDb25maWd1cmF0aW9uUGFuZWxcbiAgICAgICAgICAgICAgPyBfYyhcImlcIiwgeyBzdGF0aWNDbGFzczogXCJjaGV2cm9uIGNpcmNsZSB1cCBpY29uXCIgfSlcbiAgICAgICAgICAgICAgOiBfdm0uX2UoKVxuICAgICAgICAgIF1cbiAgICAgICAgKVxuICAgICAgXSlcbiAgICBdKVxuICBdKVxufVxudmFyIHN0YXRpY1JlbmRlckZucyA9IFtdXG5yZW5kZXIuX3dpdGhTdHJpcHBlZCA9IHRydWVcblxuZXhwb3J0IHsgcmVuZGVyLCBzdGF0aWNSZW5kZXJGbnMgfSIsIlxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gKE5hdmlnYXRpb25CYXIpIHtcbiAgTmF2aWdhdGlvbkJhci5tZXRob2RzLmluaXREYXRhID0gYXN5bmMgZnVuY3Rpb24gKCkge1xuICAgIGlmICh0aGlzLmxvY2FsQ29uZmlnLmRhdGEubGVuZ3RoID4gMlxuICAgICAgICAgICAgJiYgQXJyYXkuaXNBcnJheSh0aGlzLmxvY2FsQ29uZmlnLmRhdGFbMF0pXG4gICAgICAgICAgICAmJiB0aGlzLmxvY2FsQ29uZmlnLmRhdGFbMF0ubGVuZ3RoID4gMykge1xuICAgICAgcmV0dXJuIGZhbHNlXG4gICAgfVxuICAgIGVsc2UgaWYgKHRoaXMuY29uZmlnLm9wZW5Gcm9tQVBJKSB7XG4gICAgICByZXR1cm4gZmFsc2VcbiAgICB9XG4gICAgXG4gICAgLy9jb25zb2xlLmxvZygn5rKS5pyJ6LOH5paZ77yM6K6A5Y+WZGVtbycpXG4gICAgdGhpcy5sb2FkRGVtbygpXG4gIH1cbiAgXG4gIE5hdmlnYXRpb25CYXIubWV0aG9kcy5sb2FkRGVtbyA9IGFzeW5jIGZ1bmN0aW9uIChmaWxlKSB7XG4gICAgdGhpcy5jb25maWcuaXNEYXRhUHJvY2Vzc2luZyA9IHRydWVcbiAgICBcbiAgICBpZiAoIWZpbGUgfHwgdHlwZW9mIGZpbGUgIT09ICdzdHJpbmcnKSB7XG4gICAgICBmaWxlID0gdGhpcy5jb25maWcuZGVtb0RhdGFMaXN0WzBdXG4gICAgfVxuICAgIFxuICAgIHRoaXMubG9jYWxDb25maWcuY2xhc3NGaWVsZE5hbWUgPSBudWxsXG4gICAgXG4gICAgdGhpcy5sb2NhbENvbmZpZy5maWxlbmFtZSA9IGZpbGVcbiAgICBcbiAgICB0aGlzLmNvbmZpZy5sb2FkaW5nUHJvZ3Jlc3MgPSAwXG4gICAgbGV0IHJhd0RhdGEgPSBhd2FpdCB0aGlzLmxvYWREZW1vRGF0YShmaWxlKVxuICAgIGF3YWl0IHRoaXMucHJvY2Vzc1Jhd0RhdGEocmF3RGF0YSlcbiAgICBhd2FpdCB0aGlzLiRwYXJlbnQuc3RhcnRQcmVkaWN0KClcbiAgfVxuICBcbiAgTmF2aWdhdGlvbkJhci5tZXRob2RzLnByb2Nlc3NSYXdEYXRhID0gYXN5bmMgZnVuY3Rpb24gKHJhd0RhdGEpIHtcbiAgICBcbiAgICB0aGlzLmNvbmZpZy5sb2FkaW5nUHJvZ3Jlc3MgPSAwLjVcbiAgICBsZXQgZGV0ZWN0UmVzdWx0ID0gdGhpcy5kZXRlY3RDbGFzc0ZpZWxkKHJhd0RhdGEpXG4gICAgLy9jb25zb2xlLmxvZyhkZXRlY3RSZXN1bHQpXG4gICAgbGV0IG9yZGVyZWREYXRhID0gYXdhaXQgdGhpcy5vcmRlckNvbHVtbnMocmF3RGF0YSwgZGV0ZWN0UmVzdWx0LmNsYXNzRmllbGRJbmRleClcbiAgICB0aGlzLmNvbmZpZy5sb2FkaW5nUHJvZ3Jlc3MgPSAwLjc1XG4gICAgXG4gICAgdGhpcy5sb2NhbENvbmZpZy5jbGFzc0ZpZWxkTmFtZSA9IGRldGVjdFJlc3VsdC5jbGFzc0ZpZWxkTmFtZSAgICBcbiAgICBcbiAgICB0aGlzLmxvY2FsQ29uZmlnLmhlYWRlcnMgPSBvcmRlcmVkRGF0YVswXVxuICAgIFxuICAgIGxldCBkYXRhID0gb3JkZXJlZERhdGEuc3BsaWNlKDEpXG4gICAgLy9jb25zb2xlLmxvZyhkYXRhKVxuICAgIC8vdGhpcy5sb2NhbENvbmZpZy5kYXRhID0gdGhpcy5sb2NhbENvbmZpZy5kYXRhLnNwbGljZSgwLCAwKS5jb25jYXQoZGF0YSlcbiAgICB3aGlsZSAoIXRoaXMuJHBhcmVudC4kcmVmcy5EYXRhVGFibGUpIHtcbiAgICAgIGF3YWl0IHRoaXMudXRpbHMuQXN5bmNVdGlscy5zbGVlcCgxMDApXG4gICAgfVxuICAgIFxuICAgIGF3YWl0IHRoaXMuJHBhcmVudC4kcmVmcy5EYXRhVGFibGUubG9hZERhdGEoZGF0YSlcbiAgICBcbiAgICAvL2xldCBkYXRhID0gb3JkZXJlZERhdGEuc3BsaWNlKDEpXG4gICAgLy90aGlzLmxvY2FsQ29uZmlnLmRhdGEgPSB0aGlzLmxvY2FsQ29uZmlnLmRhdGEuc3BsaWNlKDAsIDApLmNvbmNhdChkYXRhKVxuICAgIFxuICAgIHRoaXMuY29uZmlnLmxvYWRpbmdQcm9ncmVzcyA9IDFcbiAgICAvL2NvbnNvbGUubG9nKHRoaXMubG9jYWxDb25maWcuZGF0YS5sZW5ndGgpXG4gICAgXG4gICAgdGhpcy5jb25maWcuaXNEYXRhUHJvY2Vzc2luZyA9IGZhbHNlXG4gIH1cbiAgXG4gIE5hdmlnYXRpb25CYXIubWV0aG9kcy5sb2FkRGVtb0RhdGEgPSBhc3luYyBmdW5jdGlvbiAoZmlsZSkge1xuICAgIGxldCBwYXRoID0gXCIuL2Fzc2V0cy9kYXRhL1wiICsgZmlsZVxuICAgIC8vY29uc29sZS5sb2cocGF0aClcbiAgICBpZiAocGF0aC5lbmRzV2l0aCgnLmNzdicpKSB7XG4gICAgICByZXR1cm4gYXdhaXQgdGhpcy5sb2FkVVJMQ1NWKHBhdGgpXG4gICAgfVxuICAgIGVsc2Uge1xuICAgICAgcmV0dXJuIGF3YWl0IHRoaXMubG9hZFVSTE9EUyhwYXRoKVxuICAgIH1cbiAgfVxuICBcbiAgTmF2aWdhdGlvbkJhci5tZXRob2RzLmRldGVjdENsYXNzRmllbGQgPSBmdW5jdGlvbiAoZGF0YSkge1xuICAgIGlmIChBcnJheS5pc0FycmF5KGRhdGEpID09PSBmYWxzZSBcbiAgICAgICAgICAgIHx8IGRhdGEubGVuZ3RoID09PSAwKSB7XG4gICAgICByZXR1cm4gZmFsc2VcbiAgICB9XG4gICAgXG4gICAgbGV0IGhlYWRlcnMgPSBkYXRhWzBdXG4gICAgXG4gICAgaWYgKGhlYWRlcnNbMV0gPT09ICdwcmVkaWN0Jykge1xuICAgICAgLy8g5bey57aT6KKr6Kq/5pW05aW95LqG77yM5LiN55So5YaN5pW055CGXG4gICAgICByZXR1cm4ge1xuICAgICAgICBjbGFzc0ZpZWxkTmFtZTogaGVhZGVyc1swXSxcbiAgICAgICAgY2xhc3NGaWVsZEluZGV4OiAwXG4gICAgICB9XG4gICAgfVxuICAgIFxuICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgIC8vIOWBtea4rFxuICAgIFxuICAgIGxldCBjbGFzc0ZpZWxkTmFtZUNhbmRpZGF0ZXMgPSBbJ2NsYXNzJywgJ2xhYmVsJywgJ3RhcmdldCcsICdzY29yZScsICdkdiddXG4gICAgbGV0IGNsYXNzRmllbGRJbmRleCA9IC0xXG4gICAgbGV0IGNsYXNzRmllbGROYW1lXG4gICAgXG4gICAgZm9yIChsZXQgbGVuID0gY2xhc3NGaWVsZE5hbWVDYW5kaWRhdGVzLmxlbmd0aCwgaSA9IGxlbjsgaSA+IDA7IGktLSkge1xuICAgICAgbGV0IG5hbWUgPSBjbGFzc0ZpZWxkTmFtZUNhbmRpZGF0ZXNbKGxlbiAtIGkpXVxuICAgICAgbGV0IGluZGV4ID0gaGVhZGVycy5pbmRleE9mKG5hbWUpXG4gICAgICBpZiAoaW5kZXggPiAtMSkge1xuICAgICAgICBjbGFzc0ZpZWxkSW5kZXggPSBpbmRleFxuICAgICAgICBjbGFzc0ZpZWxkTmFtZSA9IG5hbWVcbiAgICAgICAgYnJlYWtcbiAgICAgIH1cbiAgICB9XG4gICAgLy9jb25zb2xlLmxvZyhjbGFzc0ZpZWxkTmFtZSwgY2xhc3NGaWVsZEluZGV4KVxuICAgIFxuICAgIGlmIChjbGFzc0ZpZWxkSW5kZXggPT09IC0xKSB7XG4gICAgICBjbGFzc0ZpZWxkSW5kZXggPSBoZWFkZXJzLmxlbmd0aCAtIDFcbiAgICAgIGNsYXNzRmllbGROYW1lID0gaGVhZGVyc1tjbGFzc0ZpZWxkSW5kZXhdXG4gICAgfVxuICAgIFxuICAgIHJldHVybiB7XG4gICAgICBjbGFzc0ZpZWxkTmFtZSxcbiAgICAgIGNsYXNzRmllbGRJbmRleFxuICAgIH1cbiAgfVxuICBcbiAgTmF2aWdhdGlvbkJhci5tZXRob2RzLm9yZGVyQ29sdW1ucyA9IGFzeW5jIGZ1bmN0aW9uIChkYXRhLCBjbGFzc0ZpZWxkSW5kZXgpIHtcbiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAvLyDplovlp4vlpKfpgbfnp7tcbiAgICBmb3IgKGxldCByb3dMZW4gPSBkYXRhLmxlbmd0aCwgciA9IHJvd0xlbjsgciA+IDA7IHItLSkge1xuICAgICAgbGV0IHJvdyA9IGRhdGFbKHJvd0xlbiAtIHIpXVxuICAgICAgXG4gICAgICBsZXQgY2xhc3NGaWVsZCA9IHJvdy5zcGxpY2UoY2xhc3NGaWVsZEluZGV4ICwxKVxuICAgICAgLy8gcHV0dGluZyB0aGUgJ3JvbGUnIHN0cmluZyBiYWNrIGluIHRoZSBhcnJheTpcbiAgICAgIFxuICAgICAgaWYgKHIgPT09IHJvd0xlbikge1xuICAgICAgICByb3cudW5zaGlmdCgncHJlZGljdCcpXG4gICAgICAgIHJvdy51bnNoaWZ0KGNsYXNzRmllbGRbMF0pXG4gICAgICB9XG4gICAgICBlbHNlIHtcbiAgICAgICAgcm93LnVuc2hpZnQobnVsbClcbiAgICAgICAgcm93LnVuc2hpZnQoY2xhc3NGaWVsZFswXSlcbiAgICAgIH1cbiAgICAgIFxuICAgICAgaWYgKHIgJSAxMCA9PT0gMSkge1xuICAgICAgICB0aGlzLnV0aWxzLkFzeW5jVXRpbHMuc2xlZXAoMClcbiAgICAgIH1cbiAgICB9XG4gICAgXG4gICAgcmV0dXJuIGRhdGFcbiAgfVxuICBcbiAgXG4gIE5hdmlnYXRpb25CYXIubWV0aG9kcy5kYXRhVG9BcnJheUpTT04gPSBhc3luYyBmdW5jdGlvbiAoKSB7XG4gICAgbGV0IGhlYWRlcnMgPSB0aGlzLmxvY2FsQ29uZmlnLmhlYWRlcnNcbiAgICBsZXQgcm93cyA9IHRoaXMubG9jYWxDb25maWcuZGF0YVxuICAgIFxuICAgIGxldCBkYXRhID0gW11cbiAgICBcbiAgICBmb3IgKGxldCBsZW4gPSByb3dzLmxlbmd0aCwgaSA9IGxlbjsgaSA+IDA7IGktLSkge1xuICAgICAgbGV0IHJvdyA9IHJvd3NbKGxlbiAtIGkpXVxuICAgICAgXG4gICAgICBsZXQganNvbiA9IHt9XG4gICAgICBoZWFkZXJzLmZvckVhY2goKGhlYWRlciwgaSkgPT4ge1xuICAgICAgICBqc29uW2hlYWRlcl0gPSByb3dbaV1cbiAgICAgIH0pXG4gICAgICBcbiAgICAgIGRhdGEucHVzaChqc29uKVxuICAgICAgXG4gICAgICBpZiAoaSAlIDEwID09PSA1KSB7XG4gICAgICAgIGF3YWl0IHRoaXMudXRpbHMuQXN5bmNVdGlscy5zbGVlcCgwKVxuICAgICAgfVxuICAgIH1cbiAgICBcbiAgICByZXR1cm4gZGF0YVxuICB9XG4gIFxuICBOYXZpZ2F0aW9uQmFyLm1ldGhvZHMuZ2V0RmlsZW5hbWVXaXRoVGltZSA9IGZ1bmN0aW9uIChleHQpIHtcbiAgICByZXR1cm4gdGhpcy5maWxlbmFtZVdpdGhvdXRFeHQgKyAnXycgKyAobmV3IERhdGUoKSkubW1kZGhobW0oKSArICcuJyArIGV4dFxuICB9XG59IiwiaW1wb3J0IFhMU1ggZnJvbSAneGxzeCdcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gKE5hdmlnYXRpb25CYXIpIHtcbiAgXG4gIE5hdmlnYXRpb25CYXIubWV0aG9kcy5sb2FkVVJMT0RTID0gZnVuY3Rpb24gKHVybCkge1xuXG4gICAgcmV0dXJuIG5ldyBQcm9taXNlKChyZXNvbHZlKSA9PiB7XG4gICAgICAvKiBzZXQgdXAgYXN5bmMgR0VUIHJlcXVlc3QgKi9cbiAgICAgIHZhciByZXEgPSBuZXcgWE1MSHR0cFJlcXVlc3QoKTtcbiAgICAgIHJlcS5vcGVuKFwiR0VUXCIsIHVybCwgdHJ1ZSk7XG4gICAgICByZXEucmVzcG9uc2VUeXBlID0gXCJhcnJheWJ1ZmZlclwiO1xuXG4gICAgICByZXEub25sb2FkID0gYXN5bmMgKGUpID0+IHtcbiAgICAgICAgdmFyIGRhdGEgPSBuZXcgVWludDhBcnJheShyZXEucmVzcG9uc2UpO1xuICAgICAgICB2YXIgd29ya2Jvb2sgPSBYTFNYLnJlYWQoZGF0YSwge3R5cGU6XCJhcnJheVwifSk7XG5cbiAgICAgICAgcmVzb2x2ZShhd2FpdCB0aGlzLnByb2Nlc3NYTFNYRGF0YSh3b3JrYm9vaykpXG4gICAgICB9XG5cbiAgICAgIHJlcS5zZW5kKCk7XG4gICAgfSlcbiAgfVxuICBcbiAgTmF2aWdhdGlvbkJhci5tZXRob2RzLmxvYWRGaWxlT0RTID0gYXN5bmMgZnVuY3Rpb24gKGZpbGUpIHtcbiAgICBsZXQgcmVhZGVyID0gbmV3IEZpbGVSZWFkZXIoKTtcbiAgICByZXR1cm4gbmV3IFByb21pc2UoKHJlc29sdmUpID0+IHtcbiAgICAgIHJlYWRlci5yZWFkQXNBcnJheUJ1ZmZlcihmaWxlKTtcbiAgICAgIHJlYWRlci5vbmxvYWQgPSBhc3luYyAoZSkgPT4ge1xuICAgICAgICB2YXIgZGF0YSA9IG5ldyBVaW50OEFycmF5KHJlYWRlci5yZXN1bHQpO1xuICAgICAgICB2YXIgd29ya2Jvb2sgPSBYTFNYLnJlYWQoZGF0YSwge3R5cGU6IFwiYXJyYXlcIn0pXG4gICAgICAgIHJlc29sdmUoYXdhaXQgdGhpcy5wcm9jZXNzWExTWERhdGEod29ya2Jvb2spKVxuICAgICAgfVxuICAgIH0pXG4gIH1cbiAgXG4gIE5hdmlnYXRpb25CYXIubWV0aG9kcy5wcm9jZXNzWExTWERhdGEgPSBhc3luYyBmdW5jdGlvbiAod29ya2Jvb2spIHtcbiAgICBcbiAgICB2YXIgc2hlZXRfbmFtZV9saXN0ID0gd29ya2Jvb2suU2hlZXROYW1lcztcblxuICAgIC8vY29uc29sZS5sb2codXJsKVxuICAgIC8vY29uc29sZS5sb2coc2hlZXRfbmFtZV9saXN0KVxuICAgIHZhciB4bERhdGEgPSBYTFNYLnV0aWxzLnNoZWV0X3RvX2pzb24od29ya2Jvb2suU2hlZXRzW3NoZWV0X25hbWVfbGlzdFswXV0pO1xuXG4gICAgbGV0IGhlYWRlcnNcbiAgICBcbiAgICBmb3IgKGxldCBsZW4gPSB4bERhdGEubGVuZ3RoLCBpID0gbGVuOyBpID4gMDsgaS0tKSB7XG4gICAgICBsZXQgcm93SW5kZXggPSAobGVuIC0gaSlcbiAgICAgIGxldCByb3cgPSB4bERhdGFbcm93SW5kZXhdXG4gICAgICBpZiAoIWhlYWRlcnMpIHtcbiAgICAgICAgaGVhZGVycyA9IE9iamVjdC5rZXlzKHJvdylcbiAgICAgIH1cbiAgICAgIHhsRGF0YVtyb3dJbmRleF0gPSBoZWFkZXJzLm1hcChoZWFkZXIgPT4ge1xuICAgICAgICByZXR1cm4gcm93W2hlYWRlcl1cbiAgICAgIH0pXG4gICAgICBcbiAgICAgIGlmIChpICUgMTAgPT09IDUpIHtcbiAgICAgICAgYXdhaXQgdGhpcy51dGlscy5Bc3luY1V0aWxzLnNsZWVwKDApXG4gICAgICB9XG4gICAgfVxuICAgIFxuICAgIHhsRGF0YS51bnNoaWZ0KGhlYWRlcnMpXG5cbiAgICB4bERhdGEgPSBhd2FpdCB0aGlzLnV0aWxzLkRhdGFVdGlscy5wYXJzZU51bWJlcih4bERhdGEpXG4gICAgcmV0dXJuIHhsRGF0YVxuICB9XG4gIFxuICBOYXZpZ2F0aW9uQmFyLm1ldGhvZHMuc2F2ZUZpbGVPRFMgPSBhc3luYyBmdW5jdGlvbiAoKSB7XG4gICAgbGV0IGFycmF5SlNPTiA9IGF3YWl0IHRoaXMuZGF0YVRvQXJyYXlKU09OKClcbiAgICAvLyBleHBvcnQganNvbiB0byBXb3Jrc2hlZXQgb2YgRXhjZWxcbiAgICAvLyBvbmx5IGFycmF5IHBvc3NpYmxlXG4gICAgdmFyIGRhdGEgPSBYTFNYLnV0aWxzLmpzb25fdG9fc2hlZXQoYXJyYXlKU09OKSBcblxuICAgIC8vIEEgd29ya2Jvb2sgaXMgdGhlIG5hbWUgZ2l2ZW4gdG8gYW4gRXhjZWwgZmlsZVxuICAgIHZhciB3YiA9IFhMU1gudXRpbHMuYm9va19uZXcoKSAvLyBtYWtlIFdvcmtib29rIG9mIEV4Y2VsXG5cbiAgICAvLyBhZGQgV29ya3NoZWV0IHRvIFdvcmtib29rXG4gICAgLy8gV29ya2Jvb2sgY29udGFpbnMgb25lIG9yIG1vcmUgd29ya3NoZWV0c1xuICAgIFhMU1gudXRpbHMuYm9va19hcHBlbmRfc2hlZXQod2IsIGRhdGEsICdkYXRhJykgLy8gc2hlZXRBTmFtZSBpcyBuYW1lIG9mIFdvcmtzaGVldFxuICAgIFxuICAgIC8vIGV4cG9ydCBFeGNlbCBmaWxlXG4gICAgXG4gICAgbGV0IGZpbGVuYW1lID0gdGhpcy5nZXRGaWxlbmFtZVdpdGhUaW1lKCdvZHMnKVxuICAgIFxuICAgIFhMU1gud3JpdGVGaWxlKHdiLCBmaWxlbmFtZSkgLy8gbmFtZSBvZiB0aGUgZmlsZSBpcyAnYm9vay54bHN4J1xuICB9XG59IiwiaW1wb3J0IFBhcGEgZnJvbSAncGFwYXBhcnNlJ1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiAoTmF2aWdhdGlvbkJhcikge1xuICBcbiAgTmF2aWdhdGlvbkJhci5tZXRob2RzLmxvYWRVUkxDU1YgPSBmdW5jdGlvbiAodXJsKSB7XG4vLyAgICBpZiAodXJsLnN0YXJ0c1dpdGgoJy4vJykpIHtcbi8vICAgICAgbGV0IGN1cnJlbnRVUkwgPSBsb2NhdGlvbi5ocmVmXG4vLyAgICAgIHVybCA9IGN1cnJlbnRVUkwuc2xpY2UoMCwgY3VycmVudFVSTC5sYXN0SW5kZXhPZignLycpICsgMSkgKyB1cmwuc2xpY2UoMilcbi8vICAgIH1cbiAgICBcbiAgICAvL2NvbnNvbGUubG9nKHVybClcbiAgICBcbiAgICByZXR1cm4gbmV3IFByb21pc2UoKHJlc29sdmUpID0+IHtcbiAgICAgIGxldCBkYXRhID0gW11cbiAgICAgIGxldCBmaWVsZENvdW50XG4gICAgICBQYXBhLnBhcnNlKHVybCwge1xuICAgICAgICBkb3dubG9hZDogdHJ1ZSxcbiAgICAgICAgc3RlcDogZnVuY3Rpb24ocm93KSB7XG4gICAgICAgICAgaWYgKEFycmF5LmlzQXJyYXkocm93LmRhdGEpKSB7XG4gICAgICAgICAgICBpZiAoIWZpZWxkQ291bnQpIHtcbiAgICAgICAgICAgICAgZmllbGRDb3VudCA9IHJvdy5kYXRhLmxlbmd0aFxuICAgICAgICAgICAgfVxuICAgICAgICAgICAgaWYgKGZpZWxkQ291bnQgIT09IHJvdy5kYXRhLmxlbmd0aCkge1xuICAgICAgICAgICAgICByZXR1cm4gZmFsc2VcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC8vY29uc29sZS5sb2cocm93LmRhdGEubGVuZ3RoKVxuICAgICAgICAgICAgZGF0YS5wdXNoKHJvdy5kYXRhKVxuICAgICAgICAgIH1cbiAgICAgICAgfSxcbiAgICAgICAgY29tcGxldGU6IGFzeW5jICgpID0+IHtcbiAgICAgICAgICBkYXRhID0gYXdhaXQgdGhpcy51dGlscy5EYXRhVXRpbHMucGFyc2VOdW1iZXIoZGF0YSlcbiAgICAgICAgICByZXNvbHZlKGRhdGEpXG4gICAgICAgIH1cbiAgICAgIH0pO1xuICAgIH0pXG4gIH1cbiAgXG4gIE5hdmlnYXRpb25CYXIubWV0aG9kcy5sb2FkRmlsZUNTViA9IGZ1bmN0aW9uIChmaWxlKSB7XG5cbiAgICByZXR1cm4gbmV3IFByb21pc2UoKHJlc29sdmUpID0+IHtcbiAgICAgIGxldCBkYXRhID0gW11cbiAgICAgIGxldCBmaWVsZENvdW50XG4gICAgICBQYXBhLnBhcnNlKGV2ZW50LnRhcmdldC5maWxlc1swXSwge1xuICAgICAgICB3b3JrZXI6IHRydWUsIC8vIERvbid0IGJvZyBkb3duIHRoZSBtYWluIHRocmVhZCBpZiBpdHMgYSBiaWcgZmlsZVxuICAgICAgICBzdGVwOiBmdW5jdGlvbihyb3cpIHtcbiAgICAgICAgICBpZiAoQXJyYXkuaXNBcnJheShyb3cuZGF0YSkpIHtcbiAgICAgICAgICAgIGlmICghZmllbGRDb3VudCkge1xuICAgICAgICAgICAgICBmaWVsZENvdW50ID0gcm93LmRhdGEubGVuZ3RoXG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBpZiAoZmllbGRDb3VudCAhPT0gcm93LmRhdGEubGVuZ3RoKSB7XG4gICAgICAgICAgICAgIHJldHVybiBmYWxzZVxuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLy9jb25zb2xlLmxvZyhyb3cuZGF0YS5sZW5ndGgpXG4gICAgICAgICAgICBkYXRhLnB1c2gocm93LmRhdGEpXG4gICAgICAgICAgfVxuICAgICAgICB9LFxuICAgICAgICBjb21wbGV0ZTogYXN5bmMgKCkgPT4ge1xuICAgICAgICAgIGRhdGEgPSBhd2FpdCB0aGlzLnV0aWxzLkRhdGFVdGlscy5wYXJzZU51bWJlcihkYXRhKVxuICAgICAgICAgIHJlc29sdmUoZGF0YSlcbiAgICAgICAgfVxuICAgICAgfSlcbiAgICB9KVxuICB9XG4gIFxuICBOYXZpZ2F0aW9uQmFyLm1ldGhvZHMuc2F2ZUZpbGVDU1YgPSBhc3luYyBmdW5jdGlvbiAoKSB7XG4gICAgdGhpcy5jb25maWcubG9hZGluZ1Byb2dyZXNzID0gMFxuICAgIGxldCBhcnJheUpTT04gPSBhd2FpdCB0aGlzLmRhdGFUb0FycmF5SlNPTigpXG4gICAgdGhpcy5jb25maWcubG9hZGluZ1Byb2dyZXNzID0gMC41XG4gICAgLy9jb25zb2xlLmxvZyhhcnJheUpTT04pXG4gICAgdmFyIGNzdiA9IFBhcGEudW5wYXJzZShhcnJheUpTT04pXG4gICAgXG4gICAgdGhpcy5jb25maWcubG9hZGluZ1Byb2dyZXNzID0gMC43XG4gICAgbGV0IGZpbGVuYW1lID0gdGhpcy5nZXRGaWxlbmFtZVdpdGhUaW1lKCdjc3YnKVxuXG4vLyAgICB2YXIgY3N2RGF0YSA9IG5ldyBCbG9iKFtjc3ZdLCB7dHlwZTogJ3RleHQvY3N2O2NoYXJzZXQ9dXRmLTg7J30pO1xuLy8gICAgdmFyIGNzdlVSTFxuLy8vLyAgICBpZiAobmF2aWdhdG9yLm1zU2F2ZUJsb2IpIHtcbi8vLy8gICAgICBjc3ZVUkwgPSBuYXZpZ2F0b3IubXNTYXZlQmxvYihjc3ZEYXRhLCBmaWxlbmFtZSk7XG4vLy8vICAgIH0gZWxzZSB7XG4vLy8vICAgICAgY3N2VVJMID0gd2luZG93LlVSTC5jcmVhdGVPYmplY3RVUkwoY3N2RGF0YSk7XG4vLy8vICAgIH1cbi8vICAgIFxuLy8gICAgY3N2VVJMID0gd2luZG93LlVSTC5jcmVhdGVPYmplY3RVUkwoY3N2RGF0YSk7XG5cbiAgICB0aGlzLmNvbmZpZy5sb2FkaW5nUHJvZ3Jlc3MgPSAxXG4gICAgdGhpcy51dGlscy5GaWxlVXRpbHMuZG93bmxvYWQoZmlsZW5hbWUsIGNzdilcbiAgICBcbiAgfVxufSIsImltcG9ydCAkIGZyb20gJ2pxdWVyeSdcbmltcG9ydCBQYXBhIGZyb20gJ3BhcGFwYXJzZSdcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gKE5hdmlnYXRpb25CYXIpIHtcbiAgTmF2aWdhdGlvbkJhci5tZXRob2RzLmluaXREcm9wZG93biA9IGFzeW5jIGZ1bmN0aW9uICgpIHtcbiAgICB3aGlsZSAoIXRoaXMuJHJlZnMuTG9hZERlbW9Ecm9wZG93biB8fCAhJC5pc1NlbWFudGljTklXU0ZSZWFkeSkge1xuICAgICAgYXdhaXQgdGhpcy51dGlscy5Bc3luY1V0aWxzLnNsZWVwKClcbiAgICB9XG4gICAgbGV0IGNvbmZpZyA9IHtcbiAgICAgIG9uOiAnaG92ZXInXG4gICAgfVxuICAgIFxuICAgICQodGhpcy4kcmVmcy5Mb2FkRGVtb0Ryb3Bkb3duKS5kcm9wZG93bihjb25maWcpXG4gICAgJCh0aGlzLiRyZWZzLlNhdmVGaWxlRHJvcGRvd24pLmRyb3Bkb3duKGNvbmZpZylcbiAgfVxuICAgIFxuICBOYXZpZ2F0aW9uQmFyLm1ldGhvZHMub25TZWFyY2ggPSBmdW5jdGlvbiAoZXZlbnQpIHtcbiAgICB3aW5kb3cuYWxlcnQoJ1RPRE86IFNlYXJjaCAnICsgdGhpcy5sb2NhbENvbmZpZy5zZWFyY2hLZXl3b3JkKVxuICAgIC8vY29uc29sZS5sb2coZXZlbnQpXG4gICAgcmV0dXJuIGZhbHNlXG4gIH1cbiAgXG4gIE5hdmlnYXRpb25CYXIubWV0aG9kcy5zYXZlRmlsZSA9IGFzeW5jIGZ1bmN0aW9uIChmb3JtYXQpIHtcbiAgICBpZiAoIWZvcm1hdCB8fCB0eXBlb2YgZm9ybWF0ICE9PSAnc3RyaW5nJykge1xuICAgICAgZm9ybWF0ID0gdGhpcy5zYXZlRm9ybWF0c1swXVxuICAgIH1cbiAgICBcbiAgICBpZiAoZm9ybWF0ID09PSAnY3N2Jykge1xuICAgICAgdGhpcy5zYXZlRmlsZUNTVigpXG4gICAgfVxuICAgIGVsc2UgaWYgKGZvcm1hdCA9PT0gJ29kcycpIHtcbiAgICAgIHRoaXMuc2F2ZUZpbGVPRFMoKVxuICAgIH1cbiAgICBlbHNlIHtcbiAgICAgIHdpbmRvdy5hbGVydCh0aGlzLiR0KCdJbmNvcnJlY3QgZm9ybWF0OiAnKSArIGZvcm1hdClcbiAgICB9XG4gIH1cbiAgXG4gIE5hdmlnYXRpb25CYXIubWV0aG9kcy5vcGVuRmlsZSA9IGFzeW5jIGZ1bmN0aW9uIChldmVudCkge1xuICAgIC8vY29uc29sZS5sb2coMSk7XG4gICAgaWYgKCF3aW5kb3cuRmlsZVJlYWRlcikge1xuICAgICAgY29uc29sZS5lcnJvcih0aGlzLiR0KCdCcm93c2VyIGlzIG5vdCBjb21wYXRpYmxlJykpXG4gICAgICByZXR1cm4gZmFsc2UgLy8gQnJvd3NlciBpcyBub3QgY29tcGF0aWJsZVxuICAgIH1cblxuICAgIC8vdmFyIHJlYWRlciA9IG5ldyBGaWxlUmVhZGVyKCk7XG5cbiAgICBsZXQgZmlsZSA9IGV2ZW50LnRhcmdldC5maWxlc1swXVxuICAgIHRoaXMubG9jYWxDb25maWcuZmlsZW5hbWUgPSBmaWxlLm5hbWVcbiAgICBcbiAgICB0aGlzLmNvbmZpZy5sb2FkaW5nUHJvZ3Jlc3MgPSAwXG4gICAgXG4gICAgbGV0IHJhd0RhdGFcbiAgICBpZiAodGhpcy5sb2NhbENvbmZpZy5maWxlbmFtZS5lbmRzV2l0aCgnLmNzdicpKSB7XG4gICAgICByYXdEYXRhID0gYXdhaXQgdGhpcy5sb2FkRmlsZUNTVihmaWxlKVxuICAgIH1cbiAgICBlbHNlIGlmICh0aGlzLmxvY2FsQ29uZmlnLmZpbGVuYW1lLmVuZHNXaXRoKCcub2RzJykpIHtcbiAgICAgIHJhd0RhdGEgPSBhd2FpdCB0aGlzLmxvYWRGaWxlT0RTKGZpbGUpXG4gICAgfVxuICAgIFxuICAgIGF3YWl0IHRoaXMucHJvY2Vzc1Jhd0RhdGEocmF3RGF0YSlcbiAgfVxufSIsImV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIChOYXZpZ2F0aW9uQmFyKSB7XG4gICAgXG4gIE5hdmlnYXRpb25CYXIud2F0Y2hbJ2xvY2FsQ29uZmlnLmxvY2FsZSddID0gYXN5bmMgZnVuY3Rpb24gKCkge1xuICAgIHRoaXMuJGkxOG4ubG9jYWxlID0gdGhpcy5sb2NhbENvbmZpZy5sb2NhbGVcbiAgfVxuICBcbiAgXG59IiwiaW1wb3J0IGxvZ29QYXRoIGZyb20gJy4vLi4vLi4vLi4vYXNzZXRzL2Zhdmljb24vZmF2aWNvbi5zdmcnXHJcblxyXG5sZXQgTmF2aWdhdGlvbkJhciA9IHtcclxuICBwcm9wczogWydjb25maWcnLCAnbG9jYWxDb25maWcnLCAndXRpbHMnXSxcclxuICBkYXRhICgpIHsgICAgXHJcbiAgICB0aGlzLiRpMThuLmxvY2FsZSA9IHRoaXMubG9jYWxDb25maWcubG9jYWxlXHJcbiAgICByZXR1cm4ge1xyXG4gICAgICBsb2dvUGF0aCxcclxuICAgICAgc2F2ZUZvcm1hdHM6IFsnb2RzJywgJ2NzdiddXHJcbiAgICB9XHJcbiAgfSxcclxuICB3YXRjaDoge30sICAvLyBOYXZpZ2F0aW9uQmFyV2F0Y2guanNcclxuICBjb21wdXRlZDoge1xyXG4gICAgZmlsZW5hbWVXaXRob3V0RXh0ICgpIHtcclxuICAgICAgbGV0IGZpbGVuYW1lID0gdGhpcy5sb2NhbENvbmZpZy5maWxlbmFtZVxyXG4gICAgICBsZXQgcG9zID0gZmlsZW5hbWUubGFzdEluZGV4T2YoJy4nKVxyXG4gICAgICBpZiAocG9zID09PSAtMSkge1xyXG4gICAgICAgIHJldHVybiBmaWxlbmFtZVxyXG4gICAgICB9XHJcbiAgICAgIHJldHVybiBmaWxlbmFtZS5zbGljZSgwLCBwb3MpXHJcbiAgICB9XHJcbiAgfSxcclxuICBtb3VudGVkOiBhc3luYyBmdW5jdGlvbiAoKSB7XHJcbiAgICBhd2FpdCB0aGlzLmluaXREYXRhKClcclxuICAgIHRoaXMuaW5pdERyb3Bkb3duKClcclxuICB9LFxyXG4gIG1ldGhvZHM6IHt9XHJcbn1cclxuXHJcbmltcG9ydCBOYXZpZ2F0aW9uQmFyTWV0aG9kc0RhdGEgZnJvbSAnLi9OYXZpZ2F0aW9uQmFyTWV0aG9kc0RhdGEuanMnXHJcbk5hdmlnYXRpb25CYXJNZXRob2RzRGF0YShOYXZpZ2F0aW9uQmFyKVxyXG5cclxuaW1wb3J0IE5hdmlnYXRpb25CYXJNZXRob2RzSGFuZGxlck9EUyBmcm9tICcuL05hdmlnYXRpb25CYXJNZXRob2RzSGFuZGxlck9EUy5qcydcclxuTmF2aWdhdGlvbkJhck1ldGhvZHNIYW5kbGVyT0RTKE5hdmlnYXRpb25CYXIpXHJcblxyXG5pbXBvcnQgTmF2aWdhdGlvbkJhck1ldGhvZHNIYW5kbGVyQ1NWIGZyb20gJy4vTmF2aWdhdGlvbkJhck1ldGhvZHNIYW5kbGVyQ1NWLmpzJ1xyXG5OYXZpZ2F0aW9uQmFyTWV0aG9kc0hhbmRsZXJDU1YoTmF2aWdhdGlvbkJhcilcclxuXHJcbmltcG9ydCBOYXZpZ2F0aW9uQmFyTWV0aG9kc1ZpZXcgZnJvbSAnLi9OYXZpZ2F0aW9uQmFyTWV0aG9kc1ZpZXcuanMnXHJcbk5hdmlnYXRpb25CYXJNZXRob2RzVmlldyhOYXZpZ2F0aW9uQmFyKVxyXG5cclxuaW1wb3J0IE5hdmlnYXRpb25CYXJXYXRjaCBmcm9tICcuL05hdmlnYXRpb25CYXJXYXRjaC5qcydcclxuTmF2aWdhdGlvbkJhcldhdGNoKE5hdmlnYXRpb25CYXIpXHJcblxyXG5leHBvcnQgZGVmYXVsdCBOYXZpZ2F0aW9uQmFyIiwiaW1wb3J0IG1vZCBmcm9tIFwiLSEuLi8uLi8uLi9ub2RlX21vZHVsZXMvYmFiZWwtbG9hZGVyL2xpYi9pbmRleC5qcz8/cmVmLS02IS4vTmF2aWdhdGlvbkJhci5qcz92dWUmdHlwZT1zY3JpcHQmbGFuZz1qcyZcIjsgZXhwb3J0IGRlZmF1bHQgbW9kOyBleHBvcnQgKiBmcm9tIFwiLSEuLi8uLi8uLi9ub2RlX21vZHVsZXMvYmFiZWwtbG9hZGVyL2xpYi9pbmRleC5qcz8/cmVmLS02IS4vTmF2aWdhdGlvbkJhci5qcz92dWUmdHlwZT1zY3JpcHQmbGFuZz1qcyZcIiIsImltcG9ydCB7IHJlbmRlciwgc3RhdGljUmVuZGVyRm5zIH0gZnJvbSBcIi4vTmF2aWdhdGlvbkJhci5odG1sP3Z1ZSZ0eXBlPXRlbXBsYXRlJmlkPTFkNWJkOWUyJnNjb3BlZD10cnVlJlwiXG5pbXBvcnQgc2NyaXB0IGZyb20gXCIuL05hdmlnYXRpb25CYXIuanM/dnVlJnR5cGU9c2NyaXB0Jmxhbmc9anMmXCJcbmV4cG9ydCAqIGZyb20gXCIuL05hdmlnYXRpb25CYXIuanM/dnVlJnR5cGU9c2NyaXB0Jmxhbmc9anMmXCJcbmltcG9ydCBzdHlsZTAgZnJvbSBcIi4vTmF2aWdhdGlvbkJhci5sZXNzP3Z1ZSZ0eXBlPXN0eWxlJmluZGV4PTAmaWQ9MWQ1YmQ5ZTImbGFuZz1sZXNzJnNjb3BlZD10cnVlJlwiXG5cblxuLyogbm9ybWFsaXplIGNvbXBvbmVudCAqL1xuaW1wb3J0IG5vcm1hbGl6ZXIgZnJvbSBcIiEuLi8uLi8uLi9ub2RlX21vZHVsZXMvdnVlLWxvYWRlci9saWIvcnVudGltZS9jb21wb25lbnROb3JtYWxpemVyLmpzXCJcbnZhciBjb21wb25lbnQgPSBub3JtYWxpemVyKFxuICBzY3JpcHQsXG4gIHJlbmRlcixcbiAgc3RhdGljUmVuZGVyRm5zLFxuICBmYWxzZSxcbiAgbnVsbCxcbiAgXCIxZDViZDllMlwiLFxuICBudWxsXG4gIFxuKVxuXG4vKiBjdXN0b20gYmxvY2tzICovXG5pbXBvcnQgYmxvY2swIGZyb20gXCIuL05hdmlnYXRpb25CYXIueWFtbD92dWUmdHlwZT1jdXN0b20maW5kZXg9MCZibG9ja1R5cGU9aTE4biZpc3N1ZXJQYXRoPUQlM0ElNUN4YW1wcCU1Q2h0ZG9jcyU1Q3Byb2plY3RzLWh0bWw1JTVDSFRNTC1TaW1wbGUtQ2xhc3NpZmllciU1Q3NyYyU1Q2NvbXBvbmVudHMlNUNOYXZpZ2F0aW9uQmFyJTVDTmF2aWdhdGlvbkJhci52dWUmbGFuZz15YW1sXCJcbmlmICh0eXBlb2YgYmxvY2swID09PSAnZnVuY3Rpb24nKSBibG9jazAoY29tcG9uZW50KVxuXG4vKiBob3QgcmVsb2FkICovXG5pZiAobW9kdWxlLmhvdCkge1xuICB2YXIgYXBpID0gcmVxdWlyZShcIkQ6XFxcXHhhbXBwXFxcXGh0ZG9jc1xcXFxwcm9qZWN0cy1odG1sNVxcXFxIVE1MLVNpbXBsZS1DbGFzc2lmaWVyXFxcXG5vZGVfbW9kdWxlc1xcXFx2dWUtaG90LXJlbG9hZC1hcGlcXFxcZGlzdFxcXFxpbmRleC5qc1wiKVxuICBhcGkuaW5zdGFsbChyZXF1aXJlKCd2dWUnKSlcbiAgaWYgKGFwaS5jb21wYXRpYmxlKSB7XG4gICAgbW9kdWxlLmhvdC5hY2NlcHQoKVxuICAgIGlmICghYXBpLmlzUmVjb3JkZWQoJzFkNWJkOWUyJykpIHtcbiAgICAgIGFwaS5jcmVhdGVSZWNvcmQoJzFkNWJkOWUyJywgY29tcG9uZW50Lm9wdGlvbnMpXG4gICAgfSBlbHNlIHtcbiAgICAgIGFwaS5yZWxvYWQoJzFkNWJkOWUyJywgY29tcG9uZW50Lm9wdGlvbnMpXG4gICAgfVxuICAgIG1vZHVsZS5ob3QuYWNjZXB0KFwiLi9OYXZpZ2F0aW9uQmFyLmh0bWw/dnVlJnR5cGU9dGVtcGxhdGUmaWQ9MWQ1YmQ5ZTImc2NvcGVkPXRydWUmXCIsIGZ1bmN0aW9uICgpIHtcbiAgICAgIGFwaS5yZXJlbmRlcignMWQ1YmQ5ZTInLCB7XG4gICAgICAgIHJlbmRlcjogcmVuZGVyLFxuICAgICAgICBzdGF0aWNSZW5kZXJGbnM6IHN0YXRpY1JlbmRlckZuc1xuICAgICAgfSlcbiAgICB9KVxuICB9XG59XG5jb21wb25lbnQub3B0aW9ucy5fX2ZpbGUgPSBcInNyYy9jb21wb25lbnRzL05hdmlnYXRpb25CYXIvTmF2aWdhdGlvbkJhci52dWVcIlxuZXhwb3J0IGRlZmF1bHQgY29tcG9uZW50LmV4cG9ydHMiXSwibWFwcGluZ3MiOiI7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FDcktBO0FBQ0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFDQTtBQURBO0FBVUE7QUFDQTtBQUNBO0FBWkE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQWFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUVBO0FBWEE7QUFBQTtBQUNBO0FBREE7QUFZQTtBQVpBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFnQkE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFFQTtBQUNBO0FBQ0E7QUFKQTtBQUFBO0FBQ0E7QUFEQTtBQUtBO0FBQ0E7QUFFQTtBQUVBO0FBRUE7QUFFQTtBQUNBO0FBZkE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBcUJBO0FBQ0E7QUFFQTtBQUNBO0FBRUE7QUFDQTtBQTVCQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQTZCQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFGQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQVVBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUZBO0FBSUE7QUFHQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFGQTtBQUlBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBdEJBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQTBCQTtBQUFBO0FBQ0E7QUFEQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBRUE7QUFKQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFPQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQWZBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQU1BO0FBQ0E7QUFQQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUNBO0FBREE7QUFNQTtBQU5BO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUF1QkE7QUFDQTtBQUNBO0FBQ0E7Ozs7Ozs7O0FDN0tBO0FBRUE7QUFFQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFBQTtBQUFBO0FBRkE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBTUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBR0E7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFGQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBS0E7QUFDQTtBQVZBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBV0E7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFFQTtBQUdBO0FBQ0E7QUFBQTtBQU5BO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQVdBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFuQkE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBVUE7QUFDQTtBQVhBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQ0E7QUFEQTtBQVVBO0FBVkE7QUFBQTtBQUNBO0FBREE7QUF5QkE7QUF6QkE7QUFBQTtBQUNBO0FBREE7QUEyQkE7QUEzQkE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBOEJBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBRUE7QUFDQTtBQUNBO0FBQUE7QUFFQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBbEJBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBbUJBOzs7Ozs7OztBQ3JGQTtBQUVBO0FBRUE7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFDQTtBQUNBO0FBQ0E7QUFIQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBZEE7QUFtQkE7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQ0E7QUFDQTtBQUNBO0FBSEE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQWRBO0FBbUJBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUNBO0FBREE7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFHQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUF0QkE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUF3QkE7Ozs7Ozs7O0FDeEZBO0FBQ0E7QUFFQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBSUE7QUFDQTtBQURBO0FBSUE7QUFDQTtBQUNBO0FBVkE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQVdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQWRBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBZUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBRUE7QUFIQTtBQUNBO0FBREE7QUFPQTtBQUVBO0FBQ0E7QUFFQTtBQUNBO0FBYkE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFDQTtBQURBO0FBZ0JBO0FBaEJBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFDQTtBQURBO0FBbUJBO0FBQ0E7QUFwQkE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUF3QkE7Ozs7QUM5REE7QUFFQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUZBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBS0E7Ozs7QUNQQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRkE7QUFJQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBUkE7QUFVQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUVBO0FBQ0E7QUFIQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBSUE7QUF4QkE7QUEyQkE7QUFDQTtBQUVBO0FBQ0E7QUFFQTtBQUNBO0FBRUE7QUFDQTtBQUVBO0FBQ0E7QUFFQTs7QUM1Q0E7Ozs7Ozs7Ozs7O0FDQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsdUJBaUJBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///506\n')}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["NavigationBar"],{
+
+/***/ "./assets/favicon/favicon.svg":
+/*!************************************!*\
+  !*** ./assets/favicon/favicon.svg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "./dist/asset/favicon.svg";
+
+/***/ }),
+
+/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function (Component) {
+  Component.options.__i18n = Component.options.__i18n || []
+  Component.options.__i18n.push('{"en":{"TEST_MESSAGE":"Test Message"},"zh-TW":{"TEST_MESSAGE":"測試訊息"}}')
+  delete Component.options._Ctor
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(true);
+// Module
+exports.push([module.i, "img[data-v-1d5bd9e2] {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu[data-v-1d5bd9e2] {\n  z-index: 99999 !important;\n}\ninput[type=\"file\"][data-v-1d5bd9e2] {\n  display: none !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","NavigationBar.less"],"names":[],"mappings":"AAAA;EACE,wBAAA;EACA,YAAA;ACCF;ADEA;EACE,yBAAA;ACAF;ADGA;EACE,wBAAA;ACDF","file":"NavigationBar.less","sourcesContent":["img {\n  width: 1.5rem !important;\n  height: auto;\n}\n\n.menu {\n  z-index: 99999 !important;\n}\n\ninput[type=\"file\"] {\n  display: none !important;\n}\n","img {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu {\n  z-index: 99999 !important;\n}\ninput[type=\"file\"] {\n  display: none !important;\n}\n"]}]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/NavigationBar/NavigationBar.html?vue&type=template&id=1d5bd9e2&scoped=true&":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./src/components/NavigationBar/NavigationBar.html?vue&type=template&id=1d5bd9e2&scoped=true& ***!
+  \********************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "ui top fixed inverted menu" }, [
+      _c("div", { staticClass: "item" }, [
+        _c("img", { attrs: { src: _vm.logoPath } }),
+        _vm._v("\n      " + _vm._s(_vm.config.t) + "\n    ")
+      ]),
+      _vm._v(" "),
+      _c("a", { ref: "LoadDemoDropdown", staticClass: "ui dropdown item" }, [
+        _c("span", { on: { click: _vm.loadDemo } }, [
+          _vm._v("\n        " + _vm._s(_vm.$t("LOAD DEMO")) + "\n      ")
+        ]),
+        _vm._v(" "),
+        _c("i", { staticClass: "dropdown icon" }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "menu" },
+          _vm._l(_vm.config.demoDataList, function(file) {
+            return _c(
+              "div",
+              {
+                staticClass: "item",
+                on: {
+                  click: function($event) {
+                    return _vm.loadDemo(file)
+                  }
+                }
+              },
+              [_vm._v("\n          " + _vm._s(_vm.$t(file)) + "\n        ")]
+            )
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "item",
+          on: {
+            click: function($event) {
+              return _vm.$refs.FileInput.click()
+            }
+          }
+        },
+        [
+          _vm._v("\n      " + _vm._s(_vm.$t("OPEN FILE")) + "\n      "),
+          _c("input", {
+            ref: "FileInput",
+            attrs: { type: "file", accept: ".ods,.csv" },
+            on: { change: _vm.openFile }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c("a", { ref: "SaveFileDropdown", staticClass: "ui dropdown item" }, [
+        _c("span", { on: { click: _vm.saveFile } }, [
+          _vm._v("\n        " + _vm._s(_vm.$t("SAVE FILE")) + "\n      ")
+        ]),
+        _vm._v(" "),
+        _c("i", { staticClass: "dropdown icon" }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "menu" },
+          _vm._l(_vm.saveFormats, function(format) {
+            return _c(
+              "div",
+              {
+                staticClass: "item",
+                on: {
+                  click: function($event) {
+                    return _vm.saveFile(format)
+                  }
+                }
+              },
+              [_vm._v("\n          " + _vm._s(_vm.$t(format)) + "\n        ")]
+            )
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "right menu" }, [
+        _c(
+          "div",
+          { staticClass: "ui right mini aligned category search item" },
+          [
+            _c(
+              "form",
+              {
+                staticClass: "ui icon input",
+                on: {
+                  submit: function($event) {
+                    $event.stopPropagation()
+                    $event.preventDefault()
+                    return _vm.onSearch($event)
+                  }
+                }
+              },
+              [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.localConfig.searchKeyword,
+                      expression: "localConfig.searchKeyword"
+                    }
+                  ],
+                  staticClass: "prompt",
+                  attrs: { type: "text", placeholder: _vm.$t("Search...") },
+                  domProps: { value: _vm.localConfig.searchKeyword },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.localConfig,
+                        "searchKeyword",
+                        $event.target.value
+                      )
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("i", { staticClass: "search link icon" })
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "results" })
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "icon item",
+            on: {
+              click: function($event) {
+                _vm.localConfig.displayConfigurationPanel = !_vm.localConfig
+                  .displayConfigurationPanel
+              }
+            }
+          },
+          [
+            !_vm.localConfig.displayConfigurationPanel
+              ? _c("i", { staticClass: "bars icon" })
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.localConfig.displayConfigurationPanel
+              ? _c("i", { staticClass: "chevron circle up icon" })
+              : _vm._e()
+          ]
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true& */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("3a2dc9eb", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBar.html?vue&type=template&id=1d5bd9e2&scoped=true&":
+/*!****************************************************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBar.html?vue&type=template&id=1d5bd9e2&scoped=true& ***!
+  \****************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_NavigationBar_html_vue_type_template_id_1d5bd9e2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./NavigationBar.html?vue&type=template&id=1d5bd9e2&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/NavigationBar/NavigationBar.html?vue&type=template&id=1d5bd9e2&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_NavigationBar_html_vue_type_template_id_1d5bd9e2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_NavigationBar_html_vue_type_template_id_1d5bd9e2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBar.js?vue&type=script&lang=js&?73f3":
+/*!********************************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBar.js?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _NavigationBar_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./NavigationBar.js?vue&type=script&lang=js& */ "./src/components/NavigationBar/NavigationBar.js?vue&type=script&lang=js&?b81b");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_NavigationBar_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBar.js?vue&type=script&lang=js&?b81b":
+/*!********************************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBar.js?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../assets/favicon/favicon.svg */ "./assets/favicon/favicon.svg");
+/* harmony import */ var _assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _NavigationBarMethodsData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavigationBarMethodsData.js */ "./src/components/NavigationBar/NavigationBarMethodsData.js");
+/* harmony import */ var _NavigationBarMethodsHandlerODS_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavigationBarMethodsHandlerODS.js */ "./src/components/NavigationBar/NavigationBarMethodsHandlerODS.js");
+/* harmony import */ var _NavigationBarMethodsHandlerCSV_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NavigationBarMethodsHandlerCSV.js */ "./src/components/NavigationBar/NavigationBarMethodsHandlerCSV.js");
+/* harmony import */ var _NavigationBarMethodsView_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavigationBarMethodsView.js */ "./src/components/NavigationBar/NavigationBarMethodsView.js");
+/* harmony import */ var _NavigationBarWatch_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavigationBarWatch.js */ "./src/components/NavigationBar/NavigationBarWatch.js");
+
+
+let NavigationBar = {
+  props: ['config', 'localConfig', 'utils'],
+  data () {    
+    this.$i18n.locale = this.localConfig.locale
+    return {
+      logoPath: (_assets_favicon_favicon_svg__WEBPACK_IMPORTED_MODULE_0___default()),
+      saveFormats: ['ods', 'csv']
+    }
+  },
+  watch: {},  // NavigationBarWatch.js
+  computed: {
+    filenameWithoutExt () {
+      let filename = this.localConfig.filename
+      let pos = filename.lastIndexOf('.')
+      if (pos === -1) {
+        return filename
+      }
+      return filename.slice(0, pos)
+    }
+  },
+  mounted: async function () {
+    await this.initData()
+    this.initDropdown()
+  },
+  methods: {}
+}
+
+
+Object(_NavigationBarMethodsData_js__WEBPACK_IMPORTED_MODULE_1__["default"])(NavigationBar)
+
+
+Object(_NavigationBarMethodsHandlerODS_js__WEBPACK_IMPORTED_MODULE_2__["default"])(NavigationBar)
+
+
+Object(_NavigationBarMethodsHandlerCSV_js__WEBPACK_IMPORTED_MODULE_3__["default"])(NavigationBar)
+
+
+Object(_NavigationBarMethodsView_js__WEBPACK_IMPORTED_MODULE_4__["default"])(NavigationBar)
+
+
+Object(_NavigationBarWatch_js__WEBPACK_IMPORTED_MODULE_5__["default"])(NavigationBar)
+
+/* harmony default export */ __webpack_exports__["default"] = (NavigationBar);
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&":
+/*!*******************************************************************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true& ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_NavigationBar_less_vue_type_style_index_0_id_1d5bd9e2_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-style-loader!../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_NavigationBar_less_vue_type_style_index_0_id_1d5bd9e2_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_NavigationBar_less_vue_type_style_index_0_id_1d5bd9e2_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_NavigationBar_less_vue_type_style_index_0_id_1d5bd9e2_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_NavigationBar_less_vue_type_style_index_0_id_1d5bd9e2_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBar.vue":
+/*!********************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBar.vue ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _NavigationBar_html_vue_type_template_id_1d5bd9e2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NavigationBar.html?vue&type=template&id=1d5bd9e2&scoped=true& */ "./src/components/NavigationBar/NavigationBar.html?vue&type=template&id=1d5bd9e2&scoped=true&");
+/* harmony import */ var _NavigationBar_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavigationBar.js?vue&type=script&lang=js& */ "./src/components/NavigationBar/NavigationBar.js?vue&type=script&lang=js&?73f3");
+/* empty/unused harmony star reexport *//* harmony import */ var _NavigationBar_less_vue_type_style_index_0_id_1d5bd9e2_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true& */ "./src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml */ "./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _NavigationBar_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NavigationBar_html_vue_type_template_id_1d5bd9e2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _NavigationBar_html_vue_type_template_id_1d5bd9e2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "1d5bd9e2",
+  null
+  
+)
+
+/* custom blocks */
+
+if (typeof _NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "src/components/NavigationBar/NavigationBar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/@kazupon/vue-i18n-loader/lib!./NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml");
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBarMethodsData.js":
+/*!******************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBarMethodsData.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
+  NavigationBar.methods.initData = async function () {
+    if (this.localConfig.data.length > 2
+            && Array.isArray(this.localConfig.data[0])
+            && this.localConfig.data[0].length > 3) {
+      return false
+    }
+    else if (this.config.openFromAPI) {
+      return false
+    }
+    
+    //console.log('沒有資料，讀取demo')
+    this.loadDemo()
+  }
+  
+  NavigationBar.methods.loadDemo = async function (file) {
+    this.config.isDataProcessing = true
+    
+    if (!file || typeof file !== 'string') {
+      file = this.config.demoDataList[0]
+    }
+    
+    this.localConfig.classFieldName = null
+    
+    this.localConfig.filename = file
+    
+    this.config.loadingProgress = 0
+    let rawData = await this.loadDemoData(file)
+    await this.processRawData(rawData)
+    await this.$parent.startPredict()
+  }
+  
+  NavigationBar.methods.processRawData = async function (rawData) {
+    console.log('processRawData', 1)
+    this.config.loadingProgress = 0.5
+    let detectResult = this.detectClassField(rawData)
+    
+    console.log('processRawData', 2)
+    //console.log(detectResult)
+    let orderedData = await this.orderColumns(rawData, detectResult.classFieldIndex)
+    
+    console.log('processRawData', 3)
+    this.config.loadingProgress = 0.75
+    
+    this.localConfig.classFieldName = detectResult.classFieldName    
+    
+    console.log('processRawData', 4)
+    this.localConfig.headers = orderedData[0]
+    
+    let data = orderedData.splice(1)
+    //console.log(data)
+    //this.localConfig.data = this.localConfig.data.splice(0, 0).concat(data)
+    console.log('processRawData', 5)
+    
+    while (!this.$parent.$refs.DataTable) {
+      await this.utils.AsyncUtils.sleep(100)
+    }
+    
+    console.log('processRawData', 6)
+    
+    await this.$parent.$refs.DataTable.loadData(data)
+    
+    //let data = orderedData.splice(1)
+    //this.localConfig.data = this.localConfig.data.splice(0, 0).concat(data)
+    
+    this.config.loadingProgress = 1
+    //console.log(this.localConfig.data.length)
+    
+    this.config.isDataProcessing = false
+  }
+  
+  NavigationBar.methods.loadDemoData = async function (file) {
+    let path = "./assets/data/" + file
+    //console.log(path)
+    if (path.endsWith('.csv')) {
+      return await this.loadURLCSV(path)
+    }
+    else {
+      return await this.loadURLODS(path)
+    }
+  }
+  
+  NavigationBar.methods.detectClassField = function (data) {
+    if (Array.isArray(data) === false 
+            || data.length === 0) {
+      return false
+    }
+    
+    let headers = data[0]
+    
+    if (headers[1] === 'predict') {
+      // 已經被調整好了，不用再整理
+      return {
+        classFieldName: headers[0],
+        classFieldIndex: 0
+      }
+    }
+    
+    // ---------------------------
+    // 偵測
+    
+    let classFieldNameCandidates = ['class', 'label', 'target', 'score', 'dv']
+    let classFieldIndex = -1
+    let classFieldName
+    
+    for (let len = classFieldNameCandidates.length, i = len; i > 0; i--) {
+      let name = classFieldNameCandidates[(len - i)]
+      let index = headers.indexOf(name)
+      if (index > -1) {
+        classFieldIndex = index
+        classFieldName = name
+        break
+      }
+    }
+    //console.log(classFieldName, classFieldIndex)
+    
+    if (classFieldIndex === -1) {
+      classFieldIndex = headers.length - 1
+      classFieldName = headers[classFieldIndex]
+    }
+    
+    return {
+      classFieldName,
+      classFieldIndex
+    }
+  }
+  
+  NavigationBar.methods.orderColumns = async function (data, classFieldIndex) {
+    // ---------------------------
+    // 開始大遷移
+    for (let rowLen = data.length, r = rowLen; r > 0; r--) {
+      let row = data[(rowLen - r)]
+      
+      let classField = row.splice(classFieldIndex ,1)
+      // putting the 'role' string back in the array:
+      
+      if (r === rowLen) {
+        row.unshift('predict')
+        row.unshift(classField[0])
+      }
+      else {
+        row.unshift(null)
+        row.unshift(classField[0])
+      }
+      
+      if (r % 10 === 1) {
+        this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    
+    return data
+  }
+  
+  
+  NavigationBar.methods.dataToArrayJSON = async function () {
+    let headers = this.localConfig.headers
+    let rows = this.localConfig.data
+    
+    let data = []
+    
+    for (let len = rows.length, i = len; i > 0; i--) {
+      let row = rows[(len - i)]
+      
+      let json = {}
+      headers.forEach((header, i) => {
+        json[header] = row[i]
+      })
+      
+      data.push(json)
+      
+      if (i % 10 === 5) {
+        await this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    
+    return data
+  }
+  
+  NavigationBar.methods.getFilenameWithTime = function (ext) {
+    return this.filenameWithoutExt + '_' + (new Date()).mmddhhmm() + '.' + ext
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBarMethodsHandlerCSV.js":
+/*!************************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBarMethodsHandlerCSV.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var papaparse__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! papaparse */ "./node_modules/papaparse/papaparse.min.js");
+/* harmony import */ var papaparse__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(papaparse__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
+  
+  NavigationBar.methods.loadURLCSV = function (url) {
+//    if (url.startsWith('./')) {
+//      let currentURL = location.href
+//      url = currentURL.slice(0, currentURL.lastIndexOf('/') + 1) + url.slice(2)
+//    }
+    
+    //console.log(url)
+    
+    return new Promise((resolve) => {
+      let data = []
+      let fieldCount
+      papaparse__WEBPACK_IMPORTED_MODULE_0___default.a.parse(url, {
+        download: true,
+        step: function(row) {
+          if (Array.isArray(row.data)) {
+            if (!fieldCount) {
+              fieldCount = row.data.length
+            }
+            if (fieldCount !== row.data.length) {
+              return false
+            }
+            //console.log(row.data.length)
+            data.push(row.data)
+          }
+        },
+        complete: async () => {
+          data = await this.utils.DataUtils.parseNumber(data)
+          resolve(data)
+        }
+      });
+    })
+  }
+  
+  NavigationBar.methods.loadFileCSV = function (file) {
+
+    return new Promise((resolve) => {
+      let data = []
+      let fieldCount
+      papaparse__WEBPACK_IMPORTED_MODULE_0___default.a.parse(event.target.files[0], {
+        worker: true, // Don't bog down the main thread if its a big file
+        dynamicTyping: true,
+        step: function(row) {
+          if (Array.isArray(row.data)) {
+            if (!fieldCount) {
+              fieldCount = row.data.length
+            }
+            if (fieldCount !== row.data.length) {
+              return false
+            }
+            console.log('Papa parse', row.data.length)
+            data.push(row.data)
+          }
+        },
+        complete: async () => {
+          console.log('Papa完成')
+          //data = await this.utils.DataUtils.parseNumber(data)
+          //console.log('parseNumber完成')
+          resolve(data)
+        }
+      })
+    })
+  }
+  
+  NavigationBar.methods.saveFileCSV = async function () {
+    this.config.loadingProgress = 0
+    let arrayJSON = await this.dataToArrayJSON()
+    this.config.loadingProgress = 0.5
+    //console.log(arrayJSON)
+    var csv = papaparse__WEBPACK_IMPORTED_MODULE_0___default.a.unparse(arrayJSON)
+    
+    this.config.loadingProgress = 0.7
+    let filename = this.getFilenameWithTime('csv')
+
+//    var csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
+//    var csvURL
+////    if (navigator.msSaveBlob) {
+////      csvURL = navigator.msSaveBlob(csvData, filename);
+////    } else {
+////      csvURL = window.URL.createObjectURL(csvData);
+////    }
+//    
+//    csvURL = window.URL.createObjectURL(csvData);
+
+    this.config.loadingProgress = 1
+    this.utils.FileUtils.download(filename, csv)
+    
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBarMethodsHandlerODS.js":
+/*!************************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBarMethodsHandlerODS.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! xlsx */ "./node_modules/xlsx/xlsx.js");
+/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(xlsx__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
+  
+  NavigationBar.methods.loadURLODS = function (url) {
+
+    return new Promise((resolve) => {
+      /* set up async GET request */
+      var req = new XMLHttpRequest();
+      req.open("GET", url, true);
+      req.responseType = "arraybuffer";
+
+      req.onload = async (e) => {
+        var data = new Uint8Array(req.response);
+        var workbook = xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.read(data, {type:"array"});
+
+        resolve(await this.processXLSXData(workbook))
+      }
+
+      req.send();
+    })
+  }
+  
+  NavigationBar.methods.loadFileODS = async function (file) {
+    let reader = new FileReader();
+    return new Promise((resolve) => {
+      reader.readAsArrayBuffer(file);
+      reader.onload = async (e) => {
+        var data = new Uint8Array(reader.result);
+        var workbook = xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.read(data, {type: "array"})
+        resolve(await this.processXLSXData(workbook))
+      }
+    })
+  }
+  
+  NavigationBar.methods.processXLSXData = async function (workbook) {
+    
+    var sheet_name_list = workbook.SheetNames;
+
+    //console.log(url)
+    //console.log(sheet_name_list)
+    var xlData = xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
+
+    let headers
+    
+    for (let len = xlData.length, i = len; i > 0; i--) {
+      let rowIndex = (len - i)
+      let row = xlData[rowIndex]
+      if (!headers) {
+        headers = Object.keys(row)
+      }
+      xlData[rowIndex] = headers.map(header => {
+        return row[header]
+      })
+      
+      if (i % 10 === 5) {
+        await this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    
+    xlData.unshift(headers)
+
+    xlData = await this.utils.DataUtils.parseNumber(xlData)
+    return xlData
+  }
+  
+  NavigationBar.methods.saveFileODS = async function () {
+    let arrayJSON = await this.dataToArrayJSON()
+    // export json to Worksheet of Excel
+    // only array possible
+    var data = xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.utils.json_to_sheet(arrayJSON) 
+
+    // A workbook is the name given to an Excel file
+    var wb = xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.utils.book_new() // make Workbook of Excel
+
+    // add Worksheet to Workbook
+    // Workbook contains one or more worksheets
+    xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.utils.book_append_sheet(wb, data, 'data') // sheetAName is name of Worksheet
+    
+    // export Excel file
+    
+    let filename = this.getFilenameWithTime('ods')
+    
+    xlsx__WEBPACK_IMPORTED_MODULE_0___default.a.writeFile(wb, filename) // name of the file is 'book.xlsx'
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBarMethodsView.js":
+/*!******************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBarMethodsView.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var papaparse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! papaparse */ "./node_modules/papaparse/papaparse.min.js");
+/* harmony import */ var papaparse__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(papaparse__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
+  NavigationBar.methods.initDropdown = async function () {
+    while (!this.$refs.LoadDemoDropdown || !jquery__WEBPACK_IMPORTED_MODULE_0___default.a.isSemanticNIWSFReady) {
+      await this.utils.AsyncUtils.sleep()
+    }
+    let config = {
+      on: 'hover'
+    }
+    
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.LoadDemoDropdown).dropdown(config)
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.SaveFileDropdown).dropdown(config)
+  }
+    
+  NavigationBar.methods.onSearch = function (event) {
+    window.alert('TODO: Search ' + this.localConfig.searchKeyword)
+    //console.log(event)
+    return false
+  }
+  
+  NavigationBar.methods.saveFile = async function (format) {
+    if (!format || typeof format !== 'string') {
+      format = this.saveFormats[0]
+    }
+    
+    if (format === 'csv') {
+      this.saveFileCSV()
+    }
+    else if (format === 'ods') {
+      this.saveFileODS()
+    }
+    else {
+      window.alert(this.$t('Incorrect format: ') + format)
+    }
+  }
+  
+  NavigationBar.methods.openFile = async function (event) {
+    //console.log(1);
+    if (!window.FileReader) {
+      console.error(this.$t('Browser is not compatible'))
+      return false // Browser is not compatible
+    }
+
+    //var reader = new FileReader();
+
+    let file = event.target.files[0]
+    this.localConfig.filename = file.name
+    
+    this.config.loadingProgress = 0
+    
+    let rawData
+    if (this.localConfig.filename.endsWith('.csv')) {
+      rawData = await this.loadFileCSV(file)
+    }
+    else if (this.localConfig.filename.endsWith('.ods')) {
+      rawData = await this.loadFileODS(file)
+    }
+    
+    await this.processRawData(rawData)
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/NavigationBar/NavigationBarWatch.js":
+/*!************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBarWatch.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (NavigationBar) {
+    
+  NavigationBar.watch['localConfig.locale'] = async function () {
+    this.$i18n.locale = this.localConfig.locale
+  }
+  
+  
+});
+
+/***/ }),
+
+/***/ 0:
+/*!********************!*\
+  !*** fs (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 1:
+/*!************************!*\
+  !*** crypto (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 2:
+/*!************************!*\
+  !*** stream (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ })
+
+}]);
+//# sourceMappingURL=NavigationBar.js.map
