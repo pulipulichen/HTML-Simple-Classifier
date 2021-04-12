@@ -10,11 +10,15 @@ export default function (ConfigurationPanel) {
   }
   
   ConfigurationPanel.computed.isNeedPredict = function () {
+    //console.log(this.localConfig.data)
     for (let len = this.localConfig.data.length - 1, i = len; i > 0; i--) {
       let predict = this.localConfig.data[(len - i)][1]
+      //console.log(predict)
       if (this.utils.DataUtils.isMissingData(predict)) {
         return true
       }
+      
+      
     }
     return false
   }

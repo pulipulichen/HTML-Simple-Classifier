@@ -490,11 +490,15 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   ConfigurationPanel.computed.isNeedPredict = function () {
+    //console.log(this.localConfig.data)
     for (let len = this.localConfig.data.length - 1, i = len; i > 0; i--) {
       let predict = this.localConfig.data[(len - i)][1]
+      //console.log(predict)
       if (this.utils.DataUtils.isMissingData(predict)) {
         return true
       }
+      
+      
     }
     return false
   }
@@ -544,7 +548,7 @@ __webpack_require__.r(__webpack_exports__);
     let testSet = []
     let testSetRowIndexes = []
     let trainSetClasses = []
-    console.log(this.localConfig.data)
+    //console.log(this.localConfig.data)
     for (let len = this.localConfig.data.length, i = len; i > 0; i--) {
       let rowIndex = (len - i)
       let row = this.localConfig.data[rowIndex]
@@ -572,7 +576,7 @@ __webpack_require__.r(__webpack_exports__);
           }
           
           let value = row[j]
-          console.log(i, header, value)
+          //console.log(i, header, value)
           
           if (typeof value === 'string' && !isNaN(value)) {
             value = Number(value)
@@ -594,8 +598,8 @@ __webpack_require__.r(__webpack_exports__);
             testJSON[header] = value
           }
           
-          if (j % 1000 === 5) {
-            console.log('getJSONData sleep j', j)
+          if (j % 5000 === 500) {
+            console.log('getJSONData sleep j', j, headersLen, i, len)
             await this.utils.AsyncUtils.sleep(0)
           }
         }

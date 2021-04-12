@@ -45,7 +45,7 @@ export default function (DecisionTree) {
     console.log('start', 9)
     //console.log(data.testSet)
     let predictResults = await this.getPredictResults(this.model, data.testSet)
-    //console.log(predictResults)
+    console.log(predictResults)
     if (predictResults[0] === 'undefined') {
       this.config.loadingProgress = 1
       console.error('predict is undefined')

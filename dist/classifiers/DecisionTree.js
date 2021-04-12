@@ -357,7 +357,7 @@ __webpack_require__.r(__webpack_exports__);
     console.log('start', 9)
     //console.log(data.testSet)
     let predictResults = await this.getPredictResults(this.model, data.testSet)
-    //console.log(predictResults)
+    console.log(predictResults)
     if (predictResults[0] === 'undefined') {
       this.config.loadingProgress = 1
       console.error('predict is undefined')
@@ -840,7 +840,7 @@ var dt = (function () {
         }
       }
 
-      if (i % 1000 === 5) {
+      if (i % 10 === 5) {
         console.log('buildDecisionTree sleep i', i)
         await sleep(0)
       }

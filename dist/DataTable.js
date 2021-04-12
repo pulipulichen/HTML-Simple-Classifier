@@ -860,12 +860,20 @@ __webpack_require__.r(__webpack_exports__);
     
     
      */
+    //console.log(this.localConfig.modelJSON)
     this.hotInstance.selectColumns(1,1)
     this.unlockPredictColumn()
     this.hotInstance.emptySelectedCells()
-    this.lockPredictColumn()
     
+    this.localConfig.data = this.localConfig.data.map((row, i) => {
+      row[1] = null
+      return row
+    })
+    
+    this.lockPredictColumn()
     this.hotInstance.deselectCell()
+    this.localConfig.modelJSON = null
+    //console.log(this.localConfig.modelJSON)
   }
   
   DataTable.methods.lockPredictColumn = function () {
@@ -934,6 +942,13 @@ __webpack_require__.r(__webpack_exports__);
     this.unlockPredictColumn()
     this.hotInstance.emptySelectedCells()
     this.lockPredictColumn()
+    
+    this.localConfig.data = this.localConfig.data.map((row, i) => {
+      if (this.isMissingData(row[0])) {
+        row[1] = null
+      }
+      return row
+    })
     
     this.hotInstance.selectCells([])
   }

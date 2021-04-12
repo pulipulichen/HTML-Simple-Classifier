@@ -5,7 +5,7 @@ export default function (ConfigurationPanel) {
     let testSet = []
     let testSetRowIndexes = []
     let trainSetClasses = []
-    console.log(this.localConfig.data)
+    //console.log(this.localConfig.data)
     for (let len = this.localConfig.data.length, i = len; i > 0; i--) {
       let rowIndex = (len - i)
       let row = this.localConfig.data[rowIndex]
@@ -33,7 +33,7 @@ export default function (ConfigurationPanel) {
           }
           
           let value = row[j]
-          console.log(i, header, value)
+          //console.log(i, header, value)
           
           if (typeof value === 'string' && !isNaN(value)) {
             value = Number(value)
@@ -55,8 +55,8 @@ export default function (ConfigurationPanel) {
             testJSON[header] = value
           }
           
-          if (j % 1000 === 5) {
-            console.log('getJSONData sleep j', j)
+          if (j % 5000 === 500) {
+            console.log('getJSONData sleep j', j, headersLen, i, len)
             await this.utils.AsyncUtils.sleep(0)
           }
         }
