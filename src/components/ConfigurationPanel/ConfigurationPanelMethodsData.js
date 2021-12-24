@@ -23,6 +23,7 @@ export default function (ConfigurationPanel) {
       let isTrainingSet = true
       
       // 先確認是否有已經預測的資料，如果已經有了，那就略過預測
+      //console.log(this.isModelBuilded)
       if (this.isModelBuilded === false || this.utils.DataUtils.isMissingData(row[1])) {
 
         for (let j = 0, headersLen = headers.length; j < headersLen; j++) {
@@ -68,6 +69,7 @@ export default function (ConfigurationPanel) {
         testJSON['predict'] = row[1]
       }
       
+      console.log(this.hasModelEvaluated)
       if (this.hasModelEvaluated === false && isTrainingSet) {
         trainSetClasses.push(row[0])
       }
@@ -117,6 +119,11 @@ export default function (ConfigurationPanel) {
       let vector = []
       fieldKeyToIndex.forEach((key) => {
         let value = set[key]
+        if (typeof(value) === 'number') {
+          vector.push(value)
+          return true
+        }
+        
         if (!fieldValueToIndex[key]) {
           fieldValueToIndex[key] = []
         }
@@ -142,16 +149,21 @@ export default function (ConfigurationPanel) {
     
     //let trainSetClasses = json.trainSetClasses
     let fieldTrainValueToIndex = []
-    console.log(json.trainSetClasses)
+    //console.log(json.trainSetClasses)
+    if (json.trainSetClasses.length === 0) {
+      console.error('No trainSetClasses')
+      throw Error('No trainSetClasses')
+    }
+    
     json.trainSetClasses = json.trainSetClasses.map(value => {
-      console.log(value)
+      //console.log(value)
       if (fieldTrainValueToIndex.indexOf(value) === -1) {
         fieldTrainValueToIndex.push(value)
       }
       return fieldTrainValueToIndex.indexOf(value)
     })
     json.trainSetClassesDict = fieldTrainValueToIndex
-    console.log(json.trainSetClassesDict)
+    //console.log(json.trainSetClassesDict)
     
     // ---------------------------------------------------
     

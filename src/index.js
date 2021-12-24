@@ -60,7 +60,7 @@ window.onerror = function(message, source, lineno, colno, error) {
   if (error === null) {
     error = message
   }
-  //console.error(error)
+  console.error(error)
   VueController.data.errors.push(error)
 }
 

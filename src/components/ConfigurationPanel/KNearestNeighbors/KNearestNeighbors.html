@@ -2,7 +2,6 @@
   <div class="ui field">
     <button type="button"
             class="ui primary fluid button"
-            v-bind:class="{'disabled': !$parent.isNeedPredict}"
             v-on:click="start">
       <template v-if="!isModelBuilded">
         {{ $t('Build Model and Predict') }}

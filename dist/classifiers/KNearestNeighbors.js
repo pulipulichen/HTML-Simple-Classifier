@@ -55,7 +55,6 @@ var render = function() {
         "button",
         {
           staticClass: "ui primary fluid button",
-          class: { disabled: !_vm.$parent.isNeedPredict },
           attrs: { type: "button" },
           on: { click: _vm.start }
         },
@@ -161,7 +160,9 @@ let KNearestNeighbors = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
-      model: null
+      model: null,
+      dataToShow: null,
+      unknownsPrediction: []
     }
   },
   watch: {
@@ -171,14 +172,8 @@ let KNearestNeighbors = {
   },
   computed: {
     isModelBuilded () {
-      //console.log(this.localConfig)
-      return (this.localConfig.modelJSON !== null && this.localConfig.modelJSON !== '{}')
+      return (this.model !== null)
     },
-    modelCSSURL () {
-      let currentURL = location.href
-      return currentURL.slice(0, currentURL.lastIndexOf('/') + 1)
-        + 'assets/classifiers/DecisionTree/style.css'
-    }
   },
   mounted() {
 //    setTimeout(() => {
@@ -314,7 +309,18 @@ __webpack_require__.r(__webpack_exports__);
     //this.localConfig.modelJSON = null
     this.config.loadingProgress = 0
     console.log('start', 1)
+    
+    this.localConfig.modelJSON = null
+    this.localConfig.modelEvaluations = []
     let data = await this.$parent.getVectorData()
+    
+    this.dataToShow = data
+    
+    if (data.trainSetClasses.length === 0) {
+      console.error('No trainSetClasses')
+      throw Error('No trainSetClasses')
+    }
+    
     console.log(data)
     //return false
     this.config.loadingProgress = 0.25
@@ -323,9 +329,15 @@ __webpack_require__.r(__webpack_exports__);
     //console.log(data.trainSet[0])
     
     console.log('start', 3)
-    //if (!this.model) {
+    if (!this.localConfig.modelJSON) {
       this.model = this.buildModel(data)
-    //}
+      this.localConfig.modelJSON = this.model
+    }
+    else {
+      this.model = ml_knn__WEBPACK_IMPORTED_MODULE_0__["default"].load(this.localConfig.modelJSON)
+    }
+
+    //console.log(this.model.toJSON())
 
     //console.log(this.model)
     console.log('start', 5)
@@ -334,8 +346,9 @@ __webpack_require__.r(__webpack_exports__);
     
     console.log('start', 9)
     //console.log(data.testSet)
-    let predictResults = await this.getPredictResults(this.model, data)
-    console.log(predictResults)
+    let predictVector = await this.getPredictResultsVector(this.model, data)
+    let predictResults = await this.getPredictResultsValue(data, predictVector)
+    console.log(predictVector)
     if (predictResults[0] === 'undefined') {
       this.config.loadingProgress = 1
       console.error('predict is undefined')
@@ -346,7 +359,18 @@ __webpack_require__.r(__webpack_exports__);
     this.config.loadingProgress = 0.75
     
     if (this.$parent.hasModelEvaluated === false) {
-      this.evaluationResults(data, predictResults)
+      let testSetRowIndexes = data.testSetRowIndexes
+      this.unknownsPrediction = []
+      let predictVectorToEvalute = predictVector.filter((value, i) => {
+        let notMatch = (testSetRowIndexes.indexOf(i) === -1)
+        
+        if (notMatch === false) {
+          this.unknownsPrediction.push(value)
+        }
+        
+        return notMatch
+      })
+      this.evaluationResults(data.trainSetClasses, predictVectorToEvalute)
     }
     
     //console.log(predictResults)
@@ -362,31 +386,42 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   KNearestNeighbors.methods.buildModel = function (data){
-    let dataset = data.testSet
+    let testSetRowIndexes = data.testSetRowIndexes
+    let dataset = data.testSet.filter((row, i) => {
+      return (testSetRowIndexes.indexOf(i) === -1)
+    })
+    console.log(dataset)
     let predictions = data.trainSetClasses
+    
+    if (dataset.length !== predictions.length) {
+      console.error('length is not match')
+    }
+    
     return new ml_knn__WEBPACK_IMPORTED_MODULE_0__["default"](dataset, predictions)
   }
   
-  KNearestNeighbors.methods.getPredictResults = async function (model, data) {
+  KNearestNeighbors.methods.getPredictResultsVector = async function (model, data) {
     let testSet = data.testSet
     let resultVector = model.predict(testSet);
+    return resultVector
+  }
+  
+  KNearestNeighbors.methods.getPredictResultsValue = async function (data, resultVector) {
     let trainSetClassesDict = data.trainSetClassesDict
-    console.log(trainSetClassesDict)
+    //console.log(trainSetClassesDict)
     return resultVector.map(index => {
       return trainSetClassesDict[index]
     })
   }
   
-  KNearestNeighbors.methods.evaluationResults = async function (data, predictResults) {
-    let getTrainSetPredicts = await this.$parent.getTrainSetPredicts(predictResults, data.testSetRowIndexes)
-    //console.log(data.trainSetClasses)
-    //console.log(getTrainSetPredicts)
-
+  KNearestNeighbors.methods.evaluationResults = async function (train, predict) {
+    
     this.$parent.resetModelEvaluation()
-
+    console.log(train)
+    console.log(predict)
     //console.log(data.trainSetClasses.length, getTrainSetPredicts.length, data.testSetRowIndexes.length)
 
-    let accuracy = await this.$parent.calcAccuracy(data.trainSetClasses, getTrainSetPredicts)
+    let accuracy = await this.$parent.calcAccuracy(train, predict)
     //console.log(accuracy)
     let accuracyInfo = {
       name: 'accuracy',
@@ -410,6 +445,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var ml_distance_euclidean__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ml-distance-euclidean */ "./node_modules/ml-distance-euclidean/lib-es6/euclidean.js");
+
+//const euclidean = MLDistanceEuclidean.euclidean
+
 /* harmony default export */ __webpack_exports__["default"] = (function (KNearestNeighbors) {
   KNearestNeighbors.methods.showModel = async function () {
     if (!this.model) {
@@ -418,15 +457,101 @@ __webpack_require__.r(__webpack_exports__);
       //return false
     }
     
-    let bodyHTML = await this.model.treeToHtml()
+    // --------------------------
+    //console.log(this.dataToShow)
+    let unknownSetRowIndex = this.dataToShow.testSetRowIndexes
+    
+    let neighbors = []
+    let unknowns = []
+    //console.log(unknownSetRowIndex)
+    
+    this.dataToShow.testSet.forEach((set, i) => {
+      if (unknownSetRowIndex.indexOf(i) === -1) {
+        neighbors.push(set)
+      }
+      else {
+        unknowns.push(set)
+      }
+    })
+    
+    //console.log(neighbors)
+    //console.log(unknowns)
+    // --------------------------
+    let distanceMatrix = unknowns.map(unknownFeature => {
+      let maxDistance = null
+      let distances = neighbors.map(neighbor => {
+        let distance = Object(ml_distance_euclidean__WEBPACK_IMPORTED_MODULE_0__["euclidean"])(unknownFeature, neighbor)
+        if (maxDistance === null || distance > maxDistance) {
+          maxDistance = distance
+        }
+        
+        return distance
+      })
+      
+      distances = distances.map(d => {
+        return ((maxDistance - d) / maxDistance)
+      })
+      
+      return distances
+    })
+    
+    //console.log(distanceMatrix)
+    
+    let colorMatrix = distanceMatrix.map(unknown => {
+      return unknown.map(d => {
+        return heatMapColorforValue(d)
+      })
+    })
+    
+    //console.log(colorMatrix)
+    
+    // --------------------------
+    
+    let tableHeader = `<thead>
+  <tr>
+    <th rowspan="2" colspan="2" valign="bottom">${this.$t('Unknowns')}</th>
+    <th colspan="${colorMatrix[0].length}">${this.$t('Neighbors')}</th>
+  </tr>
+  <tr>${colorMatrix[0].map((value, i) => `<th>${i+1}</th>`).join('')}</tr>
+</thead>`
+    
+    let trainSetClassesDict = this.dataToShow.trainSetClassesDict
+    
+    let tableBody = `<tbody>
+${colorMatrix.map((row, i) => {
+  return `<tr>
+  <th>${unknownSetRowIndex[i]}</th>
+  <th>${trainSetClassesDict[this.unknownsPrediction[i]]}</th>
+  ${row.map((color, j) => {
+    let d = distanceMatrix[i][j]
+    let dText = d
+    dText = Math.round(dText * 100) + '%'
+    
+    if (d > 0.5) {
+      return `<td style="text-align:center;background-color: ${color}; color: white">${dText}</td>`
+    }
+    else {
+      return `<td style="text-align:center;background-color: ${color}">${dText}</td>`
+    }
+  }).join('')}
+</tr>`
+}).join('\n')}
+</tbody>`
+    
+    // --------------------------
+    
+    let bodyHTML = `<table border="1" align="center">
+    ${tableHeader}
+    ${tableBody}
+</table>`
     bodyHTML = `<div class="tree">${bodyHTML}</div>`
     //console.error('[TODO]')
     //console.log()
-    let title = this.$t('Decision Tree') + ` (` + (new Date()).mmddhhmm() + ')'
+    let title = this.$t('KNN') + ` (` + (new Date()).mmddhhmm() + ')'
     
     if (this.$parent.isModelWindowOpened === false) {
       this.$parent.modelWindow = this.utils.PopupUtils.open({
-        windowName: 'DecisionTreeModelShow',
+        windowName: 'KNNModelShow',
         cssURL: this.modelCSSURL,
         bodyHTML,
         size: 'right',
@@ -440,6 +565,16 @@ __webpack_require__.r(__webpack_exports__);
     
     this.$parent.modelWindow.scrollToTop()
     this.$parent.modelWindow.scrollToCenter()
+  }
+  
+  /**
+   * https://stackoverflow.com/a/27263918/6645399
+   */
+  function heatMapColorforValue(value){
+    //var h = (1.0 - value) * 240
+    //return "hsl(" + h + ", 100%, 50%)";
+    return `rgba(22, 160, 133, ${value})`
+    // rgb(22, 160, 133)
   }
 });
 

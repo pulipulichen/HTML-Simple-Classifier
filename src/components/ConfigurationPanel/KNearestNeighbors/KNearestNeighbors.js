@@ -3,7 +3,9 @@ let KNearestNeighbors = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
-      model: null
+      model: null,
+      dataToShow: null,
+      unknownsPrediction: []
     }
   },
   watch: {
@@ -13,14 +15,8 @@ let KNearestNeighbors = {
   },
   computed: {
     isModelBuilded () {
-      //console.log(this.localConfig)
-      return (this.localConfig.modelJSON !== null && this.localConfig.modelJSON !== '{}')
+      return (this.model !== null)
     },
-    modelCSSURL () {
-      let currentURL = location.href
-      return currentURL.slice(0, currentURL.lastIndexOf('/') + 1)
-        + 'assets/classifiers/DecisionTree/style.css'
-    }
   },
   mounted() {
 //    setTimeout(() => {

@@ -9,7 +9,7 @@ export default function (ConfigurationPanel) {
   
   ConfigurationPanel.watch['classifier'] = function () {
     this.localConfig.modelJSON = null
-    
+    this.localConfig.modelEvaluations = []
     this.clearPrediction()
   }
   
