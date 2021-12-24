@@ -17,7 +17,7 @@
     <label for="Classifier">
       {{ $t('Classifier') }}
     </label>
-    <select v-model="classifier"
+    <select v-model="localConfig.classifier"
             id="Classifier">
       <option v-for="c in classifierList"
               v-bind:value="c">
@@ -27,7 +27,7 @@
   </div>
   
   <DecisionTree 
-    v-if="classifier === 'DecisionTree'"
+    v-if="localConfig.classifier === 'DecisionTree'"
     ref="Classifier"
     v-bind:config="config"
     v-bind:localConfig="localConfig"
@@ -35,7 +35,7 @@
   </DecisionTree>
   
   <KNearestNeighbors 
-    v-if="classifier === 'KNearestNeighbors'"
+    v-if="localConfig.classifier === 'KNearestNeighbors'"
     ref="Classifier"
     v-bind:config="config"
     v-bind:localConfig="localConfig"

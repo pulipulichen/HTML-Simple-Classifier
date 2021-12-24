@@ -6,7 +6,7 @@ let ConfigurationPanel = {
     this.$i18n.locale = this.localConfig.locale
     return {
       //classifier: 'DecisionTree',
-      classifier: 'KNearestNeighbors',
+      
       classifierList: [
         'DecisionTree',
         'KNearestNeighbors',

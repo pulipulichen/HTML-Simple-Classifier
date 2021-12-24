@@ -143,8 +143,8 @@ var render = function() {
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.classifier,
-                expression: "classifier"
+                value: _vm.localConfig.classifier,
+                expression: "localConfig.classifier"
               }
             ],
             attrs: { id: "Classifier" },
@@ -158,9 +158,11 @@ var render = function() {
                     var val = "_value" in o ? o._value : o.value
                     return val
                   })
-                _vm.classifier = $event.target.multiple
-                  ? $$selectedVal
-                  : $$selectedVal[0]
+                _vm.$set(
+                  _vm.localConfig,
+                  "classifier",
+                  $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                )
               }
             }
           },
@@ -173,7 +175,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _vm.classifier === "DecisionTree"
+      _vm.localConfig.classifier === "DecisionTree"
         ? _c("DecisionTree", {
             ref: "Classifier",
             attrs: {
@@ -184,7 +186,7 @@ var render = function() {
           })
         : _vm._e(),
       _vm._v(" "),
-      _vm.classifier === "KNearestNeighbors"
+      _vm.localConfig.classifier === "KNearestNeighbors"
         ? _c("KNearestNeighbors", {
             ref: "Classifier",
             attrs: {
@@ -357,7 +359,7 @@ let ConfigurationPanel = {
     this.$i18n.locale = this.localConfig.locale
     return {
       //classifier: 'DecisionTree',
-      classifier: 'KNearestNeighbors',
+      
       classifierList: [
         'DecisionTree',
         'KNearestNeighbors',

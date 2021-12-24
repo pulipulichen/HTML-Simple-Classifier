@@ -8,6 +8,8 @@ let localConfig = {
   classDataType: 'nominal',
   classifierModelJSON: null,
   
+  classifier: 'DecisionTree',
+  
   filename: null,
   modelJSON: null,
   modelEvaluations: [],

@@ -34,14 +34,28 @@ export default function (Index) {
     if (data.data) {
       data = data.data
     }
-    let {rawData} = data
+    let {rawData, config } = data
     
     if (Array.isArray(rawData) === false || rawData.length < 3) {
       return false
     }
     
     await this.processRawData(rawData)
+    await this.processConfig(config)
     await this.startPredict()
+  }
+  
+  Index.methods.processConfig = async function (config) {
+    //this.localConfig.data = data.t
+    while (this.config.inited === false
+            || !this.$refs.NavigationBar
+            || !this.$refs.NavigationBar.processRawData) {
+      await this.utils.AsyncUtils.sleep(100)
+    }
+    
+    if (config.classifier) {
+      this.localConfig.classifier = config.classifier
+    }
   }
   
   Index.methods.processRawData = async function (rawData) {
