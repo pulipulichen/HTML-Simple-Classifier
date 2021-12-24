@@ -26,6 +26,10 @@ export default function (KNearestNeighbors) {
       }
     })
     
+    if (neighbors.length === 0) {
+      neighbors = unknowns
+    }
+    
     //console.log(neighbors)
     //console.log(unknowns)
     // --------------------------

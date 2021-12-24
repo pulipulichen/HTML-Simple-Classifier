@@ -11,10 +11,10 @@ module.exports = "./dist/asset/favicon.svg";
 
 /***/ }),
 
-/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FNavigationBar%2FNavigationBar.vue&lang=yaml":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FNavigationBar%2FNavigationBar.vue&lang=yaml ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -38,7 +38,7 @@ module.exports = function (Component) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "img[data-v-1d5bd9e2] {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu[data-v-1d5bd9e2] {\n  z-index: 99999 !important;\n}\ninput[type=\"file\"][data-v-1d5bd9e2] {\n  display: none !important;\n}\n", "",{"version":3,"sources":["E:/pudding/Code-Porjects/html-api/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","NavigationBar.less"],"names":[],"mappings":"AAAA;EACE,wBAAA;EACA,YAAA;ACCF;ADEA;EACE,yBAAA;ACAF;ADGA;EACE,wBAAA;ACDF","file":"NavigationBar.less","sourcesContent":["img {\n  width: 1.5rem !important;\n  height: auto;\n}\n\n.menu {\n  z-index: 99999 !important;\n}\n\ninput[type=\"file\"] {\n  display: none !important;\n}\n","img {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu {\n  z-index: 99999 !important;\n}\ninput[type=\"file\"] {\n  display: none !important;\n}\n"]}]);
+exports.push([module.i, "img[data-v-1d5bd9e2] {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu[data-v-1d5bd9e2] {\n  z-index: 99999 !important;\n}\ninput[type=\"file\"][data-v-1d5bd9e2] {\n  display: none !important;\n}\n", "",{"version":3,"sources":["/var/host/media/removable/MicroSD/NetBeansProjects/[html-api]/HTML-Simple-Classifier/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","NavigationBar.less"],"names":[],"mappings":"AAAA;EACE,wBAAA;EACA,YAAA;ACCF;ADEA;EACE,yBAAA;ACAF;ADGA;EACE,wBAAA;ACDF","file":"NavigationBar.less","sourcesContent":["img {\n  width: 1.5rem !important;\n  height: auto;\n}\n\n.menu {\n  z-index: 99999 !important;\n}\n\ninput[type=\"file\"] {\n  display: none !important;\n}\n","img {\n  width: 1.5rem !important;\n  height: auto;\n}\n.menu {\n  z-index: 99999 !important;\n}\ninput[type=\"file\"] {\n  display: none !important;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -64,12 +64,12 @@ var render = function() {
     _c("div", { staticClass: "ui top fixed inverted menu" }, [
       _c("div", { staticClass: "item" }, [
         _c("img", { attrs: { src: _vm.logoPath } }),
-        _vm._v("\r\n      " + _vm._s(_vm.config.t) + "\r\n    ")
+        _vm._v("\n      " + _vm._s(_vm.config.t) + "\n    ")
       ]),
       _vm._v(" "),
       _c("a", { ref: "LoadDemoDropdown", staticClass: "ui dropdown item" }, [
         _c("span", { on: { click: _vm.loadDemo } }, [
-          _vm._v("\r\n        " + _vm._s(_vm.$t("LOAD DEMO")) + "\r\n      ")
+          _vm._v("\n        " + _vm._s(_vm.$t("LOAD DEMO")) + "\n      ")
         ]),
         _vm._v(" "),
         _c("i", { staticClass: "dropdown icon" }),
@@ -88,7 +88,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\r\n          " + _vm._s(_vm.$t(file)) + "\r\n        ")]
+              [_vm._v("\n          " + _vm._s(_vm.$t(file)) + "\n        ")]
             )
           }),
           0
@@ -106,7 +106,7 @@ var render = function() {
           }
         },
         [
-          _vm._v("\r\n      " + _vm._s(_vm.$t("OPEN FILE")) + "\r\n      "),
+          _vm._v("\n      " + _vm._s(_vm.$t("OPEN FILE")) + "\n      "),
           _c("input", {
             ref: "FileInput",
             attrs: { type: "file", accept: ".ods,.csv" },
@@ -117,7 +117,7 @@ var render = function() {
       _vm._v(" "),
       _c("a", { ref: "SaveFileDropdown", staticClass: "ui dropdown item" }, [
         _c("span", { on: { click: _vm.saveFile } }, [
-          _vm._v("\r\n        " + _vm._s(_vm.$t("SAVE FILE")) + "\r\n      ")
+          _vm._v("\n        " + _vm._s(_vm.$t("SAVE FILE")) + "\n      ")
         ]),
         _vm._v(" "),
         _c("i", { staticClass: "dropdown icon" }),
@@ -136,11 +136,7 @@ var render = function() {
                   }
                 }
               },
-              [
-                _vm._v(
-                  "\r\n          " + _vm._s(_vm.$t(format)) + "\r\n        "
-                )
-              ]
+              [_vm._v("\n          " + _vm._s(_vm.$t(format)) + "\n        ")]
             )
           }),
           0
@@ -378,7 +374,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavigationBar_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavigationBar.js?vue&type=script&lang=js& */ "./src/components/NavigationBar/NavigationBar.js?vue&type=script&lang=js&?73f3");
 /* empty/unused harmony star reexport *//* harmony import */ var _NavigationBar_less_vue_type_style_index_0_id_1d5bd9e2_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true& */ "./src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml */ "./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml");
+/* harmony import */ var _NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FNavigationBar_2FNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FNavigationBar%2FNavigationBar.vue&lang=yaml */ "./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FNavigationBar%2FNavigationBar.vue&lang=yaml");
 
 
 
@@ -400,7 +396,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* custom blocks */
 
-if (typeof _NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
+if (typeof _NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FNavigationBar_2FNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FNavigationBar_2FNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
 
 /* hot reload */
 if (false) { var api; }
@@ -409,19 +405,19 @@ component.options.__file = "src/components/NavigationBar/NavigationBar.vue"
 
 /***/ }),
 
-/***/ "./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml":
-/*!***********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml ***!
-  \***********************************************************************************************************************************************************************************************************************************************/
+/***/ "./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FNavigationBar%2FNavigationBar.vue&lang=yaml":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FNavigationBar%2FNavigationBar.vue&lang=yaml ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/@kazupon/vue-i18n-loader/lib!./NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CNavigationBar%5CNavigationBar.vue&lang=yaml");
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CNavigationBar_5CNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FNavigationBar_2FNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/@kazupon/vue-i18n-loader/lib!./NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FNavigationBar%2FNavigationBar.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/NavigationBar/NavigationBar.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FNavigationBar%2FNavigationBar.vue&lang=yaml");
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FNavigationBar_2FNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FNavigationBar_2FNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FNavigationBar_2FNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FNavigationBar_2FNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_NavigationBar_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FNavigationBar_2FNavigationBar_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 

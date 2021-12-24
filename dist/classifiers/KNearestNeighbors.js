@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["classifiers/KNearestNeighbors"],{
 
-/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml":
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -62,19 +62,15 @@ var render = function() {
           !_vm.isModelBuilded
             ? [
                 _vm._v(
-                  "\r\n        " +
+                  "\n        " +
                     _vm._s(_vm.$t("Build Model and Predict")) +
-                    "\r\n      "
+                    "\n      "
                 )
               ]
             : _vm._e(),
           _vm._v(" "),
           _vm.isModelBuilded
-            ? [
-                _vm._v(
-                  "\r\n        " + _vm._s(_vm.$t("Predict")) + "\r\n      "
-                )
-              ]
+            ? [_vm._v("\n        " + _vm._s(_vm.$t("Predict")) + "\n      ")]
             : _vm._e()
         ],
         2
@@ -90,7 +86,7 @@ var render = function() {
               attrs: { type: "button" },
               on: { click: _vm.showModel }
             },
-            [_vm._v("\r\n      " + _vm._s(_vm.$t("Show Model")) + "\r\n    ")]
+            [_vm._v("\n      " + _vm._s(_vm.$t("Show Model")) + "\n    ")]
           )
         ])
       : _vm._e()
@@ -241,7 +237,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _KNearestNeighbors_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./KNearestNeighbors.js?vue&type=script&lang=js& */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.js?vue&type=script&lang=js&?fa1d");
 /* empty/unused harmony star reexport *//* harmony import */ var _KNearestNeighbors_less_vue_type_style_index_0_id_1295245c_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true& */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml");
+/* harmony import */ var _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml");
 
 
 
@@ -263,7 +259,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* custom blocks */
 
-if (typeof _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
+if (typeof _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
 
 /* hot reload */
 if (false) { var api; }
@@ -272,19 +268,19 @@ component.options.__file = "src/components/ConfigurationPanel/KNearestNeighbors/
 
 /***/ }),
 
-/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/@kazupon/vue-i18n-loader/lib!./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml");
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/@kazupon/vue-i18n-loader/lib!./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fvar%2Fhost%2Fmedia%2Fremovable%2FMicroSD%2FNetBeansProjects%2F%5Bhtml-api%5D%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml");
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fvar_2Fhost_2Fmedia_2Fremovable_2FMicroSD_2FNetBeansProjects_2F_5Bhtml_api_5D_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -473,6 +469,10 @@ __webpack_require__.r(__webpack_exports__);
         unknowns.push(set)
       }
     })
+    
+    if (neighbors.length === 0) {
+      neighbors = unknowns
+    }
     
     //console.log(neighbors)
     //console.log(unknowns)
