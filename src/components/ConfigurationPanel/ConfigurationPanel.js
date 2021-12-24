@@ -5,16 +5,25 @@ let ConfigurationPanel = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
-      classifier: 'DecisionTree',
-      classifierList: ['DecisionTree'],
+      //classifier: 'DecisionTree',
+      classifier: 'KNearestNeighbors',
+      classifierList: [
+        'DecisionTree',
+        'KNearestNeighbors',
+      ],
       modelWindow: null
     }
   },
   components: {
     DecisionTree: () => import(/* webpackChunkName: "classifiers/DecisionTree" */ './DecisionTree/DecisionTree.vue'),
+    KNearestNeighbors: () => import(/* webpackChunkName: "classifiers/KNearestNeighbors" */ './KNearestNeighbors/KNearestNeighbors.vue'),
     EvaluationPanel
   },
-  watch: {},  // ConfigurationPanelWatch
+  watch: {
+    classifier () {
+      
+    },
+  },  // ConfigurationPanelWatch
   computed: {}, // ConfigurationPanelComputed.js
   mounted() {
     

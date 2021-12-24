@@ -40,6 +40,8 @@ var dt = (function () {
   }
 
   DecisionTree.prototype.treeToHtml = async function (tree) {
+    //console.log('pl')
+    
     //let tree = this.root
     if (!tree) {
       tree = this.root

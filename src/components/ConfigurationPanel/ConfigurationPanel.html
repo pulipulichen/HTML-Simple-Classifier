@@ -34,6 +34,14 @@
     v-bind:utils="utils">
   </DecisionTree>
   
+  <KNearestNeighbors 
+    v-if="classifier === 'KNearestNeighbors'"
+    ref="Classifier"
+    v-bind:config="config"
+    v-bind:localConfig="localConfig"
+    v-bind:utils="utils">
+  </KNearestNeighbors>
+  
   <EvaluationPanel 
     ref="EvaluationPanel"
     v-bind:config="config"

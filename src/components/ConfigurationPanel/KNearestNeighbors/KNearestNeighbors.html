@@ -1,0 +1,24 @@
+<div class="DecisionTree">
+  <div class="ui field">
+    <button type="button"
+            class="ui primary fluid button"
+            v-bind:class="{'disabled': !$parent.isNeedPredict}"
+            v-on:click="start">
+      <template v-if="!isModelBuilded">
+        {{ $t('Build Model and Predict') }}
+      </template>
+      <template v-if="isModelBuilded">
+        {{ $t('Predict') }}
+      </template>
+    </button>
+  </div>
+  
+  <div class="ui field" v-if="isModelBuilded">
+    <button type="button"
+            class="ui primary fluid button"
+            v-on:click="showModel">
+      {{ $t('Show Model') }}
+    </button>
+  </div>
+  
+</div>
