@@ -19,11 +19,7 @@ let ConfigurationPanel = {
     KNearestNeighbors: () => import(/* webpackChunkName: "classifiers/KNearestNeighbors" */ './KNearestNeighbors/KNearestNeighbors.vue'),
     EvaluationPanel
   },
-  watch: {
-    classifier () {
-      
-    },
-  },  // ConfigurationPanelWatch
+  watch: {},  // ConfigurationPanelWatch
   computed: {}, // ConfigurationPanelComputed.js
   mounted() {
     

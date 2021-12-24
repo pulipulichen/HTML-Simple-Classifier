@@ -7,6 +7,13 @@ export default function (ConfigurationPanel) {
     this.localConfig.modelJSON = null
   }
   
+  ConfigurationPanel.watch['classifier'] = function () {
+    this.localConfig.modelJSON = null
+    
+    this.clearPrediction()
+  }
+  
+  
   ConfigurationPanel.watch['localConfig.modelJSON'] = function () {
     this.resetModelEvaluation()
 

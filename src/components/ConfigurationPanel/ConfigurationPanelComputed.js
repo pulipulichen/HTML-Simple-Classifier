@@ -17,8 +17,6 @@ export default function (ConfigurationPanel) {
       if (this.utils.DataUtils.isMissingData(predict)) {
         return true
       }
-      
-      
     }
     return false
   }

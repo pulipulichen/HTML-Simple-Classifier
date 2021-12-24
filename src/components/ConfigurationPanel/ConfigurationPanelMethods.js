@@ -7,4 +7,13 @@ export default function (ConfigurationPanel) {
     
     this.$refs.Classifier.startPredict()
   }
+  
+  ConfigurationPanel.methods.clearPrediction = async function () {
+    /*
+    for (let len = this.localConfig.data.length - 1, i = len; i > 0; i--) {
+      this.localConfig.data[(len - i)][1] = ''
+    }
+    */
+    this.$parent.$refs.DataTable.clearPredictColumn()
+  }
 }

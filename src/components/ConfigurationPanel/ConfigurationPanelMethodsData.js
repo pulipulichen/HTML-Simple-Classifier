@@ -97,6 +97,67 @@ export default function (ConfigurationPanel) {
     }
   }
   
+  ConfigurationPanel.methods.getVectorData = async function () {
+    let json = await this.getJSONData()
+    
+    // ---------------------------------------------------
+    
+    let testSet = json.testSet
+    let testVector = []
+    
+    let fieldKeyToIndex = null
+    let fieldValueToIndex = {}
+    for (let i = 0; i < testSet.length; i++) {
+      let set = testSet[i]
+      
+      if (!fieldKeyToIndex) {
+        fieldKeyToIndex = Object.keys(set)
+      }
+      
+      let vector = []
+      fieldKeyToIndex.forEach((key) => {
+        let value = set[key]
+        if (!fieldValueToIndex[key]) {
+          fieldValueToIndex[key] = []
+        }
+        if (fieldValueToIndex[key].indexOf(value) === -1) {
+          fieldValueToIndex[key].push(value)
+        }
+        vector.push(fieldValueToIndex[key].indexOf(value))
+      })
+      
+      testVector.push(vector)
+      
+      if (i % 1000 === 5) {
+        console.log('getVectorData sleep i', i)
+        await this.utils.AsyncUtils.sleep(0)
+      }
+    }
+    //console.log(testVector)
+    json.testSet = testVector
+    json.testSetFieldDict = fieldKeyToIndex
+    json.testSetFieldValueDict = fieldValueToIndex
+    
+    // ---------------------------------------------------
+    
+    //let trainSetClasses = json.trainSetClasses
+    let fieldTrainValueToIndex = []
+    console.log(json.trainSetClasses)
+    json.trainSetClasses = json.trainSetClasses.map(value => {
+      console.log(value)
+      if (fieldTrainValueToIndex.indexOf(value) === -1) {
+        fieldTrainValueToIndex.push(value)
+      }
+      return fieldTrainValueToIndex.indexOf(value)
+    })
+    json.trainSetClassesDict = fieldTrainValueToIndex
+    console.log(json.trainSetClassesDict)
+    
+    // ---------------------------------------------------
+    
+    return json
+  }
+  
   ConfigurationPanel.methods.setPredictResults = async function (predictResults) {
     let data = this.localConfig.data
     for (let len = data.length, i = len; i > 0; i--) {
