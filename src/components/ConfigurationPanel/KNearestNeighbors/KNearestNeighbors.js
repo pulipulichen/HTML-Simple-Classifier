@@ -5,7 +5,7 @@ let KNearestNeighbors = {
     return {
       model: null,
       dataToShow: null,
-      unknownsPrediction: []
+      unknownsPrediction: [],
     }
   },
   watch: {

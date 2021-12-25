@@ -69,6 +69,7 @@ export default function (DecisionTree) {
     }
     
     this.config.loadingProgress = 1
+    this.config.modelBuildedTime = (new Date()).getTime()
   }
   
   DecisionTree.methods.buildModel = function (trainSet) {

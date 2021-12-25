@@ -19,7 +19,8 @@ let config = {
     'iris.ods',
     'labor.csv'
   ],
-  isDataProcessing: false
+  isDataProcessing: false,
+  modelBuildedTime: null
   //demoData: 'weather.play.ods'
   //demoData: 'labor.csv'
   //demoData: 'unbalanced.csv'

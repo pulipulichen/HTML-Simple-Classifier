@@ -14,23 +14,17 @@ export default function (DecisionTree) {
     //console.log()
     let title = this.$t('Decision Tree') + ` (` + (new Date()).mmddhhmm() + ')'
     
+    let modelWindow = this.utils.PopupUtils.open({
+      windowName: 'DecisionTreeModelShow' + this.config.modelBuildedTime,
+      cssURL: this.modelCSSURL,
+      bodyHTML,
+      size: 'right',
+      //size: 'left',
+      title
+    })
+
+    modelWindow.scrollToTop()
+    modelWindow.scrollToCenter()
     
-    
-    if (this.$parent.isModelWindowOpened === false) {
-      this.$parent.modelWindow = this.utils.PopupUtils.open({
-        windowName: 'DecisionTreeModelShow' + (new Date()).mmddhhmm(),
-        cssURL: this.modelCSSURL,
-        bodyHTML,
-        size: 'right',
-        title
-      })
-    }
-    else {
-      this.$parent.modelWindow.setHTML(bodyHTML)
-      this.$parent.modelWindow.setTitle(title)
-    }
-    
-    this.$parent.modelWindow.scrollToTop()
-    this.$parent.modelWindow.scrollToCenter()
   }
 }

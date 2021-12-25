@@ -89,6 +89,7 @@ export default function (KNearestNeighbors) {
     }
     
     this.config.loadingProgress = 1
+    this.config.modelBuildedTime = (new Date()).getTime()
   }
   
   KNearestNeighbors.methods.buildModel = function (data){
