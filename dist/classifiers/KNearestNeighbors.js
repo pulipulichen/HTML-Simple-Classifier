@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["classifiers/KNearestNeighbors"],{
 
-/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml":
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -50,36 +50,49 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "DecisionTree" }, [
-    _c("div", { staticClass: "ui field" }, [
-      _c(
-        "button",
-        {
-          staticClass: "ui primary fluid button",
-          attrs: { type: "button" },
-          on: { click: _vm.start }
-        },
-        [
-          !_vm.isModelBuilded
-            ? [
+    !_vm.isModelBuilded
+      ? _c("div", { staticClass: "ui field" }, [
+          _c(
+            "button",
+            {
+              staticClass: "ui primary fluid button",
+              attrs: { type: "button" },
+              on: { click: _vm.start }
+            },
+            [
+              [
                 _vm._v(
                   "\r\n        " +
                     _vm._s(_vm.$t("Build Model and Predict")) +
                     "\r\n      "
                 )
               ]
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.isModelBuilded
-            ? [
+            ],
+            2
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.isModelBuilded && !_vm.isModelUnsupervised
+      ? _c("div", { staticClass: "ui field" }, [
+          _c(
+            "button",
+            {
+              staticClass: "ui primary fluid button",
+              attrs: { type: "button" },
+              on: { click: _vm.start }
+            },
+            [
+              [
                 _vm._v(
                   "\r\n        " + _vm._s(_vm.$t("Predict")) + "\r\n      "
                 )
               ]
-            : _vm._e()
-        ],
-        2
-      )
-    ]),
+            ],
+            2
+          )
+        ])
+      : _vm._e(),
     _vm._v(" "),
     _vm.isModelBuilded
       ? _c("div", { staticClass: "ui field" }, [
@@ -174,6 +187,9 @@ let KNearestNeighbors = {
     isModelBuilded () {
       return (this.model !== null)
     },
+    isModelUnsupervised () {
+      return (this.model !== null && this.model === 'unsupervised')
+    },
   },
   mounted() {
 //    setTimeout(() => {
@@ -241,7 +257,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _KNearestNeighbors_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./KNearestNeighbors.js?vue&type=script&lang=js& */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.js?vue&type=script&lang=js&?fa1d");
 /* empty/unused harmony star reexport *//* harmony import */ var _KNearestNeighbors_less_vue_type_style_index_0_id_1295245c_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true& */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml");
+/* harmony import */ var _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml");
 
 
 
@@ -263,7 +279,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* custom blocks */
 
-if (typeof _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
+if (typeof _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
 
 /* hot reload */
 if (false) { var api; }
@@ -272,19 +288,19 @@ component.options.__file = "src/components/ConfigurationPanel/KNearestNeighbors/
 
 /***/ }),
 
-/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/@kazupon/vue-i18n-loader/lib!./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml");
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/@kazupon/vue-i18n-loader/lib!./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml");
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -318,7 +334,7 @@ __webpack_require__.r(__webpack_exports__);
     
     if (data.trainSetClasses.length === 0) {
       console.error('No trainSetClasses')
-      throw Error('No trainSetClasses')
+      //throw Error('No trainSetClasses')
     }
     
     console.log(data)
@@ -329,54 +345,60 @@ __webpack_require__.r(__webpack_exports__);
     //console.log(data.trainSet[0])
     
     console.log('start', 3)
-    if (!this.localConfig.modelJSON) {
-      this.model = this.buildModel(data)
-      this.localConfig.modelJSON = this.model
-    }
+    if (data.trainSetClasses.length > 0) {
+      if (!this.localConfig.modelJSON) {
+        this.model = this.buildModel(data)
+        this.localConfig.modelJSON = this.model
+      }
+      else {
+        this.model = ml_knn__WEBPACK_IMPORTED_MODULE_0__["default"].load(this.localConfig.modelJSON)
+      }
+
+      //console.log(this.model.toJSON())
+
+      //console.log(this.model)
+      console.log('start', 5)
+
+      this.config.loadingProgress = 0.5
+
+      console.log('start', 9)
+      //console.log(data.testSet)
+      let predictVector = await this.getPredictResultsVector(this.model, data)
+      let predictResults = await this.getPredictResultsValue(data, predictVector)
+      console.log(predictVector)
+      if (predictResults[0] === 'undefined') {
+        this.config.loadingProgress = 1
+        console.error('predict is undefined')
+        return false
+      }
+
+      console.log('start', 10)
+      this.config.loadingProgress = 0.75
+
+      if (this.$parent.hasModelEvaluated === false) {
+        let testSetRowIndexes = data.testSetRowIndexes
+        this.unknownsPrediction = []
+        let predictVectorToEvalute = predictVector.filter((value, i) => {
+          let notMatch = (testSetRowIndexes.indexOf(i) === -1)
+
+          if (notMatch === false) {
+            this.unknownsPrediction.push(value)
+          }
+
+          return notMatch
+        })
+        this.evaluationResults(data.trainSetClasses, predictVectorToEvalute)
+      }
+
+      //console.log(predictResults)
+      this.$parent.setPredictResults(predictResults)
+
+      this.config.loadingProgress = 0.9
+
+    } // if (data.trainSetClasses.length > 0) {
     else {
-      this.model = ml_knn__WEBPACK_IMPORTED_MODULE_0__["default"].load(this.localConfig.modelJSON)
+      this.model = 'unsupervised'
     }
-
-    //console.log(this.model.toJSON())
-
-    //console.log(this.model)
-    console.log('start', 5)
-
-    this.config.loadingProgress = 0.5
-    
-    console.log('start', 9)
-    //console.log(data.testSet)
-    let predictVector = await this.getPredictResultsVector(this.model, data)
-    let predictResults = await this.getPredictResultsValue(data, predictVector)
-    console.log(predictVector)
-    if (predictResults[0] === 'undefined') {
-      this.config.loadingProgress = 1
-      console.error('predict is undefined')
-      return false
-    }
-    
-    console.log('start', 10)
-    this.config.loadingProgress = 0.75
-    
-    if (this.$parent.hasModelEvaluated === false) {
-      let testSetRowIndexes = data.testSetRowIndexes
-      this.unknownsPrediction = []
-      let predictVectorToEvalute = predictVector.filter((value, i) => {
-        let notMatch = (testSetRowIndexes.indexOf(i) === -1)
-        
-        if (notMatch === false) {
-          this.unknownsPrediction.push(value)
-        }
-        
-        return notMatch
-      })
-      this.evaluationResults(data.trainSetClasses, predictVectorToEvalute)
-    }
-    
-    //console.log(predictResults)
-    this.$parent.setPredictResults(predictResults)
-    
-    this.config.loadingProgress = 0.9
     
     if (this.$parent.isModelWindowOpened) {
       this.showModel()
@@ -390,8 +412,14 @@ __webpack_require__.r(__webpack_exports__);
     let dataset = data.testSet.filter((row, i) => {
       return (testSetRowIndexes.indexOf(i) === -1)
     })
+    
     console.log(dataset)
     let predictions = data.trainSetClasses
+    
+    if (dataset.length === 0) {
+      dataset = data.testSet
+      predictions = dataset.map(item => 'unknown')
+    }
     
     if (dataset.length !== predictions.length) {
       console.error('length is not match')
@@ -476,6 +504,10 @@ __webpack_require__.r(__webpack_exports__);
     
     //console.log(neighbors)
     //console.log(unknowns)
+    if (neighbors.length === 0) {
+      neighbors = unknowns
+    }
+    
     // --------------------------
     let distanceMatrix = unknowns.map(unknownFeature => {
       let maxDistance = null
@@ -507,9 +539,14 @@ __webpack_require__.r(__webpack_exports__);
     
     // --------------------------
     
+    let tableHeaderUnknownColspan = 2
+    if (this.model === 'unsupervised') {
+      tableHeaderUnknownColspan = 1
+    }
+    
     let tableHeader = `<thead>
   <tr>
-    <th rowspan="2" colspan="2" valign="bottom">${this.$t('Unknowns')}</th>
+    <th rowspan="2" colspan="${tableHeaderUnknownColspan}" valign="bottom">${this.$t('Unknowns')}</th>
     <th colspan="${colorMatrix[0].length}">${this.$t('Neighbors')}</th>
   </tr>
   <tr>${colorMatrix[0].map((value, i) => `<th>${i+1}</th>`).join('')}</tr>
@@ -519,9 +556,13 @@ __webpack_require__.r(__webpack_exports__);
     
     let tableBody = `<tbody>
 ${colorMatrix.map((row, i) => {
+  let thPrediection = `<th>${trainSetClassesDict[this.unknownsPrediction[i]]}</th>`
+  if (this.model === 'unsupervised') {
+    thPrediection = ''
+  }
   return `<tr>
-  <th>${unknownSetRowIndex[i]}</th>
-  <th>${trainSetClassesDict[this.unknownsPrediction[i]]}</th>
+  <th>${(unknownSetRowIndex[i])+1}</th>
+  ${thPrediection}
   ${row.map((color, j) => {
     let d = distanceMatrix[i][j]
     let dText = d
@@ -555,6 +596,7 @@ ${colorMatrix.map((row, i) => {
         cssURL: this.modelCSSURL,
         bodyHTML,
         size: 'right',
+        //size: 'left',
         title
       })
     }

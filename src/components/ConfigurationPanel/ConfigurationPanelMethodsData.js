@@ -152,7 +152,7 @@ export default function (ConfigurationPanel) {
     //console.log(json.trainSetClasses)
     if (json.trainSetClasses.length === 0) {
       console.error('No trainSetClasses')
-      throw Error('No trainSetClasses')
+      //throw Error('No trainSetClasses')
     }
     
     json.trainSetClasses = json.trainSetClasses.map(value => {

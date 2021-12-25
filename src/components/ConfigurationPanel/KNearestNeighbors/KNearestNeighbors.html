@@ -1,12 +1,21 @@
 <div class="DecisionTree">
-  <div class="ui field">
+  <div class="ui field"
+       v-if="!isModelBuilded">
     <button type="button"
             class="ui primary fluid button"
             v-on:click="start">
-      <template v-if="!isModelBuilded">
+      <template>
         {{ $t('Build Model and Predict') }}
       </template>
-      <template v-if="isModelBuilded">
+    </button>
+  </div>
+  
+  <div class="ui field"
+       v-if="isModelBuilded && !isModelUnsupervised" >
+    <button type="button"
+            class="ui primary fluid button"
+            v-on:click="start">
+      <template>
         {{ $t('Predict') }}
       </template>
     </button>

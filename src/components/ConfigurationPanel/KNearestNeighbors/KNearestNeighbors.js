@@ -17,6 +17,9 @@ let KNearestNeighbors = {
     isModelBuilded () {
       return (this.model !== null)
     },
+    isModelUnsupervised () {
+      return (this.model !== null && this.model === 'unsupervised')
+    },
   },
   mounted() {
 //    setTimeout(() => {

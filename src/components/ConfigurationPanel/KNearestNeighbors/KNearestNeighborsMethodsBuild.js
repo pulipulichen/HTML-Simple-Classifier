@@ -18,7 +18,7 @@ export default function (KNearestNeighbors) {
     
     if (data.trainSetClasses.length === 0) {
       console.error('No trainSetClasses')
-      throw Error('No trainSetClasses')
+      //throw Error('No trainSetClasses')
     }
     
     console.log(data)
@@ -29,54 +29,60 @@ export default function (KNearestNeighbors) {
     //console.log(data.trainSet[0])
     
     console.log('start', 3)
-    if (!this.localConfig.modelJSON) {
-      this.model = this.buildModel(data)
-      this.localConfig.modelJSON = this.model
-    }
+    if (data.trainSetClasses.length > 0) {
+      if (!this.localConfig.modelJSON) {
+        this.model = this.buildModel(data)
+        this.localConfig.modelJSON = this.model
+      }
+      else {
+        this.model = KNN.load(this.localConfig.modelJSON)
+      }
+
+      //console.log(this.model.toJSON())
+
+      //console.log(this.model)
+      console.log('start', 5)
+
+      this.config.loadingProgress = 0.5
+
+      console.log('start', 9)
+      //console.log(data.testSet)
+      let predictVector = await this.getPredictResultsVector(this.model, data)
+      let predictResults = await this.getPredictResultsValue(data, predictVector)
+      console.log(predictVector)
+      if (predictResults[0] === 'undefined') {
+        this.config.loadingProgress = 1
+        console.error('predict is undefined')
+        return false
+      }
+
+      console.log('start', 10)
+      this.config.loadingProgress = 0.75
+
+      if (this.$parent.hasModelEvaluated === false) {
+        let testSetRowIndexes = data.testSetRowIndexes
+        this.unknownsPrediction = []
+        let predictVectorToEvalute = predictVector.filter((value, i) => {
+          let notMatch = (testSetRowIndexes.indexOf(i) === -1)
+
+          if (notMatch === false) {
+            this.unknownsPrediction.push(value)
+          }
+
+          return notMatch
+        })
+        this.evaluationResults(data.trainSetClasses, predictVectorToEvalute)
+      }
+
+      //console.log(predictResults)
+      this.$parent.setPredictResults(predictResults)
+
+      this.config.loadingProgress = 0.9
+
+    } // if (data.trainSetClasses.length > 0) {
     else {
-      this.model = KNN.load(this.localConfig.modelJSON)
+      this.model = 'unsupervised'
     }
-
-    //console.log(this.model.toJSON())
-
-    //console.log(this.model)
-    console.log('start', 5)
-
-    this.config.loadingProgress = 0.5
-    
-    console.log('start', 9)
-    //console.log(data.testSet)
-    let predictVector = await this.getPredictResultsVector(this.model, data)
-    let predictResults = await this.getPredictResultsValue(data, predictVector)
-    console.log(predictVector)
-    if (predictResults[0] === 'undefined') {
-      this.config.loadingProgress = 1
-      console.error('predict is undefined')
-      return false
-    }
-    
-    console.log('start', 10)
-    this.config.loadingProgress = 0.75
-    
-    if (this.$parent.hasModelEvaluated === false) {
-      let testSetRowIndexes = data.testSetRowIndexes
-      this.unknownsPrediction = []
-      let predictVectorToEvalute = predictVector.filter((value, i) => {
-        let notMatch = (testSetRowIndexes.indexOf(i) === -1)
-        
-        if (notMatch === false) {
-          this.unknownsPrediction.push(value)
-        }
-        
-        return notMatch
-      })
-      this.evaluationResults(data.trainSetClasses, predictVectorToEvalute)
-    }
-    
-    //console.log(predictResults)
-    this.$parent.setPredictResults(predictResults)
-    
-    this.config.loadingProgress = 0.9
     
     if (this.$parent.isModelWindowOpened) {
       this.showModel()
@@ -90,8 +96,14 @@ export default function (KNearestNeighbors) {
     let dataset = data.testSet.filter((row, i) => {
       return (testSetRowIndexes.indexOf(i) === -1)
     })
+    
     console.log(dataset)
     let predictions = data.trainSetClasses
+    
+    if (dataset.length === 0) {
+      dataset = data.testSet
+      predictions = dataset.map(item => 'unknown')
+    }
     
     if (dataset.length !== predictions.length) {
       console.error('length is not match')

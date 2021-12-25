@@ -28,6 +28,10 @@ export default function (KNearestNeighbors) {
     
     //console.log(neighbors)
     //console.log(unknowns)
+    if (neighbors.length === 0) {
+      neighbors = unknowns
+    }
+    
     // --------------------------
     let distanceMatrix = unknowns.map(unknownFeature => {
       let maxDistance = null
@@ -59,9 +63,14 @@ export default function (KNearestNeighbors) {
     
     // --------------------------
     
+    let tableHeaderUnknownColspan = 2
+    if (this.model === 'unsupervised') {
+      tableHeaderUnknownColspan = 1
+    }
+    
     let tableHeader = `<thead>
   <tr>
-    <th rowspan="2" colspan="2" valign="bottom">${this.$t('Unknowns')}</th>
+    <th rowspan="2" colspan="${tableHeaderUnknownColspan}" valign="bottom">${this.$t('Unknowns')}</th>
     <th colspan="${colorMatrix[0].length}">${this.$t('Neighbors')}</th>
   </tr>
   <tr>${colorMatrix[0].map((value, i) => `<th>${i+1}</th>`).join('')}</tr>
@@ -71,9 +80,13 @@ export default function (KNearestNeighbors) {
     
     let tableBody = `<tbody>
 ${colorMatrix.map((row, i) => {
+  let thPrediection = `<th>${trainSetClassesDict[this.unknownsPrediction[i]]}</th>`
+  if (this.model === 'unsupervised') {
+    thPrediection = ''
+  }
   return `<tr>
-  <th>${unknownSetRowIndex[i]}</th>
-  <th>${trainSetClassesDict[this.unknownsPrediction[i]]}</th>
+  <th>${(unknownSetRowIndex[i])+1}</th>
+  ${thPrediection}
   ${row.map((color, j) => {
     let d = distanceMatrix[i][j]
     let dText = d
@@ -107,6 +120,7 @@ ${colorMatrix.map((row, i) => {
         cssURL: this.modelCSSURL,
         bodyHTML,
         size: 'right',
+        //size: 'left',
         title
       })
     }
