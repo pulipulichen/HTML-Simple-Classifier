@@ -14,6 +14,7 @@
        v-if="isModelBuilded && !isModelUnsupervised" >
     <button type="button"
             class="ui primary fluid button"
+            v-bind:class="{'disabled': !$parent.isNeedPredict}"
             v-on:click="start">
       <template>
         {{ $t('Predict') }}

@@ -116,7 +116,7 @@ ${colorMatrix.map((row, i) => {
     
     if (this.$parent.isModelWindowOpened === false) {
       this.$parent.modelWindow = this.utils.PopupUtils.open({
-        windowName: 'KNNModelShow',
+        windowName: 'KNNModelShow' + (new Date()).mmddhhmm(),
         cssURL: this.modelCSSURL,
         bodyHTML,
         size: 'right',

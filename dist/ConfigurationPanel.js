@@ -834,10 +834,11 @@ __webpack_require__.r(__webpack_exports__);
     this.localConfig.modelJSON = null
   }
   
-  ConfigurationPanel.watch['classifier'] = function () {
+  ConfigurationPanel.watch['localConfig.classifier'] = function () {
+    
     this.localConfig.modelJSON = null
     this.localConfig.modelEvaluations = []
-    this.clearPrediction()
+    this.clearPrediction() 
   }
   
   

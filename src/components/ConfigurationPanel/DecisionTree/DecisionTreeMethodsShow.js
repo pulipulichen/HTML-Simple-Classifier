@@ -18,7 +18,7 @@ export default function (DecisionTree) {
     
     if (this.$parent.isModelWindowOpened === false) {
       this.$parent.modelWindow = this.utils.PopupUtils.open({
-        windowName: 'DecisionTreeModelShow',
+        windowName: 'DecisionTreeModelShow' + (new Date()).mmddhhmm(),
         cssURL: this.modelCSSURL,
         bodyHTML,
         size: 'right',
