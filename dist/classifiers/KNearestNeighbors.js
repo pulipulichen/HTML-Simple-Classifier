@@ -602,7 +602,7 @@ ${colorMatrix.map((row, i) => {
         let dText = d
         dText = Math.round(dText * 100) + '%'
 
-        if (d > 0.5) {
+        if (d > 0.7 || d < 0.3) {
           return `<td style="text-align:center;background-color: ${color}; color: white">${dText}</td>`
         } else {
           return `<td style="text-align:center;background-color: ${color}">${dText}</td>`
@@ -641,9 +641,9 @@ ${colorMatrix.map((row, i) => {
    * https://stackoverflow.com/a/27263918/6645399
    */
   function heatMapColorforValue(value) {
-    //var h = (1.0 - value) * 240
-    //return "hsl(" + h + ", 100%, 50%)";
-    return `rgba(22, 160, 133, ${value})`
+    var h = (1.0 - value) * 240
+    return "hsl(" + h + ", 100%, 50%)";
+    //return `rgba(22, 160, 133, ${value})`
     // rgb(22, 160, 133)
   }
 });
