@@ -15,14 +15,18 @@ export default function (KNearestNeighbors) {
     let unknownSetRowIndex = this.dataToShow.testSetRowIndexes
 
     let neighbors = []
+    let neighborsID = []
     let unknowns = []
+    let unknownsID = []
     //console.log(unknownSetRowIndex)
 
     this.dataToShow.testSet.forEach((set, i) => {
       if (unknownSetRowIndex.indexOf(i) === -1) {
         neighbors.push(set)
+        neighborsID.push(i)
       } else {
         unknowns.push(set)
+        unknownsID.push(i)
       }
     })
 
@@ -30,6 +34,7 @@ export default function (KNearestNeighbors) {
     //console.log(unknowns)
     if (neighbors.length === 0) {
       neighbors = unknowns
+      neighborsID = unknownsID
     }
 
     // --------------------------
@@ -73,7 +78,7 @@ export default function (KNearestNeighbors) {
     <th rowspan="2" colspan="${tableHeaderUnknownColspan}" valign="bottom">${this.$t('Unknowns')}</th>
     <th colspan="${colorMatrix[0].length}">${this.$t('Neighbors')}</th>
   </tr>
-  <tr>${colorMatrix[0].map((value, i) => `<th>${i + 1}</th>`).join('')}</tr>
+  <tr>${colorMatrix[0].map((value, i) => `<th>${neighborsID[i] + 1}</th>`).join('')}</tr>
 </thead>`
 
     let trainSetClassesDict = this.dataToShow.trainSetClassesDict
