@@ -1,4 +1,11 @@
 <div class="DecisionTree">
+  <div class="field">
+    <label for="KNearestNeighborsOptionsK">{{ $t('K-nearest neighbor') }}</label>
+    <input type="number" min="2" 
+           id="KNearestNeighborsOptionsK"
+           v-model="localConfig.KNearestNeighborsOptionsK" />
+  </div>
+  
   <div class="ui field"
        v-if="!isModelBuilded">
     <button type="button"

@@ -14,7 +14,9 @@ let localConfig = {
   modelJSON: null,
   modelEvaluations: [],
   
-  searchKeyword: ''
+  searchKeyword: '',
+  
+  KNearestNeighborsOptionsK: 3
 }
 
 export default localConfig

@@ -1,1 +1,690 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{204:function(module,exports){eval('module.exports = function (Component) {\n  Component.options.__i18n = Component.options.__i18n || []\n  Component.options.__i18n.push(\'{"en":{"TEST_MESSAGE":"Test Message"},"zh-TW":{"TEST_MESSAGE":"測試訊息"}}\')\n  delete Component.options._Ctor\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjA0LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29uZmlndXJhdGlvblBhbmVsL0tOZWFyZXN0TmVpZ2hib3JzL0tOZWFyZXN0TmVpZ2hib3JzLnlhbWw/ZDg4MyJdLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uIChDb21wb25lbnQpIHtcbiAgQ29tcG9uZW50Lm9wdGlvbnMuX19pMThuID0gQ29tcG9uZW50Lm9wdGlvbnMuX19pMThuIHx8IFtdXG4gIENvbXBvbmVudC5vcHRpb25zLl9faTE4bi5wdXNoKCd7XCJlblwiOntcIlRFU1RfTUVTU0FHRVwiOlwiVGVzdCBNZXNzYWdlXCJ9LFwiemgtVFdcIjp7XCJURVNUX01FU1NBR0VcIjpcIua4rOippuioiuaBr1wifX0nKVxuICBkZWxldGUgQ29tcG9uZW50Lm9wdGlvbnMuX0N0b3Jcbn1cbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTsiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///204\n')},377:function(module,__webpack_exports__,__webpack_require__){"use strict";eval('__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "squaredEuclidean", function() { return squaredEuclidean; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "euclidean", function() { return euclidean; });\nfunction squaredEuclidean(p, q) {\r\n    let d = 0;\r\n    for (let i = 0; i < p.length; i++) {\r\n        d += (p[i] - q[i]) * (p[i] - q[i]);\r\n    }\r\n    return d;\r\n}\r\nfunction euclidean(p, q) {\r\n    return Math.sqrt(squaredEuclidean(p, q));\r\n}\r\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzc3LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL21sLWRpc3RhbmNlLWV1Y2xpZGVhbi9saWItZXM2L2V1Y2xpZGVhbi5qcz81OWU3Il0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBmdW5jdGlvbiBzcXVhcmVkRXVjbGlkZWFuKHAsIHEpIHtcclxuICAgIGxldCBkID0gMDtcclxuICAgIGZvciAobGV0IGkgPSAwOyBpIDwgcC5sZW5ndGg7IGkrKykge1xyXG4gICAgICAgIGQgKz0gKHBbaV0gLSBxW2ldKSAqIChwW2ldIC0gcVtpXSk7XHJcbiAgICB9XHJcbiAgICByZXR1cm4gZDtcclxufVxyXG5leHBvcnQgZnVuY3Rpb24gZXVjbGlkZWFuKHAsIHEpIHtcclxuICAgIHJldHVybiBNYXRoLnNxcnQoc3F1YXJlZEV1Y2xpZGVhbihwLCBxKSk7XHJcbn1cclxuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTsiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///377\n')},378:function(module,exports,__webpack_require__){eval("var api = __webpack_require__(5);\n            var content = __webpack_require__(485);\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzc4LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29uZmlndXJhdGlvblBhbmVsL0tOZWFyZXN0TmVpZ2hib3JzL0tOZWFyZXN0TmVpZ2hib3JzLmxlc3M/ODJiOCJdLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgYXBpID0gcmVxdWlyZShcIiEuLi8uLi8uLi8uLi9ub2RlX21vZHVsZXMvc3R5bGUtbG9hZGVyL2Rpc3QvcnVudGltZS9pbmplY3RTdHlsZXNJbnRvU3R5bGVUYWcuanNcIik7XG4gICAgICAgICAgICB2YXIgY29udGVudCA9IHJlcXVpcmUoXCIhIS4uLy4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMSEuLi8uLi8uLi8uLi9ub2RlX21vZHVsZXMvdnVlLWxvYWRlci9saWIvbG9hZGVycy9zdHlsZVBvc3RMb2FkZXIuanMhLi4vLi4vLi4vLi4vbm9kZV9tb2R1bGVzL3Bvc3Rjc3MtbG9hZGVyL3NyYy9pbmRleC5qcz8/cmVmLS0xLTIhLi4vLi4vLi4vLi4vbm9kZV9tb2R1bGVzL2xlc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMyEuL0tOZWFyZXN0TmVpZ2hib3JzLmxlc3M/dnVlJnR5cGU9c3R5bGUmaW5kZXg9MCZpZD0xMjk1MjQ1YyZsYW5nPWxlc3Mmc2NvcGVkPXRydWUmXCIpO1xuXG4gICAgICAgICAgICBjb250ZW50ID0gY29udGVudC5fX2VzTW9kdWxlID8gY29udGVudC5kZWZhdWx0IDogY29udGVudDtcblxuICAgICAgICAgICAgaWYgKHR5cGVvZiBjb250ZW50ID09PSAnc3RyaW5nJykge1xuICAgICAgICAgICAgICBjb250ZW50ID0gW1ttb2R1bGUuaWQsIGNvbnRlbnQsICcnXV07XG4gICAgICAgICAgICB9XG5cbnZhciBvcHRpb25zID0ge307XG5cbm9wdGlvbnMuaW5zZXJ0ID0gXCJoZWFkXCI7XG5vcHRpb25zLnNpbmdsZXRvbiA9IGZhbHNlO1xuXG52YXIgdXBkYXRlID0gYXBpKGNvbnRlbnQsIG9wdGlvbnMpO1xuXG5cblxubW9kdWxlLmV4cG9ydHMgPSBjb250ZW50LmxvY2FscyB8fCB7fTsiXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///378\n")},484:function(module,__webpack_exports__,__webpack_require__){"use strict";eval("/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_ref_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_1_2_node_modules_less_loader_dist_cjs_js_ref_1_3_KNearestNeighbors_less_vue_type_style_index_0_id_1295245c_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(378);\n/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_ref_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_1_2_node_modules_less_loader_dist_cjs_js_ref_1_3_KNearestNeighbors_less_vue_type_style_index_0_id_1295245c_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_ref_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_1_2_node_modules_less_loader_dist_cjs_js_ref_1_3_KNearestNeighbors_less_vue_type_style_index_0_id_1295245c_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__);\n/* unused harmony reexport * */\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDg0LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29uZmlndXJhdGlvblBhbmVsL0tOZWFyZXN0TmVpZ2hib3JzL0tOZWFyZXN0TmVpZ2hib3JzLmxlc3M/OWUwYyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tIFwiLSEuLi8uLi8uLi8uLi9ub2RlX21vZHVsZXMvc3R5bGUtbG9hZGVyL2Rpc3QvY2pzLmpzIS4uLy4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMSEuLi8uLi8uLi8uLi9ub2RlX21vZHVsZXMvdnVlLWxvYWRlci9saWIvbG9hZGVycy9zdHlsZVBvc3RMb2FkZXIuanMhLi4vLi4vLi4vLi4vbm9kZV9tb2R1bGVzL3Bvc3Rjc3MtbG9hZGVyL3NyYy9pbmRleC5qcz8/cmVmLS0xLTIhLi4vLi4vLi4vLi4vbm9kZV9tb2R1bGVzL2xlc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMyEuL0tOZWFyZXN0TmVpZ2hib3JzLmxlc3M/dnVlJnR5cGU9c3R5bGUmaW5kZXg9MCZpZD0xMjk1MjQ1YyZsYW5nPWxlc3Mmc2NvcGVkPXRydWUmXCIiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTsiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///484\n")},485:function(module,exports,__webpack_require__){eval('// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);\nexports = ___CSS_LOADER_API_IMPORT___(true);\n// Module\nexports.push([module.i, "", "",{"version":3,"sources":[],"names":[],"mappings":"","file":"KNearestNeighbors.less"}]);\n// Exports\nmodule.exports = exports;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDg1LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29uZmlndXJhdGlvblBhbmVsL0tOZWFyZXN0TmVpZ2hib3JzL0tOZWFyZXN0TmVpZ2hib3JzLmxlc3M/YjkwZCJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBJbXBvcnRzXG52YXIgX19fQ1NTX0xPQURFUl9BUElfSU1QT1JUX19fID0gcmVxdWlyZShcIi4uLy4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvcnVudGltZS9hcGkuanNcIik7XG5leHBvcnRzID0gX19fQ1NTX0xPQURFUl9BUElfSU1QT1JUX19fKHRydWUpO1xuLy8gTW9kdWxlXG5leHBvcnRzLnB1c2goW21vZHVsZS5pZCwgXCJcIiwgXCJcIix7XCJ2ZXJzaW9uXCI6MyxcInNvdXJjZXNcIjpbXSxcIm5hbWVzXCI6W10sXCJtYXBwaW5nc1wiOlwiXCIsXCJmaWxlXCI6XCJLTmVhcmVzdE5laWdoYm9ycy5sZXNzXCJ9XSk7XG4vLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IGV4cG9ydHM7XG4iXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///485\n')},486:function(module,__webpack_exports__,__webpack_require__){"use strict";eval('/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(204);\n/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);\n /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); //# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDg2LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29uZmlndXJhdGlvblBhbmVsL0tOZWFyZXN0TmVpZ2hib3JzL0tOZWFyZXN0TmVpZ2hib3JzLnlhbWw/NWUzNyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgbW9kIGZyb20gXCItIS4uLy4uLy4uLy4uL25vZGVfbW9kdWxlcy9Aa2F6dXBvbi92dWUtaTE4bi1sb2FkZXIvbGliL2luZGV4LmpzIS4vS05lYXJlc3ROZWlnaGJvcnMueWFtbD92dWUmdHlwZT1jdXN0b20maW5kZXg9MCZibG9ja1R5cGU9aTE4biZpc3N1ZXJQYXRoPSUyRm1lZGlhJTJGcHVkZGluZyUyRkRBVEElMkZwdWRkaW5nJTJGQ29kZS1Qb3JqZWN0cyUyRmh0bWwtYXBpJTJGSFRNTC1TaW1wbGUtQ2xhc3NpZmllciUyRnNyYyUyRmNvbXBvbmVudHMlMkZDb25maWd1cmF0aW9uUGFuZWwlMkZLTmVhcmVzdE5laWdoYm9ycyUyRktOZWFyZXN0TmVpZ2hib3JzLnZ1ZSZsYW5nPXlhbWxcIjsgZXhwb3J0IGRlZmF1bHQgbW9kOyBleHBvcnQgKiBmcm9tIFwiLSEuLi8uLi8uLi8uLi9ub2RlX21vZHVsZXMvQGthenVwb24vdnVlLWkxOG4tbG9hZGVyL2xpYi9pbmRleC5qcyEuL0tOZWFyZXN0TmVpZ2hib3JzLnlhbWw/dnVlJnR5cGU9Y3VzdG9tJmluZGV4PTAmYmxvY2tUeXBlPWkxOG4maXNzdWVyUGF0aD0lMkZtZWRpYSUyRnB1ZGRpbmclMkZEQVRBJTJGcHVkZGluZyUyRkNvZGUtUG9yamVjdHMlMkZodG1sLWFwaSUyRkhUTUwtU2ltcGxlLUNsYXNzaWZpZXIlMkZzcmMlMkZjb21wb25lbnRzJTJGQ29uZmlndXJhdGlvblBhbmVsJTJGS05lYXJlc3ROZWlnaGJvcnMlMkZLTmVhcmVzdE5laWdoYm9ycy52dWUmbGFuZz15YW1sXCIiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///486\n')},513:function(module,__webpack_exports__,__webpack_require__){"use strict";eval('// ESM COMPAT FLAG\n__webpack_require__.r(__webpack_exports__);\n\n// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.html?vue&type=template&id=1295245c&scoped=true&\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c("div", { staticClass: "DecisionTree" }, [\n    !_vm.isModelBuilded\n      ? _c("div", { staticClass: "ui field" }, [\n          _c(\n            "button",\n            {\n              staticClass: "ui primary fluid button",\n              attrs: { type: "button" },\n              on: { click: _vm.start }\n            },\n            [\n              [\n                _vm._v(\n                  "\\r\\n        " +\n                    _vm._s(_vm.$t("Build Model and Predict")) +\n                    "\\r\\n      "\n                )\n              ]\n            ],\n            2\n          )\n        ])\n      : _vm._e(),\n    _vm._v(" "),\n    _vm.isModelBuilded && !_vm.isModelUnsupervised\n      ? _c("div", { staticClass: "ui field" }, [\n          _c(\n            "button",\n            {\n              staticClass: "ui primary fluid button",\n              class: { disabled: !_vm.$parent.isNeedPredict },\n              attrs: { type: "button" },\n              on: { click: _vm.start }\n            },\n            [\n              [\n                _vm._v(\n                  "\\r\\n        " + _vm._s(_vm.$t("Predict")) + "\\r\\n      "\n                )\n              ]\n            ],\n            2\n          )\n        ])\n      : _vm._e(),\n    _vm._v(" "),\n    _vm.isModelBuilded\n      ? _c("div", { staticClass: "ui field" }, [\n          _c(\n            "button",\n            {\n              staticClass: "ui primary fluid button",\n              attrs: { type: "button" },\n              on: { click: _vm.showModel }\n            },\n            [_vm._v("\\r\\n      " + _vm._s(_vm.$t("Show Model")) + "\\r\\n    ")]\n          )\n        ])\n      : _vm._e()\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n// CONCATENATED MODULE: ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.html?vue&type=template&id=1295245c&scoped=true&\n\n// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js\nvar asyncToGenerator = __webpack_require__(1);\nvar asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);\n\n// EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js\nvar regenerator = __webpack_require__(0);\nvar regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);\n\n// EXTERNAL MODULE: ./node_modules/ml-distance-euclidean/lib-es6/euclidean.js\nvar euclidean = __webpack_require__(377);\n\n// CONCATENATED MODULE: ./node_modules/ml-knn/src/KDTree.js\n/*\n * Original code from:\n *\n * k-d Tree JavaScript - V 1.01\n *\n * https://github.com/ubilabs/kd-tree-javascript\n *\n * @author Mircea Pricop <pricop@ubilabs.net>, 2012\n * @author Martin Kleppe <kleppe@ubilabs.net>, 2012\n * @author Ubilabs http://ubilabs.net, 2012\n * @license MIT License <http://www.opensource.org/licenses/mit-license.php>\n */\n\nfunction Node(obj, dimension, parent) {\n  this.obj = obj;\n  this.left = null;\n  this.right = null;\n  this.parent = parent;\n  this.dimension = dimension;\n}\n\nclass KDTree {\n  constructor(points, metric) {\n    // If points is not an array, assume we\'re loading a pre-built tree\n    if (!Array.isArray(points)) {\n      this.dimensions = points.dimensions;\n      this.root = points;\n      restoreParent(this.root);\n    } else {\n      this.dimensions = new Array(points[0].length);\n      for (var i = 0; i < this.dimensions.length; i++) {\n        this.dimensions[i] = i;\n      }\n      this.root = buildTree(points, 0, null, this.dimensions);\n    }\n    this.metric = metric;\n  }\n\n  // Convert to a JSON serializable structure; this just requires removing\n  // the `parent` property\n  toJSON() {\n    const result = toJSONImpl(this.root, true);\n    result.dimensions = this.dimensions;\n    return result;\n  }\n\n  nearest(point, maxNodes, maxDistance) {\n    const metric = this.metric;\n    const dimensions = this.dimensions;\n    var i;\n\n    const bestNodes = new BinaryHeap(function (e) {\n      return -e[1];\n    });\n\n    function nearestSearch(node) {\n      const dimension = dimensions[node.dimension];\n      const ownDistance = metric(point, node.obj);\n      const linearPoint = {};\n      var bestChild, linearDistance, otherChild, i;\n\n      function saveNode(node, distance) {\n        bestNodes.push([node, distance]);\n        if (bestNodes.size() > maxNodes) {\n          bestNodes.pop();\n        }\n      }\n\n      for (i = 0; i < dimensions.length; i += 1) {\n        if (i === node.dimension) {\n          linearPoint[dimensions[i]] = point[dimensions[i]];\n        } else {\n          linearPoint[dimensions[i]] = node.obj[dimensions[i]];\n        }\n      }\n\n      linearDistance = metric(linearPoint, node.obj);\n\n      if (node.right === null && node.left === null) {\n        if (bestNodes.size() < maxNodes || ownDistance < bestNodes.peek()[1]) {\n          saveNode(node, ownDistance);\n        }\n        return;\n      }\n\n      if (node.right === null) {\n        bestChild = node.left;\n      } else if (node.left === null) {\n        bestChild = node.right;\n      } else {\n        if (point[dimension] < node.obj[dimension]) {\n          bestChild = node.left;\n        } else {\n          bestChild = node.right;\n        }\n      }\n\n      nearestSearch(bestChild);\n\n      if (bestNodes.size() < maxNodes || ownDistance < bestNodes.peek()[1]) {\n        saveNode(node, ownDistance);\n      }\n\n      if (\n        bestNodes.size() < maxNodes ||\n        Math.abs(linearDistance) < bestNodes.peek()[1]\n      ) {\n        if (bestChild === node.left) {\n          otherChild = node.right;\n        } else {\n          otherChild = node.left;\n        }\n        if (otherChild !== null) {\n          nearestSearch(otherChild);\n        }\n      }\n    }\n\n    if (maxDistance) {\n      for (i = 0; i < maxNodes; i += 1) {\n        bestNodes.push([null, maxDistance]);\n      }\n    }\n\n    if (this.root) {\n      nearestSearch(this.root);\n    }\n\n    const result = [];\n    for (i = 0; i < Math.min(maxNodes, bestNodes.content.length); i += 1) {\n      if (bestNodes.content[i][0]) {\n        result.push([bestNodes.content[i][0].obj, bestNodes.content[i][1]]);\n      }\n    }\n    return result;\n  }\n}\n\nfunction toJSONImpl(src) {\n  const dest = new Node(src.obj, src.dimension, null);\n  if (src.left) dest.left = toJSONImpl(src.left);\n  if (src.right) dest.right = toJSONImpl(src.right);\n  return dest;\n}\n\nfunction buildTree(points, depth, parent, dimensions) {\n  const dim = depth % dimensions.length;\n\n  if (points.length === 0) {\n    return null;\n  }\n  if (points.length === 1) {\n    return new Node(points[0], dim, parent);\n  }\n\n  points.sort((a, b) => a[dimensions[dim]] - b[dimensions[dim]]);\n\n  const median = Math.floor(points.length / 2);\n  const node = new Node(points[median], dim, parent);\n  node.left = buildTree(points.slice(0, median), depth + 1, node, dimensions);\n  node.right = buildTree(points.slice(median + 1), depth + 1, node, dimensions);\n\n  return node;\n}\n\nfunction restoreParent(root) {\n  if (root.left) {\n    root.left.parent = root;\n    restoreParent(root.left);\n  }\n\n  if (root.right) {\n    root.right.parent = root;\n    restoreParent(root.right);\n  }\n}\n\n// Binary heap implementation from:\n// http://eloquentjavascript.net/appendix2.html\nclass BinaryHeap {\n  constructor(scoreFunction) {\n    this.content = [];\n    this.scoreFunction = scoreFunction;\n  }\n\n  push(element) {\n    // Add the new element to the end of the array.\n    this.content.push(element);\n    // Allow it to bubble up.\n    this.bubbleUp(this.content.length - 1);\n  }\n\n  pop() {\n    // Store the first element so we can return it later.\n    var result = this.content[0];\n    // Get the element at the end of the array.\n    var end = this.content.pop();\n    // If there are any elements left, put the end element at the\n    // start, and let it sink down.\n    if (this.content.length > 0) {\n      this.content[0] = end;\n      this.sinkDown(0);\n    }\n    return result;\n  }\n\n  peek() {\n    return this.content[0];\n  }\n\n  size() {\n    return this.content.length;\n  }\n\n  bubbleUp(n) {\n    // Fetch the element that has to be moved.\n    var element = this.content[n];\n    // When at 0, an element can not go up any further.\n    while (n > 0) {\n      // Compute the parent element\'s index, and fetch it.\n      const parentN = Math.floor((n + 1) / 2) - 1;\n      const parent = this.content[parentN];\n      // Swap the elements if the parent is greater.\n      if (this.scoreFunction(element) < this.scoreFunction(parent)) {\n        this.content[parentN] = element;\n        this.content[n] = parent;\n        // Update \'n\' to continue at the new position.\n        n = parentN;\n      } else {\n        // Found a parent that is less, no need to move it further.\n        break;\n      }\n    }\n  }\n\n  sinkDown(n) {\n    // Look up the target element and its score.\n    var length = this.content.length;\n    var element = this.content[n];\n    var elemScore = this.scoreFunction(element);\n\n    while (true) {\n      // Compute the indices of the child elements.\n      var child2N = (n + 1) * 2;\n      var child1N = child2N - 1;\n      // This is used to store the new position of the element,\n      // if any.\n      var swap = null;\n      // If the first child exists (is inside the array)...\n      if (child1N < length) {\n        // Look it up and compute its score.\n        var child1 = this.content[child1N];\n        var child1Score = this.scoreFunction(child1);\n        // If the score is less than our element\'s, we need to swap.\n        if (child1Score < elemScore) {\n          swap = child1N;\n        }\n      }\n      // Do the same checks for the other child.\n      if (child2N < length) {\n        var child2 = this.content[child2N];\n        var child2Score = this.scoreFunction(child2);\n        if (child2Score < (swap === null ? elemScore : child1Score)) {\n          swap = child2N;\n        }\n      }\n\n      // If the element needs to be moved, swap it, and continue.\n      if (swap !== null) {\n        this.content[n] = this.content[swap];\n        this.content[swap] = element;\n        n = swap;\n      } else {\n        // Otherwise, we are done.\n        break;\n      }\n    }\n  }\n}\n\n// CONCATENATED MODULE: ./node_modules/ml-knn/src/index.js\n\n\n\n\nclass src_KNN {\n  /**\n   * @param {Array} dataset\n   * @param {Array} labels\n   * @param {object} options\n   * @param {number} [options.k=numberOfClasses + 1] - Number of neighbors to classify.\n   * @param {function} [options.distance=euclideanDistance] - Distance function that takes two parameters.\n   */\n  constructor(dataset, labels, options = {}) {\n    if (dataset === true) {\n      const model = labels;\n      this.kdTree = new KDTree(model.kdTree, options);\n      this.k = model.k;\n      this.classes = new Set(model.classes);\n      this.isEuclidean = model.isEuclidean;\n      return;\n    }\n\n    const classes = new Set(labels);\n\n    const { distance = euclidean["euclidean"], k = classes.size + 1 } = options;\n\n    const points = new Array(dataset.length);\n    for (var i = 0; i < points.length; ++i) {\n      points[i] = dataset[i].slice();\n    }\n\n    for (i = 0; i < labels.length; ++i) {\n      points[i].push(labels[i]);\n    }\n\n    this.kdTree = new KDTree(points, distance);\n    this.k = k;\n    this.classes = classes;\n    this.isEuclidean = distance === euclidean["euclidean"];\n  }\n\n  /**\n   * Create a new KNN instance with the given model.\n   * @param {object} model\n   * @param {function} distance=euclideanDistance - distance function must be provided if the model wasn\'t trained with euclidean distance.\n   * @return {KNN}\n   */\n  static load(model, distance = euclidean["euclidean"]) {\n    if (model.name !== \'KNN\') {\n      throw new Error(`invalid model: ${model.name}`);\n    }\n    if (!model.isEuclidean && distance === euclidean["euclidean"]) {\n      throw new Error(\n        \'a custom distance function was used to create the model. Please provide it again\'\n      );\n    }\n    if (model.isEuclidean && distance !== euclidean["euclidean"]) {\n      throw new Error(\n        \'the model was created with the default distance function. Do not load it with another one\'\n      );\n    }\n    return new src_KNN(true, model, distance);\n  }\n\n  /**\n   * Return a JSON containing the kd-tree model.\n   * @return {object} JSON KNN model.\n   */\n  toJSON() {\n    return {\n      name: \'KNN\',\n      kdTree: this.kdTree,\n      k: this.k,\n      classes: Array.from(this.classes),\n      isEuclidean: this.isEuclidean\n    };\n  }\n\n  /**\n   * Predicts the output given the matrix to predict.\n   * @param {Array} dataset\n   * @return {Array} predictions\n   */\n  predict(dataset) {\n    if (Array.isArray(dataset)) {\n      if (typeof dataset[0] === \'number\') {\n        return getSinglePrediction(this, dataset);\n      } else if (\n        Array.isArray(dataset[0]) &&\n        typeof dataset[0][0] === \'number\'\n      ) {\n        const predictions = new Array(dataset.length);\n        for (var i = 0; i < dataset.length; i++) {\n          predictions[i] = getSinglePrediction(this, dataset[i]);\n        }\n        return predictions;\n      }\n    }\n    throw new TypeError(\'dataset to predict must be an array or a matrix\');\n  }\n}\n\nfunction getSinglePrediction(knn, currentCase) {\n  var nearestPoints = knn.kdTree.nearest(currentCase, knn.k);\n  var pointsPerClass = {};\n  var predictedClass = -1;\n  var maxPoints = -1;\n  var lastElement = nearestPoints[0][0].length - 1;\n\n  for (var element of knn.classes) {\n    pointsPerClass[element] = 0;\n  }\n\n  for (var i = 0; i < nearestPoints.length; ++i) {\n    var currentClass = nearestPoints[i][0][lastElement];\n    var currentPoints = ++pointsPerClass[currentClass];\n    if (currentPoints > maxPoints) {\n      predictedClass = currentClass;\n      maxPoints = currentPoints;\n    }\n  }\n\n  return predictedClass;\n}\n\n// CONCATENATED MODULE: ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighborsMethodsBuild.js\n\n\n\n/* harmony default export */ var KNearestNeighborsMethodsBuild = (function (KNearestNeighbors) {\n  KNearestNeighbors.methods.startPredict = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n    return regenerator_default.a.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return this.start();\n\n          case 2:\n            return _context.abrupt("return", _context.sent);\n\n          case 3:\n          case "end":\n            return _context.stop();\n        }\n      }\n    }, _callee, this);\n  }));\n  KNearestNeighbors.methods.start = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2() {\n    var _this = this;\n\n    var data, predictVector, predictResults, testSetRowIndexes, predictVectorToEvalute;\n    return regenerator_default.a.wrap(function _callee2$(_context2) {\n      while (1) {\n        switch (_context2.prev = _context2.next) {\n          case 0:\n            //this.localConfig.modelJSON = null\n            this.config.loadingProgress = 0;\n            console.log(\'start\', 1);\n            this.localConfig.modelJSON = null;\n            this.localConfig.modelEvaluations = [];\n            _context2.next = 6;\n            return this.$parent.getVectorData();\n\n          case 6:\n            data = _context2.sent;\n            this.dataToShow = data;\n\n            if (data.trainSetClasses.length === 0) {\n              console.error(\'No trainSetClasses\'); //throw Error(\'No trainSetClasses\')\n            }\n\n            console.log(data); //return false\n\n            this.config.loadingProgress = 0.25;\n            console.log(\'start\', 2); //console.log(data.trainSet[0])\n\n            console.log(\'start\', 3);\n\n            if (!(data.trainSetClasses.length > 0)) {\n              _context2.next = 36;\n              break;\n            }\n\n            if (!this.localConfig.modelJSON) {\n              this.model = this.buildModel(data);\n              this.localConfig.modelJSON = this.model;\n            } else {\n              this.model = src_KNN.load(this.localConfig.modelJSON);\n            } //console.log(this.model.toJSON())\n            //console.log(this.model)\n\n\n            console.log(\'start\', 5);\n            this.config.loadingProgress = 0.5;\n            console.log(\'start\', 9); //console.log(data.testSet)\n\n            _context2.next = 20;\n            return this.getPredictResultsVector(this.model, data);\n\n          case 20:\n            predictVector = _context2.sent;\n            _context2.next = 23;\n            return this.getPredictResultsValue(data, predictVector);\n\n          case 23:\n            predictResults = _context2.sent;\n            console.log(predictVector);\n\n            if (!(predictResults[0] === \'undefined\')) {\n              _context2.next = 29;\n              break;\n            }\n\n            this.config.loadingProgress = 1;\n            console.error(\'predict is undefined\');\n            return _context2.abrupt("return", false);\n\n          case 29:\n            console.log(\'start\', 10);\n            this.config.loadingProgress = 0.75;\n\n            if (this.$parent.hasModelEvaluated === false) {\n              testSetRowIndexes = data.testSetRowIndexes;\n              this.unknownsPrediction = [];\n              predictVectorToEvalute = predictVector.filter(function (value, i) {\n                var notMatch = testSetRowIndexes.indexOf(i) === -1;\n\n                if (notMatch === false) {\n                  _this.unknownsPrediction.push(value);\n                }\n\n                return notMatch;\n              });\n              this.evaluationResults(data.trainSetClasses, predictVectorToEvalute);\n            } //console.log(predictResults)\n\n\n            this.$parent.setPredictResults(predictResults);\n            this.config.loadingProgress = 0.9;\n            _context2.next = 37;\n            break;\n\n          case 36:\n            this.model = \'unsupervised\';\n\n          case 37:\n            if (this.$parent.isModelWindowOpened) {\n              this.showModel();\n            }\n\n            this.config.loadingProgress = 1;\n            this.config.modelBuildedTime = new Date().getTime();\n\n          case 40:\n          case "end":\n            return _context2.stop();\n        }\n      }\n    }, _callee2, this);\n  }));\n\n  KNearestNeighbors.methods.buildModel = function (data) {\n    var testSetRowIndexes = data.testSetRowIndexes;\n    var dataset = data.testSet.filter(function (row, i) {\n      return testSetRowIndexes.indexOf(i) === -1;\n    });\n    console.log(dataset);\n    var predictions = data.trainSetClasses;\n\n    if (dataset.length === 0) {\n      dataset = data.testSet;\n      predictions = dataset.map(function (item) {\n        return \'unknown\';\n      });\n    }\n\n    if (dataset.length !== predictions.length) {\n      console.error(\'length is not match\');\n    }\n\n    return new src_KNN(dataset, predictions);\n  };\n\n  KNearestNeighbors.methods.getPredictResultsVector = /*#__PURE__*/function () {\n    var _ref3 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee3(model, data) {\n      var testSet, resultVector;\n      return regenerator_default.a.wrap(function _callee3$(_context3) {\n        while (1) {\n          switch (_context3.prev = _context3.next) {\n            case 0:\n              testSet = data.testSet;\n              resultVector = model.predict(testSet);\n              return _context3.abrupt("return", resultVector);\n\n            case 3:\n            case "end":\n              return _context3.stop();\n          }\n        }\n      }, _callee3);\n    }));\n\n    return function (_x, _x2) {\n      return _ref3.apply(this, arguments);\n    };\n  }();\n\n  KNearestNeighbors.methods.getPredictResultsValue = /*#__PURE__*/function () {\n    var _ref4 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee4(data, resultVector) {\n      var trainSetClassesDict;\n      return regenerator_default.a.wrap(function _callee4$(_context4) {\n        while (1) {\n          switch (_context4.prev = _context4.next) {\n            case 0:\n              trainSetClassesDict = data.trainSetClassesDict; //console.log(trainSetClassesDict)\n\n              return _context4.abrupt("return", resultVector.map(function (index) {\n                return trainSetClassesDict[index];\n              }));\n\n            case 2:\n            case "end":\n              return _context4.stop();\n          }\n        }\n      }, _callee4);\n    }));\n\n    return function (_x3, _x4) {\n      return _ref4.apply(this, arguments);\n    };\n  }();\n\n  KNearestNeighbors.methods.evaluationResults = /*#__PURE__*/function () {\n    var _ref5 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee5(train, predict) {\n      var accuracy, accuracyInfo;\n      return regenerator_default.a.wrap(function _callee5$(_context5) {\n        while (1) {\n          switch (_context5.prev = _context5.next) {\n            case 0:\n              this.$parent.resetModelEvaluation();\n              console.log(train);\n              console.log(predict); //console.log(data.trainSetClasses.length, getTrainSetPredicts.length, data.testSetRowIndexes.length)\n\n              _context5.next = 5;\n              return this.$parent.calcAccuracy(train, predict);\n\n            case 5:\n              accuracy = _context5.sent;\n              //console.log(accuracy)\n              accuracyInfo = {\n                name: \'accuracy\',\n                type: \'percent\',\n                value: accuracy\n              }; //console.log(accuracyInfo)\n\n              this.localConfig.modelEvaluations.push(accuracyInfo);\n\n            case 8:\n            case "end":\n              return _context5.stop();\n          }\n        }\n      }, _callee5, this);\n    }));\n\n    return function (_x5, _x6) {\n      return _ref5.apply(this, arguments);\n    };\n  }();\n});\n// CONCATENATED MODULE: ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighborsMethodsShow.js\n\n\n\n//import {euclidean} from \'ml-distance-euclidean\'\nvar KNearestNeighborsMethodsShow_euclidean = __webpack_require__(377).euclidean; //const euclidean = MLDistanceEuclidean.euclidean\n\n\n/* harmony default export */ var KNearestNeighborsMethodsShow = (function (KNearestNeighbors) {\n  KNearestNeighbors.methods.showModel = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n    var _this = this;\n\n    var unknownSetRowIndex, neighbors, unknowns, distanceMatrix, colorMatrix, tableHeaderUnknownColspan, tableHeader, trainSetClassesDict, tableBody, bodyHTML, title, modelWindow;\n    return regenerator_default.a.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            if (this.model) {\n              _context.next = 3;\n              break;\n            }\n\n            _context.next = 3;\n            return this.start();\n\n          case 3:\n            // --------------------------\n            //console.log(this.dataToShow)\n            unknownSetRowIndex = this.dataToShow.testSetRowIndexes;\n            neighbors = [];\n            unknowns = []; //console.log(unknownSetRowIndex)\n\n            this.dataToShow.testSet.forEach(function (set, i) {\n              if (unknownSetRowIndex.indexOf(i) === -1) {\n                neighbors.push(set);\n              } else {\n                unknowns.push(set);\n              }\n            }); //console.log(neighbors)\n            //console.log(unknowns)\n\n            if (neighbors.length === 0) {\n              neighbors = unknowns;\n            } // --------------------------\n\n\n            distanceMatrix = unknowns.map(function (unknownFeature) {\n              var maxDistance = null;\n              var distances = neighbors.map(function (neighbor) {\n                var distance = KNearestNeighborsMethodsShow_euclidean(unknownFeature, neighbor);\n\n                if (maxDistance === null || distance > maxDistance) {\n                  maxDistance = distance;\n                }\n\n                return distance;\n              });\n              distances = distances.map(function (d) {\n                return (maxDistance - d) / maxDistance;\n              });\n              return distances;\n            }); //console.log(distanceMatrix)\n\n            colorMatrix = distanceMatrix.map(function (unknown) {\n              return unknown.map(function (d) {\n                return heatMapColorforValue(d);\n              });\n            }); //console.log(colorMatrix)\n            // --------------------------\n\n            tableHeaderUnknownColspan = 2;\n\n            if (this.model === \'unsupervised\') {\n              tableHeaderUnknownColspan = 1;\n            }\n\n            tableHeader = "<thead>\\n  <tr>\\n    <th rowspan=\\"2\\" colspan=\\"".concat(tableHeaderUnknownColspan, "\\" valign=\\"bottom\\">").concat(this.$t(\'Unknowns\'), "</th>\\n    <th colspan=\\"").concat(colorMatrix[0].length, "\\">").concat(this.$t(\'Neighbors\'), "</th>\\n  </tr>\\n  <tr>").concat(colorMatrix[0].map(function (value, i) {\n              return "<th>".concat(i + 1, "</th>");\n            }).join(\'\'), "</tr>\\n</thead>");\n            trainSetClassesDict = this.dataToShow.trainSetClassesDict;\n            tableBody = "<tbody>\\n".concat(colorMatrix.map(function (row, i) {\n              var thPrediection = "<th>".concat(trainSetClassesDict[_this.unknownsPrediction[i]], "</th>");\n\n              if (_this.model === \'unsupervised\') {\n                thPrediection = \'\';\n              }\n\n              return "<tr>\\n  <th>".concat(unknownSetRowIndex[i] + 1, "</th>\\n  ").concat(thPrediection, "\\n  ").concat(row.map(function (color, j) {\n                var d = distanceMatrix[i][j];\n                var dText = d;\n                dText = Math.round(dText * 100) + \'%\';\n\n                if (d > 0.5) {\n                  return "<td style=\\"text-align:center;background-color: ".concat(color, "; color: white\\">").concat(dText, "</td>");\n                } else {\n                  return "<td style=\\"text-align:center;background-color: ".concat(color, "\\">").concat(dText, "</td>");\n                }\n              }).join(\'\'), "\\n</tr>");\n            }).join(\'\\n\'), "\\n</tbody>"); // --------------------------\n\n            bodyHTML = "<table border=\\"1\\" align=\\"center\\">\\n    ".concat(tableHeader, "\\n    ").concat(tableBody, "\\n</table>");\n            bodyHTML = "<div class=\\"tree\\">".concat(bodyHTML, "</div>"); //console.error(\'[TODO]\')\n            //console.log()\n\n            title = this.$t(\'KNN\') + " (" + new Date().mmddhhmm() + \')\';\n            console.log(\'KNNModelShow\' + this.config.modelBuildedTime);\n            modelWindow = this.utils.PopupUtils.open({\n              windowName: \'KNNModelShow\' + this.config.modelBuildedTime,\n              cssURL: this.modelCSSURL,\n              bodyHTML: bodyHTML,\n              size: \'right\',\n              //size: \'left\',\n              title: title\n            });\n            modelWindow.scrollToTop();\n            modelWindow.scrollToCenter();\n\n          case 22:\n          case "end":\n            return _context.stop();\n        }\n      }\n    }, _callee, this);\n  }));\n  /**\n   * https://stackoverflow.com/a/27263918/6645399\n   */\n\n  function heatMapColorforValue(value) {\n    //var h = (1.0 - value) * 240\n    //return "hsl(" + h + ", 100%, 50%)";\n    return "rgba(22, 160, 133, ".concat(value, ")"); // rgb(22, 160, 133)\n  }\n});\n// CONCATENATED MODULE: ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighborsMethodsTest.js\n\n\n // https://www.npmjs.com/package/ml-knn\n\n/* harmony default export */ var KNearestNeighborsMethodsTest = (function (KNearestNeighbors) {\n  KNearestNeighbors.methods.testKNN = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n    var dataset, predictions, knn, ans;\n    return regenerator_default.a.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            dataset = [[0, 0, 0], [0, 1, 1], [1, 1, 0], [2, 2, 2], [1, 2, 2], [2, 1, 2]];\n            predictions = [0, 0, 0, 1, 1, 1];\n            knn = new src_KNN(dataset, predictions);\n            dataset = [[0, 0, 0], [2, 2, 2]];\n            ans = knn.predict(dataset);\n            console.log(ans);\n\n          case 6:\n          case "end":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n});\n// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--6!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.js?vue&type=script&lang=js&\nvar KNearestNeighborsvue_type_script_lang_js_KNearestNeighbors = {\n  props: [\'config\', \'localConfig\', \'utils\'],\n  data: function data() {\n    this.$i18n.locale = this.localConfig.locale;\n    return {\n      model: null,\n      dataToShow: null,\n      unknownsPrediction: []\n    };\n  },\n  watch: {\n    \'localConfig.locale\': function localConfigLocale() {\n      this.$i18n.locale = this.localConfig.locale;\n    }\n  },\n  computed: {\n    isModelBuilded: function isModelBuilded() {\n      return this.model !== null;\n    },\n    isModelUnsupervised: function isModelUnsupervised() {\n      return this.model !== null && this.model === \'unsupervised\';\n    }\n  },\n  mounted: function mounted() {//    setTimeout(() => {\n    //      this.start()\n    //    }, 1000)\n    //this.testKNN()\n  },\n  methods: {}\n};\n\nKNearestNeighborsMethodsBuild(KNearestNeighborsvue_type_script_lang_js_KNearestNeighbors);\n\nKNearestNeighborsMethodsShow(KNearestNeighborsvue_type_script_lang_js_KNearestNeighbors);\n\nKNearestNeighborsMethodsTest(KNearestNeighborsvue_type_script_lang_js_KNearestNeighbors);\n/* harmony default export */ var KNearestNeighborsvue_type_script_lang_js_ = (KNearestNeighborsvue_type_script_lang_js_KNearestNeighbors);\n// CONCATENATED MODULE: ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.js?vue&type=script&lang=js&\n /* harmony default export */ var KNearestNeighbors_KNearestNeighborsvue_type_script_lang_js_ = (KNearestNeighborsvue_type_script_lang_js_); \n// EXTERNAL MODULE: ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true&\nvar KNearestNeighborsvue_type_style_index_0_id_1295245c_lang_less_scoped_true_ = __webpack_require__(484);\n\n// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js\nvar componentNormalizer = __webpack_require__(6);\n\n// EXTERNAL MODULE: ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml\nvar KNearestNeighborsvue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml = __webpack_require__(486);\n\n// CONCATENATED MODULE: ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.vue\n\n\n\n\n\n\n/* normalize component */\n\nvar component = Object(componentNormalizer["a" /* default */])(\n  KNearestNeighbors_KNearestNeighborsvue_type_script_lang_js_,\n  render,\n  staticRenderFns,\n  false,\n  null,\n  "1295245c",\n  null\n  \n)\n\n/* custom blocks */\n\nif (typeof KNearestNeighborsvue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml["default"] === \'function\') Object(KNearestNeighborsvue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml["default"])(component)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = "src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.vue"\n/* harmony default export */ var KNearestNeighbors_KNearestNeighbors = __webpack_exports__["default"] = (component.exports);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNTEzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29uZmlndXJhdGlvblBhbmVsL0tOZWFyZXN0TmVpZ2hib3JzL0tOZWFyZXN0TmVpZ2hib3JzLmh0bWw/NzQ4OCIsIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvbWwta25uL3NyYy9LRFRyZWUuanM/OWQwYyIsIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvbWwta25uL3NyYy9pbmRleC5qcz8yNjEyIiwid2VicGFjazovLy8uL3NyYy9jb21wb25lbnRzL0NvbmZpZ3VyYXRpb25QYW5lbC9LTmVhcmVzdE5laWdoYm9ycy9LTmVhcmVzdE5laWdoYm9yc01ldGhvZHNCdWlsZC5qcz8zMWM0Iiwid2VicGFjazovLy8uL3NyYy9jb21wb25lbnRzL0NvbmZpZ3VyYXRpb25QYW5lbC9LTmVhcmVzdE5laWdoYm9ycy9LTmVhcmVzdE5laWdoYm9yc01ldGhvZHNTaG93LmpzPzNkYjciLCJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29uZmlndXJhdGlvblBhbmVsL0tOZWFyZXN0TmVpZ2hib3JzL0tOZWFyZXN0TmVpZ2hib3JzTWV0aG9kc1Rlc3QuanM/NTU0NiIsIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db25maWd1cmF0aW9uUGFuZWwvS05lYXJlc3ROZWlnaGJvcnMvS05lYXJlc3ROZWlnaGJvcnMuanM/ZmFiMiIsIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db25maWd1cmF0aW9uUGFuZWwvS05lYXJlc3ROZWlnaGJvcnMvS05lYXJlc3ROZWlnaGJvcnMuanM/ZjAxNiIsIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db25maWd1cmF0aW9uUGFuZWwvS05lYXJlc3ROZWlnaGJvcnMvS05lYXJlc3ROZWlnaGJvcnMudnVlP2RkODMiXSwic291cmNlc0NvbnRlbnQiOlsidmFyIHJlbmRlciA9IGZ1bmN0aW9uKCkge1xuICB2YXIgX3ZtID0gdGhpc1xuICB2YXIgX2ggPSBfdm0uJGNyZWF0ZUVsZW1lbnRcbiAgdmFyIF9jID0gX3ZtLl9zZWxmLl9jIHx8IF9oXG4gIHJldHVybiBfYyhcImRpdlwiLCB7IHN0YXRpY0NsYXNzOiBcIkRlY2lzaW9uVHJlZVwiIH0sIFtcbiAgICAhX3ZtLmlzTW9kZWxCdWlsZGVkXG4gICAgICA/IF9jKFwiZGl2XCIsIHsgc3RhdGljQ2xhc3M6IFwidWkgZmllbGRcIiB9LCBbXG4gICAgICAgICAgX2MoXG4gICAgICAgICAgICBcImJ1dHRvblwiLFxuICAgICAgICAgICAge1xuICAgICAgICAgICAgICBzdGF0aWNDbGFzczogXCJ1aSBwcmltYXJ5IGZsdWlkIGJ1dHRvblwiLFxuICAgICAgICAgICAgICBhdHRyczogeyB0eXBlOiBcImJ1dHRvblwiIH0sXG4gICAgICAgICAgICAgIG9uOiB7IGNsaWNrOiBfdm0uc3RhcnQgfVxuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIFtcbiAgICAgICAgICAgICAgW1xuICAgICAgICAgICAgICAgIF92bS5fdihcbiAgICAgICAgICAgICAgICAgIFwiXFxyXFxuICAgICAgICBcIiArXG4gICAgICAgICAgICAgICAgICAgIF92bS5fcyhfdm0uJHQoXCJCdWlsZCBNb2RlbCBhbmQgUHJlZGljdFwiKSkgK1xuICAgICAgICAgICAgICAgICAgICBcIlxcclxcbiAgICAgIFwiXG4gICAgICAgICAgICAgICAgKVxuICAgICAgICAgICAgICBdXG4gICAgICAgICAgICBdLFxuICAgICAgICAgICAgMlxuICAgICAgICAgIClcbiAgICAgICAgXSlcbiAgICAgIDogX3ZtLl9lKCksXG4gICAgX3ZtLl92KFwiIFwiKSxcbiAgICBfdm0uaXNNb2RlbEJ1aWxkZWQgJiYgIV92bS5pc01vZGVsVW5zdXBlcnZpc2VkXG4gICAgICA/IF9jKFwiZGl2XCIsIHsgc3RhdGljQ2xhc3M6IFwidWkgZmllbGRcIiB9LCBbXG4gICAgICAgICAgX2MoXG4gICAgICAgICAgICBcImJ1dHRvblwiLFxuICAgICAgICAgICAge1xuICAgICAgICAgICAgICBzdGF0aWNDbGFzczogXCJ1aSBwcmltYXJ5IGZsdWlkIGJ1dHRvblwiLFxuICAgICAgICAgICAgICBjbGFzczogeyBkaXNhYmxlZDogIV92bS4kcGFyZW50LmlzTmVlZFByZWRpY3QgfSxcbiAgICAgICAgICAgICAgYXR0cnM6IHsgdHlwZTogXCJidXR0b25cIiB9LFxuICAgICAgICAgICAgICBvbjogeyBjbGljazogX3ZtLnN0YXJ0IH1cbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBbXG4gICAgICAgICAgICAgIFtcbiAgICAgICAgICAgICAgICBfdm0uX3YoXG4gICAgICAgICAgICAgICAgICBcIlxcclxcbiAgICAgICAgXCIgKyBfdm0uX3MoX3ZtLiR0KFwiUHJlZGljdFwiKSkgKyBcIlxcclxcbiAgICAgIFwiXG4gICAgICAgICAgICAgICAgKVxuICAgICAgICAgICAgICBdXG4gICAgICAgICAgICBdLFxuICAgICAgICAgICAgMlxuICAgICAgICAgIClcbiAgICAgICAgXSlcbiAgICAgIDogX3ZtLl9lKCksXG4gICAgX3ZtLl92KFwiIFwiKSxcbiAgICBfdm0uaXNNb2RlbEJ1aWxkZWRcbiAgICAgID8gX2MoXCJkaXZcIiwgeyBzdGF0aWNDbGFzczogXCJ1aSBmaWVsZFwiIH0sIFtcbiAgICAgICAgICBfYyhcbiAgICAgICAgICAgIFwiYnV0dG9uXCIsXG4gICAgICAgICAgICB7XG4gICAgICAgICAgICAgIHN0YXRpY0NsYXNzOiBcInVpIHByaW1hcnkgZmx1aWQgYnV0dG9uXCIsXG4gICAgICAgICAgICAgIGF0dHJzOiB7IHR5cGU6IFwiYnV0dG9uXCIgfSxcbiAgICAgICAgICAgICAgb246IHsgY2xpY2s6IF92bS5zaG93TW9kZWwgfVxuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIFtfdm0uX3YoXCJcXHJcXG4gICAgICBcIiArIF92bS5fcyhfdm0uJHQoXCJTaG93IE1vZGVsXCIpKSArIFwiXFxyXFxuICAgIFwiKV1cbiAgICAgICAgICApXG4gICAgICAgIF0pXG4gICAgICA6IF92bS5fZSgpXG4gIF0pXG59XG52YXIgc3RhdGljUmVuZGVyRm5zID0gW11cbnJlbmRlci5fd2l0aFN0cmlwcGVkID0gdHJ1ZVxuXG5leHBvcnQgeyByZW5kZXIsIHN0YXRpY1JlbmRlckZucyB9IiwiLypcbiAqIE9yaWdpbmFsIGNvZGUgZnJvbTpcbiAqXG4gKiBrLWQgVHJlZSBKYXZhU2NyaXB0IC0gViAxLjAxXG4gKlxuICogaHR0cHM6Ly9naXRodWIuY29tL3ViaWxhYnMva2QtdHJlZS1qYXZhc2NyaXB0XG4gKlxuICogQGF1dGhvciBNaXJjZWEgUHJpY29wIDxwcmljb3BAdWJpbGFicy5uZXQ+LCAyMDEyXG4gKiBAYXV0aG9yIE1hcnRpbiBLbGVwcGUgPGtsZXBwZUB1YmlsYWJzLm5ldD4sIDIwMTJcbiAqIEBhdXRob3IgVWJpbGFicyBodHRwOi8vdWJpbGFicy5uZXQsIDIwMTJcbiAqIEBsaWNlbnNlIE1JVCBMaWNlbnNlIDxodHRwOi8vd3d3Lm9wZW5zb3VyY2Uub3JnL2xpY2Vuc2VzL21pdC1saWNlbnNlLnBocD5cbiAqL1xuXG5mdW5jdGlvbiBOb2RlKG9iaiwgZGltZW5zaW9uLCBwYXJlbnQpIHtcbiAgdGhpcy5vYmogPSBvYmo7XG4gIHRoaXMubGVmdCA9IG51bGw7XG4gIHRoaXMucmlnaHQgPSBudWxsO1xuICB0aGlzLnBhcmVudCA9IHBhcmVudDtcbiAgdGhpcy5kaW1lbnNpb24gPSBkaW1lbnNpb247XG59XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEtEVHJlZSB7XG4gIGNvbnN0cnVjdG9yKHBvaW50cywgbWV0cmljKSB7XG4gICAgLy8gSWYgcG9pbnRzIGlzIG5vdCBhbiBhcnJheSwgYXNzdW1lIHdlJ3JlIGxvYWRpbmcgYSBwcmUtYnVpbHQgdHJlZVxuICAgIGlmICghQXJyYXkuaXNBcnJheShwb2ludHMpKSB7XG4gICAgICB0aGlzLmRpbWVuc2lvbnMgPSBwb2ludHMuZGltZW5zaW9ucztcbiAgICAgIHRoaXMucm9vdCA9IHBvaW50cztcbiAgICAgIHJlc3RvcmVQYXJlbnQodGhpcy5yb290KTtcbiAgICB9IGVsc2Uge1xuICAgICAgdGhpcy5kaW1lbnNpb25zID0gbmV3IEFycmF5KHBvaW50c1swXS5sZW5ndGgpO1xuICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCB0aGlzLmRpbWVuc2lvbnMubGVuZ3RoOyBpKyspIHtcbiAgICAgICAgdGhpcy5kaW1lbnNpb25zW2ldID0gaTtcbiAgICAgIH1cbiAgICAgIHRoaXMucm9vdCA9IGJ1aWxkVHJlZShwb2ludHMsIDAsIG51bGwsIHRoaXMuZGltZW5zaW9ucyk7XG4gICAgfVxuICAgIHRoaXMubWV0cmljID0gbWV0cmljO1xuICB9XG5cbiAgLy8gQ29udmVydCB0byBhIEpTT04gc2VyaWFsaXphYmxlIHN0cnVjdHVyZTsgdGhpcyBqdXN0IHJlcXVpcmVzIHJlbW92aW5nXG4gIC8vIHRoZSBgcGFyZW50YCBwcm9wZXJ0eVxuICB0b0pTT04oKSB7XG4gICAgY29uc3QgcmVzdWx0ID0gdG9KU09OSW1wbCh0aGlzLnJvb3QsIHRydWUpO1xuICAgIHJlc3VsdC5kaW1lbnNpb25zID0gdGhpcy5kaW1lbnNpb25zO1xuICAgIHJldHVybiByZXN1bHQ7XG4gIH1cblxuICBuZWFyZXN0KHBvaW50LCBtYXhOb2RlcywgbWF4RGlzdGFuY2UpIHtcbiAgICBjb25zdCBtZXRyaWMgPSB0aGlzLm1ldHJpYztcbiAgICBjb25zdCBkaW1lbnNpb25zID0gdGhpcy5kaW1lbnNpb25zO1xuICAgIHZhciBpO1xuXG4gICAgY29uc3QgYmVzdE5vZGVzID0gbmV3IEJpbmFyeUhlYXAoZnVuY3Rpb24gKGUpIHtcbiAgICAgIHJldHVybiAtZVsxXTtcbiAgICB9KTtcblxuICAgIGZ1bmN0aW9uIG5lYXJlc3RTZWFyY2gobm9kZSkge1xuICAgICAgY29uc3QgZGltZW5zaW9uID0gZGltZW5zaW9uc1tub2RlLmRpbWVuc2lvbl07XG4gICAgICBjb25zdCBvd25EaXN0YW5jZSA9IG1ldHJpYyhwb2ludCwgbm9kZS5vYmopO1xuICAgICAgY29uc3QgbGluZWFyUG9pbnQgPSB7fTtcbiAgICAgIHZhciBiZXN0Q2hpbGQsIGxpbmVhckRpc3RhbmNlLCBvdGhlckNoaWxkLCBpO1xuXG4gICAgICBmdW5jdGlvbiBzYXZlTm9kZShub2RlLCBkaXN0YW5jZSkge1xuICAgICAgICBiZXN0Tm9kZXMucHVzaChbbm9kZSwgZGlzdGFuY2VdKTtcbiAgICAgICAgaWYgKGJlc3ROb2Rlcy5zaXplKCkgPiBtYXhOb2Rlcykge1xuICAgICAgICAgIGJlc3ROb2Rlcy5wb3AoKTtcbiAgICAgICAgfVxuICAgICAgfVxuXG4gICAgICBmb3IgKGkgPSAwOyBpIDwgZGltZW5zaW9ucy5sZW5ndGg7IGkgKz0gMSkge1xuICAgICAgICBpZiAoaSA9PT0gbm9kZS5kaW1lbnNpb24pIHtcbiAgICAgICAgICBsaW5lYXJQb2ludFtkaW1lbnNpb25zW2ldXSA9IHBvaW50W2RpbWVuc2lvbnNbaV1dO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgIGxpbmVhclBvaW50W2RpbWVuc2lvbnNbaV1dID0gbm9kZS5vYmpbZGltZW5zaW9uc1tpXV07XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgbGluZWFyRGlzdGFuY2UgPSBtZXRyaWMobGluZWFyUG9pbnQsIG5vZGUub2JqKTtcblxuICAgICAgaWYgKG5vZGUucmlnaHQgPT09IG51bGwgJiYgbm9kZS5sZWZ0ID09PSBudWxsKSB7XG4gICAgICAgIGlmIChiZXN0Tm9kZXMuc2l6ZSgpIDwgbWF4Tm9kZXMgfHwgb3duRGlzdGFuY2UgPCBiZXN0Tm9kZXMucGVlaygpWzFdKSB7XG4gICAgICAgICAgc2F2ZU5vZGUobm9kZSwgb3duRGlzdGFuY2UpO1xuICAgICAgICB9XG4gICAgICAgIHJldHVybjtcbiAgICAgIH1cblxuICAgICAgaWYgKG5vZGUucmlnaHQgPT09IG51bGwpIHtcbiAgICAgICAgYmVzdENoaWxkID0gbm9kZS5sZWZ0O1xuICAgICAgfSBlbHNlIGlmIChub2RlLmxlZnQgPT09IG51bGwpIHtcbiAgICAgICAgYmVzdENoaWxkID0gbm9kZS5yaWdodDtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIGlmIChwb2ludFtkaW1lbnNpb25dIDwgbm9kZS5vYmpbZGltZW5zaW9uXSkge1xuICAgICAgICAgIGJlc3RDaGlsZCA9IG5vZGUubGVmdDtcbiAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICBiZXN0Q2hpbGQgPSBub2RlLnJpZ2h0O1xuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIG5lYXJlc3RTZWFyY2goYmVzdENoaWxkKTtcblxuICAgICAgaWYgKGJlc3ROb2Rlcy5zaXplKCkgPCBtYXhOb2RlcyB8fCBvd25EaXN0YW5jZSA8IGJlc3ROb2Rlcy5wZWVrKClbMV0pIHtcbiAgICAgICAgc2F2ZU5vZGUobm9kZSwgb3duRGlzdGFuY2UpO1xuICAgICAgfVxuXG4gICAgICBpZiAoXG4gICAgICAgIGJlc3ROb2Rlcy5zaXplKCkgPCBtYXhOb2RlcyB8fFxuICAgICAgICBNYXRoLmFicyhsaW5lYXJEaXN0YW5jZSkgPCBiZXN0Tm9kZXMucGVlaygpWzFdXG4gICAgICApIHtcbiAgICAgICAgaWYgKGJlc3RDaGlsZCA9PT0gbm9kZS5sZWZ0KSB7XG4gICAgICAgICAgb3RoZXJDaGlsZCA9IG5vZGUucmlnaHQ7XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgb3RoZXJDaGlsZCA9IG5vZGUubGVmdDtcbiAgICAgICAgfVxuICAgICAgICBpZiAob3RoZXJDaGlsZCAhPT0gbnVsbCkge1xuICAgICAgICAgIG5lYXJlc3RTZWFyY2gob3RoZXJDaGlsZCk7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG5cbiAgICBpZiAobWF4RGlzdGFuY2UpIHtcbiAgICAgIGZvciAoaSA9IDA7IGkgPCBtYXhOb2RlczsgaSArPSAxKSB7XG4gICAgICAgIGJlc3ROb2Rlcy5wdXNoKFtudWxsLCBtYXhEaXN0YW5jZV0pO1xuICAgICAgfVxuICAgIH1cblxuICAgIGlmICh0aGlzLnJvb3QpIHtcbiAgICAgIG5lYXJlc3RTZWFyY2godGhpcy5yb290KTtcbiAgICB9XG5cbiAgICBjb25zdCByZXN1bHQgPSBbXTtcbiAgICBmb3IgKGkgPSAwOyBpIDwgTWF0aC5taW4obWF4Tm9kZXMsIGJlc3ROb2Rlcy5jb250ZW50Lmxlbmd0aCk7IGkgKz0gMSkge1xuICAgICAgaWYgKGJlc3ROb2Rlcy5jb250ZW50W2ldWzBdKSB7XG4gICAgICAgIHJlc3VsdC5wdXNoKFtiZXN0Tm9kZXMuY29udGVudFtpXVswXS5vYmosIGJlc3ROb2Rlcy5jb250ZW50W2ldWzFdXSk7XG4gICAgICB9XG4gICAgfVxuICAgIHJldHVybiByZXN1bHQ7XG4gIH1cbn1cblxuZnVuY3Rpb24gdG9KU09OSW1wbChzcmMpIHtcbiAgY29uc3QgZGVzdCA9IG5ldyBOb2RlKHNyYy5vYmosIHNyYy5kaW1lbnNpb24sIG51bGwpO1xuICBpZiAoc3JjLmxlZnQpIGRlc3QubGVmdCA9IHRvSlNPTkltcGwoc3JjLmxlZnQpO1xuICBpZiAoc3JjLnJpZ2h0KSBkZXN0LnJpZ2h0ID0gdG9KU09OSW1wbChzcmMucmlnaHQpO1xuICByZXR1cm4gZGVzdDtcbn1cblxuZnVuY3Rpb24gYnVpbGRUcmVlKHBvaW50cywgZGVwdGgsIHBhcmVudCwgZGltZW5zaW9ucykge1xuICBjb25zdCBkaW0gPSBkZXB0aCAlIGRpbWVuc2lvbnMubGVuZ3RoO1xuXG4gIGlmIChwb2ludHMubGVuZ3RoID09PSAwKSB7XG4gICAgcmV0dXJuIG51bGw7XG4gIH1cbiAgaWYgKHBvaW50cy5sZW5ndGggPT09IDEpIHtcbiAgICByZXR1cm4gbmV3IE5vZGUocG9pbnRzWzBdLCBkaW0sIHBhcmVudCk7XG4gIH1cblxuICBwb2ludHMuc29ydCgoYSwgYikgPT4gYVtkaW1lbnNpb25zW2RpbV1dIC0gYltkaW1lbnNpb25zW2RpbV1dKTtcblxuICBjb25zdCBtZWRpYW4gPSBNYXRoLmZsb29yKHBvaW50cy5sZW5ndGggLyAyKTtcbiAgY29uc3Qgbm9kZSA9IG5ldyBOb2RlKHBvaW50c1ttZWRpYW5dLCBkaW0sIHBhcmVudCk7XG4gIG5vZGUubGVmdCA9IGJ1aWxkVHJlZShwb2ludHMuc2xpY2UoMCwgbWVkaWFuKSwgZGVwdGggKyAxLCBub2RlLCBkaW1lbnNpb25zKTtcbiAgbm9kZS5yaWdodCA9IGJ1aWxkVHJlZShwb2ludHMuc2xpY2UobWVkaWFuICsgMSksIGRlcHRoICsgMSwgbm9kZSwgZGltZW5zaW9ucyk7XG5cbiAgcmV0dXJuIG5vZGU7XG59XG5cbmZ1bmN0aW9uIHJlc3RvcmVQYXJlbnQocm9vdCkge1xuICBpZiAocm9vdC5sZWZ0KSB7XG4gICAgcm9vdC5sZWZ0LnBhcmVudCA9IHJvb3Q7XG4gICAgcmVzdG9yZVBhcmVudChyb290LmxlZnQpO1xuICB9XG5cbiAgaWYgKHJvb3QucmlnaHQpIHtcbiAgICByb290LnJpZ2h0LnBhcmVudCA9IHJvb3Q7XG4gICAgcmVzdG9yZVBhcmVudChyb290LnJpZ2h0KTtcbiAgfVxufVxuXG4vLyBCaW5hcnkgaGVhcCBpbXBsZW1lbnRhdGlvbiBmcm9tOlxuLy8gaHR0cDovL2Vsb3F1ZW50amF2YXNjcmlwdC5uZXQvYXBwZW5kaXgyLmh0bWxcbmNsYXNzIEJpbmFyeUhlYXAge1xuICBjb25zdHJ1Y3RvcihzY29yZUZ1bmN0aW9uKSB7XG4gICAgdGhpcy5jb250ZW50ID0gW107XG4gICAgdGhpcy5zY29yZUZ1bmN0aW9uID0gc2NvcmVGdW5jdGlvbjtcbiAgfVxuXG4gIHB1c2goZWxlbWVudCkge1xuICAgIC8vIEFkZCB0aGUgbmV3IGVsZW1lbnQgdG8gdGhlIGVuZCBvZiB0aGUgYXJyYXkuXG4gICAgdGhpcy5jb250ZW50LnB1c2goZWxlbWVudCk7XG4gICAgLy8gQWxsb3cgaXQgdG8gYnViYmxlIHVwLlxuICAgIHRoaXMuYnViYmxlVXAodGhpcy5jb250ZW50Lmxlbmd0aCAtIDEpO1xuICB9XG5cbiAgcG9wKCkge1xuICAgIC8vIFN0b3JlIHRoZSBmaXJzdCBlbGVtZW50IHNvIHdlIGNhbiByZXR1cm4gaXQgbGF0ZXIuXG4gICAgdmFyIHJlc3VsdCA9IHRoaXMuY29udGVudFswXTtcbiAgICAvLyBHZXQgdGhlIGVsZW1lbnQgYXQgdGhlIGVuZCBvZiB0aGUgYXJyYXkuXG4gICAgdmFyIGVuZCA9IHRoaXMuY29udGVudC5wb3AoKTtcbiAgICAvLyBJZiB0aGVyZSBhcmUgYW55IGVsZW1lbnRzIGxlZnQsIHB1dCB0aGUgZW5kIGVsZW1lbnQgYXQgdGhlXG4gICAgLy8gc3RhcnQsIGFuZCBsZXQgaXQgc2luayBkb3duLlxuICAgIGlmICh0aGlzLmNvbnRlbnQubGVuZ3RoID4gMCkge1xuICAgICAgdGhpcy5jb250ZW50WzBdID0gZW5kO1xuICAgICAgdGhpcy5zaW5rRG93bigwKTtcbiAgICB9XG4gICAgcmV0dXJuIHJlc3VsdDtcbiAgfVxuXG4gIHBlZWsoKSB7XG4gICAgcmV0dXJuIHRoaXMuY29udGVudFswXTtcbiAgfVxuXG4gIHNpemUoKSB7XG4gICAgcmV0dXJuIHRoaXMuY29udGVudC5sZW5ndGg7XG4gIH1cblxuICBidWJibGVVcChuKSB7XG4gICAgLy8gRmV0Y2ggdGhlIGVsZW1lbnQgdGhhdCBoYXMgdG8gYmUgbW92ZWQuXG4gICAgdmFyIGVsZW1lbnQgPSB0aGlzLmNvbnRlbnRbbl07XG4gICAgLy8gV2hlbiBhdCAwLCBhbiBlbGVtZW50IGNhbiBub3QgZ28gdXAgYW55IGZ1cnRoZXIuXG4gICAgd2hpbGUgKG4gPiAwKSB7XG4gICAgICAvLyBDb21wdXRlIHRoZSBwYXJlbnQgZWxlbWVudCdzIGluZGV4LCBhbmQgZmV0Y2ggaXQuXG4gICAgICBjb25zdCBwYXJlbnROID0gTWF0aC5mbG9vcigobiArIDEpIC8gMikgLSAxO1xuICAgICAgY29uc3QgcGFyZW50ID0gdGhpcy5jb250ZW50W3BhcmVudE5dO1xuICAgICAgLy8gU3dhcCB0aGUgZWxlbWVudHMgaWYgdGhlIHBhcmVudCBpcyBncmVhdGVyLlxuICAgICAgaWYgKHRoaXMuc2NvcmVGdW5jdGlvbihlbGVtZW50KSA8IHRoaXMuc2NvcmVGdW5jdGlvbihwYXJlbnQpKSB7XG4gICAgICAgIHRoaXMuY29udGVudFtwYXJlbnROXSA9IGVsZW1lbnQ7XG4gICAgICAgIHRoaXMuY29udGVudFtuXSA9IHBhcmVudDtcbiAgICAgICAgLy8gVXBkYXRlICduJyB0byBjb250aW51ZSBhdCB0aGUgbmV3IHBvc2l0aW9uLlxuICAgICAgICBuID0gcGFyZW50TjtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIC8vIEZvdW5kIGEgcGFyZW50IHRoYXQgaXMgbGVzcywgbm8gbmVlZCB0byBtb3ZlIGl0IGZ1cnRoZXIuXG4gICAgICAgIGJyZWFrO1xuICAgICAgfVxuICAgIH1cbiAgfVxuXG4gIHNpbmtEb3duKG4pIHtcbiAgICAvLyBMb29rIHVwIHRoZSB0YXJnZXQgZWxlbWVudCBhbmQgaXRzIHNjb3JlLlxuICAgIHZhciBsZW5ndGggPSB0aGlzLmNvbnRlbnQubGVuZ3RoO1xuICAgIHZhciBlbGVtZW50ID0gdGhpcy5jb250ZW50W25dO1xuICAgIHZhciBlbGVtU2NvcmUgPSB0aGlzLnNjb3JlRnVuY3Rpb24oZWxlbWVudCk7XG5cbiAgICB3aGlsZSAodHJ1ZSkge1xuICAgICAgLy8gQ29tcHV0ZSB0aGUgaW5kaWNlcyBvZiB0aGUgY2hpbGQgZWxlbWVudHMuXG4gICAgICB2YXIgY2hpbGQyTiA9IChuICsgMSkgKiAyO1xuICAgICAgdmFyIGNoaWxkMU4gPSBjaGlsZDJOIC0gMTtcbiAgICAgIC8vIFRoaXMgaXMgdXNlZCB0byBzdG9yZSB0aGUgbmV3IHBvc2l0aW9uIG9mIHRoZSBlbGVtZW50LFxuICAgICAgLy8gaWYgYW55LlxuICAgICAgdmFyIHN3YXAgPSBudWxsO1xuICAgICAgLy8gSWYgdGhlIGZpcnN0IGNoaWxkIGV4aXN0cyAoaXMgaW5zaWRlIHRoZSBhcnJheSkuLi5cbiAgICAgIGlmIChjaGlsZDFOIDwgbGVuZ3RoKSB7XG4gICAgICAgIC8vIExvb2sgaXQgdXAgYW5kIGNvbXB1dGUgaXRzIHNjb3JlLlxuICAgICAgICB2YXIgY2hpbGQxID0gdGhpcy5jb250ZW50W2NoaWxkMU5dO1xuICAgICAgICB2YXIgY2hpbGQxU2NvcmUgPSB0aGlzLnNjb3JlRnVuY3Rpb24oY2hpbGQxKTtcbiAgICAgICAgLy8gSWYgdGhlIHNjb3JlIGlzIGxlc3MgdGhhbiBvdXIgZWxlbWVudCdzLCB3ZSBuZWVkIHRvIHN3YXAuXG4gICAgICAgIGlmIChjaGlsZDFTY29yZSA8IGVsZW1TY29yZSkge1xuICAgICAgICAgIHN3YXAgPSBjaGlsZDFOO1xuICAgICAgICB9XG4gICAgICB9XG4gICAgICAvLyBEbyB0aGUgc2FtZSBjaGVja3MgZm9yIHRoZSBvdGhlciBjaGlsZC5cbiAgICAgIGlmIChjaGlsZDJOIDwgbGVuZ3RoKSB7XG4gICAgICAgIHZhciBjaGlsZDIgPSB0aGlzLmNvbnRlbnRbY2hpbGQyTl07XG4gICAgICAgIHZhciBjaGlsZDJTY29yZSA9IHRoaXMuc2NvcmVGdW5jdGlvbihjaGlsZDIpO1xuICAgICAgICBpZiAoY2hpbGQyU2NvcmUgPCAoc3dhcCA9PT0gbnVsbCA/IGVsZW1TY29yZSA6IGNoaWxkMVNjb3JlKSkge1xuICAgICAgICAgIHN3YXAgPSBjaGlsZDJOO1xuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIC8vIElmIHRoZSBlbGVtZW50IG5lZWRzIHRvIGJlIG1vdmVkLCBzd2FwIGl0LCBhbmQgY29udGludWUuXG4gICAgICBpZiAoc3dhcCAhPT0gbnVsbCkge1xuICAgICAgICB0aGlzLmNvbnRlbnRbbl0gPSB0aGlzLmNvbnRlbnRbc3dhcF07XG4gICAgICAgIHRoaXMuY29udGVudFtzd2FwXSA9IGVsZW1lbnQ7XG4gICAgICAgIG4gPSBzd2FwO1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgLy8gT3RoZXJ3aXNlLCB3ZSBhcmUgZG9uZS5cbiAgICAgICAgYnJlYWs7XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iLCJpbXBvcnQgeyBldWNsaWRlYW4gYXMgZXVjbGlkZWFuRGlzdGFuY2UgfSBmcm9tICdtbC1kaXN0YW5jZS1ldWNsaWRlYW4nO1xuXG5pbXBvcnQgS0RUcmVlIGZyb20gJy4vS0RUcmVlJztcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgS05OIHtcbiAgLyoqXG4gICAqIEBwYXJhbSB7QXJyYXl9IGRhdGFzZXRcbiAgICogQHBhcmFtIHtBcnJheX0gbGFiZWxzXG4gICAqIEBwYXJhbSB7b2JqZWN0fSBvcHRpb25zXG4gICAqIEBwYXJhbSB7bnVtYmVyfSBbb3B0aW9ucy5rPW51bWJlck9mQ2xhc3NlcyArIDFdIC0gTnVtYmVyIG9mIG5laWdoYm9ycyB0byBjbGFzc2lmeS5cbiAgICogQHBhcmFtIHtmdW5jdGlvbn0gW29wdGlvbnMuZGlzdGFuY2U9ZXVjbGlkZWFuRGlzdGFuY2VdIC0gRGlzdGFuY2UgZnVuY3Rpb24gdGhhdCB0YWtlcyB0d28gcGFyYW1ldGVycy5cbiAgICovXG4gIGNvbnN0cnVjdG9yKGRhdGFzZXQsIGxhYmVscywgb3B0aW9ucyA9IHt9KSB7XG4gICAgaWYgKGRhdGFzZXQgPT09IHRydWUpIHtcbiAgICAgIGNvbnN0IG1vZGVsID0gbGFiZWxzO1xuICAgICAgdGhpcy5rZFRyZWUgPSBuZXcgS0RUcmVlKG1vZGVsLmtkVHJlZSwgb3B0aW9ucyk7XG4gICAgICB0aGlzLmsgPSBtb2RlbC5rO1xuICAgICAgdGhpcy5jbGFzc2VzID0gbmV3IFNldChtb2RlbC5jbGFzc2VzKTtcbiAgICAgIHRoaXMuaXNFdWNsaWRlYW4gPSBtb2RlbC5pc0V1Y2xpZGVhbjtcbiAgICAgIHJldHVybjtcbiAgICB9XG5cbiAgICBjb25zdCBjbGFzc2VzID0gbmV3IFNldChsYWJlbHMpO1xuXG4gICAgY29uc3QgeyBkaXN0YW5jZSA9IGV1Y2xpZGVhbkRpc3RhbmNlLCBrID0gY2xhc3Nlcy5zaXplICsgMSB9ID0gb3B0aW9ucztcblxuICAgIGNvbnN0IHBvaW50cyA9IG5ldyBBcnJheShkYXRhc2V0Lmxlbmd0aCk7XG4gICAgZm9yICh2YXIgaSA9IDA7IGkgPCBwb2ludHMubGVuZ3RoOyArK2kpIHtcbiAgICAgIHBvaW50c1tpXSA9IGRhdGFzZXRbaV0uc2xpY2UoKTtcbiAgICB9XG5cbiAgICBmb3IgKGkgPSAwOyBpIDwgbGFiZWxzLmxlbmd0aDsgKytpKSB7XG4gICAgICBwb2ludHNbaV0ucHVzaChsYWJlbHNbaV0pO1xuICAgIH1cblxuICAgIHRoaXMua2RUcmVlID0gbmV3IEtEVHJlZShwb2ludHMsIGRpc3RhbmNlKTtcbiAgICB0aGlzLmsgPSBrO1xuICAgIHRoaXMuY2xhc3NlcyA9IGNsYXNzZXM7XG4gICAgdGhpcy5pc0V1Y2xpZGVhbiA9IGRpc3RhbmNlID09PSBldWNsaWRlYW5EaXN0YW5jZTtcbiAgfVxuXG4gIC8qKlxuICAgKiBDcmVhdGUgYSBuZXcgS05OIGluc3RhbmNlIHdpdGggdGhlIGdpdmVuIG1vZGVsLlxuICAgKiBAcGFyYW0ge29iamVjdH0gbW9kZWxcbiAgICogQHBhcmFtIHtmdW5jdGlvbn0gZGlzdGFuY2U9ZXVjbGlkZWFuRGlzdGFuY2UgLSBkaXN0YW5jZSBmdW5jdGlvbiBtdXN0IGJlIHByb3ZpZGVkIGlmIHRoZSBtb2RlbCB3YXNuJ3QgdHJhaW5lZCB3aXRoIGV1Y2xpZGVhbiBkaXN0YW5jZS5cbiAgICogQHJldHVybiB7S05OfVxuICAgKi9cbiAgc3RhdGljIGxvYWQobW9kZWwsIGRpc3RhbmNlID0gZXVjbGlkZWFuRGlzdGFuY2UpIHtcbiAgICBpZiAobW9kZWwubmFtZSAhPT0gJ0tOTicpIHtcbiAgICAgIHRocm93IG5ldyBFcnJvcihgaW52YWxpZCBtb2RlbDogJHttb2RlbC5uYW1lfWApO1xuICAgIH1cbiAgICBpZiAoIW1vZGVsLmlzRXVjbGlkZWFuICYmIGRpc3RhbmNlID09PSBldWNsaWRlYW5EaXN0YW5jZSkge1xuICAgICAgdGhyb3cgbmV3IEVycm9yKFxuICAgICAgICAnYSBjdXN0b20gZGlzdGFuY2UgZnVuY3Rpb24gd2FzIHVzZWQgdG8gY3JlYXRlIHRoZSBtb2RlbC4gUGxlYXNlIHByb3ZpZGUgaXQgYWdhaW4nXG4gICAgICApO1xuICAgIH1cbiAgICBpZiAobW9kZWwuaXNFdWNsaWRlYW4gJiYgZGlzdGFuY2UgIT09IGV1Y2xpZGVhbkRpc3RhbmNlKSB7XG4gICAgICB0aHJvdyBuZXcgRXJyb3IoXG4gICAgICAgICd0aGUgbW9kZWwgd2FzIGNyZWF0ZWQgd2l0aCB0aGUgZGVmYXVsdCBkaXN0YW5jZSBmdW5jdGlvbi4gRG8gbm90IGxvYWQgaXQgd2l0aCBhbm90aGVyIG9uZSdcbiAgICAgICk7XG4gICAgfVxuICAgIHJldHVybiBuZXcgS05OKHRydWUsIG1vZGVsLCBkaXN0YW5jZSk7XG4gIH1cblxuICAvKipcbiAgICogUmV0dXJuIGEgSlNPTiBjb250YWluaW5nIHRoZSBrZC10cmVlIG1vZGVsLlxuICAgKiBAcmV0dXJuIHtvYmplY3R9IEpTT04gS05OIG1vZGVsLlxuICAgKi9cbiAgdG9KU09OKCkge1xuICAgIHJldHVybiB7XG4gICAgICBuYW1lOiAnS05OJyxcbiAgICAgIGtkVHJlZTogdGhpcy5rZFRyZWUsXG4gICAgICBrOiB0aGlzLmssXG4gICAgICBjbGFzc2VzOiBBcnJheS5mcm9tKHRoaXMuY2xhc3NlcyksXG4gICAgICBpc0V1Y2xpZGVhbjogdGhpcy5pc0V1Y2xpZGVhblxuICAgIH07XG4gIH1cblxuICAvKipcbiAgICogUHJlZGljdHMgdGhlIG91dHB1dCBnaXZlbiB0aGUgbWF0cml4IHRvIHByZWRpY3QuXG4gICAqIEBwYXJhbSB7QXJyYXl9IGRhdGFzZXRcbiAgICogQHJldHVybiB7QXJyYXl9IHByZWRpY3Rpb25zXG4gICAqL1xuICBwcmVkaWN0KGRhdGFzZXQpIHtcbiAgICBpZiAoQXJyYXkuaXNBcnJheShkYXRhc2V0KSkge1xuICAgICAgaWYgKHR5cGVvZiBkYXRhc2V0WzBdID09PSAnbnVtYmVyJykge1xuICAgICAgICByZXR1cm4gZ2V0U2luZ2xlUHJlZGljdGlvbih0aGlzLCBkYXRhc2V0KTtcbiAgICAgIH0gZWxzZSBpZiAoXG4gICAgICAgIEFycmF5LmlzQXJyYXkoZGF0YXNldFswXSkgJiZcbiAgICAgICAgdHlwZW9mIGRhdGFzZXRbMF1bMF0gPT09ICdudW1iZXInXG4gICAgICApIHtcbiAgICAgICAgY29uc3QgcHJlZGljdGlvbnMgPSBuZXcgQXJyYXkoZGF0YXNldC5sZW5ndGgpO1xuICAgICAgICBmb3IgKHZhciBpID0gMDsgaSA8IGRhdGFzZXQubGVuZ3RoOyBpKyspIHtcbiAgICAgICAgICBwcmVkaWN0aW9uc1tpXSA9IGdldFNpbmdsZVByZWRpY3Rpb24odGhpcywgZGF0YXNldFtpXSk7XG4gICAgICAgIH1cbiAgICAgICAgcmV0dXJuIHByZWRpY3Rpb25zO1xuICAgICAgfVxuICAgIH1cbiAgICB0aHJvdyBuZXcgVHlwZUVycm9yKCdkYXRhc2V0IHRvIHByZWRpY3QgbXVzdCBiZSBhbiBhcnJheSBvciBhIG1hdHJpeCcpO1xuICB9XG59XG5cbmZ1bmN0aW9uIGdldFNpbmdsZVByZWRpY3Rpb24oa25uLCBjdXJyZW50Q2FzZSkge1xuICB2YXIgbmVhcmVzdFBvaW50cyA9IGtubi5rZFRyZWUubmVhcmVzdChjdXJyZW50Q2FzZSwga25uLmspO1xuICB2YXIgcG9pbnRzUGVyQ2xhc3MgPSB7fTtcbiAgdmFyIHByZWRpY3RlZENsYXNzID0gLTE7XG4gIHZhciBtYXhQb2ludHMgPSAtMTtcbiAgdmFyIGxhc3RFbGVtZW50ID0gbmVhcmVzdFBvaW50c1swXVswXS5sZW5ndGggLSAxO1xuXG4gIGZvciAodmFyIGVsZW1lbnQgb2Yga25uLmNsYXNzZXMpIHtcbiAgICBwb2ludHNQZXJDbGFzc1tlbGVtZW50XSA9IDA7XG4gIH1cblxuICBmb3IgKHZhciBpID0gMDsgaSA8IG5lYXJlc3RQb2ludHMubGVuZ3RoOyArK2kpIHtcbiAgICB2YXIgY3VycmVudENsYXNzID0gbmVhcmVzdFBvaW50c1tpXVswXVtsYXN0RWxlbWVudF07XG4gICAgdmFyIGN1cnJlbnRQb2ludHMgPSArK3BvaW50c1BlckNsYXNzW2N1cnJlbnRDbGFzc107XG4gICAgaWYgKGN1cnJlbnRQb2ludHMgPiBtYXhQb2ludHMpIHtcbiAgICAgIHByZWRpY3RlZENsYXNzID0gY3VycmVudENsYXNzO1xuICAgICAgbWF4UG9pbnRzID0gY3VycmVudFBvaW50cztcbiAgICB9XG4gIH1cblxuICByZXR1cm4gcHJlZGljdGVkQ2xhc3M7XG59XG4iLCJpbXBvcnQgS05OIGZyb20gJ21sLWtubidcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIChLTmVhcmVzdE5laWdoYm9ycykge1xyXG4gIEtOZWFyZXN0TmVpZ2hib3JzLm1ldGhvZHMuc3RhcnRQcmVkaWN0ID0gYXN5bmMgZnVuY3Rpb24gKCkge1xyXG4gICAgcmV0dXJuIGF3YWl0IHRoaXMuc3RhcnQoKVxyXG4gIH1cclxuICAgIFxyXG4gIEtOZWFyZXN0TmVpZ2hib3JzLm1ldGhvZHMuc3RhcnQgPSBhc3luYyBmdW5jdGlvbiAoKSB7XHJcbiAgICAvL3RoaXMubG9jYWxDb25maWcubW9kZWxKU09OID0gbnVsbFxyXG4gICAgdGhpcy5jb25maWcubG9hZGluZ1Byb2dyZXNzID0gMFxyXG4gICAgY29uc29sZS5sb2coJ3N0YXJ0JywgMSlcclxuICAgIFxyXG4gICAgdGhpcy5sb2NhbENvbmZpZy5tb2RlbEpTT04gPSBudWxsXHJcbiAgICB0aGlzLmxvY2FsQ29uZmlnLm1vZGVsRXZhbHVhdGlvbnMgPSBbXVxyXG4gICAgbGV0IGRhdGEgPSBhd2FpdCB0aGlzLiRwYXJlbnQuZ2V0VmVjdG9yRGF0YSgpXHJcbiAgICBcclxuICAgIHRoaXMuZGF0YVRvU2hvdyA9IGRhdGFcclxuICAgIFxyXG4gICAgaWYgKGRhdGEudHJhaW5TZXRDbGFzc2VzLmxlbmd0aCA9PT0gMCkge1xyXG4gICAgICBjb25zb2xlLmVycm9yKCdObyB0cmFpblNldENsYXNzZXMnKVxyXG4gICAgICAvL3Rocm93IEVycm9yKCdObyB0cmFpblNldENsYXNzZXMnKVxyXG4gICAgfVxyXG4gICAgXHJcbiAgICBjb25zb2xlLmxvZyhkYXRhKVxyXG4gICAgLy9yZXR1cm4gZmFsc2VcclxuICAgIHRoaXMuY29uZmlnLmxvYWRpbmdQcm9ncmVzcyA9IDAuMjVcclxuICAgIFxyXG4gICAgY29uc29sZS5sb2coJ3N0YXJ0JywgMilcclxuICAgIC8vY29uc29sZS5sb2coZGF0YS50cmFpblNldFswXSlcclxuICAgIFxyXG4gICAgY29uc29sZS5sb2coJ3N0YXJ0JywgMylcclxuICAgIGlmIChkYXRhLnRyYWluU2V0Q2xhc3Nlcy5sZW5ndGggPiAwKSB7XHJcbiAgICAgIGlmICghdGhpcy5sb2NhbENvbmZpZy5tb2RlbEpTT04pIHtcclxuICAgICAgICB0aGlzLm1vZGVsID0gdGhpcy5idWlsZE1vZGVsKGRhdGEpXHJcbiAgICAgICAgdGhpcy5sb2NhbENvbmZpZy5tb2RlbEpTT04gPSB0aGlzLm1vZGVsXHJcbiAgICAgIH1cclxuICAgICAgZWxzZSB7XHJcbiAgICAgICAgdGhpcy5tb2RlbCA9IEtOTi5sb2FkKHRoaXMubG9jYWxDb25maWcubW9kZWxKU09OKVxyXG4gICAgICB9XHJcblxyXG4gICAgICAvL2NvbnNvbGUubG9nKHRoaXMubW9kZWwudG9KU09OKCkpXHJcblxyXG4gICAgICAvL2NvbnNvbGUubG9nKHRoaXMubW9kZWwpXHJcbiAgICAgIGNvbnNvbGUubG9nKCdzdGFydCcsIDUpXHJcblxyXG4gICAgICB0aGlzLmNvbmZpZy5sb2FkaW5nUHJvZ3Jlc3MgPSAwLjVcclxuXHJcbiAgICAgIGNvbnNvbGUubG9nKCdzdGFydCcsIDkpXHJcbiAgICAgIC8vY29uc29sZS5sb2coZGF0YS50ZXN0U2V0KVxyXG4gICAgICBsZXQgcHJlZGljdFZlY3RvciA9IGF3YWl0IHRoaXMuZ2V0UHJlZGljdFJlc3VsdHNWZWN0b3IodGhpcy5tb2RlbCwgZGF0YSlcclxuICAgICAgbGV0IHByZWRpY3RSZXN1bHRzID0gYXdhaXQgdGhpcy5nZXRQcmVkaWN0UmVzdWx0c1ZhbHVlKGRhdGEsIHByZWRpY3RWZWN0b3IpXHJcbiAgICAgIGNvbnNvbGUubG9nKHByZWRpY3RWZWN0b3IpXHJcbiAgICAgIGlmIChwcmVkaWN0UmVzdWx0c1swXSA9PT0gJ3VuZGVmaW5lZCcpIHtcclxuICAgICAgICB0aGlzLmNvbmZpZy5sb2FkaW5nUHJvZ3Jlc3MgPSAxXHJcbiAgICAgICAgY29uc29sZS5lcnJvcigncHJlZGljdCBpcyB1bmRlZmluZWQnKVxyXG4gICAgICAgIHJldHVybiBmYWxzZVxyXG4gICAgICB9XHJcblxyXG4gICAgICBjb25zb2xlLmxvZygnc3RhcnQnLCAxMClcclxuICAgICAgdGhpcy5jb25maWcubG9hZGluZ1Byb2dyZXNzID0gMC43NVxyXG5cclxuICAgICAgaWYgKHRoaXMuJHBhcmVudC5oYXNNb2RlbEV2YWx1YXRlZCA9PT0gZmFsc2UpIHtcclxuICAgICAgICBsZXQgdGVzdFNldFJvd0luZGV4ZXMgPSBkYXRhLnRlc3RTZXRSb3dJbmRleGVzXHJcbiAgICAgICAgdGhpcy51bmtub3duc1ByZWRpY3Rpb24gPSBbXVxyXG4gICAgICAgIGxldCBwcmVkaWN0VmVjdG9yVG9FdmFsdXRlID0gcHJlZGljdFZlY3Rvci5maWx0ZXIoKHZhbHVlLCBpKSA9PiB7XHJcbiAgICAgICAgICBsZXQgbm90TWF0Y2ggPSAodGVzdFNldFJvd0luZGV4ZXMuaW5kZXhPZihpKSA9PT0gLTEpXHJcblxyXG4gICAgICAgICAgaWYgKG5vdE1hdGNoID09PSBmYWxzZSkge1xyXG4gICAgICAgICAgICB0aGlzLnVua25vd25zUHJlZGljdGlvbi5wdXNoKHZhbHVlKVxyXG4gICAgICAgICAgfVxyXG5cclxuICAgICAgICAgIHJldHVybiBub3RNYXRjaFxyXG4gICAgICAgIH0pXHJcbiAgICAgICAgdGhpcy5ldmFsdWF0aW9uUmVzdWx0cyhkYXRhLnRyYWluU2V0Q2xhc3NlcywgcHJlZGljdFZlY3RvclRvRXZhbHV0ZSlcclxuICAgICAgfVxyXG5cclxuICAgICAgLy9jb25zb2xlLmxvZyhwcmVkaWN0UmVzdWx0cylcclxuICAgICAgdGhpcy4kcGFyZW50LnNldFByZWRpY3RSZXN1bHRzKHByZWRpY3RSZXN1bHRzKVxyXG5cclxuICAgICAgdGhpcy5jb25maWcubG9hZGluZ1Byb2dyZXNzID0gMC45XHJcblxyXG4gICAgfSAvLyBpZiAoZGF0YS50cmFpblNldENsYXNzZXMubGVuZ3RoID4gMCkge1xyXG4gICAgZWxzZSB7XHJcbiAgICAgIHRoaXMubW9kZWwgPSAndW5zdXBlcnZpc2VkJ1xyXG4gICAgfVxyXG4gICAgXHJcbiAgICBpZiAodGhpcy4kcGFyZW50LmlzTW9kZWxXaW5kb3dPcGVuZWQpIHtcclxuICAgICAgdGhpcy5zaG93TW9kZWwoKVxyXG4gICAgfVxyXG4gICAgXHJcbiAgICB0aGlzLmNvbmZpZy5sb2FkaW5nUHJvZ3Jlc3MgPSAxXHJcbiAgICB0aGlzLmNvbmZpZy5tb2RlbEJ1aWxkZWRUaW1lID0gKG5ldyBEYXRlKCkpLmdldFRpbWUoKVxyXG4gIH1cclxuICBcclxuICBLTmVhcmVzdE5laWdoYm9ycy5tZXRob2RzLmJ1aWxkTW9kZWwgPSBmdW5jdGlvbiAoZGF0YSl7XHJcbiAgICBsZXQgdGVzdFNldFJvd0luZGV4ZXMgPSBkYXRhLnRlc3RTZXRSb3dJbmRleGVzXHJcbiAgICBsZXQgZGF0YXNldCA9IGRhdGEudGVzdFNldC5maWx0ZXIoKHJvdywgaSkgPT4ge1xyXG4gICAgICByZXR1cm4gKHRlc3RTZXRSb3dJbmRleGVzLmluZGV4T2YoaSkgPT09IC0xKVxyXG4gICAgfSlcclxuICAgIFxyXG4gICAgY29uc29sZS5sb2coZGF0YXNldClcclxuICAgIGxldCBwcmVkaWN0aW9ucyA9IGRhdGEudHJhaW5TZXRDbGFzc2VzXHJcbiAgICBcclxuICAgIGlmIChkYXRhc2V0Lmxlbmd0aCA9PT0gMCkge1xyXG4gICAgICBkYXRhc2V0ID0gZGF0YS50ZXN0U2V0XHJcbiAgICAgIHByZWRpY3Rpb25zID0gZGF0YXNldC5tYXAoaXRlbSA9PiAndW5rbm93bicpXHJcbiAgICB9XHJcbiAgICBcclxuICAgIGlmIChkYXRhc2V0Lmxlbmd0aCAhPT0gcHJlZGljdGlvbnMubGVuZ3RoKSB7XHJcbiAgICAgIGNvbnNvbGUuZXJyb3IoJ2xlbmd0aCBpcyBub3QgbWF0Y2gnKVxyXG4gICAgfVxyXG4gICAgXHJcbiAgICByZXR1cm4gbmV3IEtOTihkYXRhc2V0LCBwcmVkaWN0aW9ucylcclxuICB9XHJcbiAgXHJcbiAgS05lYXJlc3ROZWlnaGJvcnMubWV0aG9kcy5nZXRQcmVkaWN0UmVzdWx0c1ZlY3RvciA9IGFzeW5jIGZ1bmN0aW9uIChtb2RlbCwgZGF0YSkge1xyXG4gICAgbGV0IHRlc3RTZXQgPSBkYXRhLnRlc3RTZXRcclxuICAgIGxldCByZXN1bHRWZWN0b3IgPSBtb2RlbC5wcmVkaWN0KHRlc3RTZXQpO1xyXG4gICAgcmV0dXJuIHJlc3VsdFZlY3RvclxyXG4gIH1cclxuICBcclxuICBLTmVhcmVzdE5laWdoYm9ycy5tZXRob2RzLmdldFByZWRpY3RSZXN1bHRzVmFsdWUgPSBhc3luYyBmdW5jdGlvbiAoZGF0YSwgcmVzdWx0VmVjdG9yKSB7XHJcbiAgICBsZXQgdHJhaW5TZXRDbGFzc2VzRGljdCA9IGRhdGEudHJhaW5TZXRDbGFzc2VzRGljdFxyXG4gICAgLy9jb25zb2xlLmxvZyh0cmFpblNldENsYXNzZXNEaWN0KVxyXG4gICAgcmV0dXJuIHJlc3VsdFZlY3Rvci5tYXAoaW5kZXggPT4ge1xyXG4gICAgICByZXR1cm4gdHJhaW5TZXRDbGFzc2VzRGljdFtpbmRleF1cclxuICAgIH0pXHJcbiAgfVxyXG4gIFxyXG4gIEtOZWFyZXN0TmVpZ2hib3JzLm1ldGhvZHMuZXZhbHVhdGlvblJlc3VsdHMgPSBhc3luYyBmdW5jdGlvbiAodHJhaW4sIHByZWRpY3QpIHtcclxuICAgIFxyXG4gICAgdGhpcy4kcGFyZW50LnJlc2V0TW9kZWxFdmFsdWF0aW9uKClcclxuICAgIGNvbnNvbGUubG9nKHRyYWluKVxyXG4gICAgY29uc29sZS5sb2cocHJlZGljdClcclxuICAgIC8vY29uc29sZS5sb2coZGF0YS50cmFpblNldENsYXNzZXMubGVuZ3RoLCBnZXRUcmFpblNldFByZWRpY3RzLmxlbmd0aCwgZGF0YS50ZXN0U2V0Um93SW5kZXhlcy5sZW5ndGgpXHJcblxyXG4gICAgbGV0IGFjY3VyYWN5ID0gYXdhaXQgdGhpcy4kcGFyZW50LmNhbGNBY2N1cmFjeSh0cmFpbiwgcHJlZGljdClcclxuICAgIC8vY29uc29sZS5sb2coYWNjdXJhY3kpXHJcbiAgICBsZXQgYWNjdXJhY3lJbmZvID0ge1xyXG4gICAgICBuYW1lOiAnYWNjdXJhY3knLFxyXG4gICAgICB0eXBlOiAncGVyY2VudCcsXHJcbiAgICAgIHZhbHVlOiBhY2N1cmFjeVxyXG4gICAgfVxyXG4gICAgXHJcbiAgICAvL2NvbnNvbGUubG9nKGFjY3VyYWN5SW5mbylcclxuICAgIHRoaXMubG9jYWxDb25maWcubW9kZWxFdmFsdWF0aW9ucy5wdXNoKGFjY3VyYWN5SW5mbylcclxuICB9XHJcbn0iLCIvL2ltcG9ydCB7ZXVjbGlkZWFufSBmcm9tICdtbC1kaXN0YW5jZS1ldWNsaWRlYW4nXG5jb25zdCBldWNsaWRlYW4gPSByZXF1aXJlKCdtbC1kaXN0YW5jZS1ldWNsaWRlYW4nKS5ldWNsaWRlYW5cbi8vY29uc3QgZXVjbGlkZWFuID0gTUxEaXN0YW5jZUV1Y2xpZGVhbi5ldWNsaWRlYW5cblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gKEtOZWFyZXN0TmVpZ2hib3JzKSB7XG4gIEtOZWFyZXN0TmVpZ2hib3JzLm1ldGhvZHMuc2hvd01vZGVsID0gYXN5bmMgZnVuY3Rpb24gKCkge1xuICAgIGlmICghdGhpcy5tb2RlbCkge1xuICAgICAgYXdhaXQgdGhpcy5zdGFydCgpXG4gICAgICAvL2NvbnNvbGUuZXJyb3IoJ25vIHRoaXMubW9kZWwnKVxuICAgICAgLy9yZXR1cm4gZmFsc2VcbiAgICB9XG5cbiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgIC8vY29uc29sZS5sb2codGhpcy5kYXRhVG9TaG93KVxuICAgIGxldCB1bmtub3duU2V0Um93SW5kZXggPSB0aGlzLmRhdGFUb1Nob3cudGVzdFNldFJvd0luZGV4ZXNcblxuICAgIGxldCBuZWlnaGJvcnMgPSBbXVxuICAgIGxldCB1bmtub3ducyA9IFtdXG4gICAgLy9jb25zb2xlLmxvZyh1bmtub3duU2V0Um93SW5kZXgpXG5cbiAgICB0aGlzLmRhdGFUb1Nob3cudGVzdFNldC5mb3JFYWNoKChzZXQsIGkpID0+IHtcbiAgICAgIGlmICh1bmtub3duU2V0Um93SW5kZXguaW5kZXhPZihpKSA9PT0gLTEpIHtcbiAgICAgICAgbmVpZ2hib3JzLnB1c2goc2V0KVxuICAgICAgfSBlbHNlIHtcbiAgICAgICAgdW5rbm93bnMucHVzaChzZXQpXG4gICAgICB9XG4gICAgfSlcblxuICAgIC8vY29uc29sZS5sb2cobmVpZ2hib3JzKVxuICAgIC8vY29uc29sZS5sb2codW5rbm93bnMpXG4gICAgaWYgKG5laWdoYm9ycy5sZW5ndGggPT09IDApIHtcbiAgICAgIG5laWdoYm9ycyA9IHVua25vd25zXG4gICAgfVxuXG4gICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICBsZXQgZGlzdGFuY2VNYXRyaXggPSB1bmtub3ducy5tYXAodW5rbm93bkZlYXR1cmUgPT4ge1xuICAgICAgbGV0IG1heERpc3RhbmNlID0gbnVsbFxuICAgICAgbGV0IGRpc3RhbmNlcyA9IG5laWdoYm9ycy5tYXAobmVpZ2hib3IgPT4ge1xuICAgICAgICBsZXQgZGlzdGFuY2UgPSBldWNsaWRlYW4odW5rbm93bkZlYXR1cmUsIG5laWdoYm9yKVxuICAgICAgICBpZiAobWF4RGlzdGFuY2UgPT09IG51bGwgfHwgZGlzdGFuY2UgPiBtYXhEaXN0YW5jZSkge1xuICAgICAgICAgIG1heERpc3RhbmNlID0gZGlzdGFuY2VcbiAgICAgICAgfVxuXG4gICAgICAgIHJldHVybiBkaXN0YW5jZVxuICAgICAgfSlcblxuICAgICAgZGlzdGFuY2VzID0gZGlzdGFuY2VzLm1hcChkID0+IHtcbiAgICAgICAgcmV0dXJuICgobWF4RGlzdGFuY2UgLSBkKSAvIG1heERpc3RhbmNlKVxuICAgICAgfSlcblxuICAgICAgcmV0dXJuIGRpc3RhbmNlc1xuICAgIH0pXG5cbiAgICAvL2NvbnNvbGUubG9nKGRpc3RhbmNlTWF0cml4KVxuXG4gICAgbGV0IGNvbG9yTWF0cml4ID0gZGlzdGFuY2VNYXRyaXgubWFwKHVua25vd24gPT4ge1xuICAgICAgcmV0dXJuIHVua25vd24ubWFwKGQgPT4ge1xuICAgICAgICByZXR1cm4gaGVhdE1hcENvbG9yZm9yVmFsdWUoZClcbiAgICAgIH0pXG4gICAgfSlcblxuICAgIC8vY29uc29sZS5sb2coY29sb3JNYXRyaXgpXG5cbiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG4gICAgbGV0IHRhYmxlSGVhZGVyVW5rbm93bkNvbHNwYW4gPSAyXG4gICAgaWYgKHRoaXMubW9kZWwgPT09ICd1bnN1cGVydmlzZWQnKSB7XG4gICAgICB0YWJsZUhlYWRlclVua25vd25Db2xzcGFuID0gMVxuICAgIH1cblxuICAgIGxldCB0YWJsZUhlYWRlciA9IGA8dGhlYWQ+XG4gIDx0cj5cbiAgICA8dGggcm93c3Bhbj1cIjJcIiBjb2xzcGFuPVwiJHt0YWJsZUhlYWRlclVua25vd25Db2xzcGFufVwiIHZhbGlnbj1cImJvdHRvbVwiPiR7dGhpcy4kdCgnVW5rbm93bnMnKX08L3RoPlxuICAgIDx0aCBjb2xzcGFuPVwiJHtjb2xvck1hdHJpeFswXS5sZW5ndGh9XCI+JHt0aGlzLiR0KCdOZWlnaGJvcnMnKX08L3RoPlxuICA8L3RyPlxuICA8dHI+JHtjb2xvck1hdHJpeFswXS5tYXAoKHZhbHVlLCBpKSA9PiBgPHRoPiR7aSArIDF9PC90aD5gKS5qb2luKCcnKX08L3RyPlxuPC90aGVhZD5gXG5cbiAgICBsZXQgdHJhaW5TZXRDbGFzc2VzRGljdCA9IHRoaXMuZGF0YVRvU2hvdy50cmFpblNldENsYXNzZXNEaWN0XG5cbiAgICBsZXQgdGFibGVCb2R5ID0gYDx0Ym9keT5cbiR7Y29sb3JNYXRyaXgubWFwKChyb3csIGkpID0+IHtcbiAgICAgIGxldCB0aFByZWRpZWN0aW9uID0gYDx0aD4ke3RyYWluU2V0Q2xhc3Nlc0RpY3RbdGhpcy51bmtub3duc1ByZWRpY3Rpb25baV1dfTwvdGg+YFxuICAgICAgaWYgKHRoaXMubW9kZWwgPT09ICd1bnN1cGVydmlzZWQnKSB7XG4gICAgICAgIHRoUHJlZGllY3Rpb24gPSAnJ1xuICAgICAgfVxuICAgICAgcmV0dXJuIGA8dHI+XG4gIDx0aD4keyh1bmtub3duU2V0Um93SW5kZXhbaV0pICsgMX08L3RoPlxuICAke3RoUHJlZGllY3Rpb259XG4gICR7cm93Lm1hcCgoY29sb3IsIGopID0+IHtcbiAgICAgICAgbGV0IGQgPSBkaXN0YW5jZU1hdHJpeFtpXVtqXVxuICAgICAgICBsZXQgZFRleHQgPSBkXG4gICAgICAgIGRUZXh0ID0gTWF0aC5yb3VuZChkVGV4dCAqIDEwMCkgKyAnJSdcblxuICAgICAgICBpZiAoZCA+IDAuNSkge1xuICAgICAgICAgIHJldHVybiBgPHRkIHN0eWxlPVwidGV4dC1hbGlnbjpjZW50ZXI7YmFja2dyb3VuZC1jb2xvcjogJHtjb2xvcn07IGNvbG9yOiB3aGl0ZVwiPiR7ZFRleHR9PC90ZD5gXG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgcmV0dXJuIGA8dGQgc3R5bGU9XCJ0ZXh0LWFsaWduOmNlbnRlcjtiYWNrZ3JvdW5kLWNvbG9yOiAke2NvbG9yfVwiPiR7ZFRleHR9PC90ZD5gXG4gICAgICAgIH1cbiAgICAgIH0pLmpvaW4oJycpfVxuPC90cj5gXG4gICAgfSkuam9pbignXFxuJyl9XG48L3Rib2R5PmBcblxuICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICBsZXQgYm9keUhUTUwgPSBgPHRhYmxlIGJvcmRlcj1cIjFcIiBhbGlnbj1cImNlbnRlclwiPlxuICAgICR7dGFibGVIZWFkZXJ9XG4gICAgJHt0YWJsZUJvZHl9XG48L3RhYmxlPmBcbiAgICBib2R5SFRNTCA9IGA8ZGl2IGNsYXNzPVwidHJlZVwiPiR7Ym9keUhUTUx9PC9kaXY+YFxuICAgIC8vY29uc29sZS5lcnJvcignW1RPRE9dJylcbiAgICAvL2NvbnNvbGUubG9nKClcbiAgICBsZXQgdGl0bGUgPSB0aGlzLiR0KCdLTk4nKSArIGAgKGAgKyAobmV3IERhdGUoKSkubW1kZGhobW0oKSArICcpJ1xuXG4gICAgY29uc29sZS5sb2coJ0tOTk1vZGVsU2hvdycgKyB0aGlzLmNvbmZpZy5tb2RlbEJ1aWxkZWRUaW1lKVxuICAgIGxldCBtb2RlbFdpbmRvdyA9IHRoaXMudXRpbHMuUG9wdXBVdGlscy5vcGVuKHtcbiAgICAgIHdpbmRvd05hbWU6ICdLTk5Nb2RlbFNob3cnICsgdGhpcy5jb25maWcubW9kZWxCdWlsZGVkVGltZSxcbiAgICAgIGNzc1VSTDogdGhpcy5tb2RlbENTU1VSTCxcbiAgICAgIGJvZHlIVE1MLFxuICAgICAgc2l6ZTogJ3JpZ2h0JyxcbiAgICAgIC8vc2l6ZTogJ2xlZnQnLFxuICAgICAgdGl0bGVcbiAgICB9KVxuXG4gICAgbW9kZWxXaW5kb3cuc2Nyb2xsVG9Ub3AoKVxuICAgIG1vZGVsV2luZG93LnNjcm9sbFRvQ2VudGVyKClcbiAgfVxuXG4gIC8qKlxuICAgKiBodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL2EvMjcyNjM5MTgvNjY0NTM5OVxuICAgKi9cbiAgZnVuY3Rpb24gaGVhdE1hcENvbG9yZm9yVmFsdWUodmFsdWUpIHtcbiAgICAvL3ZhciBoID0gKDEuMCAtIHZhbHVlKSAqIDI0MFxuICAgIC8vcmV0dXJuIFwiaHNsKFwiICsgaCArIFwiLCAxMDAlLCA1MCUpXCI7XG4gICAgcmV0dXJuIGByZ2JhKDIyLCAxNjAsIDEzMywgJHt2YWx1ZX0pYFxuICAgIC8vIHJnYigyMiwgMTYwLCAxMzMpXG4gIH1cbn0iLCJpbXBvcnQgS05OIGZyb20gJ21sLWtubidcclxuLy8gaHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvbWwta25uXHJcblxyXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiAoS05lYXJlc3ROZWlnaGJvcnMpIHtcclxuICBLTmVhcmVzdE5laWdoYm9ycy5tZXRob2RzLnRlc3RLTk4gPSBhc3luYyBmdW5jdGlvbiAoKSB7XHJcbiAgICB2YXIgZGF0YXNldCA9IFtcclxuICAgICAgWzAsIDAsIDBdLFxyXG4gICAgICBbMCwgMSwgMV0sXHJcbiAgICAgIFsxLCAxLCAwXSxcclxuICAgICAgWzIsIDIsIDJdLFxyXG4gICAgICBbMSwgMiwgMl0sXHJcbiAgICAgIFsyLCAxLCAyXVxyXG4gICAgXTtcclxuICAgIHZhciBwcmVkaWN0aW9ucyA9IFswLCAwLCAwLCAxLCAxLCAxXTtcclxuICAgIHZhciBrbm4gPSBuZXcgS05OKGRhdGFzZXQsIHByZWRpY3Rpb25zKTtcclxuICAgIFxyXG4gICAgdmFyIGRhdGFzZXQgPSBbWzAsIDAsIDBdLCBbMiwgMiwgMl1dO1xyXG4gXHJcbiAgICB2YXIgYW5zID0ga25uLnByZWRpY3QoZGF0YXNldCk7XHJcbiAgICBcclxuICAgIGNvbnNvbGUubG9nKGFucylcclxuICB9XHJcbn0iLCJsZXQgS05lYXJlc3ROZWlnaGJvcnMgPSB7XHJcbiAgcHJvcHM6IFsnY29uZmlnJywgJ2xvY2FsQ29uZmlnJywgJ3V0aWxzJ10sXHJcbiAgZGF0YSAoKSB7ICAgIFxyXG4gICAgdGhpcy4kaTE4bi5sb2NhbGUgPSB0aGlzLmxvY2FsQ29uZmlnLmxvY2FsZVxyXG4gICAgcmV0dXJuIHtcclxuICAgICAgbW9kZWw6IG51bGwsXHJcbiAgICAgIGRhdGFUb1Nob3c6IG51bGwsXHJcbiAgICAgIHVua25vd25zUHJlZGljdGlvbjogW10sXHJcbiAgICB9XHJcbiAgfSxcclxuICB3YXRjaDoge1xyXG4gICAgJ2xvY2FsQ29uZmlnLmxvY2FsZScoKSB7XHJcbiAgICAgIHRoaXMuJGkxOG4ubG9jYWxlID0gdGhpcy5sb2NhbENvbmZpZy5sb2NhbGU7XHJcbiAgICB9LFxyXG4gIH0sXHJcbiAgY29tcHV0ZWQ6IHtcclxuICAgIGlzTW9kZWxCdWlsZGVkICgpIHtcclxuICAgICAgcmV0dXJuICh0aGlzLm1vZGVsICE9PSBudWxsKVxyXG4gICAgfSxcclxuICAgIGlzTW9kZWxVbnN1cGVydmlzZWQgKCkge1xyXG4gICAgICByZXR1cm4gKHRoaXMubW9kZWwgIT09IG51bGwgJiYgdGhpcy5tb2RlbCA9PT0gJ3Vuc3VwZXJ2aXNlZCcpXHJcbiAgICB9LFxyXG4gIH0sXHJcbiAgbW91bnRlZCgpIHtcclxuLy8gICAgc2V0VGltZW91dCgoKSA9PiB7XHJcbi8vICAgICAgdGhpcy5zdGFydCgpXHJcbi8vICAgIH0sIDEwMDApXHJcblxyXG4gICAgLy90aGlzLnRlc3RLTk4oKVxyXG4gIH0sXHJcbiAgbWV0aG9kczoge31cclxufVxyXG5cclxuaW1wb3J0IEtOZWFyZXN0TmVpZ2hib3JzTWV0aG9kc0J1aWxkIGZyb20gJy4vS05lYXJlc3ROZWlnaGJvcnNNZXRob2RzQnVpbGQuanMnXHJcbktOZWFyZXN0TmVpZ2hib3JzTWV0aG9kc0J1aWxkKEtOZWFyZXN0TmVpZ2hib3JzKVxyXG5cclxuaW1wb3J0IEtOZWFyZXN0TmVpZ2hib3JzTWV0aG9kc1Nob3cgZnJvbSAnLi9LTmVhcmVzdE5laWdoYm9yc01ldGhvZHNTaG93LmpzJ1xyXG5LTmVhcmVzdE5laWdoYm9yc01ldGhvZHNTaG93KEtOZWFyZXN0TmVpZ2hib3JzKVxyXG5cclxuaW1wb3J0IEtOZWFyZXN0TmVpZ2hib3JzTWV0aG9kc1Rlc3QgZnJvbSAnLi9LTmVhcmVzdE5laWdoYm9yc01ldGhvZHNUZXN0LmpzJ1xyXG5LTmVhcmVzdE5laWdoYm9yc01ldGhvZHNUZXN0KEtOZWFyZXN0TmVpZ2hib3JzKVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgS05lYXJlc3ROZWlnaGJvcnMiLCJpbXBvcnQgbW9kIGZyb20gXCItIS4uLy4uLy4uLy4uL25vZGVfbW9kdWxlcy9iYWJlbC1sb2FkZXIvbGliL2luZGV4LmpzPz9yZWYtLTYhLi9LTmVhcmVzdE5laWdoYm9ycy5qcz92dWUmdHlwZT1zY3JpcHQmbGFuZz1qcyZcIjsgZXhwb3J0IGRlZmF1bHQgbW9kOyBleHBvcnQgKiBmcm9tIFwiLSEuLi8uLi8uLi8uLi9ub2RlX21vZHVsZXMvYmFiZWwtbG9hZGVyL2xpYi9pbmRleC5qcz8/cmVmLS02IS4vS05lYXJlc3ROZWlnaGJvcnMuanM/dnVlJnR5cGU9c2NyaXB0Jmxhbmc9anMmXCIiLCJpbXBvcnQgeyByZW5kZXIsIHN0YXRpY1JlbmRlckZucyB9IGZyb20gXCIuL0tOZWFyZXN0TmVpZ2hib3JzLmh0bWw/dnVlJnR5cGU9dGVtcGxhdGUmaWQ9MTI5NTI0NWMmc2NvcGVkPXRydWUmXCJcbmltcG9ydCBzY3JpcHQgZnJvbSBcIi4vS05lYXJlc3ROZWlnaGJvcnMuanM/dnVlJnR5cGU9c2NyaXB0Jmxhbmc9anMmXCJcbmV4cG9ydCAqIGZyb20gXCIuL0tOZWFyZXN0TmVpZ2hib3JzLmpzP3Z1ZSZ0eXBlPXNjcmlwdCZsYW5nPWpzJlwiXG5pbXBvcnQgc3R5bGUwIGZyb20gXCIuL0tOZWFyZXN0TmVpZ2hib3JzLmxlc3M/dnVlJnR5cGU9c3R5bGUmaW5kZXg9MCZpZD0xMjk1MjQ1YyZsYW5nPWxlc3Mmc2NvcGVkPXRydWUmXCJcblxuXG4vKiBub3JtYWxpemUgY29tcG9uZW50ICovXG5pbXBvcnQgbm9ybWFsaXplciBmcm9tIFwiIS4uLy4uLy4uLy4uL25vZGVfbW9kdWxlcy92dWUtbG9hZGVyL2xpYi9ydW50aW1lL2NvbXBvbmVudE5vcm1hbGl6ZXIuanNcIlxudmFyIGNvbXBvbmVudCA9IG5vcm1hbGl6ZXIoXG4gIHNjcmlwdCxcbiAgcmVuZGVyLFxuICBzdGF0aWNSZW5kZXJGbnMsXG4gIGZhbHNlLFxuICBudWxsLFxuICBcIjEyOTUyNDVjXCIsXG4gIG51bGxcbiAgXG4pXG5cbi8qIGN1c3RvbSBibG9ja3MgKi9cbmltcG9ydCBibG9jazAgZnJvbSBcIi4vS05lYXJlc3ROZWlnaGJvcnMueWFtbD92dWUmdHlwZT1jdXN0b20maW5kZXg9MCZibG9ja1R5cGU9aTE4biZpc3N1ZXJQYXRoPSUyRm1lZGlhJTJGcHVkZGluZyUyRkRBVEElMkZwdWRkaW5nJTJGQ29kZS1Qb3JqZWN0cyUyRmh0bWwtYXBpJTJGSFRNTC1TaW1wbGUtQ2xhc3NpZmllciUyRnNyYyUyRmNvbXBvbmVudHMlMkZDb25maWd1cmF0aW9uUGFuZWwlMkZLTmVhcmVzdE5laWdoYm9ycyUyRktOZWFyZXN0TmVpZ2hib3JzLnZ1ZSZsYW5nPXlhbWxcIlxuaWYgKHR5cGVvZiBibG9jazAgPT09ICdmdW5jdGlvbicpIGJsb2NrMChjb21wb25lbnQpXG5cbi8qIGhvdCByZWxvYWQgKi9cbmlmIChtb2R1bGUuaG90KSB7XG4gIHZhciBhcGkgPSByZXF1aXJlKFwiL21lZGlhL3B1ZGRpbmcvREFUQS9wdWRkaW5nL0NvZGUtUG9yamVjdHMvaHRtbC1hcGkvSFRNTC1TaW1wbGUtQ2xhc3NpZmllci9ub2RlX21vZHVsZXMvdnVlLWhvdC1yZWxvYWQtYXBpL2Rpc3QvaW5kZXguanNcIilcbiAgYXBpLmluc3RhbGwocmVxdWlyZSgndnVlJykpXG4gIGlmIChhcGkuY29tcGF0aWJsZSkge1xuICAgIG1vZHVsZS5ob3QuYWNjZXB0KClcbiAgICBpZiAoIWFwaS5pc1JlY29yZGVkKCcxMjk1MjQ1YycpKSB7XG4gICAgICBhcGkuY3JlYXRlUmVjb3JkKCcxMjk1MjQ1YycsIGNvbXBvbmVudC5vcHRpb25zKVxuICAgIH0gZWxzZSB7XG4gICAgICBhcGkucmVsb2FkKCcxMjk1MjQ1YycsIGNvbXBvbmVudC5vcHRpb25zKVxuICAgIH1cbiAgICBtb2R1bGUuaG90LmFjY2VwdChcIi4vS05lYXJlc3ROZWlnaGJvcnMuaHRtbD92dWUmdHlwZT10ZW1wbGF0ZSZpZD0xMjk1MjQ1YyZzY29wZWQ9dHJ1ZSZcIiwgZnVuY3Rpb24gKCkge1xuICAgICAgYXBpLnJlcmVuZGVyKCcxMjk1MjQ1YycsIHtcbiAgICAgICAgcmVuZGVyOiByZW5kZXIsXG4gICAgICAgIHN0YXRpY1JlbmRlckZuczogc3RhdGljUmVuZGVyRm5zXG4gICAgICB9KVxuICAgIH0pXG4gIH1cbn1cbmNvbXBvbmVudC5vcHRpb25zLl9fZmlsZSA9IFwic3JjL2NvbXBvbmVudHMvQ29uZmlndXJhdGlvblBhbmVsL0tOZWFyZXN0TmVpZ2hib3JzL0tOZWFyZXN0TmVpZ2hib3JzLnZ1ZVwiXG5leHBvcnQgZGVmYXVsdCBjb21wb25lbnQuZXhwb3J0cyJdLCJtYXBwaW5ncyI6Ijs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Ozs7Ozs7Ozs7Ozs7Ozs7QUNuRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7QUN0UkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Ozs7O0FDM0hBO0FBRUE7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFJQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQU5BO0FBQUE7QUFDQTtBQURBO0FBT0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBRUE7QUFDQTtBQXhCQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBd0JBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUlBO0FBQ0E7QUFDQTtBQURBO0FBRUE7QUFFQTtBQUNBO0FBekNBO0FBQUE7QUFDQTtBQURBO0FBMENBO0FBMUNBO0FBQUE7QUFDQTtBQURBO0FBMkNBO0FBQ0E7QUFDQTtBQTdDQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBNkNBO0FBQ0E7QUEvQ0E7QUFDQTtBQURBO0FBbURBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQXhFQTtBQUFBO0FBQ0E7QUFEQTtBQTRFQTtBQUNBO0FBN0VBO0FBK0VBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBckZBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFzRkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFGQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFLQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFGQTtBQUlBO0FBQ0E7QUFDQTtBQU5BO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBT0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUxBO0FBQUE7QUFDQTtBQURBO0FBT0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBSEE7QUFDQTtBQU1BO0FBQ0E7QUFqQkE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBa0JBOzs7OztBQ25KQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQ0E7QUFEQTtBQU9BO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBR0E7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUlBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUtBO0FBQUE7QUFHQTtBQUVBO0FBRUE7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFJQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFJQTtBQUlBO0FBRUE7QUFDQTtBQUFBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQU5BO0FBU0E7QUFDQTtBQUNBO0FBMUhBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBNEhBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBOzs7O0FDMUlBO0FBQ0E7QUFFQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBUUE7QUFDQTtBQUVBO0FBRUE7QUFFQTtBQUNBO0FBakJBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBa0JBOztBQ3RCQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBSEE7QUFLQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBSEE7QUFLQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQU5BO0FBUUE7QUFFQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBOUJBO0FBaUNBO0FBQ0E7QUFFQTtBQUNBO0FBRUE7QUFDQTtBQUVBOztBQzFDQTs7Ozs7Ozs7Ozs7QUNBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSx1QkFpQkE7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///513\n')}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["classifiers/KNearestNeighbors"],{
+
+/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function (Component) {
+  Component.options.__i18n = Component.options.__i18n || []
+  Component.options.__i18n.push('{"en":{"TEST_MESSAGE":"Test Message"},"zh-TW":{"TEST_MESSAGE":"測試訊息"}}')
+  delete Component.options._Ctor
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(true);
+// Module
+exports.push([module.i, "", "",{"version":3,"sources":[],"names":[],"mappings":"","file":"KNearestNeighbors.less"}]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.html?vue&type=template&id=1295245c&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.html?vue&type=template&id=1295245c&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "DecisionTree" }, [
+    _c("div", { staticClass: "field" }, [
+      _c("label", { attrs: { for: "KNearestNeighborsOptionsK" } }, [
+        _vm._v(_vm._s(_vm.$t("K-nearest neighbor")))
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.localConfig.KNearestNeighborsOptionsK,
+            expression: "localConfig.KNearestNeighborsOptionsK"
+          }
+        ],
+        attrs: { type: "number", min: "2", id: "KNearestNeighborsOptionsK" },
+        domProps: { value: _vm.localConfig.KNearestNeighborsOptionsK },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(
+              _vm.localConfig,
+              "KNearestNeighborsOptionsK",
+              $event.target.value
+            )
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    !_vm.isModelBuilded
+      ? _c("div", { staticClass: "ui field" }, [
+          _c(
+            "button",
+            {
+              staticClass: "ui primary fluid button",
+              attrs: { type: "button" },
+              on: { click: _vm.start }
+            },
+            [
+              [
+                _vm._v(
+                  "\r\n        " +
+                    _vm._s(_vm.$t("Build Model and Predict")) +
+                    "\r\n      "
+                )
+              ]
+            ],
+            2
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.isModelBuilded && !_vm.isModelUnsupervised
+      ? _c("div", { staticClass: "ui field" }, [
+          _c(
+            "button",
+            {
+              staticClass: "ui primary fluid button",
+              class: { disabled: !_vm.$parent.isNeedPredict },
+              attrs: { type: "button" },
+              on: { click: _vm.start }
+            },
+            [
+              [
+                _vm._v(
+                  "\r\n        " + _vm._s(_vm.$t("Predict")) + "\r\n      "
+                )
+              ]
+            ],
+            2
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.isModelBuilded
+      ? _c("div", { staticClass: "ui field" }, [
+          _c(
+            "button",
+            {
+              staticClass: "ui primary fluid button",
+              attrs: { type: "button" },
+              on: { click: _vm.showModel }
+            },
+            [_vm._v("\r\n      " + _vm._s(_vm.$t("Show Model")) + "\r\n    ")]
+          )
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true& */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true&");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("220033e5", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.html?vue&type=template&id=1295245c&scoped=true&":
+/*!*******************************************************************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.html?vue&type=template&id=1295245c&scoped=true& ***!
+  \*******************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_KNearestNeighbors_html_vue_type_template_id_1295245c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./KNearestNeighbors.html?vue&type=template&id=1295245c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.html?vue&type=template&id=1295245c&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_KNearestNeighbors_html_vue_type_template_id_1295245c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_KNearestNeighbors_html_vue_type_template_id_1295245c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.js?vue&type=script&lang=js&?decd":
+/*!***********************************************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.js?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _KNearestNeighborsMethodsBuild_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./KNearestNeighborsMethodsBuild.js */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighborsMethodsBuild.js");
+/* harmony import */ var _KNearestNeighborsMethodsShow_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./KNearestNeighborsMethodsShow.js */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighborsMethodsShow.js");
+/* harmony import */ var _KNearestNeighborsMethodsTest_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./KNearestNeighborsMethodsTest.js */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighborsMethodsTest.js");
+let KNearestNeighbors = {
+  props: ['config', 'localConfig', 'utils'],
+  data () {    
+    this.$i18n.locale = this.localConfig.locale
+    return {
+      model: null,
+      dataToShow: null,
+      unknownsPrediction: [],
+    }
+  },
+  watch: {
+    'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
+  },
+  computed: {
+    isModelBuilded () {
+      return (this.model !== null)
+    },
+    isModelUnsupervised () {
+      return (this.model !== null && this.model === 'unsupervised')
+    },
+  },
+  mounted() {
+//    setTimeout(() => {
+//      this.start()
+//    }, 1000)
+
+    //this.testKNN()
+  },
+  methods: {}
+}
+
+
+Object(_KNearestNeighborsMethodsBuild_js__WEBPACK_IMPORTED_MODULE_0__["default"])(KNearestNeighbors)
+
+
+Object(_KNearestNeighborsMethodsShow_js__WEBPACK_IMPORTED_MODULE_1__["default"])(KNearestNeighbors)
+
+
+Object(_KNearestNeighborsMethodsTest_js__WEBPACK_IMPORTED_MODULE_2__["default"])(KNearestNeighbors)
+
+/* harmony default export */ __webpack_exports__["default"] = (KNearestNeighbors);
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.js?vue&type=script&lang=js&?fa1d":
+/*!***********************************************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.js?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _KNearestNeighbors_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./KNearestNeighbors.js?vue&type=script&lang=js& */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.js?vue&type=script&lang=js&?decd");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_KNearestNeighbors_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true&":
+/*!**********************************************************************************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true& ***!
+  \**********************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_KNearestNeighbors_less_vue_type_style_index_0_id_1295245c_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-style-loader!../../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_KNearestNeighbors_less_vue_type_style_index_0_id_1295245c_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_KNearestNeighbors_less_vue_type_style_index_0_id_1295245c_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_KNearestNeighbors_less_vue_type_style_index_0_id_1295245c_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_KNearestNeighbors_less_vue_type_style_index_0_id_1295245c_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.vue":
+/*!***********************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.vue ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _KNearestNeighbors_html_vue_type_template_id_1295245c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./KNearestNeighbors.html?vue&type=template&id=1295245c&scoped=true& */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.html?vue&type=template&id=1295245c&scoped=true&");
+/* harmony import */ var _KNearestNeighbors_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./KNearestNeighbors.js?vue&type=script&lang=js& */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.js?vue&type=script&lang=js&?fa1d");
+/* empty/unused harmony star reexport *//* harmony import */ var _KNearestNeighbors_less_vue_type_style_index_0_id_1295245c_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true& */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _KNearestNeighbors_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _KNearestNeighbors_html_vue_type_template_id_1295245c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _KNearestNeighbors_html_vue_type_template_id_1295245c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "1295245c",
+  null
+  
+)
+
+/* custom blocks */
+
+if (typeof _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/@kazupon/vue-i18n-loader/lib!./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml");
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighborsMethodsBuild.js":
+/*!**********************************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighborsMethodsBuild.js ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var ml_knn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ml-knn */ "./node_modules/ml-knn/src/index.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (KNearestNeighbors) {
+  KNearestNeighbors.methods.startPredict = async function () {
+    return await this.start()
+  }
+    
+  KNearestNeighbors.methods.start = async function () {
+    //this.localConfig.modelJSON = null
+    this.config.loadingProgress = 0
+    console.log('start', 1)
+    
+    this.localConfig.modelJSON = null
+    this.localConfig.modelEvaluations = []
+    let data = await this.$parent.getVectorData()
+    
+    this.dataToShow = data
+    
+    if (data.trainSetClasses.length === 0) {
+      console.error('No trainSetClasses')
+      //throw Error('No trainSetClasses')
+    }
+    
+    console.log(data)
+    //return false
+    this.config.loadingProgress = 0.25
+    
+    console.log('start', 2)
+    //console.log(data.trainSet[0])
+    
+    console.log('start', 3)
+    if (data.trainSetClasses.length > 0) {
+      if (!this.localConfig.modelJSON) {
+        this.model = this.buildModel(data)
+        this.localConfig.modelJSON = this.model
+      }
+      else {
+        this.model = ml_knn__WEBPACK_IMPORTED_MODULE_0__["default"].load(this.localConfig.modelJSON)
+      }
+
+      //console.log(this.model.toJSON())
+
+      //console.log(this.model)
+      console.log('start', 5)
+
+      this.config.loadingProgress = 0.5
+
+      console.log('start', 9)
+      //console.log(data.testSet)
+      let predictVector = await this.getPredictResultsVector(this.model, data)
+      let predictResults = await this.getPredictResultsValue(data, predictVector)
+      console.log(predictVector)
+      if (predictResults[0] === 'undefined') {
+        this.config.loadingProgress = 1
+        console.error('predict is undefined')
+        return false
+      }
+
+      console.log('start', 10)
+      this.config.loadingProgress = 0.75
+
+      if (this.$parent.hasModelEvaluated === false) {
+        let testSetRowIndexes = data.testSetRowIndexes
+        this.unknownsPrediction = []
+        let predictVectorToEvalute = predictVector.filter((value, i) => {
+          let notMatch = (testSetRowIndexes.indexOf(i) === -1)
+
+          if (notMatch === false) {
+            this.unknownsPrediction.push(value)
+          }
+
+          return notMatch
+        })
+        this.evaluationResults(data.trainSetClasses, predictVectorToEvalute)
+      }
+
+      //console.log(predictResults)
+      this.$parent.setPredictResults(predictResults)
+
+      this.config.loadingProgress = 0.9
+
+    } // if (data.trainSetClasses.length > 0) {
+    else {
+      this.model = 'unsupervised'
+    }
+    
+    if (this.$parent.isModelWindowOpened) {
+      this.showModel()
+    }
+    
+    this.config.loadingProgress = 1
+    this.config.modelBuildedTime = (new Date()).getTime()
+  }
+  
+  KNearestNeighbors.methods.buildModel = function (data){
+    let testSetRowIndexes = data.testSetRowIndexes
+    let dataset = data.testSet.filter((row, i) => {
+      return (testSetRowIndexes.indexOf(i) === -1)
+    })
+    
+    console.log(dataset)
+    let predictions = data.trainSetClasses
+    
+    if (dataset.length === 0) {
+      dataset = data.testSet
+      predictions = dataset.map(item => 'unknown')
+    }
+    
+    if (dataset.length !== predictions.length) {
+      console.error('length is not match')
+    }
+    
+    return new ml_knn__WEBPACK_IMPORTED_MODULE_0__["default"](dataset, predictions, {
+      k: this.localConfig.KNearestNeighborsOptionsK
+    })
+  }
+  
+  KNearestNeighbors.methods.getPredictResultsVector = async function (model, data) {
+    let testSet = data.testSet
+    let resultVector = model.predict(testSet);
+    return resultVector
+  }
+  
+  KNearestNeighbors.methods.getPredictResultsValue = async function (data, resultVector) {
+    let trainSetClassesDict = data.trainSetClassesDict
+    //console.log(trainSetClassesDict)
+    return resultVector.map(index => {
+      return trainSetClassesDict[index]
+    })
+  }
+  
+  KNearestNeighbors.methods.evaluationResults = async function (train, predict) {
+    
+    this.$parent.resetModelEvaluation()
+    console.log(train)
+    console.log(predict)
+    //console.log(data.trainSetClasses.length, getTrainSetPredicts.length, data.testSetRowIndexes.length)
+
+    let accuracy = await this.$parent.calcAccuracy(train, predict)
+    //console.log(accuracy)
+    let accuracyInfo = {
+      name: 'accuracy',
+      type: 'percent',
+      value: accuracy
+    }
+    
+    //console.log(accuracyInfo)
+    this.localConfig.modelEvaluations.push(accuracyInfo)
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighborsMethodsShow.js":
+/*!*********************************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighborsMethodsShow.js ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//import {euclidean} from 'ml-distance-euclidean'
+const euclidean = __webpack_require__(/*! ml-distance-euclidean */ "./node_modules/ml-distance-euclidean/lib-es6/euclidean.js").euclidean
+//const euclidean = MLDistanceEuclidean.euclidean
+
+/* harmony default export */ __webpack_exports__["default"] = (function (KNearestNeighbors) {
+  KNearestNeighbors.methods.showModel = async function () {
+    if (!this.model) {
+      await this.start()
+      //console.error('no this.model')
+      //return false
+    }
+
+    // --------------------------
+    //console.log(this.dataToShow)
+    let unknownSetRowIndex = this.dataToShow.testSetRowIndexes
+
+    let neighbors = []
+    let unknowns = []
+    //console.log(unknownSetRowIndex)
+
+    this.dataToShow.testSet.forEach((set, i) => {
+      if (unknownSetRowIndex.indexOf(i) === -1) {
+        neighbors.push(set)
+      } else {
+        unknowns.push(set)
+      }
+    })
+
+    //console.log(neighbors)
+    //console.log(unknowns)
+    if (neighbors.length === 0) {
+      neighbors = unknowns
+    }
+
+    // --------------------------
+    let distanceMatrix = unknowns.map(unknownFeature => {
+      let maxDistance = null
+      let distances = neighbors.map(neighbor => {
+        let distance = euclidean(unknownFeature, neighbor)
+        if (maxDistance === null || distance > maxDistance) {
+          maxDistance = distance
+        }
+
+        return distance
+      })
+
+      distances = distances.map(d => {
+        return ((maxDistance - d) / maxDistance)
+      })
+
+      return distances
+    })
+
+    //console.log(distanceMatrix)
+
+    let colorMatrix = distanceMatrix.map(unknown => {
+      return unknown.map(d => {
+        return heatMapColorforValue(d)
+      })
+    })
+
+    //console.log(colorMatrix)
+
+    // --------------------------
+
+    let tableHeaderUnknownColspan = 2
+    if (this.model === 'unsupervised') {
+      tableHeaderUnknownColspan = 1
+    }
+
+    let tableHeader = `<thead>
+  <tr>
+    <th rowspan="2" colspan="${tableHeaderUnknownColspan}" valign="bottom">${this.$t('Unknowns')}</th>
+    <th colspan="${colorMatrix[0].length}">${this.$t('Neighbors')}</th>
+  </tr>
+  <tr>${colorMatrix[0].map((value, i) => `<th>${i + 1}</th>`).join('')}</tr>
+</thead>`
+
+    let trainSetClassesDict = this.dataToShow.trainSetClassesDict
+
+    let tableBody = `<tbody>
+${colorMatrix.map((row, i) => {
+      let thPrediection = `<th>${trainSetClassesDict[this.unknownsPrediction[i]]}</th>`
+      if (this.model === 'unsupervised') {
+        thPrediection = ''
+      }
+      return `<tr>
+  <th>${(unknownSetRowIndex[i]) + 1}</th>
+  ${thPrediection}
+  ${row.map((color, j) => {
+        let d = distanceMatrix[i][j]
+        let dText = d
+        dText = Math.round(dText * 100) + '%'
+
+        if (d > 0.5) {
+          return `<td style="text-align:center;background-color: ${color}; color: white">${dText}</td>`
+        } else {
+          return `<td style="text-align:center;background-color: ${color}">${dText}</td>`
+        }
+      }).join('')}
+</tr>`
+    }).join('\n')}
+</tbody>`
+
+    // --------------------------
+
+    let bodyHTML = `<table border="1" align="center">
+    ${tableHeader}
+    ${tableBody}
+</table>`
+    bodyHTML = `<div class="tree">${bodyHTML}</div>`
+    //console.error('[TODO]')
+    //console.log()
+    let title = this.$t('KNN') + ` (` + (new Date()).mmddhhmm() + ')'
+
+    //console.log('KNNModelShow' + this.config.modelBuildedTime)
+    let modelWindow = this.utils.PopupUtils.open({
+      windowName: 'KNNModelShow' + this.config.modelBuildedTime,
+      cssURL: this.modelCSSURL,
+      bodyHTML,
+      size: 'right',
+      //size: 'left',
+      title
+    })
+
+    modelWindow.scrollToTop()
+    modelWindow.scrollToCenter()
+  }
+
+  /**
+   * https://stackoverflow.com/a/27263918/6645399
+   */
+  function heatMapColorforValue(value) {
+    //var h = (1.0 - value) * 240
+    //return "hsl(" + h + ", 100%, 50%)";
+    return `rgba(22, 160, 133, ${value})`
+    // rgb(22, 160, 133)
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighborsMethodsTest.js":
+/*!*********************************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighborsMethodsTest.js ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var ml_knn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ml-knn */ "./node_modules/ml-knn/src/index.js");
+
+// https://www.npmjs.com/package/ml-knn
+
+/* harmony default export */ __webpack_exports__["default"] = (function (KNearestNeighbors) {
+  KNearestNeighbors.methods.testKNN = async function () {
+    var dataset = [
+      [0, 0, 0],
+      [0, 1, 1],
+      [1, 1, 0],
+      [2, 2, 2],
+      [1, 2, 2],
+      [2, 1, 2]
+    ];
+    var predictions = [0, 0, 0, 1, 1, 1];
+    var knn = new ml_knn__WEBPACK_IMPORTED_MODULE_0__["default"](dataset, predictions);
+    
+    var dataset = [[0, 0, 0], [2, 2, 2]];
+ 
+    var ans = knn.predict(dataset);
+    
+    console.log(ans)
+  }
+});
+
+/***/ })
+
+}]);
+//# sourceMappingURL=KNearestNeighbors.js.map

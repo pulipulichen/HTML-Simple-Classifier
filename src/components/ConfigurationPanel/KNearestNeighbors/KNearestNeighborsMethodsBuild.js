@@ -110,7 +110,9 @@ export default function (KNearestNeighbors) {
       console.error('length is not match')
     }
     
-    return new KNN(dataset, predictions)
+    return new KNN(dataset, predictions, {
+      k: this.localConfig.KNearestNeighborsOptionsK
+    })
   }
   
   KNearestNeighbors.methods.getPredictResultsVector = async function (model, data) {
