@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["classifiers/KNearestNeighbors"],{
 
-/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml":
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects-Windows%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects-Windows%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -289,7 +289,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _KNearestNeighbors_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./KNearestNeighbors.js?vue&type=script&lang=js& */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.js?vue&type=script&lang=js&?fa1d");
 /* empty/unused harmony star reexport *//* harmony import */ var _KNearestNeighbors_less_vue_type_style_index_0_id_1295245c_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true& */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.less?vue&type=style&index=0&id=1295245c&lang=less&scoped=true&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml");
+/* harmony import */ var _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_Windows_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects-Windows%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml */ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects-Windows%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml");
 
 
 
@@ -311,7 +311,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* custom blocks */
 
-if (typeof _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
+if (typeof _KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_Windows_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_Windows_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
 
 /* hot reload */
 if (false) { var api; }
@@ -320,19 +320,19 @@ component.options.__file = "src/components/ConfigurationPanel/KNearestNeighbors/
 
 /***/ }),
 
-/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects-Windows%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects-Windows%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/@kazupon/vue-i18n-loader/lib!./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml-api%2FHTML-Simple-Classifier%2Fsrc%2Fcomponents%2FConfigurationPanel%2FKNearestNeighbors%2FKNearestNeighbors.vue&lang=yaml");
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_api_2FHTML_Simple_Classifier_2Fsrc_2Fcomponents_2FConfigurationPanel_2FKNearestNeighbors_2FKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_Windows_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/@kazupon/vue-i18n-loader/lib!./KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects-Windows%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ConfigurationPanel/KNearestNeighbors/KNearestNeighbors.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=E%3A%5Cpudding%5CCode-Porjects-Windows%5Chtml-api%5CHTML-Simple-Classifier%5Csrc%5Ccomponents%5CConfigurationPanel%5CKNearestNeighbors%5CKNearestNeighbors.vue&lang=yaml");
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_Windows_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_Windows_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_Windows_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_Windows_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_KNearestNeighbors_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_E_3A_5Cpudding_5CCode_Porjects_Windows_5Chtml_api_5CHTML_Simple_Classifier_5Csrc_5Ccomponents_5CConfigurationPanel_5CKNearestNeighbors_5CKNearestNeighbors_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -525,14 +525,18 @@ const euclidean = __webpack_require__(/*! ml-distance-euclidean */ "./node_modul
     let unknownSetRowIndex = this.dataToShow.testSetRowIndexes
 
     let neighbors = []
+    let neighborsID = []
     let unknowns = []
+    let unknownsID = []
     //console.log(unknownSetRowIndex)
 
     this.dataToShow.testSet.forEach((set, i) => {
       if (unknownSetRowIndex.indexOf(i) === -1) {
         neighbors.push(set)
+        neighborsID.push(i)
       } else {
         unknowns.push(set)
+        unknownsID.push(i)
       }
     })
 
@@ -540,6 +544,7 @@ const euclidean = __webpack_require__(/*! ml-distance-euclidean */ "./node_modul
     //console.log(unknowns)
     if (neighbors.length === 0) {
       neighbors = unknowns
+      neighborsID = unknownsID
     }
 
     // --------------------------
@@ -583,7 +588,7 @@ const euclidean = __webpack_require__(/*! ml-distance-euclidean */ "./node_modul
     <th rowspan="2" colspan="${tableHeaderUnknownColspan}" valign="bottom">${this.$t('Unknowns')}</th>
     <th colspan="${colorMatrix[0].length}">${this.$t('Neighbors')}</th>
   </tr>
-  <tr>${colorMatrix[0].map((value, i) => `<th>${i + 1}</th>`).join('')}</tr>
+  <tr>${colorMatrix[0].map((value, i) => `<th>${neighborsID[i] + 1}</th>`).join('')}</tr>
 </thead>`
 
     let trainSetClassesDict = this.dataToShow.trainSetClassesDict
@@ -647,6 +652,7 @@ ${colorMatrix.map((row, i) => {
     // rgb(22, 160, 133)
   }
 });
+
 
 /***/ }),
 

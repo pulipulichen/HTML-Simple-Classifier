@@ -56,6 +56,12 @@ export default function (Index) {
     if (config.classifier) {
       this.localConfig.classifier = config.classifier
     }
+    if (config.classifierOptions) {
+      Object.keys(config.classifierOptions).forEach(key => {
+        this.localConfig[key] = config.classifierOptions[key]
+      })
+      
+    }
   }
   
   Index.methods.processRawData = async function (rawData) {
