@@ -12,6 +12,9 @@ let KNearestNeighbors = {
     'localConfig.locale'() {
       this.$i18n.locale = this.localConfig.locale;
     },
+    'localConfig.KNearestNeighborsOptionsK' () {
+      this.$parent.clearPrediction()
+    }
   },
   computed: {
     isModelBuilded () {
