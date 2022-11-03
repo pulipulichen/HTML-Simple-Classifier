@@ -4,6 +4,7 @@ const euclidean = require('ml-distance-euclidean').euclidean
 
 export default function (KNearestNeighbors) {
   KNearestNeighbors.methods.showModel = async function () {
+    // console.log(this.model)
     if (!this.model) {
       await this.start()
       //console.error('no this.model')
@@ -30,8 +31,14 @@ export default function (KNearestNeighbors) {
       }
     })
 
+    if (unknowns.length === 0) {
+      unknowns = [].concat(neighbors)
+      unknownsID = [].concat(neighborsID)
+      unknownSetRowIndex = [].concat(neighborsID)
+    }
+
     //console.log(neighbors)
-    //console.log(unknowns)
+    // console.log(unknowns)
     if (neighbors.length === 0) {
       neighbors = unknowns
       neighborsID = unknownsID
@@ -56,7 +63,10 @@ export default function (KNearestNeighbors) {
       return distances
     })
 
-    //console.log(distanceMatrix)
+    // console.log(distanceMatrix)
+    if (distanceMatrix.length === 0) {
+      throw Error('Distance matrix is empty')
+    }
 
     let colorMatrix = distanceMatrix.map(unknown => {
       return unknown.map(d => {
@@ -73,6 +83,8 @@ export default function (KNearestNeighbors) {
       tableHeaderUnknownColspan = 1
     }
 
+    // console.log({tableHeaderUnknownColspan, colorMatrix})
+
     let tableHeader = `<thead>
   <tr>
     <th rowspan="2" colspan="${tableHeaderUnknownColspan}" valign="bottom">${this.$t('Unknowns')}</th>
@@ -82,10 +94,24 @@ export default function (KNearestNeighbors) {
 </thead>`
 
     let trainSetClassesDict = this.dataToShow.trainSetClassesDict
+    let unknownsPrediction = this.unknownsPrediction
+    // console.log({trainSetClassesDict, unknownsPrediction})
+    if (unknownsPrediction.length === 0) {
+      // let data = await this.$parent.getVectorData()
+      // let predictVector = await this.getPredictResultsVector(this.model, data)
+      // let predictResults = await this.getPredictResultsValue(data, predictVector)
+      // console.log(predictVector)
+      // console.log(data)
+      unknownsPrediction = await this.$parent.getTrainSetPredictsResult()
+      // throw Error('todo')
+    }
+    else {
+      unknownsPrediction = unknownsPrediction.map(i => trainSetClassesDict[i])
+    }
 
     let tableBody = `<tbody>
 ${colorMatrix.map((row, i) => {
-      let thPrediection = `<th>${trainSetClassesDict[this.unknownsPrediction[i]]}</th>`
+      let thPrediection = `<th>${unknownsPrediction[i]}</th>`
       if (this.model === 'unsupervised') {
         thPrediection = ''
       }
@@ -109,6 +135,8 @@ ${colorMatrix.map((row, i) => {
 
     // --------------------------
 
+    // console.log(tableBody)
+
     let bodyHTML = `<table border="1" align="center">
     ${tableHeader}
     ${tableBody}
@@ -118,7 +146,7 @@ ${colorMatrix.map((row, i) => {
     //console.log()
     let title = this.$t('KNN') + ` (` + (new Date()).mmddhhmm() + ')'
 
-    //console.log('KNNModelShow' + this.config.modelBuildedTime)
+    // console.log('KNNModelShow' + this.config.modelBuildedTime)
     let modelWindow = this.utils.PopupUtils.open({
       windowName: 'KNNModelShow' + this.config.modelBuildedTime,
       cssURL: this.modelCSSURL,

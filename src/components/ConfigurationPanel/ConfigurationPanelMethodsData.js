@@ -9,6 +9,9 @@ export default function (ConfigurationPanel) {
     for (let len = this.localConfig.data.length, i = len; i > 0; i--) {
       let rowIndex = (len - i)
       let row = this.localConfig.data[rowIndex]
+      if (!row || !Array.isArray(row)) {
+        continue
+      }
       
       let notMissingRow = row.filter(cell => {
         return !this.utils.DataUtils.isMissingData(cell)
@@ -69,7 +72,7 @@ export default function (ConfigurationPanel) {
         testJSON['predict'] = row[1]
       }
       
-      console.log(this.hasModelEvaluated)
+      // console.log(this.hasModelEvaluated)
       if (this.hasModelEvaluated === false && isTrainingSet) {
         trainSetClasses.push(row[0])
       }
@@ -84,12 +87,12 @@ export default function (ConfigurationPanel) {
       }
       
       if (i % 1000 === 5) {
-        console.log('getJSONData sleep i', i)
+        // console.log('getJSONData sleep i', i)
         await this.utils.AsyncUtils.sleep(0)
       }
     }
     
-    console.log(trainSet)
+    // console.log(trainSet)
     
     return {
       trainSet,
@@ -136,7 +139,7 @@ export default function (ConfigurationPanel) {
       testVector.push(vector)
       
       if (i % 1000 === 5) {
-        console.log('getVectorData sleep i', i)
+        // console.log('getVectorData sleep i', i)
         await this.utils.AsyncUtils.sleep(0)
       }
     }
@@ -200,6 +203,11 @@ export default function (ConfigurationPanel) {
       }
     }
     return predicts
+  }
+
+  ConfigurationPanel.methods.getTrainSetPredictsResult = async function () {
+    let json = await this.getJSONData()
+    return json.testSet.map(row => row.predict)
   }
   
 }

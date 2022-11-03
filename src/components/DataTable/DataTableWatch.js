@@ -10,7 +10,7 @@ export default function (DataTable) {
   }
   
   DataTable.watch['localConfig.data'] = async function () {
-    console.log('呼叫？')
+    // console.log('呼叫？')
     if (this.dataLock === true) {
       return false
     }

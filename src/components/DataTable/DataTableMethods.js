@@ -5,15 +5,15 @@ export default function (DataTable) {
     this.config.isDataProcessing = true
     this.dataLock = true
     await this.utils.AsyncUtils.sleep(0)
-    console.log('讀取中')
+    // console.log('讀取中')
     this.hotInstance.loadData(data)
-    console.log('讀取完了')
+    // console.log('讀取完了')
     this.localConfig.data = data
-    console.log('讀取完了2')
+    // console.log('讀取完了2')
     await this.utils.AsyncUtils.sleep(0)
     this.config.isDataProcessing = false
     this.dataLock = false
-    console.log('讀取重設')
+    // console.log('讀取重設')
     this.recalculateAllColumnsWidth()
   }
   
