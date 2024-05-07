@@ -95,7 +95,7 @@ export default function (KNearestNeighbors) {
   
   KNearestNeighbors.methods.buildModel = function (data){
     let {testSetRowIndexes, trainSetRowIndexes} = data
-    console.log(testSetRowIndexes, trainSetRowIndexes)
+    // console.log(testSetRowIndexes, trainSetRowIndexes)
     let dataset = data.testSet.filter((row, i) => {
       return (testSetRowIndexes.indexOf(i) === -1)
     })
@@ -103,6 +103,7 @@ export default function (KNearestNeighbors) {
     
     // console.log(dataset)
     let predictions = data.trainSetClasses
+    // console.log(predictions)
     
     if (dataset.length === 0) {
       dataset = data.testSet

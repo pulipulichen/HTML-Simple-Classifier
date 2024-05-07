@@ -80,7 +80,7 @@ export default function (ConfigurationPanel) {
       
       if (isTrainingSet) {
         trainSet.push(trainJSON)
-        // testSet.push(testJSON)
+        testSet.push(testJSON)
         trainSetRowIndexes.push(rowIndex)
       }
       else {
@@ -95,13 +95,13 @@ export default function (ConfigurationPanel) {
     }
     
     // console.log(trainSet)
-    console.log({
-      trainSet,
-      testSet,
-      testSetRowIndexes,
-      trainSetClasses,
-      trainSetRowIndexes,
-    })
+    // console.log({
+    //   trainSet,
+    //   testSet,
+    //   testSetRowIndexes,
+    //   trainSetClasses,
+    //   trainSetRowIndexes,
+    // })
     
     return {
       trainSet,
