@@ -64,6 +64,8 @@ export default function (KNearestNeighbors) {
     })
 
     // console.log(distanceMatrix)
+
+    // console.log(distanceMatrix)
     if (distanceMatrix.length === 0) {
       throw Error('Distance matrix is empty')
     }

@@ -50,6 +50,7 @@ export default function (KNearestNeighbors) {
       let predictVector = await this.getPredictResultsVector(this.model, data)
       let predictResults = await this.getPredictResultsValue(data, predictVector)
       // console.log(predictVector)
+      // console.log(predictResults)
       if (predictResults[0] === 'undefined') {
         this.config.loadingProgress = 1
         console.error('predict is undefined')
@@ -93,10 +94,12 @@ export default function (KNearestNeighbors) {
   }
   
   KNearestNeighbors.methods.buildModel = function (data){
-    let testSetRowIndexes = data.testSetRowIndexes
+    let {testSetRowIndexes, trainSetRowIndexes} = data
+    console.log(testSetRowIndexes, trainSetRowIndexes)
     let dataset = data.testSet.filter((row, i) => {
       return (testSetRowIndexes.indexOf(i) === -1)
     })
+    // let dataset = data.trainSet
     
     // console.log(dataset)
     let predictions = data.trainSetClasses
@@ -109,7 +112,7 @@ export default function (KNearestNeighbors) {
     if (dataset.length !== predictions.length) {
       console.error('length is not match')
     }
-    
+    // console.log('ok')
     return new KNN(dataset, predictions, {
       k: this.localConfig.KNearestNeighborsOptionsK
     })

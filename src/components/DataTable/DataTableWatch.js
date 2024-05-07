@@ -17,14 +17,19 @@ export default function (DataTable) {
     
     this.dataLock = true
     //this.hotAutoColumnSize = false
+    let data = this.localConfig.data
+    // console.trace(JSON.parse(JSON.stringify(data)))
+
     await this.utils.AsyncUtils.sleep(0)
     //console.log(this.dataLock, this.localConfig.data.length)
     //console.log('載入資料')
     //console.log(this.localConfig.data)
     
+    // console.log(JSON.parse(JSON.stringify(data)))
     this.hotInstance.loadData(this.localConfig.data.concat([]))
     
     await this.utils.AsyncUtils.sleep(0)
+    // console.log(JSON.parse(JSON.stringify(data)))
     this.dataLock = false
     //this.hotAutoColumnSize = true
     

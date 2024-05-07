@@ -6,15 +6,25 @@ export default function (DataTable) {
     this.dataLock = true
     await this.utils.AsyncUtils.sleep(0)
     // console.log('讀取中')
+    // console.log(JSON.parse(JSON.stringify(data)))
+    
     this.hotInstance.loadData(data)
+    // console.log(JSON.parse(JSON.stringify(data)))
     // console.log('讀取完了')
     this.localConfig.data = data
+    // console.log(JSON.parse(JSON.stringify(data)))
+
     // console.log('讀取完了2')
     await this.utils.AsyncUtils.sleep(0)
+    // console.log(JSON.parse(JSON.stringify(data)))
     this.config.isDataProcessing = false
+    // console.log(JSON.parse(JSON.stringify(data)))
     this.dataLock = false
+    // console.log(JSON.parse(JSON.stringify(data)))
+
     // console.log('讀取重設')
     this.recalculateAllColumnsWidth()
+    // console.log(JSON.parse(JSON.stringify(data)))
   }
   
   DataTable.methods.changeClassField = async function () {
@@ -26,7 +36,7 @@ export default function (DataTable) {
     this.config.isDataProcessing = true
     this.dataLock = true
     await this.utils.AsyncUtils.sleep(0)
-
+    
     let beforeHeader = headers[0]
     headers[0] = this.localConfig.classFieldName
     headers[headerIndex] = beforeHeader
@@ -43,7 +53,10 @@ export default function (DataTable) {
       let beforeClassValue = row[0]
       let afterClassValue = row[headerIndex]
       
-      row[0] = afterClassValue
+      // console.log({afterClassValue: afterClassValue, beforeClassValue: beforeClassValue})
+      if (afterClassValue) {
+        row[0] = afterClassValue
+      }
       row[headerIndex] = beforeClassValue
       
       data.push(row)
@@ -58,7 +71,9 @@ export default function (DataTable) {
     
     this.localConfig.data = this.localConfig.data.splice(0,0).concat(data)
     
+    
     await this.utils.AsyncUtils.sleep(0)
+    
     this.config.isDataProcessing = false
     this.dataLock = false
   }

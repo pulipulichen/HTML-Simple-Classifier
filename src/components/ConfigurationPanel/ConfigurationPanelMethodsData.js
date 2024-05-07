@@ -5,6 +5,7 @@ export default function (ConfigurationPanel) {
     let testSet = []
     let testSetRowIndexes = []
     let trainSetClasses = []
+    let trainSetRowIndexes = []
     //console.log(this.localConfig.data)
     for (let len = this.localConfig.data.length, i = len; i > 0; i--) {
       let rowIndex = (len - i)
@@ -79,7 +80,8 @@ export default function (ConfigurationPanel) {
       
       if (isTrainingSet) {
         trainSet.push(trainJSON)
-        testSet.push(testJSON)
+        // testSet.push(testJSON)
+        trainSetRowIndexes.push(rowIndex)
       }
       else {
         testSet.push(testJSON)
@@ -93,12 +95,20 @@ export default function (ConfigurationPanel) {
     }
     
     // console.log(trainSet)
+    console.log({
+      trainSet,
+      testSet,
+      testSetRowIndexes,
+      trainSetClasses,
+      trainSetRowIndexes,
+    })
     
     return {
       trainSet,
       testSet,
       testSetRowIndexes,
-      trainSetClasses
+      trainSetClasses,
+      trainSetRowIndexes,
     }
   }
   

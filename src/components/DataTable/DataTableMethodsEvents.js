@@ -148,8 +148,7 @@ export default function (DataTable) {
     let before = changes[2]
     let after = changes[3]
     
-    if (this.isMissingData(before) 
-            && this.isMissingData(after)) {
+    if (this.isMissingData(before) && this.isMissingData(after)) {
       return false
     }
     
@@ -163,7 +162,9 @@ export default function (DataTable) {
     if (isTrainSet) {
       this.localConfig.modelJSON = null
       await this.utils.AsyncUtils.sleep()
+      // console.log(JSON.parse(JSON.stringify(this.localConfig.data)))
       this.clearPredictColumn()
+      // console.log(JSON.parse(JSON.stringify(this.localConfig.data)))
     }
     else {
       this.localConfig.data[row][1] = null
