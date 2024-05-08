@@ -18,7 +18,8 @@ let config = {
     'weather.class.csv',
     'iris.ods',
     'labor.csv',
-    'qa-pet-fruit-word-vector.csv'
+    'qa-pet-fruit-word-vector.csv',
+    'qa-pet-fruit_embed.csv',
   ],
   isDataProcessing: false,
   modelBuildedTime: null
